@@ -608,7 +608,7 @@ class CustomObstacle(CustomConstructionObstacle):
             actors.append(static)
             self._construction_transforms.append([static, transform])
         
-        sortedactors = sorted(zip(actors, statics), key=lambda l: l[1].get("x", 0)) # sorted by x
+        sortedactors = sorted(zip(actors, statics), key=lambda l: float(l[1].get("x", 0))) # sorted by x
         self.first = sortedactors[0][0]
         self.last = sortedactors[-1][0]
 
