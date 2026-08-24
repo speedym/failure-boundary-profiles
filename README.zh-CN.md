@@ -4,6 +4,8 @@
 
 <h1 align="center">Fail2Drive：闭环驾驶泛化能力基准测试</h1>
 
+<p align="center"><b>🎉 已被 IROS 2026 接收 🎉</b></p>
+
 <p align="center"><a href="./README.md">English</a> · <a href="./README.zh-CN.md">简体中文</a> · <a href="./README.ja.md">日本語</a></p>
 
 <p align="center">
@@ -169,13 +171,11 @@ python tools/f2d_result_parser.py /path/to/results --method MyMethod
 ## 引用
 
 ```bibtex
-@misc{gerstenecker2026fail2drivebenchmarkingclosedloopdriving,
-      title={Fail2Drive: Benchmarking Closed-Loop Driving Generalization},
-      author={Simon Gerstenecker and Andreas Geiger and Katrin Renz},
-      year={2026},
-      eprint={2604.08535},
-      archivePrefix={arXiv},
-      primaryClass={cs.RO},
-      url={https://arxiv.org/abs/2604.08535},
+@inproceedings{Gerstenecker2026Fail2Drive,
+  author    = {Gerstenecker, Simon and Geiger, Andreas and Renz, Katrin},
+  title     = {Fail2Drive: Benchmarking Closed-Loop Driving Generalization},
+  booktitle = {IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  year      = {2026},
+  note      = {to appear}
 }
 ```
