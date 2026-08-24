@@ -1,0 +1,13 @@
+index,scenario_id,status,route_file,route_id,target,minimum_free_corridor_width,maximum_route_intrusion,required_lateral_deviation,closest_approach_distance
+1,Generalization_CustomObstacles_1026_005_hero_v01,accepted,Generalization_CustomObstacles_1026_005_hero_v01.xml,102600501,0.0,8.501,-0.0009,0.0,0.8325
+2,Generalization_CustomObstacles_1026_005_hero_v02,accepted,Generalization_CustomObstacles_1026_005_hero_v02.xml,102600502,0.0992,8.4017,0.0983,0.0,0.7332
+3,Generalization_CustomObstacles_1026_005_hero_v03,accepted,Generalization_CustomObstacles_1026_005_hero_v03.xml,102600503,0.1983,8.3023,0.1977,0.0,0.6338
+4,Generalization_CustomObstacles_1026_005_hero_v04,accepted,Generalization_CustomObstacles_1026_005_hero_v04.xml,102600504,0.2975,8.2029,0.2971,0.0,0.5344
+5,Generalization_CustomObstacles_1026_005_hero_v05,accepted,Generalization_CustomObstacles_1026_005_hero_v05.xml,102600505,0.3967,8.1034,0.3966,0.0,0.435
+6,Generalization_CustomObstacles_1026_005_hero_v06,accepted,Generalization_CustomObstacles_1026_005_hero_v06.xml,102600506,0.4959,8.005,0.495,0.0,0.3366
+7,Generalization_CustomObstacles_1026_005_hero_v07,accepted,Generalization_CustomObstacles_1026_005_hero_v07.xml,102600507,0.595,7.9056,0.5944,0.0,0.2372
+8,Generalization_CustomObstacles_1026_005_hero_v08,accepted,Generalization_CustomObstacles_1026_005_hero_v08.xml,102600508,0.6942,7.8062,0.6938,0.0921,0.1377
+9,Generalization_CustomObstacles_1026_005_hero_v09,accepted,Generalization_CustomObstacles_1026_005_hero_v09.xml,102600509,0.7934,7.7068,0.7932,0.1915,0.0383
+10,Generalization_CustomObstacles_1026_005_hero_v10,accepted,Generalization_CustomObstacles_1026_005_hero_v10.xml,102600510,0.8926,7.6084,0.8916,0.29,0.0
+11,Generalization_CustomObstacles_1026_005_hero_v11,accepted,Generalization_CustomObstacles_1026_005_hero_v11.xml,102600511,0.9917,7.509,0.991,0.3894,0.0
+12,Generalization_CustomObstacles_1026_005_hero_v12,accepted,Generalization_CustomObstacles_1026_005_hero_v12.xml,102600512,1.0909,7.4096,1.0904,0.4888,0.0

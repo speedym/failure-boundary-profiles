@@ -1,0 +1,13 @@
+This repository contains two kinds of material under two licenses:
+
+1. Scenario data, variant catalogs, checksums, and documentation
+   (scenarios/, SHA256SUMS, docs/, README.md):
+   Creative Commons Attribution 4.0 International (CC BY 4.0).
+   Full text: https://creativecommons.org/licenses/by/4.0/legalcode
+   Attribution: Social Chaos Lab.
+
+2. Patches (patches/):
+   MIT License, the same license as the Fail2Drive project they apply
+   to (https://github.com/autonomousvision/fail2drive).
+
+Copyright (c) 2026 Social Chaos Lab / Milan Bulat
