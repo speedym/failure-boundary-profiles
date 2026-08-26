@@ -6,7 +6,7 @@
 
 <p align="center"><b>🎉 已被 IROS 2026 接收 🎉</b></p>
 
-<p align="center"><a href="./README.md">English</a> · <a href="./README.zh-CN.md">简体中文</a> · <a href="./README.ja.md">日本語</a></p>
+<p align="center"><a href="./README.fail2drive.md">English</a> · <a href="./README.fail2drive.zh-CN.md">简体中文</a> · <a href="./README.fail2drive.ja.md">日本語</a></p>
 
 <p align="center">
   <a href="https://simonger.github.io/fail2drive/">项目主页</a> &nbsp;|&nbsp;

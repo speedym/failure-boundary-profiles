@@ -1,3 +1,27 @@
+This repository contains two kinds of material under two licenses.
+
+1. Scenario families, variant catalogs, checksums, and project documentation
+   (scenarios/, SHA256SUMS, docs/, README.md, CITATION.cff):
+
+   Creative Commons Attribution 4.0 International (CC BY 4.0).
+   Full text: https://creativecommons.org/licenses/by/4.0/legalcode
+   Attribution: Social Chaos Lab.
+
+   Copyright (c) 2026 Social Chaos Lab / Milan Bulat
+
+2. The bundled Fail2Drive evaluation harness (all remaining directories,
+   including leaderboard/, scenario_runner/, team_code/, toolbox/, tools/,
+   assets/, fail2drive_split/) and the fork patches in patches/:
+
+   MIT License, as carried by the upstream Fail2Drive project
+   (https://github.com/autonomousvision/fail2drive). The harness is vendored
+   here with the two patches in patches/ applied; the MIT terms below govern
+   both the original harness code and those modifications.
+
+   Full text follows.
+
+--------------------------------------------------------------------------
+
 MIT License
 
 Copyright (c) 2026 Simon Gerstenecker, Katrin Renz, Andreas Geiger

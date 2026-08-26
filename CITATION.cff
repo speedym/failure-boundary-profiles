@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use these scenario families, please cite this repository. A paper reference will be added once the preprint is public."
+title: "Failure-Boundary Profiles: Scenario Families"
+authors:
+  - family-names: Bulat
+    given-names: Milan
+    affiliation: Social Chaos Lab
+repository-code: "https://github.com/speedym/failure-boundary-profiles"
+license: CC-BY-4.0

@@ -1,0 +1,34 @@
+From 88a9d5539d4129993f80767c3a004f9d8a6946b7 Mon Sep 17 00:00:00 2001
+From: Milan Bulat <speedy.milan@gmail.com>
+Date: Thu, 30 Jul 2026 13:01:35 +0200
+Subject: [PATCH 2/2] SCL fork: float() the CustomObstacle actor sort key (line
+ 611)
+
+The parsed objects-attr values are strings and the .get default is int 0:
+any scenario mixing objects WITH and WITHOUT an x= key crashes setup with
+"'<' not supported between instances of 'str' and 'int'". First triggered
+by fm_002 (imported hero machine has no x=, solver-added barriers do).
+The two sibling call sites (CustomObstacleTwoWays copy, RoadBlocked)
+already carry the float() fix upstream - this completes the set, and also
+makes the ordering numeric rather than lexicographic.
+
+---
+ scenario_runner/srunner/scenarios/construction_crash_vehicle.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/scenario_runner/srunner/scenarios/construction_crash_vehicle.py b/scenario_runner/srunner/scenarios/construction_crash_vehicle.py
+index 578a478..6c55c2f 100644
+--- a/scenario_runner/srunner/scenarios/construction_crash_vehicle.py
++++ b/scenario_runner/srunner/scenarios/construction_crash_vehicle.py
+@@ -608,7 +608,7 @@ class CustomObstacle(CustomConstructionObstacle):
+             actors.append(static)
+             self._construction_transforms.append([static, transform])
+         
+-        sortedactors = sorted(zip(actors, statics), key=lambda l: l[1].get("x", 0)) # sorted by x
++        sortedactors = sorted(zip(actors, statics), key=lambda l: float(l[1].get("x", 0))) # sorted by x
+         self.first = sortedactors[0][0]
+         self.last = sortedactors[-1][0]
+ 
+-- 
+2.34.1
+

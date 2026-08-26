@@ -1,174 +1,71 @@
-<p align="center">
-  <img src="./assets/Fail2Drive_logo.png" width="400"/>
-</p>
+# Failure-Boundary Profiles: Scenario Families
 
-<h1 align="center">Fail2Drive: Benchmarking Closed-Loop Driving Generalization</h1>
+Certified scenario families for measuring failure-boundary profiles of autonomous driving agents in CARLA. This repository is the public artifact of the paper "Beyond Driving Scores: Failure-Boundary Profiles" (in preparation, arXiv fall 2026) by Social Chaos Lab.
 
-<p align="center"><b>🎉 Accepted at IROS 2026 🎉</b></p>
+Instead of a single score, each family sweeps one physical factor of a hard scenario (for example, how far a fallen obstacle intrudes into the driving corridor) across a set of measured, validated variants. Running an agent across a family locates where its behavior flips, and repeating across traffic seeds turns that location into a distribution rather than an anecdote.
 
-<p align="center"><a href="./README.md">English</a> · <a href="./README.zh-CN.md">简体中文</a> · <a href="./README.ja.md">日本語</a></p>
+This repository bundles everything needed to run the families: the scenario data **and** the [Fail2Drive](https://github.com/autonomousvision/fail2drive) evaluation harness they run under, vendored with our two fork patches already applied. See [Bundled harness](#bundled-harness).
 
-<p align="center">
-  <a href="https://simonger.github.io/fail2drive/">Project Page</a> &nbsp;|&nbsp;
-  <a href="https://arxiv.org/pdf/2604.08535">Paper</a> &nbsp;|&nbsp;
-  <a href="https://huggingface.co/datasets/SimonGer/Fail2Drive">Download</a> &nbsp;|&nbsp;
-  <a href="https://discord.gg/HZ83Em6kyZ">Discord</a> &nbsp;|&nbsp;
-  <a href="https://github.com/SimonGer/fail2drive_scenario_hub">Scenario Hub</a>
-</p>
+## Scenario families
 
-<p align="center">
-  <img src="./assets/hero.gif" alt="teaser" width="61.3%"> <img src="./assets/bar_plot.png" width="37.7%">
-</p>
+All families run in CARLA Town13 under fixed clear weather. Each variant is a standard leaderboard-format route XML.
 
-Fail2Drive is the first CARLA v2 benchmark designed to test closed-loop generalization on truly unseen long-tail scenarios. By pairing each shifted route with an in-distribution reference scenario, it exposes substantial hidden failure modes in current state-of-the-art driving models.
+| Family | Swept factor | Range | Variants |
+|---|---|---|---|
+| `fm_001_intrusion_sweep` | maximum route intrusion (m) | 0.49 to 0.68 | 12 accepted |
+| `fm_002_corridor_pincer` | minimum free corridor width (m) | 2.32 to 3.06 | 10 accepted |
+| `fm_003_asset_swap` | obstacle asset identity (categorical) | 23 assets | 14 accepted, 9 refused |
+| `fm_004_threshold_sweep` | minimum free corridor width (m) | 0.00 to 3.64 | 12 accepted |
+| `fm_005_hero` | maximum route intrusion (m) | 0.00 to 1.09 | 12 accepted |
 
-## Highlights
+Each family directory contains:
 
-- 17 unseen scenarios for evaluation of true generalization
-- 30 novel assets including animals, visual noise, and adversarial obstacles
-- Paired route design enables quantification of generalization gap
-- 100 route pairs in diverse environments and configurations
-- Toolbox for creating custom obstacles and routes
+- `routes/` - one route XML per accepted variant, unmodified from the files used in our measurement campaigns (`SHA256SUMS` at the repo root lets you verify byte-identity).
+- `variants.csv` - the variant catalog: target factor value, and the measured, in-simulator verified geometry of the realized scene (free corridor width, route intrusion, required lateral deviation, closest approach distance).
 
-## Leaderboard
+A variant marked `refused` in `variants.csv` has no route XML: the generation pipeline validates every candidate scene in simulation before accepting it, and candidates that fail validation (for example, obstacle assets that tip over, roll away, or sink under physics) are refused rather than shipped. Refusals are retained in the catalog because they document the certified feasibility boundary of each family.
 
-[![Leaderboard](https://raw.githubusercontent.com/SimonGer/fail2drive_leaderboard/main/rendered/table.png)](https://github.com/SimonGer/fail2drive_leaderboard)
+## Running the scenarios
 
-## Contents
+See [docs/RUNNING.md](docs/RUNNING.md) for step-by-step instructions: CARLA setup, the harness environment, agent checkpoints, and the exact invocation. [docs/VERSIONS.md](docs/VERSIONS.md) pins every component we used, down to checkpoint revisions.
 
-- [Installation](#installation)
-- [Experiments](#experiments)
-- [Evaluation](#evaluation)
-- [Fail2Drive Toolbox](#fail2drive-toolbox)
-
-## Installation
-
-> If you want to introduce Fail2Drive into an existing CARLA project, we provide a lightweight plugin installation on the [plugin branch](https://github.com/autonomousvision/Fail2Drive/tree/plugin). The installation below includes the `carla_garage` models to provide a starting point for new users.
-
-After a quick installation, you can already explore the benchmark manually, run baseline agents, and start testing custom scenarios.
+Short version, once CARLA 0.9.15 and the conda environment are up:
 
 ```bash
-# 1. Clone this repository
-git clone https://github.com/autonomousvision/fail2drive.git
-cd fail2drive
-
-# 2. Set up the Fail2Drive CARLA simulator
-mkdir f2d_carla
-curl -L \
-  https://huggingface.co/datasets/SimonGer/fail2drive/resolve/main/fail2drive_simulator.tar.gz \
-  | tar -xz -C f2d_carla
-
-# 3. Create the conda environment
-conda env create -f environment.yml
-conda activate fail2drive
-
-# NOTE: The pip installed carla==0.9.15 should work, but may cause warnings in some places.
-# If you want to install the official Fail2Drive PythonAPI you can find it at:
-# f2d_carla/PythonAPI/carla/dist/carla-0.9.15-cp310-cp310-linux_x86_64.whl
-
-# 4. Set environment variables
 source env_vars.sh
 
-# Ready to start experimenting!
-```
-
-## Experiments
-
-To run any of the experiments below, start CARLA in a second terminal:
-
-```bash
-bash ${CARLA_ROOT}/CarlaUE4.sh
-```
-
-<details>
-<summary>Tips for usage with reduced computational resources</summary>
-
-- Run CARLA with `-RenderOffscreen` to prevent the spectator window from opening.
-- Run CARLA with `-quality-level=Low` to reduce rendering cost. Do not use this for final evaluation.
-- Run CARLA and the model on different GPUs by specifying `-graphicsadapter=[id]`.
-
-</details>
-
-#### Can you solve the benchmark routes by hand?
-
-```bash
 python leaderboard/leaderboard/leaderboard_evaluator.py \
-  --agent ${WORK_DIR}/leaderboard/leaderboard/autoagents/human_agent_keyboard.py \
-  --routes ${WORK_DIR}/fail2drive_split/Generalization_PedestriansOnRoad_1085.xml
+  --routes ${WORK_DIR}/scenarios/fm_001_intrusion_sweep/routes/Generalization_PassableObstacles_1060_001_intrusion_sweep_v01.xml \
+  --agent <agent entry point> \
+  --agent-config <checkpoint dir> \
+  --track SENSORS \
+  --traffic-manager-seed 0
 ```
 
-#### Running the PDM-Lite expert policy
+## Bundled harness
 
-```bash
-python leaderboard/leaderboard/leaderboard_evaluator_local.py \
-  --agent ${WORK_DIR}/team_code/visu_agent.py \
-  --track MAP \
-  --routes ${WORK_DIR}/fail2drive_split/Generalization_PedestriansOnRoad_1085.xml
-```
+The [Fail2Drive](https://github.com/autonomousvision/fail2drive) benchmark harness (Gerstenecker, Geiger and Renz, IROS 2026) is vendored in this repository at upstream commit `bceb18a`, under `leaderboard/`, `scenario_runner/`, `team_code/`, `toolbox/`, `tools/`, `assets/` and `fail2drive_split/`. Its own documentation - installation, the full Fail2Drive benchmark split, the SLURM evaluation tooling, the route-authoring toolbox - is unchanged and still applies. Upstream's README is preserved verbatim as [README.fail2drive.md](README.fail2drive.md) ([简体中文](README.fail2drive.zh-CN.md), [日本語](README.fail2drive.ja.md)) and is the reference for all of it; follow its installation section to build the conda environment and fetch the CARLA build.
 
-#### Running the TransFuser++ model
+Two fork patches are **already applied** to the vendored tree. Both are retained under `patches/` as a provenance record, so the exact deltas against upstream stay auditable:
 
-Before running the model, download the checkpoint into the `checkpoints` folder:
+1. `0001` - `AgentBlockedTest` `min_speed` 0.1 -> 0.2 m/s, in both the `leaderboard` and `scenario_runner` copies of `route_scenario.py`. A creeping agent (between 0.1 and 0.2 m/s) never triggers the 180 game-second blocked termination; with the patch, crawl-forever scores as blocked, the same as a full stop. **This is a scoring-semantics change: campaigns run across this boundary are not comparable.**
+2. `0002` - `float()` the `CustomObstacle` actor sort key in `construction_crash_vehicle.py`. Fixes a `'<' not supported between instances of 'str' and 'int'` crash in scenarios mixing obstacles with and without an `x=` key.
 
-```bash
-mkdir -p checkpoints/tfpp
-wget -P checkpoints/tfpp \
-  https://huggingface.co/SimonGer/TFv5/resolve/main/all_towns/model_0030_0.pth \
-  https://huggingface.co/SimonGer/TFv5/resolve/main/all_towns/config.json
-```
+Do not re-apply the patches; `git am patches/*.patch` against this tree will fail because the changes are already present.
 
-Then run TransFuser++ with the `LIVE_VISU` flag to inspect the model inputs live:
+## Scope of this release
 
-```bash
-LIVE_VISU=1 python leaderboard/leaderboard/leaderboard_evaluator_local.py \
-  --routes ${WORK_DIR}/fail2drive_split/Generalization_PedestriansOnRoad_1085.xml \
-  --agent ${WORK_DIR}/team_code/sensor_agent.py \
-  --agent-config ${WORK_DIR}/checkpoints/tfpp
-```
+This release contains the scenario families and everything needed to run them. Planned additions: scoring and analysis tooling, and boundary-profile fitting code. The scenario authoring system that generated these families is not part of this repository.
 
-## Evaluation
+## License
 
-### Fail2Drive Rules
-
-As an offline benchmark, users have access to the full evaluation routes and assets. To prevent overfitting and keep Fail2Drive fair, we establish the following rules:
-
-1. **No training on Fail2Drive scenarios.** Models must not use the routes, scenario definitions, or assets introduced in Fail2Drive for training or fine-tuning. The benchmark serves strictly as a held-out test set.
-
-2. **External pretraining is allowed.** Pretraining on large-scale real-world datasets, internet-scale multimodal corpora, foundation models, or VLM/LLM backbones is permitted. Such general visual or linguistic knowledge is considered part of the model prior and not a violation of the benchmark.
-
-3. **Leaderboard entry.** We encourage users to submit final scores through the public evaluation repository via pull request in the [official Leaderboard repository](https://github.com/SimonGer/fail2drive_leaderboard). This enables consistent comparison and facilitates transparent benchmarking. Find out more in the [contribution guidelines](https://github.com/SimonGer/fail2drive_leaderboard?tab=contributing-ov-file).
-
-### SLURM Evaluation
-
-We provide tools to evaluate models on the full benchmark using a SLURM cluster. The [slurm_evaluate.py](slurm_evaluate.py) script automatically submits jobs up to a limit specified by [eval_num_jobs.txt](eval_num_jobs.txt) and monitors the evaluation. Small modifications are necessary to adapt this script to your specific cluster and model. Look for `NOTE` and `TODO` comments in the script.
-
-> **Note:** Make sure to activate the conda environment before running the script: `conda activate fail2drive`
-
-If you run into problems during evaluations, feel free to open an issue!
-
-### Result Generation
-
-To obtain the final scores, use the [tools/f2d_result_parser.py](tools/f2d_result_parser.py) script:
-
-```bash
-python tools/f2d_result_parser.py /path/to/results --method MyMethod
-```
-
-## Fail2Drive Toolbox
-
-We provide tools to generate new routes using the customizable scenarios and novel assets provided by Fail2Drive.
-
-![Toolbox](./assets/toolbox.png)
-
-You can find the documentation for these tools [here](toolbox). To share and browse community-created scenarios, visit our [Scenario Hub](https://github.com/SimonGer/fail2drive_scenario_hub).
-
-## Acknowledgements
-
-This work stands on the shoulders of great open-source projects. We build heavily on [carla_garage](https://github.com/autonomousvision/carla_garage) and [carla_route_generator](https://github.com/autonomousvision/carla_route_generator), and integrate the [CARLA Leaderboard](https://github.com/carla-simulator/leaderboard) and [scenario_runner](https://github.com/carla-simulator/scenario_runner) frameworks.
-
-We also thank the authors of the models evaluated in our benchmark: [SimLingo](https://github.com/RenzKa/simlingo), [HiP-AD](https://github.com/nullmax-vision/HiP-AD), [Orion](https://github.com/xiaomi-mlab/Orion), [PlanT2](https://github.com/autonomousvision/plant2), and [Bench2DriveZoo](https://github.com/Thinklab-SJTU/Bench2DriveZoo).
+Scenario data, catalogs, and documentation: CC BY 4.0. The bundled Fail2Drive harness and the patches in `patches/`: MIT, as upstream. See [LICENSE](LICENSE).
 
 ## Citation
+
+For the scenario families, see [CITATION.cff](CITATION.cff). A paper reference will replace this once the preprint is public.
+
+If you use the bundled harness, please also cite Fail2Drive:
 
 ```bibtex
 @inproceedings{Gerstenecker2026Fail2Drive,
@@ -179,3 +76,7 @@ We also thank the authors of the models evaluated in our benchmark: [SimLingo](h
   note      = {to appear}
 }
 ```
+
+## Contact
+
+Social Chaos Lab - milan@socialchaoslab.com
