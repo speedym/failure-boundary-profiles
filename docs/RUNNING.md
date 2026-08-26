@@ -1,6 +1,6 @@
 # Running the scenario families
 
-The routes are standard CARLA leaderboard route XMLs and run under the public [Fail2Drive](https://github.com/autonomousvision/fail2drive) evaluation harness. Every version below is pinned in [VERSIONS.md](VERSIONS.md).
+The routes are standard CARLA leaderboard route XMLs and run under the [Fail2Drive](https://github.com/autonomousvision/fail2drive) evaluation harness, which is bundled in this repository. Every version below is pinned in [VERSIONS.md](VERSIONS.md).
 
 ## 1. CARLA
 
@@ -12,16 +12,15 @@ ${CARLA_ROOT}/CarlaUE4.sh -RenderOffscreen
 
 ## 2. Fail2Drive harness + patches
 
-Clone the harness at the pinned base commit and apply the two patches from this repository:
+The harness is vendored in this repository and **both patches are already applied** - there is nothing to clone and nothing to `git am`. Set up its Python environment following the bundled upstream README, [README.fail2drive.md](../README.fail2drive.md):
 
 ```bash
-git clone https://github.com/autonomousvision/fail2drive.git
-cd fail2drive
-git checkout 72fea2777424d1c92ebbac79e720e9f6725c2a4d
-git am /path/to/failure-boundary-profiles/patches/*.patch
+conda env create -f environment.yml
+conda activate fail2drive
+source env_vars.sh
 ```
 
-Then follow Fail2Drive's own README for its Python environment and CARLA client setup.
+The patches are retained under `patches/` as a provenance record of the exact deltas against upstream `bceb18a`. Re-applying them will fail; the changes are already in the tree.
 
 The patches matter for reproduction:
 
@@ -41,7 +40,7 @@ Run one route through the harness evaluator (leaderboard-style flags):
 
 ```bash
 python leaderboard/leaderboard/leaderboard_evaluator.py \
-  --routes /path/to/failure-boundary-profiles/scenarios/fm_001_intrusion_sweep/routes/Generalization_PassableObstacles_1060_001_intrusion_sweep_v01.xml \
+  --routes ${WORK_DIR}/scenarios/fm_001_intrusion_sweep/routes/Generalization_PassableObstacles_1060_001_intrusion_sweep_v01.xml \
   --agent <agent entry point> \
   --agent-config <checkpoint dir> \
   --track SENSORS \

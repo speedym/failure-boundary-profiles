@@ -5,7 +5,7 @@ Everything our measurement campaigns ran with. Route XML integrity is verifiable
 | Component | Pin |
 |---|---|
 | CARLA | 0.9.15 (Town13) |
-| Fail2Drive harness | `autonomousvision/fail2drive` @ `72fea2777424d1c92ebbac79e720e9f6725c2a4d` + the two patches in `patches/` (applied in order) |
+| Fail2Drive harness | `autonomousvision/fail2drive` @ `bceb18a`, vendored in this repository with the two patches in `patches/` already applied (in order). Campaigns were run against base `72fea2777424d1c92ebbac79e720e9f6725c2a4d`; the two commits since (`37a1442`, `bceb18a`) touch only README files, no harness code. |
 | LEAD repository (TFv6 sensor agent) | `kesai-labs/lead`, branch `cvpr2026` |
 | TFv6 checkpoints | Hugging Face `ln2697/tfv6`, revision `2b3173e7af78392d4472c53cf2e1c2b003b53105`, variant `tfv6_resnet34` (ResNet-34, 140 deg camera + LiDAR + Radar; three training-seed files, loaded together as an ensemble by the LEAD inference loader) |
 | BridgeDrive code | `shuliu-ethz/BridgeDrive`, overlay applied onto `kesai-labs/lead` @ `156afed46562884be77ec51f2b09aa60b7634c98` |
