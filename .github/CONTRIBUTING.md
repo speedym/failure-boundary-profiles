@@ -1,51 +1,55 @@
-# Contributing to Fail2Drive
+# Contributing to Failure-Boundary Profiles
 
-There are many ways you can contribute to Fail2Drive, and we welcome all ideas for improving generalization research! Your scenarios, bug fixes, and toolbox improvements help strengthen the benchmark for everyone.
-
----
-
-## New Scenarios
-
-Designing additional scenarios increases the diversity and complexity of Fail2Drive, and can support custom use cases. There are two ways to create and share new scenarios:
-
-### 1. Fail2Drive Toolbox *(beginner-friendly)*
-
-You can create new route files and custom obstacle designs using our Toolbox and share them on the [Scenario Hub](https://github.com/SimonGer/fail2drive_scenario_hub). Route contributions are managed through the Scenario Hub rather than pull requests to the main repository.
-
-### 2. Custom Scenario Implementation *(advanced)*
-
-We also welcome completely new scenario implementations in the scenario runner. If you have an idea for a useful scenario, refer to our existing custom scenario implementations to get started. Once your scenario is working, open a pull request to share it with us.
-
-> **Submission checklist for new scenarios:**
-> - Sample images of the scenario
-> - A description of the scenario's concept and intended behavior
-> - Test results with baseline agents
-> - Implementation details explaining how the scenario behavior is implemented
+This repository is the public artifact of a paper: five certified scenario families, plus the [Fail2Drive](https://github.com/autonomousvision/fail2drive) harness they run under, vendored with our two fork patches applied. That shapes what contributions make sense here.
 
 ---
 
-## Toolbox Improvements
+## The scenario data is frozen
 
-Improving the capabilities of the Fail2Drive Toolbox is another valuable way to contribute. This includes:
+Every route XML under `scenarios/*/routes/` is byte-identical to the file used in our measurement campaigns, and `SHA256SUMS` at the repo root exists so anyone can verify that. **Pull requests that modify route XMLs or `variants.csv` will not be merged** - changing them silently invalidates every published number.
 
-- **UI improvements** — enhancing usability and visual clarity
-- **Additional features** — extending what users can build or configure
-- **Bug fixes** — resolving unexpected behavior in existing functionality
+If you believe a variant is wrong, open an issue describing what you observed rather than a PR fixing it. A genuine error is worth a documented correction with new checksums and a note in the paper, not a quiet edit.
 
----
-
-## Bug Fixes
-
-If you encounter a bug, please open an issue describing what you observed and how to reproduce it. If you'd like to go further, we also welcome pull requests with proposed fixes.
+The scenario authoring system that generated these families is not part of this repository, so new families cannot be contributed here either.
 
 ---
 
-## Best Practices
+## What is welcome
 
-We provide issue and pull request templates to help structure your contributions.
+**Reproduction reports.** The most useful contribution: run a family, report what you got. Include the agent, the checkpoint revision, the traffic-manager seeds, and the per-seed outcomes. Divergence from our published profiles is interesting, not unwelcome - CARLA closed-loop runs are not deterministic, and pooling more samples is how these become measurements rather than anecdotes.
+
+**Analysis and scoring tooling.** Boundary-profile fitting and scoring code are planned additions (see the README's scope section). If you have built something that consumes `variants.csv` and a directory of result JSONs, we would like to see it.
+
+**Documentation fixes.** Anything in `docs/` or the READMEs that is wrong, stale, or unclear.
+
+**Harness bugs that affect these families.** See below.
+
+---
+
+## Harness bugs go upstream
+
+The `leaderboard/`, `scenario_runner/`, `team_code/`, `toolbox/`, `tools/`, `assets/` and `fail2drive_split/` directories are vendored Fail2Drive, MIT-licensed, at upstream commit `bceb18a`. A bug in that code is almost certainly an upstream bug: please report it at [autonomousvision/fail2drive](https://github.com/autonomousvision/fail2drive/issues) so every Fail2Drive user gets the fix.
+
+Open an issue *here* as well only if the bug specifically affects running these scenario families - for example, something that interacts with the two patches in `patches/`.
+
+Do not send PRs that re-apply `patches/*.patch`; those changes are already in the tree.
+
+---
+
+## Best practices
 
 When opening a **pull request**, include:
-- A clear description of the changes made
-- Details on how your changes can be tested or verified
 
-When submitting a **scenario**, include the items listed in the [scenario submission checklist](#2-custom-scenario-implementation-advanced) above.
+- A clear description of what changed and why
+- How to verify it - for tooling, a worked example against a real family
+
+When reporting a **run**, include:
+
+- Family and variant IDs, the agent and checkpoint revision, CARLA version
+- Every traffic-manager seed you ran, and the outcome of each - not just the aggregate
+
+---
+
+## Contact
+
+Social Chaos Lab - milan@socialchaoslab.com
