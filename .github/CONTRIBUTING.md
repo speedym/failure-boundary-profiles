@@ -6,7 +6,7 @@ This repository is the public artifact of a paper: five certified scenario famil
 
 ## The scenario data is frozen
 
-Every route XML under `scenarios/*/routes/` is byte-identical to the file used in our measurement campaigns, and `SHA256SUMS` at the repo root exists so anyone can verify that. **Pull requests that modify route XMLs or `variants.csv` will not be merged** - changing them silently invalidates every published number.
+Every route XML under `failure_boundary_profiling_splits/*/routes/` is byte-identical to the file used in our measurement campaigns, and `SHA256SUMS` at the repo root exists so anyone can verify that. **Pull requests that modify route XMLs or `variants.csv` will not be merged** - changing them silently invalidates every published number.
 
 If you believe a variant is wrong, open an issue describing what you observed rather than a PR fixing it. A genuine error is worth a documented correction with new checksums and a note in the paper, not a quiet edit.
 

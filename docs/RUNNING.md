@@ -40,7 +40,7 @@ Run one route through the harness evaluator (leaderboard-style flags):
 
 ```bash
 python leaderboard/leaderboard/leaderboard_evaluator.py \
-  --routes ${WORK_DIR}/scenarios/fm_001_intrusion_sweep/routes/Generalization_PassableObstacles_1060_001_intrusion_sweep_v01.xml \
+  --routes ${WORK_DIR}/failure_boundary_profiling_splits/fm_001_intrusion_sweep/routes/Generalization_PassableObstacles_1060_001_intrusion_sweep_v01.xml \
   --agent <agent entry point> \
   --agent-config <checkpoint dir> \
   --track SENSORS \

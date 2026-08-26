@@ -8,6 +8,8 @@ This repository bundles everything needed to run the families: the scenario data
 
 ## Scenario families
 
+The families live under [`failure_boundary_profiling_splits/`](failure_boundary_profiling_splits), one directory per family - the profiling counterpart to the harness's own `fail2drive_split/`.
+
 All families run in CARLA Town13 under fixed clear weather. Each variant is a standard leaderboard-format route XML.
 
 | Family | Swept factor | Range | Variants |
@@ -18,9 +20,9 @@ All families run in CARLA Town13 under fixed clear weather. Each variant is a st
 | `fm_004_threshold_sweep` | minimum free corridor width (m) | 0.00 to 3.64 | 12 accepted |
 | `fm_005_hero` | maximum route intrusion (m) | 0.00 to 1.09 | 12 accepted |
 
-Each family directory contains:
+Each family directory - for example `failure_boundary_profiling_splits/fm_001_intrusion_sweep/` - contains:
 
-- `routes/` - one route XML per accepted variant, unmodified from the files used in our measurement campaigns (`SHA256SUMS` at the repo root lets you verify byte-identity).
+- `routes/` - one route XML per accepted variant, unmodified from the files used in our measurement campaigns. `SHA256SUMS` at the repo root lets you verify byte-identity: run `sha256sum -c SHA256SUMS` from the repo root.
 - `variants.csv` - the variant catalog: target factor value, and the measured, in-simulator verified geometry of the realized scene (free corridor width, route intrusion, required lateral deviation, closest approach distance).
 
 A variant marked `refused` in `variants.csv` has no route XML: the generation pipeline validates every candidate scene in simulation before accepting it, and candidates that fail validation (for example, obstacle assets that tip over, roll away, or sink under physics) are refused rather than shipped. Refusals are retained in the catalog because they document the certified feasibility boundary of each family.
@@ -35,7 +37,7 @@ Short version, once CARLA 0.9.15 and the conda environment are up:
 source env_vars.sh
 
 python leaderboard/leaderboard/leaderboard_evaluator.py \
-  --routes ${WORK_DIR}/scenarios/fm_001_intrusion_sweep/routes/Generalization_PassableObstacles_1060_001_intrusion_sweep_v01.xml \
+  --routes ${WORK_DIR}/failure_boundary_profiling_splits/fm_001_intrusion_sweep/routes/Generalization_PassableObstacles_1060_001_intrusion_sweep_v01.xml \
   --agent <agent entry point> \
   --agent-config <checkpoint dir> \
   --track SENSORS \
