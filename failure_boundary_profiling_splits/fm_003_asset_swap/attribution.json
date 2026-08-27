@@ -1,0 +1,147 @@
+{
+ "policy": "score_runs.py attribution inputs: blueprint, world x/y, planar half-extent; sources are the countersign sidecar or the spawn-probed registry. A scenario with an empty list has attribution DISABLED (no-fallback contract).",
+ "ego_half_length_m": 2.45,
+ "attrib_slack_m": 1.0,
+ "scenarios": {
+  "Generalization_CustomObstacles_1026_003_asset_swap_v01": [
+   {
+    "blueprint": "static.prop.barbeque",
+    "x": -1193.89,
+    "y": 5809.34,
+    "half_extent": 0.4488,
+    "extent_source": "sidecar",
+    "pose_source": "sidecar"
+   }
+  ],
+  "Generalization_CustomObstacles_1026_003_asset_swap_v03": [
+   {
+    "blueprint": "static.prop.box03",
+    "x": -1193.88,
+    "y": 5809.26,
+    "half_extent": 0.3636,
+    "extent_source": "sidecar",
+    "pose_source": "sidecar"
+   }
+  ],
+  "Generalization_CustomObstacles_1026_003_asset_swap_v05": [
+   {
+    "blueprint": "static.prop.doghouse",
+    "x": -1193.86,
+    "y": 5809.05,
+    "half_extent": 0.6823,
+    "extent_source": "sidecar",
+    "pose_source": "sidecar"
+   }
+  ],
+  "Generalization_CustomObstacles_1026_003_asset_swap_v09": [
+   {
+    "blueprint": "static.prop.ironplank",
+    "x": -1193.86,
+    "y": 5809.0,
+    "half_extent": 0.6698,
+    "extent_source": "sidecar",
+    "pose_source": "sidecar"
+   }
+  ],
+  "Generalization_CustomObstacles_1026_003_asset_swap_v10": [
+   {
+    "blueprint": "static.prop.mailbox",
+    "x": -1193.87,
+    "y": 5809.13,
+    "half_extent": 0.2428,
+    "extent_source": "sidecar",
+    "pose_source": "sidecar"
+   }
+  ],
+  "Generalization_CustomObstacles_1026_003_asset_swap_v12": [
+   {
+    "blueprint": "static.prop.plasticchair",
+    "x": -1193.88,
+    "y": 5809.23,
+    "half_extent": 0.4068,
+    "extent_source": "sidecar",
+    "pose_source": "sidecar"
+   }
+  ],
+  "Generalization_CustomObstacles_1026_003_asset_swap_v13": [
+   {
+    "blueprint": "static.prop.plastictable",
+    "x": -1193.8,
+    "y": 5808.35,
+    "half_extent": 1.3484,
+    "extent_source": "sidecar",
+    "pose_source": "sidecar"
+   }
+  ],
+  "Generalization_CustomObstacles_1026_003_asset_swap_v14": [
+   {
+    "blueprint": "static.prop.slide",
+    "x": -1193.86,
+    "y": 5808.96,
+    "half_extent": 2.0955,
+    "extent_source": "sidecar",
+    "pose_source": "sidecar"
+   }
+  ],
+  "Generalization_CustomObstacles_1026_003_asset_swap_v17": [
+   {
+    "blueprint": "static.prop.streetbarrier",
+    "x": -1193.86,
+    "y": 5808.98,
+    "half_extent": 0.5885,
+    "extent_source": "sidecar",
+    "pose_source": "sidecar"
+   }
+  ],
+  "Generalization_CustomObstacles_1026_003_asset_swap_v18": [
+   {
+    "blueprint": "static.prop.trafficcone01",
+    "x": -1193.87,
+    "y": 5809.15,
+    "half_extent": 0.4793,
+    "extent_source": "sidecar",
+    "pose_source": "sidecar"
+   }
+  ],
+  "Generalization_CustomObstacles_1026_003_asset_swap_v19": [
+   {
+    "blueprint": "static.prop.trafficwarning",
+    "x": -1193.81,
+    "y": 5808.41,
+    "half_extent": 1.5369,
+    "extent_source": "sidecar",
+    "pose_source": "sidecar"
+   }
+  ],
+  "Generalization_CustomObstacles_1026_003_asset_swap_v20": [
+   {
+    "blueprint": "static.prop.trampoline",
+    "x": -1193.73,
+    "y": 5807.53,
+    "half_extent": 2.2444,
+    "extent_source": "sidecar",
+    "pose_source": "sidecar"
+   }
+  ],
+  "Generalization_CustomObstacles_1026_003_asset_swap_v22": [
+   {
+    "blueprint": "static.prop.vendingmachine",
+    "x": -1193.87,
+    "y": 5809.11,
+    "half_extent": 0.5883,
+    "extent_source": "sidecar",
+    "pose_source": "sidecar"
+   }
+  ],
+  "Generalization_CustomObstacles_1026_003_asset_swap_v23": [
+   {
+    "blueprint": "static.prop.bin",
+    "x": -1193.89,
+    "y": 5809.32,
+    "half_extent": 0.3426,
+    "extent_source": "sidecar",
+    "pose_source": "sidecar"
+   }
+  ]
+ }
+}

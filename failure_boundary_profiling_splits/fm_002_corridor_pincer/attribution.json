@@ -1,0 +1,267 @@
+{
+ "policy": "score_runs.py attribution inputs: blueprint, world x/y, planar half-extent; sources are the countersign sidecar or the spawn-probed registry. A scenario with an empty list has attribution DISABLED (no-fallback contract).",
+ "ego_half_length_m": 2.45,
+ "attrib_slack_m": 1.0,
+ "scenarios": {
+  "Generalization_PassableObstacles_1060_002_corridor_pincer_v01": [
+   {
+    "blueprint": "static.prop.vendingmachine",
+    "x": 2430.25,
+    "y": 613.11,
+    "half_extent": 0.5532,
+    "extent_source": "sidecar",
+    "pose_source": "sidecar"
+   },
+   {
+    "blueprint": "static.prop.streetbarrier",
+    "x": 2427.08,
+    "y": 612.34,
+    "half_extent": 0.607,
+    "extent_source": "sidecar",
+    "pose_source": "sidecar"
+   },
+   {
+    "blueprint": "static.prop.streetbarrier",
+    "x": 2427.07,
+    "y": 613.85,
+    "half_extent": 0.607,
+    "extent_source": "sidecar",
+    "pose_source": "sidecar"
+   }
+  ],
+  "Generalization_PassableObstacles_1060_002_corridor_pincer_v02": [
+   {
+    "blueprint": "static.prop.vendingmachine",
+    "x": 2430.2519684173326,
+    "y": 613.1115663176971,
+    "half_extent": 0.5532,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   },
+   {
+    "blueprint": "static.prop.streetbarrier",
+    "x": 2426.999617147387,
+    "y": 612.3377085097713,
+    "half_extent": 0.6075,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   },
+   {
+    "blueprint": "static.prop.streetbarrier",
+    "x": 2426.99240195381,
+    "y": 613.8526913812856,
+    "half_extent": 0.6075,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   }
+  ],
+  "Generalization_PassableObstacles_1060_002_corridor_pincer_v03": [
+   {
+    "blueprint": "static.prop.vendingmachine",
+    "x": 2430.2519684173326,
+    "y": 613.1115663176971,
+    "half_extent": 0.5532,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   },
+   {
+    "blueprint": "static.prop.streetbarrier",
+    "x": 2426.9171181896154,
+    "y": 612.3372938212873,
+    "half_extent": 0.6075,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   },
+   {
+    "blueprint": "static.prop.streetbarrier",
+    "x": 2426.909902996038,
+    "y": 613.8522766928016,
+    "half_extent": 0.6075,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   }
+  ],
+  "Generalization_PassableObstacles_1060_002_corridor_pincer_v04": [
+   {
+    "blueprint": "static.prop.vendingmachine",
+    "x": 2430.2519684173326,
+    "y": 613.1115663176971,
+    "half_extent": 0.5532,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   },
+   {
+    "blueprint": "static.prop.streetbarrier",
+    "x": 2426.83471923058,
+    "y": 612.336879635456,
+    "half_extent": 0.6075,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   },
+   {
+    "blueprint": "static.prop.streetbarrier",
+    "x": 2426.8275040370027,
+    "y": 613.8518625069703,
+    "half_extent": 0.6075,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   }
+  ],
+  "Generalization_PassableObstacles_1060_002_corridor_pincer_v05": [
+   {
+    "blueprint": "static.prop.vendingmachine",
+    "x": 2430.2519684173326,
+    "y": 613.1115663176971,
+    "half_extent": 0.5532,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   },
+   {
+    "blueprint": "static.prop.streetbarrier",
+    "x": 2426.7522202728082,
+    "y": 612.336464946972,
+    "half_extent": 0.6075,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   },
+   {
+    "blueprint": "static.prop.streetbarrier",
+    "x": 2426.745005079231,
+    "y": 613.8514478184863,
+    "half_extent": 0.6075,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   }
+  ],
+  "Generalization_PassableObstacles_1060_002_corridor_pincer_v06": [
+   {
+    "blueprint": "static.prop.vendingmachine",
+    "x": 2430.2519684173326,
+    "y": 613.1115663176971,
+    "half_extent": 0.5532,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   },
+   {
+    "blueprint": "static.prop.streetbarrier",
+    "x": 2426.669821313773,
+    "y": 612.3360507611407,
+    "half_extent": 0.6075,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   },
+   {
+    "blueprint": "static.prop.streetbarrier",
+    "x": 2426.6626061201955,
+    "y": 613.851033632655,
+    "half_extent": 0.6075,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   }
+  ],
+  "Generalization_PassableObstacles_1060_002_corridor_pincer_v07": [
+   {
+    "blueprint": "static.prop.vendingmachine",
+    "x": 2430.2519684173326,
+    "y": 613.1115663176971,
+    "half_extent": 0.5532,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   },
+   {
+    "blueprint": "static.prop.streetbarrier",
+    "x": 2426.5873223560006,
+    "y": 612.3356360726567,
+    "half_extent": 0.6075,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   },
+   {
+    "blueprint": "static.prop.streetbarrier",
+    "x": 2426.5801071624237,
+    "y": 613.8506189441711,
+    "half_extent": 0.6075,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   }
+  ],
+  "Generalization_PassableObstacles_1060_002_corridor_pincer_v08": [
+   {
+    "blueprint": "static.prop.vendingmachine",
+    "x": 2430.2519684173326,
+    "y": 613.1115663176971,
+    "half_extent": 0.5532,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   },
+   {
+    "blueprint": "static.prop.streetbarrier",
+    "x": 2426.5049233969658,
+    "y": 612.3352218868254,
+    "half_extent": 0.6075,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   },
+   {
+    "blueprint": "static.prop.streetbarrier",
+    "x": 2426.4977082033884,
+    "y": 613.8502047583397,
+    "half_extent": 0.6075,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   }
+  ],
+  "Generalization_PassableObstacles_1060_002_corridor_pincer_v09": [
+   {
+    "blueprint": "static.prop.vendingmachine",
+    "x": 2430.2519684173326,
+    "y": 613.1115663176971,
+    "half_extent": 0.5532,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   },
+   {
+    "blueprint": "static.prop.streetbarrier",
+    "x": 2426.4224244391935,
+    "y": 612.3348071983414,
+    "half_extent": 0.6075,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   },
+   {
+    "blueprint": "static.prop.streetbarrier",
+    "x": 2426.415209245616,
+    "y": 613.8497900698558,
+    "half_extent": 0.6075,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   }
+  ],
+  "Generalization_PassableObstacles_1060_002_corridor_pincer_v10": [
+   {
+    "blueprint": "static.prop.vendingmachine",
+    "x": 2430.2519684173326,
+    "y": 613.1115663176971,
+    "half_extent": 0.5532,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   },
+   {
+    "blueprint": "static.prop.streetbarrier",
+    "x": 2426.340025480158,
+    "y": 612.3343930125101,
+    "half_extent": 0.6075,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   },
+   {
+    "blueprint": "static.prop.streetbarrier",
+    "x": 2426.3328102865808,
+    "y": 613.8493758840244,
+    "half_extent": 0.6075,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   }
+  ]
+ }
+}

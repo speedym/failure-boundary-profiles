@@ -1,0 +1,127 @@
+{
+ "policy": "score_runs.py attribution inputs: blueprint, world x/y, planar half-extent; sources are the countersign sidecar or the spawn-probed registry. A scenario with an empty list has attribution DISABLED (no-fallback contract).",
+ "ego_half_length_m": 2.45,
+ "attrib_slack_m": 1.0,
+ "scenarios": {
+  "Generalization_PassableObstacles_1060_001_intrusion_sweep_v01": [
+   {
+    "blueprint": "static.prop.vendingmachine",
+    "x": 2429.1250826535356,
+    "y": 613.105901924332,
+    "half_extent": 0.5532,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   }
+  ],
+  "Generalization_PassableObstacles_1060_001_intrusion_sweep_v02": [
+   {
+    "blueprint": "static.prop.vendingmachine",
+    "x": 2429.107382877141,
+    "y": 613.1058129548027,
+    "half_extent": 0.5532,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   }
+  ],
+  "Generalization_PassableObstacles_1060_001_intrusion_sweep_v03": [
+   {
+    "blueprint": "static.prop.vendingmachine",
+    "x": 2429.0897830994827,
+    "y": 613.1057244879261,
+    "half_extent": 0.5532,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   }
+  ],
+  "Generalization_PassableObstacles_1060_001_intrusion_sweep_v04": [
+   {
+    "blueprint": "static.prop.vendingmachine",
+    "x": 2429.07,
+    "y": 613.11,
+    "half_extent": 0.5532,
+    "extent_source": "sidecar",
+    "pose_source": "sidecar"
+   }
+  ],
+  "Generalization_PassableObstacles_1060_001_intrusion_sweep_v05": [
+   {
+    "blueprint": "static.prop.vendingmachine",
+    "x": 2429.0543835466933,
+    "y": 613.1055465488676,
+    "half_extent": 0.5532,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   }
+  ],
+  "Generalization_PassableObstacles_1060_001_intrusion_sweep_v06": [
+   {
+    "blueprint": "static.prop.vendingmachine",
+    "x": 2429.0366837702986,
+    "y": 613.1054575793382,
+    "half_extent": 0.5532,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   }
+  ],
+  "Generalization_PassableObstacles_1060_001_intrusion_sweep_v07": [
+   {
+    "blueprint": "static.prop.vendingmachine",
+    "x": 2429.019083992641,
+    "y": 613.1053691124616,
+    "half_extent": 0.5532,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   }
+  ],
+  "Generalization_PassableObstacles_1060_001_intrusion_sweep_v08": [
+   {
+    "blueprint": "static.prop.vendingmachine",
+    "x": 2429.001384216246,
+    "y": 613.1052801429323,
+    "half_extent": 0.5532,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   }
+  ],
+  "Generalization_PassableObstacles_1060_001_intrusion_sweep_v09": [
+   {
+    "blueprint": "static.prop.vendingmachine",
+    "x": 2428.9836844398515,
+    "y": 613.105191173403,
+    "half_extent": 0.5532,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   }
+  ],
+  "Generalization_PassableObstacles_1060_001_intrusion_sweep_v10": [
+   {
+    "blueprint": "static.prop.vendingmachine",
+    "x": 2428.9659846634568,
+    "y": 613.1051022038737,
+    "half_extent": 0.5532,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   }
+  ],
+  "Generalization_PassableObstacles_1060_001_intrusion_sweep_v11": [
+   {
+    "blueprint": "static.prop.vendingmachine",
+    "x": 2428.9483848857985,
+    "y": 613.1050137369972,
+    "half_extent": 0.5532,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   }
+  ],
+  "Generalization_PassableObstacles_1060_001_intrusion_sweep_v12": [
+   {
+    "blueprint": "static.prop.vendingmachine",
+    "x": 2428.930685109404,
+    "y": 613.1049247674679,
+    "half_extent": 0.5532,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   }
+  ]
+ }
+}

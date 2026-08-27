@@ -1,0 +1,223 @@
+{
+ "policy": "score_runs.py attribution inputs: blueprint, world x/y, planar half-extent; sources are the countersign sidecar or the spawn-probed registry. A scenario with an empty list has attribution DISABLED (no-fallback contract).",
+ "ego_half_length_m": 2.45,
+ "attrib_slack_m": 1.0,
+ "scenarios": {
+  "Generalization_PassableObstacles_1061_004_threshold_sweep_v01": [
+   {
+    "blueprint": "vehicle.dodge.charger_2020",
+    "x": 3140.1776305952776,
+    "y": 4512.01642686431,
+    "half_extent": 2.5039,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   },
+   {
+    "blueprint": "vehicle.dodge.charger_2020",
+    "x": 3138.2963694047226,
+    "y": 4511.99357313569,
+    "half_extent": 2.5039,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   }
+  ],
+  "Generalization_PassableObstacles_1061_004_threshold_sweep_v02": [
+   {
+    "blueprint": "vehicle.dodge.charger_2020",
+    "x": 3140.6366967229396,
+    "y": 4512.022003640545,
+    "half_extent": 2.5039,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   },
+   {
+    "blueprint": "vehicle.dodge.charger_2020",
+    "x": 3137.8373032770605,
+    "y": 4511.987996359455,
+    "half_extent": 2.5039,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   }
+  ],
+  "Generalization_PassableObstacles_1061_004_threshold_sweep_v03": [
+   {
+    "blueprint": "vehicle.dodge.charger_2020",
+    "x": 3141.095862843224,
+    "y": 4512.0275816315,
+    "half_extent": 2.5039,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   },
+   {
+    "blueprint": "vehicle.dodge.charger_2020",
+    "x": 3137.378137156776,
+    "y": 4511.9824183685005,
+    "half_extent": 2.5039,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   }
+  ],
+  "Generalization_PassableObstacles_1061_004_threshold_sweep_v04": [
+   {
+    "blueprint": "vehicle.dodge.charger_2020",
+    "x": 3141.2144540929316,
+    "y": 4512.0290222885715,
+    "half_extent": 2.5039,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   },
+   {
+    "blueprint": "vehicle.dodge.charger_2020",
+    "x": 3137.2595459070685,
+    "y": 4511.980977711429,
+    "half_extent": 2.5039,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   }
+  ],
+  "Generalization_PassableObstacles_1061_004_threshold_sweep_v05": [
+   {
+    "blueprint": "vehicle.dodge.charger_2020",
+    "x": 3141.3330453426393,
+    "y": 4512.030462945643,
+    "half_extent": 2.5039,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   },
+   {
+    "blueprint": "vehicle.dodge.charger_2020",
+    "x": 3137.140954657361,
+    "y": 4511.979537054357,
+    "half_extent": 2.5039,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   }
+  ],
+  "Generalization_PassableObstacles_1061_004_threshold_sweep_v06": [
+   {
+    "blueprint": "vehicle.dodge.charger_2020",
+    "x": 3141.451536599725,
+    "y": 4512.031902387996,
+    "half_extent": 2.5039,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   },
+   {
+    "blueprint": "vehicle.dodge.charger_2020",
+    "x": 3137.0224634002752,
+    "y": 4511.978097612005,
+    "half_extent": 2.5039,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   }
+  ],
+  "Generalization_PassableObstacles_1061_004_threshold_sweep_v07": [
+   {
+    "blueprint": "vehicle.dodge.charger_2020",
+    "x": 3141.5701278494325,
+    "y": 4512.033343045066,
+    "half_extent": 2.5039,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   },
+   {
+    "blueprint": "vehicle.dodge.charger_2020",
+    "x": 3136.9038721505676,
+    "y": 4511.976656954934,
+    "half_extent": 2.5039,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   }
+  ],
+  "Generalization_PassableObstacles_1061_004_threshold_sweep_v08": [
+   {
+    "blueprint": "vehicle.dodge.charger_2020",
+    "x": 3141.6887190991397,
+    "y": 4512.034783702138,
+    "half_extent": 2.5039,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   },
+   {
+    "blueprint": "vehicle.dodge.charger_2020",
+    "x": 3136.7852809008605,
+    "y": 4511.975216297862,
+    "half_extent": 2.5039,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   }
+  ],
+  "Generalization_PassableObstacles_1061_004_threshold_sweep_v09": [
+   {
+    "blueprint": "vehicle.dodge.charger_2020",
+    "x": 3141.8073103488473,
+    "y": 4512.03622435921,
+    "half_extent": 2.5039,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   },
+   {
+    "blueprint": "vehicle.dodge.charger_2020",
+    "x": 3136.666689651153,
+    "y": 4511.97377564079,
+    "half_extent": 2.5039,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   }
+  ],
+  "Generalization_PassableObstacles_1061_004_threshold_sweep_v10": [
+   {
+    "blueprint": "vehicle.dodge.charger_2020",
+    "x": 3141.925801605933,
+    "y": 4512.037663801562,
+    "half_extent": 2.5039,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   },
+   {
+    "blueprint": "vehicle.dodge.charger_2020",
+    "x": 3136.548198394067,
+    "y": 4511.972336198438,
+    "half_extent": 2.5039,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   }
+  ],
+  "Generalization_PassableObstacles_1061_004_threshold_sweep_v11": [
+   {
+    "blueprint": "vehicle.dodge.charger_2020",
+    "x": 3141.9628988687,
+    "y": 4512.038114462416,
+    "half_extent": 2.5039,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   },
+   {
+    "blueprint": "vehicle.dodge.charger_2020",
+    "x": 3136.5111011313,
+    "y": 4511.971885537584,
+    "half_extent": 2.5039,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   }
+  ],
+  "Generalization_PassableObstacles_1061_004_threshold_sweep_v12": [
+   {
+    "blueprint": "vehicle.dodge.charger_2020",
+    "x": 3141.9998961388446,
+    "y": 4512.038563908552,
+    "half_extent": 2.5039,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   },
+   {
+    "blueprint": "vehicle.dodge.charger_2020",
+    "x": 3136.4741038611555,
+    "y": 4511.971436091449,
+    "half_extent": 2.5039,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   }
+  ]
+ }
+}

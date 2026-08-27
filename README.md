@@ -57,11 +57,11 @@ Do not re-apply the patches; `git am patches/*.patch` against this tree will fai
 
 ## Scope of this release
 
-This release contains the scenario families and everything needed to run them. Planned additions: scoring and analysis tooling, and boundary-profile fitting code. The scenario authoring system that generated these families is not part of this repository.
+This release contains the scenario families, everything needed to run them, and the scoring/curves layer under [`analysis/`](analysis) (stdlib-only; see its README). Planned additions: boundary-profile fitting with uncertainty, figures, and recorder-based trajectory metrics. The scenario authoring system that generated these families is not part of this repository.
 
 ## License
 
-Scenario data, catalogs, and documentation: CC BY 4.0. The bundled Fail2Drive harness and the patches in `patches/`: MIT, as upstream. See [LICENSE](LICENSE).
+Scenario data, catalogs, and documentation: CC BY 4.0. The bundled Fail2Drive harness and the patches in `patches/`: MIT, as upstream. The `analysis/` tools: MIT. See [LICENSE](LICENSE).
 
 ## Citation
 

@@ -1,0 +1,319 @@
+{
+ "policy": "score_runs.py attribution inputs: blueprint, world x/y, planar half-extent; sources are the countersign sidecar or the spawn-probed registry. A scenario with an empty list has attribution DISABLED (no-fallback contract).",
+ "ego_half_length_m": 2.45,
+ "attrib_slack_m": 1.0,
+ "scenarios": {
+  "Generalization_CustomObstacles_1026_005_hero_v01": [
+   {
+    "blueprint": "static.prop.vendingmachine",
+    "x": -1193.8175029123613,
+    "y": 5808.540453211537,
+    "half_extent": 0.5532,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   },
+   {
+    "blueprint": "static.prop.bin",
+    "x": -1192.6333606510154,
+    "y": 5807.8543955573305,
+    "half_extent": 0.3191,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   },
+   {
+    "blueprint": "static.prop.bin",
+    "x": -1193.743470201762,
+    "y": 5806.870400539386,
+    "half_extent": 0.3191,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   }
+  ],
+  "Generalization_CustomObstacles_1026_005_hero_v02": [
+   {
+    "blueprint": "static.prop.vendingmachine",
+    "x": -1193.8264798703015,
+    "y": 5808.639246198262,
+    "half_extent": 0.5532,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   },
+   {
+    "blueprint": "static.prop.bin",
+    "x": -1193.8987540811468,
+    "y": 5806.728365590153,
+    "half_extent": 0.3191,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   },
+   {
+    "blueprint": "static.prop.bin",
+    "x": -1192.46830521546,
+    "y": 5808.061280847271,
+    "half_extent": 0.3191,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   }
+  ],
+  "Generalization_CustomObstacles_1026_005_hero_v03": [
+   {
+    "blueprint": "static.prop.vendingmachine",
+    "x": -1193.8354477788887,
+    "y": 5808.737939595284,
+    "half_extent": 0.5532,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   },
+   {
+    "blueprint": "static.prop.bin",
+    "x": -1192.2471868067944,
+    "y": 5808.771705473357,
+    "half_extent": 0.3191,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   },
+   {
+    "blueprint": "static.prop.bin",
+    "x": -1193.9216620173731,
+    "y": 5806.031232262548,
+    "half_extent": 0.3191,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   }
+  ],
+  "Generalization_CustomObstacles_1026_005_hero_v04": [
+   {
+    "blueprint": "static.prop.vendingmachine",
+    "x": -1193.8444247368286,
+    "y": 5808.836732582009,
+    "half_extent": 0.5532,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   },
+   {
+    "blueprint": "static.prop.bin",
+    "x": -1193.6923318755623,
+    "y": 5806.104284887807,
+    "half_extent": 0.3191,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   },
+   {
+    "blueprint": "static.prop.bin",
+    "x": -1194.8930161590895,
+    "y": 5808.4719451382,
+    "half_extent": 0.3191,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   }
+  ],
+  "Generalization_CustomObstacles_1026_005_hero_v05": [
+   {
+    "blueprint": "static.prop.vendingmachine",
+    "x": -1193.8534016947685,
+    "y": 5808.935525568734,
+    "half_extent": 0.5532,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   },
+   {
+    "blueprint": "static.prop.bin",
+    "x": -1191.1797408633568,
+    "y": 5808.399676001622,
+    "half_extent": 0.3191,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   },
+   {
+    "blueprint": "static.prop.bin",
+    "x": -1193.3663225274809,
+    "y": 5806.725636000273,
+    "half_extent": 0.3191,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   }
+  ],
+  "Generalization_CustomObstacles_1026_005_hero_v06": [
+   {
+    "blueprint": "static.prop.vendingmachine",
+    "x": -1193.86,
+    "y": 5809.03,
+    "half_extent": 0.5884,
+    "extent_source": "sidecar",
+    "pose_source": "sidecar"
+   },
+   {
+    "blueprint": "static.prop.bin",
+    "x": -1193.63,
+    "y": 5807.09,
+    "half_extent": 0.3833,
+    "extent_source": "sidecar",
+    "pose_source": "sidecar"
+   },
+   {
+    "blueprint": "static.prop.bin",
+    "x": -1195.95,
+    "y": 5807.71,
+    "half_extent": 0.4109,
+    "extent_source": "sidecar",
+    "pose_source": "sidecar"
+   }
+  ],
+  "Generalization_CustomObstacles_1026_005_hero_v07": [
+   {
+    "blueprint": "static.prop.vendingmachine",
+    "x": -1193.871346561296,
+    "y": 5809.133011952481,
+    "half_extent": 0.5532,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   },
+   {
+    "blueprint": "static.prop.bin",
+    "x": -1196.2114813766802,
+    "y": 5808.847172109517,
+    "half_extent": 0.3191,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   },
+   {
+    "blueprint": "static.prop.bin",
+    "x": -1193.6947697963537,
+    "y": 5807.540055174636,
+    "half_extent": 0.3191,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   }
+  ],
+  "Generalization_CustomObstacles_1026_005_hero_v08": [
+   {
+    "blueprint": "static.prop.vendingmachine",
+    "x": -1193.8803235192358,
+    "y": 5809.231804939207,
+    "half_extent": 0.5532,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   },
+   {
+    "blueprint": "static.prop.bin",
+    "x": -1193.4124585602322,
+    "y": 5806.321703671186,
+    "half_extent": 0.3191,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   },
+   {
+    "blueprint": "static.prop.bin",
+    "x": -1191.7789802051927,
+    "y": 5808.795071008161,
+    "half_extent": 0.3191,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   }
+  ],
+  "Generalization_CustomObstacles_1026_005_hero_v09": [
+   {
+    "blueprint": "static.prop.vendingmachine",
+    "x": -1193.8893004771758,
+    "y": 5809.330597925932,
+    "half_extent": 0.5532,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   },
+   {
+    "blueprint": "static.prop.bin",
+    "x": -1195.1461257869069,
+    "y": 5808.49925239559,
+    "half_extent": 0.3191,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   },
+   {
+    "blueprint": "static.prop.bin",
+    "x": -1193.8355063408826,
+    "y": 5806.288685111452,
+    "half_extent": 0.3191,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   }
+  ],
+  "Generalization_CustomObstacles_1026_005_hero_v10": [
+   {
+    "blueprint": "static.prop.vendingmachine",
+    "x": -1193.898277435116,
+    "y": 5809.429390912657,
+    "half_extent": 0.5532,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   },
+   {
+    "blueprint": "static.prop.bin",
+    "x": -1193.3707526736237,
+    "y": 5807.510354767606,
+    "half_extent": 0.3191,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   },
+   {
+    "blueprint": "static.prop.bin",
+    "x": -1192.741946294305,
+    "y": 5809.418486657002,
+    "half_extent": 0.3191,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   }
+  ],
+  "Generalization_CustomObstacles_1026_005_hero_v11": [
+   {
+    "blueprint": "static.prop.vendingmachine",
+    "x": -1193.9072453437032,
+    "y": 5809.528084309679,
+    "half_extent": 0.5532,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   },
+   {
+    "blueprint": "static.prop.bin",
+    "x": -1195.005275568505,
+    "y": 5809.4421671669115,
+    "half_extent": 0.3191,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   },
+   {
+    "blueprint": "static.prop.bin",
+    "x": -1193.3014147312758,
+    "y": 5807.216925475014,
+    "half_extent": 0.3191,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   }
+  ],
+  "Generalization_CustomObstacles_1026_005_hero_v12": [
+   {
+    "blueprint": "static.prop.vendingmachine",
+    "x": -1193.916222301643,
+    "y": 5809.626877296404,
+    "half_extent": 0.5532,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   },
+   {
+    "blueprint": "static.prop.bin",
+    "x": -1194.0003456935735,
+    "y": 5806.480555452579,
+    "half_extent": 0.3191,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   },
+   {
+    "blueprint": "static.prop.bin",
+    "x": -1195.2748537393004,
+    "y": 5808.6130703391345,
+    "half_extent": 0.3191,
+    "extent_source": "registry",
+    "pose_source": "xml+anchor"
+   }
+  ]
+ }
+}
