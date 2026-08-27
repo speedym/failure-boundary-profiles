@@ -57,7 +57,7 @@ Do not re-apply the patches; `git am patches/*.patch` against this tree will fai
 
 ## Scope of this release
 
-This release contains the scenario families, everything needed to run them, and the scoring/curves layer under [`analysis/`](analysis) (stdlib-only; see its README). Planned additions: boundary-profile fitting with uncertainty, figures, and recorder-based trajectory metrics. The scenario authoring system that generated these families is not part of this repository.
+This release contains the scenario families, everything needed to run them, and the scoring, curves, boundary-fitting, and figures layers under [`analysis/`](analysis) (see its README; scoring and curves are stdlib-only, fitting needs numpy, figures matplotlib). Planned additions: recorder-based trajectory metrics. The scenario authoring system that generated these families is not part of this repository.
 
 ## License
 

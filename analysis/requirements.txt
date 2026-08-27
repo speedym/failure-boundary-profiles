@@ -1,0 +1,2 @@
+numpy>=1.24        # boundary_stats (seeded bootstrap RNG is part of the method)
+matplotlib>=3.7    # figures only; score_runs and curves are stdlib-only
