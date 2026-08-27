@@ -10,7 +10,12 @@
     "y": 613.105901924332,
     "half_extent": 0.5532,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     0.4347,
+     0.5532
+    ],
+    "yaw": null
    }
   ],
   "Generalization_PassableObstacles_1060_001_intrusion_sweep_v02": [
@@ -20,7 +25,12 @@
     "y": 613.1058129548027,
     "half_extent": 0.5532,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     0.4347,
+     0.5532
+    ],
+    "yaw": null
    }
   ],
   "Generalization_PassableObstacles_1060_001_intrusion_sweep_v03": [
@@ -30,7 +40,12 @@
     "y": 613.1057244879261,
     "half_extent": 0.5532,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     0.4347,
+     0.5532
+    ],
+    "yaw": null
    }
   ],
   "Generalization_PassableObstacles_1060_001_intrusion_sweep_v04": [
@@ -40,7 +55,12 @@
     "y": 613.11,
     "half_extent": 0.5532,
     "extent_source": "sidecar",
-    "pose_source": "sidecar"
+    "pose_source": "sidecar",
+    "half_extents": [
+     0.4347,
+     0.5532
+    ],
+    "yaw": 0.29
    }
   ],
   "Generalization_PassableObstacles_1060_001_intrusion_sweep_v05": [
@@ -50,7 +70,12 @@
     "y": 613.1055465488676,
     "half_extent": 0.5532,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     0.4347,
+     0.5532
+    ],
+    "yaw": null
    }
   ],
   "Generalization_PassableObstacles_1060_001_intrusion_sweep_v06": [
@@ -60,7 +85,12 @@
     "y": 613.1054575793382,
     "half_extent": 0.5532,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     0.4347,
+     0.5532
+    ],
+    "yaw": null
    }
   ],
   "Generalization_PassableObstacles_1060_001_intrusion_sweep_v07": [
@@ -70,7 +100,12 @@
     "y": 613.1053691124616,
     "half_extent": 0.5532,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     0.4347,
+     0.5532
+    ],
+    "yaw": null
    }
   ],
   "Generalization_PassableObstacles_1060_001_intrusion_sweep_v08": [
@@ -80,7 +115,12 @@
     "y": 613.1052801429323,
     "half_extent": 0.5532,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     0.4347,
+     0.5532
+    ],
+    "yaw": null
    }
   ],
   "Generalization_PassableObstacles_1060_001_intrusion_sweep_v09": [
@@ -90,7 +130,12 @@
     "y": 613.105191173403,
     "half_extent": 0.5532,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     0.4347,
+     0.5532
+    ],
+    "yaw": null
    }
   ],
   "Generalization_PassableObstacles_1060_001_intrusion_sweep_v10": [
@@ -100,7 +145,12 @@
     "y": 613.1051022038737,
     "half_extent": 0.5532,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     0.4347,
+     0.5532
+    ],
+    "yaw": null
    }
   ],
   "Generalization_PassableObstacles_1060_001_intrusion_sweep_v11": [
@@ -110,7 +160,12 @@
     "y": 613.1050137369972,
     "half_extent": 0.5532,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     0.4347,
+     0.5532
+    ],
+    "yaw": null
    }
   ],
   "Generalization_PassableObstacles_1060_001_intrusion_sweep_v12": [
@@ -120,7 +175,12 @@
     "y": 613.1049247674679,
     "half_extent": 0.5532,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     0.4347,
+     0.5532
+    ],
+    "yaw": null
    }
   ]
  }

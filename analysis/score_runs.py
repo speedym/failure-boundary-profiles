@@ -95,6 +95,8 @@ class PlacedObject:
     half_extent: float
     extent_source: str
     pose_source: str
+    half_extents: list | None = None   # (hx, hy) pair, for trajectory metrics
+    yaw: float | None = None           # sidecar spawned yaw, when known
 
 
 @dataclass
@@ -160,6 +162,7 @@ def load_catalogs(splits_dir: Path):
                     "index": int(row["index"]) if row.get("index") else None,
                     "target": row.get("target"),
                     "assigned_family": row.get("assigned_family") or None,
+                    "route_id": row.get("route_id"),
                     "measured": measured,
                 })
         attr = fam_dir / "attribution.json"

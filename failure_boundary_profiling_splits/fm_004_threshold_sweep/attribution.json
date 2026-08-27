@@ -10,7 +10,12 @@
     "y": 4512.01642686431,
     "half_extent": 2.5039,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     2.5039,
+     0.9408
+    ],
+    "yaw": null
    },
    {
     "blueprint": "vehicle.dodge.charger_2020",
@@ -18,7 +23,12 @@
     "y": 4511.99357313569,
     "half_extent": 2.5039,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     2.5039,
+     0.9408
+    ],
+    "yaw": null
    }
   ],
   "Generalization_PassableObstacles_1061_004_threshold_sweep_v02": [
@@ -28,7 +38,12 @@
     "y": 4512.022003640545,
     "half_extent": 2.5039,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     2.5039,
+     0.9408
+    ],
+    "yaw": null
    },
    {
     "blueprint": "vehicle.dodge.charger_2020",
@@ -36,7 +51,12 @@
     "y": 4511.987996359455,
     "half_extent": 2.5039,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     2.5039,
+     0.9408
+    ],
+    "yaw": null
    }
   ],
   "Generalization_PassableObstacles_1061_004_threshold_sweep_v03": [
@@ -46,7 +66,12 @@
     "y": 4512.0275816315,
     "half_extent": 2.5039,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     2.5039,
+     0.9408
+    ],
+    "yaw": null
    },
    {
     "blueprint": "vehicle.dodge.charger_2020",
@@ -54,7 +79,12 @@
     "y": 4511.9824183685005,
     "half_extent": 2.5039,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     2.5039,
+     0.9408
+    ],
+    "yaw": null
    }
   ],
   "Generalization_PassableObstacles_1061_004_threshold_sweep_v04": [
@@ -64,7 +94,12 @@
     "y": 4512.0290222885715,
     "half_extent": 2.5039,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     2.5039,
+     0.9408
+    ],
+    "yaw": null
    },
    {
     "blueprint": "vehicle.dodge.charger_2020",
@@ -72,7 +107,12 @@
     "y": 4511.980977711429,
     "half_extent": 2.5039,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     2.5039,
+     0.9408
+    ],
+    "yaw": null
    }
   ],
   "Generalization_PassableObstacles_1061_004_threshold_sweep_v05": [
@@ -82,7 +122,12 @@
     "y": 4512.030462945643,
     "half_extent": 2.5039,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     2.5039,
+     0.9408
+    ],
+    "yaw": null
    },
    {
     "blueprint": "vehicle.dodge.charger_2020",
@@ -90,7 +135,12 @@
     "y": 4511.979537054357,
     "half_extent": 2.5039,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     2.5039,
+     0.9408
+    ],
+    "yaw": null
    }
   ],
   "Generalization_PassableObstacles_1061_004_threshold_sweep_v06": [
@@ -100,7 +150,12 @@
     "y": 4512.031902387996,
     "half_extent": 2.5039,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     2.5039,
+     0.9408
+    ],
+    "yaw": null
    },
    {
     "blueprint": "vehicle.dodge.charger_2020",
@@ -108,7 +163,12 @@
     "y": 4511.978097612005,
     "half_extent": 2.5039,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     2.5039,
+     0.9408
+    ],
+    "yaw": null
    }
   ],
   "Generalization_PassableObstacles_1061_004_threshold_sweep_v07": [
@@ -118,7 +178,12 @@
     "y": 4512.033343045066,
     "half_extent": 2.5039,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     2.5039,
+     0.9408
+    ],
+    "yaw": null
    },
    {
     "blueprint": "vehicle.dodge.charger_2020",
@@ -126,7 +191,12 @@
     "y": 4511.976656954934,
     "half_extent": 2.5039,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     2.5039,
+     0.9408
+    ],
+    "yaw": null
    }
   ],
   "Generalization_PassableObstacles_1061_004_threshold_sweep_v08": [
@@ -136,7 +206,12 @@
     "y": 4512.034783702138,
     "half_extent": 2.5039,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     2.5039,
+     0.9408
+    ],
+    "yaw": null
    },
    {
     "blueprint": "vehicle.dodge.charger_2020",
@@ -144,7 +219,12 @@
     "y": 4511.975216297862,
     "half_extent": 2.5039,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     2.5039,
+     0.9408
+    ],
+    "yaw": null
    }
   ],
   "Generalization_PassableObstacles_1061_004_threshold_sweep_v09": [
@@ -154,7 +234,12 @@
     "y": 4512.03622435921,
     "half_extent": 2.5039,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     2.5039,
+     0.9408
+    ],
+    "yaw": null
    },
    {
     "blueprint": "vehicle.dodge.charger_2020",
@@ -162,7 +247,12 @@
     "y": 4511.97377564079,
     "half_extent": 2.5039,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     2.5039,
+     0.9408
+    ],
+    "yaw": null
    }
   ],
   "Generalization_PassableObstacles_1061_004_threshold_sweep_v10": [
@@ -172,7 +262,12 @@
     "y": 4512.037663801562,
     "half_extent": 2.5039,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     2.5039,
+     0.9408
+    ],
+    "yaw": null
    },
    {
     "blueprint": "vehicle.dodge.charger_2020",
@@ -180,7 +275,12 @@
     "y": 4511.972336198438,
     "half_extent": 2.5039,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     2.5039,
+     0.9408
+    ],
+    "yaw": null
    }
   ],
   "Generalization_PassableObstacles_1061_004_threshold_sweep_v11": [
@@ -190,7 +290,12 @@
     "y": 4512.038114462416,
     "half_extent": 2.5039,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     2.5039,
+     0.9408
+    ],
+    "yaw": null
    },
    {
     "blueprint": "vehicle.dodge.charger_2020",
@@ -198,7 +303,12 @@
     "y": 4511.971885537584,
     "half_extent": 2.5039,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     2.5039,
+     0.9408
+    ],
+    "yaw": null
    }
   ],
   "Generalization_PassableObstacles_1061_004_threshold_sweep_v12": [
@@ -208,7 +318,12 @@
     "y": 4512.038563908552,
     "half_extent": 2.5039,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     2.5039,
+     0.9408
+    ],
+    "yaw": null
    },
    {
     "blueprint": "vehicle.dodge.charger_2020",
@@ -216,7 +331,12 @@
     "y": 4511.971436091449,
     "half_extent": 2.5039,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     2.5039,
+     0.9408
+    ],
+    "yaw": null
    }
   ]
  }

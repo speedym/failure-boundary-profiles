@@ -10,7 +10,12 @@
     "y": 5808.540453211537,
     "half_extent": 0.5532,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     0.4347,
+     0.5532
+    ],
+    "yaw": null
    },
    {
     "blueprint": "static.prop.bin",
@@ -18,7 +23,12 @@
     "y": 5807.8543955573305,
     "half_extent": 0.3191,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     0.2741,
+     0.3191
+    ],
+    "yaw": null
    },
    {
     "blueprint": "static.prop.bin",
@@ -26,7 +36,12 @@
     "y": 5806.870400539386,
     "half_extent": 0.3191,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     0.2741,
+     0.3191
+    ],
+    "yaw": null
    }
   ],
   "Generalization_CustomObstacles_1026_005_hero_v02": [
@@ -36,7 +51,12 @@
     "y": 5808.639246198262,
     "half_extent": 0.5532,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     0.4347,
+     0.5532
+    ],
+    "yaw": null
    },
    {
     "blueprint": "static.prop.bin",
@@ -44,7 +64,12 @@
     "y": 5806.728365590153,
     "half_extent": 0.3191,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     0.2741,
+     0.3191
+    ],
+    "yaw": null
    },
    {
     "blueprint": "static.prop.bin",
@@ -52,7 +77,12 @@
     "y": 5808.061280847271,
     "half_extent": 0.3191,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     0.2741,
+     0.3191
+    ],
+    "yaw": null
    }
   ],
   "Generalization_CustomObstacles_1026_005_hero_v03": [
@@ -62,7 +92,12 @@
     "y": 5808.737939595284,
     "half_extent": 0.5532,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     0.4347,
+     0.5532
+    ],
+    "yaw": null
    },
    {
     "blueprint": "static.prop.bin",
@@ -70,7 +105,12 @@
     "y": 5808.771705473357,
     "half_extent": 0.3191,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     0.2741,
+     0.3191
+    ],
+    "yaw": null
    },
    {
     "blueprint": "static.prop.bin",
@@ -78,7 +118,12 @@
     "y": 5806.031232262548,
     "half_extent": 0.3191,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     0.2741,
+     0.3191
+    ],
+    "yaw": null
    }
   ],
   "Generalization_CustomObstacles_1026_005_hero_v04": [
@@ -88,7 +133,12 @@
     "y": 5808.836732582009,
     "half_extent": 0.5532,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     0.4347,
+     0.5532
+    ],
+    "yaw": null
    },
    {
     "blueprint": "static.prop.bin",
@@ -96,7 +146,12 @@
     "y": 5806.104284887807,
     "half_extent": 0.3191,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     0.2741,
+     0.3191
+    ],
+    "yaw": null
    },
    {
     "blueprint": "static.prop.bin",
@@ -104,7 +159,12 @@
     "y": 5808.4719451382,
     "half_extent": 0.3191,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     0.2741,
+     0.3191
+    ],
+    "yaw": null
    }
   ],
   "Generalization_CustomObstacles_1026_005_hero_v05": [
@@ -114,7 +174,12 @@
     "y": 5808.935525568734,
     "half_extent": 0.5532,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     0.4347,
+     0.5532
+    ],
+    "yaw": null
    },
    {
     "blueprint": "static.prop.bin",
@@ -122,7 +187,12 @@
     "y": 5808.399676001622,
     "half_extent": 0.3191,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     0.2741,
+     0.3191
+    ],
+    "yaw": null
    },
    {
     "blueprint": "static.prop.bin",
@@ -130,7 +200,12 @@
     "y": 5806.725636000273,
     "half_extent": 0.3191,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     0.2741,
+     0.3191
+    ],
+    "yaw": null
    }
   ],
   "Generalization_CustomObstacles_1026_005_hero_v06": [
@@ -140,7 +215,12 @@
     "y": 5809.03,
     "half_extent": 0.5884,
     "extent_source": "sidecar",
-    "pose_source": "sidecar"
+    "pose_source": "sidecar",
+    "half_extents": [
+     0.3856,
+     0.5884
+    ],
+    "yaw": -174.81
    },
    {
     "blueprint": "static.prop.bin",
@@ -148,7 +228,12 @@
     "y": 5807.09,
     "half_extent": 0.3833,
     "extent_source": "sidecar",
-    "pose_source": "sidecar"
+    "pose_source": "sidecar",
+    "half_extents": [
+     0.3833,
+     0.1738
+    ],
+    "yaw": 155.1
    },
    {
     "blueprint": "static.prop.bin",
@@ -156,7 +241,12 @@
     "y": 5807.71,
     "half_extent": 0.4109,
     "extent_source": "sidecar",
-    "pose_source": "sidecar"
+    "pose_source": "sidecar",
+    "half_extents": [
+     0.0909,
+     0.4109
+    ],
+    "yaw": -126.82
    }
   ],
   "Generalization_CustomObstacles_1026_005_hero_v07": [
@@ -166,7 +256,12 @@
     "y": 5809.133011952481,
     "half_extent": 0.5532,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     0.4347,
+     0.5532
+    ],
+    "yaw": null
    },
    {
     "blueprint": "static.prop.bin",
@@ -174,7 +269,12 @@
     "y": 5808.847172109517,
     "half_extent": 0.3191,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     0.2741,
+     0.3191
+    ],
+    "yaw": null
    },
    {
     "blueprint": "static.prop.bin",
@@ -182,7 +282,12 @@
     "y": 5807.540055174636,
     "half_extent": 0.3191,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     0.2741,
+     0.3191
+    ],
+    "yaw": null
    }
   ],
   "Generalization_CustomObstacles_1026_005_hero_v08": [
@@ -192,7 +297,12 @@
     "y": 5809.231804939207,
     "half_extent": 0.5532,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     0.4347,
+     0.5532
+    ],
+    "yaw": null
    },
    {
     "blueprint": "static.prop.bin",
@@ -200,7 +310,12 @@
     "y": 5806.321703671186,
     "half_extent": 0.3191,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     0.2741,
+     0.3191
+    ],
+    "yaw": null
    },
    {
     "blueprint": "static.prop.bin",
@@ -208,7 +323,12 @@
     "y": 5808.795071008161,
     "half_extent": 0.3191,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     0.2741,
+     0.3191
+    ],
+    "yaw": null
    }
   ],
   "Generalization_CustomObstacles_1026_005_hero_v09": [
@@ -218,7 +338,12 @@
     "y": 5809.330597925932,
     "half_extent": 0.5532,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     0.4347,
+     0.5532
+    ],
+    "yaw": null
    },
    {
     "blueprint": "static.prop.bin",
@@ -226,7 +351,12 @@
     "y": 5808.49925239559,
     "half_extent": 0.3191,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     0.2741,
+     0.3191
+    ],
+    "yaw": null
    },
    {
     "blueprint": "static.prop.bin",
@@ -234,7 +364,12 @@
     "y": 5806.288685111452,
     "half_extent": 0.3191,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     0.2741,
+     0.3191
+    ],
+    "yaw": null
    }
   ],
   "Generalization_CustomObstacles_1026_005_hero_v10": [
@@ -244,7 +379,12 @@
     "y": 5809.429390912657,
     "half_extent": 0.5532,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     0.4347,
+     0.5532
+    ],
+    "yaw": null
    },
    {
     "blueprint": "static.prop.bin",
@@ -252,7 +392,12 @@
     "y": 5807.510354767606,
     "half_extent": 0.3191,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     0.2741,
+     0.3191
+    ],
+    "yaw": null
    },
    {
     "blueprint": "static.prop.bin",
@@ -260,7 +405,12 @@
     "y": 5809.418486657002,
     "half_extent": 0.3191,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     0.2741,
+     0.3191
+    ],
+    "yaw": null
    }
   ],
   "Generalization_CustomObstacles_1026_005_hero_v11": [
@@ -270,7 +420,12 @@
     "y": 5809.528084309679,
     "half_extent": 0.5532,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     0.4347,
+     0.5532
+    ],
+    "yaw": null
    },
    {
     "blueprint": "static.prop.bin",
@@ -278,7 +433,12 @@
     "y": 5809.4421671669115,
     "half_extent": 0.3191,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     0.2741,
+     0.3191
+    ],
+    "yaw": null
    },
    {
     "blueprint": "static.prop.bin",
@@ -286,7 +446,12 @@
     "y": 5807.216925475014,
     "half_extent": 0.3191,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     0.2741,
+     0.3191
+    ],
+    "yaw": null
    }
   ],
   "Generalization_CustomObstacles_1026_005_hero_v12": [
@@ -296,7 +461,12 @@
     "y": 5809.626877296404,
     "half_extent": 0.5532,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     0.4347,
+     0.5532
+    ],
+    "yaw": null
    },
    {
     "blueprint": "static.prop.bin",
@@ -304,7 +474,12 @@
     "y": 5806.480555452579,
     "half_extent": 0.3191,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     0.2741,
+     0.3191
+    ],
+    "yaw": null
    },
    {
     "blueprint": "static.prop.bin",
@@ -312,7 +487,12 @@
     "y": 5808.6130703391345,
     "half_extent": 0.3191,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     0.2741,
+     0.3191
+    ],
+    "yaw": null
    }
   ]
  }

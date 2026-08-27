@@ -10,7 +10,12 @@
     "y": 613.11,
     "half_extent": 0.5532,
     "extent_source": "sidecar",
-    "pose_source": "sidecar"
+    "pose_source": "sidecar",
+    "half_extents": [
+     0.4347,
+     0.5532
+    ],
+    "yaw": 0.29
    },
    {
     "blueprint": "static.prop.streetbarrier",
@@ -18,7 +23,12 @@
     "y": 612.34,
     "half_extent": 0.607,
     "extent_source": "sidecar",
-    "pose_source": "sidecar"
+    "pose_source": "sidecar",
+    "half_extents": [
+     0.1889,
+     0.607
+    ],
+    "yaw": 90.29
    },
    {
     "blueprint": "static.prop.streetbarrier",
@@ -26,7 +36,12 @@
     "y": 613.85,
     "half_extent": 0.607,
     "extent_source": "sidecar",
-    "pose_source": "sidecar"
+    "pose_source": "sidecar",
+    "half_extents": [
+     0.1889,
+     0.607
+    ],
+    "yaw": 90.29
    }
   ],
   "Generalization_PassableObstacles_1060_002_corridor_pincer_v02": [
@@ -36,7 +51,12 @@
     "y": 613.1115663176971,
     "half_extent": 0.5532,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     0.4347,
+     0.5532
+    ],
+    "yaw": null
    },
    {
     "blueprint": "static.prop.streetbarrier",
@@ -44,7 +64,12 @@
     "y": 612.3377085097713,
     "half_extent": 0.6075,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     0.6075,
+     0.1858
+    ],
+    "yaw": null
    },
    {
     "blueprint": "static.prop.streetbarrier",
@@ -52,7 +77,12 @@
     "y": 613.8526913812856,
     "half_extent": 0.6075,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     0.6075,
+     0.1858
+    ],
+    "yaw": null
    }
   ],
   "Generalization_PassableObstacles_1060_002_corridor_pincer_v03": [
@@ -62,7 +92,12 @@
     "y": 613.1115663176971,
     "half_extent": 0.5532,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     0.4347,
+     0.5532
+    ],
+    "yaw": null
    },
    {
     "blueprint": "static.prop.streetbarrier",
@@ -70,7 +105,12 @@
     "y": 612.3372938212873,
     "half_extent": 0.6075,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     0.6075,
+     0.1858
+    ],
+    "yaw": null
    },
    {
     "blueprint": "static.prop.streetbarrier",
@@ -78,7 +118,12 @@
     "y": 613.8522766928016,
     "half_extent": 0.6075,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     0.6075,
+     0.1858
+    ],
+    "yaw": null
    }
   ],
   "Generalization_PassableObstacles_1060_002_corridor_pincer_v04": [
@@ -88,7 +133,12 @@
     "y": 613.1115663176971,
     "half_extent": 0.5532,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     0.4347,
+     0.5532
+    ],
+    "yaw": null
    },
    {
     "blueprint": "static.prop.streetbarrier",
@@ -96,7 +146,12 @@
     "y": 612.336879635456,
     "half_extent": 0.6075,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     0.6075,
+     0.1858
+    ],
+    "yaw": null
    },
    {
     "blueprint": "static.prop.streetbarrier",
@@ -104,7 +159,12 @@
     "y": 613.8518625069703,
     "half_extent": 0.6075,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     0.6075,
+     0.1858
+    ],
+    "yaw": null
    }
   ],
   "Generalization_PassableObstacles_1060_002_corridor_pincer_v05": [
@@ -114,7 +174,12 @@
     "y": 613.1115663176971,
     "half_extent": 0.5532,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     0.4347,
+     0.5532
+    ],
+    "yaw": null
    },
    {
     "blueprint": "static.prop.streetbarrier",
@@ -122,7 +187,12 @@
     "y": 612.336464946972,
     "half_extent": 0.6075,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     0.6075,
+     0.1858
+    ],
+    "yaw": null
    },
    {
     "blueprint": "static.prop.streetbarrier",
@@ -130,7 +200,12 @@
     "y": 613.8514478184863,
     "half_extent": 0.6075,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     0.6075,
+     0.1858
+    ],
+    "yaw": null
    }
   ],
   "Generalization_PassableObstacles_1060_002_corridor_pincer_v06": [
@@ -140,7 +215,12 @@
     "y": 613.1115663176971,
     "half_extent": 0.5532,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     0.4347,
+     0.5532
+    ],
+    "yaw": null
    },
    {
     "blueprint": "static.prop.streetbarrier",
@@ -148,7 +228,12 @@
     "y": 612.3360507611407,
     "half_extent": 0.6075,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     0.6075,
+     0.1858
+    ],
+    "yaw": null
    },
    {
     "blueprint": "static.prop.streetbarrier",
@@ -156,7 +241,12 @@
     "y": 613.851033632655,
     "half_extent": 0.6075,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     0.6075,
+     0.1858
+    ],
+    "yaw": null
    }
   ],
   "Generalization_PassableObstacles_1060_002_corridor_pincer_v07": [
@@ -166,7 +256,12 @@
     "y": 613.1115663176971,
     "half_extent": 0.5532,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     0.4347,
+     0.5532
+    ],
+    "yaw": null
    },
    {
     "blueprint": "static.prop.streetbarrier",
@@ -174,7 +269,12 @@
     "y": 612.3356360726567,
     "half_extent": 0.6075,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     0.6075,
+     0.1858
+    ],
+    "yaw": null
    },
    {
     "blueprint": "static.prop.streetbarrier",
@@ -182,7 +282,12 @@
     "y": 613.8506189441711,
     "half_extent": 0.6075,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     0.6075,
+     0.1858
+    ],
+    "yaw": null
    }
   ],
   "Generalization_PassableObstacles_1060_002_corridor_pincer_v08": [
@@ -192,7 +297,12 @@
     "y": 613.1115663176971,
     "half_extent": 0.5532,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     0.4347,
+     0.5532
+    ],
+    "yaw": null
    },
    {
     "blueprint": "static.prop.streetbarrier",
@@ -200,7 +310,12 @@
     "y": 612.3352218868254,
     "half_extent": 0.6075,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     0.6075,
+     0.1858
+    ],
+    "yaw": null
    },
    {
     "blueprint": "static.prop.streetbarrier",
@@ -208,7 +323,12 @@
     "y": 613.8502047583397,
     "half_extent": 0.6075,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     0.6075,
+     0.1858
+    ],
+    "yaw": null
    }
   ],
   "Generalization_PassableObstacles_1060_002_corridor_pincer_v09": [
@@ -218,7 +338,12 @@
     "y": 613.1115663176971,
     "half_extent": 0.5532,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     0.4347,
+     0.5532
+    ],
+    "yaw": null
    },
    {
     "blueprint": "static.prop.streetbarrier",
@@ -226,7 +351,12 @@
     "y": 612.3348071983414,
     "half_extent": 0.6075,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     0.6075,
+     0.1858
+    ],
+    "yaw": null
    },
    {
     "blueprint": "static.prop.streetbarrier",
@@ -234,7 +364,12 @@
     "y": 613.8497900698558,
     "half_extent": 0.6075,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     0.6075,
+     0.1858
+    ],
+    "yaw": null
    }
   ],
   "Generalization_PassableObstacles_1060_002_corridor_pincer_v10": [
@@ -244,7 +379,12 @@
     "y": 613.1115663176971,
     "half_extent": 0.5532,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     0.4347,
+     0.5532
+    ],
+    "yaw": null
    },
    {
     "blueprint": "static.prop.streetbarrier",
@@ -252,7 +392,12 @@
     "y": 612.3343930125101,
     "half_extent": 0.6075,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     0.6075,
+     0.1858
+    ],
+    "yaw": null
    },
    {
     "blueprint": "static.prop.streetbarrier",
@@ -260,7 +405,12 @@
     "y": 613.8493758840244,
     "half_extent": 0.6075,
     "extent_source": "registry",
-    "pose_source": "xml+anchor"
+    "pose_source": "xml+anchor",
+    "half_extents": [
+     0.6075,
+     0.1858
+    ],
+    "yaw": null
    }
   ]
  }
