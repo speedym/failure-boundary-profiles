@@ -489,7 +489,7 @@ def main() -> int:
     ap.add_argument("--quiet", action="store_true")
     args = ap.parse_args()
 
-    variants, _ = load_catalogs(args.splits)
+    variants, _, _ = load_catalogs(args.splits)
     rid_to_sid = {}
     for sid, (family, var) in variants.items():
         if var.get("route_id"):
