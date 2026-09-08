@@ -71,6 +71,10 @@ repeats this block so no table circulates without its policy provenance.
                                              correct_stop (blockage)
 - A row is ONE RUN - a sample, never "the" value for a (variant, seed):
   same-seed outcomes can bifurcate run-to-run. Aggregations report n.
+- stop_infraction_count is RECORDED per row but is NOT coded into either
+  curve: the outcome taxonomy keys on obstacle contact and completion, not
+  on rule compliance. It is carried for diagnostics only; any family that
+  wants to score on it needs a taxonomy decision first.
 """
 from __future__ import annotations
 
@@ -137,6 +141,7 @@ class RunRow:
     environment_collisions: int
     ambiguous_collisions: int
     min_speed_count: int
+    stop_infraction_count: int = 0
     events: list = field(default_factory=list)
     source: str = ""
 
@@ -343,6 +348,7 @@ def score_run_dirs(run_dirs: list[Path], splits_dir: Path):
                 environment_collisions=counts["environment"],
                 ambiguous_collisions=counts["ambiguous"],
                 min_speed_count=len(infractions.get("min_speed_infractions") or []),
+                stop_infraction_count=len(infractions.get("stop_infraction") or []),
                 events=events,
                 source=f"{run_dir.name}/{path.relative_to(run_dir)}"))
     return rows, unmatched, warnings
@@ -362,6 +368,7 @@ CSV_FIELDS = [
     "outcome", "driving_score", "score_route", "duration_game", "late_commit",
     "obstacle_collisions", "traffic_collisions", "pedestrian_collisions",
     "environment_collisions", "ambiguous_collisions", "min_speed_count",
+    "stop_infraction_count",
     "minimum_free_corridor_width", "maximum_route_intrusion", "source",
 ]
 
