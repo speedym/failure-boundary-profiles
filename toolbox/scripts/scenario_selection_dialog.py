@@ -80,6 +80,7 @@ SCENARIO_GROUPS = [
     ]),
     ("Other", [
         "ControlLoss",
+        "StateRecovery",
         "HardBreakRoute",
         "ParkingExit",
         "YieldToEmergencyVehicle",

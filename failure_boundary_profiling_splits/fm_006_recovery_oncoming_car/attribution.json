@@ -1,0 +1,26 @@
+{
+  "policy": "score_runs.py attribution inputs: blueprint, world x/y, planar half-extent; sources are the countersign sidecar or the spawn-probed registry. A scenario with an empty list has attribution DISABLED (no-fallback contract) UNLESS declares_empty is true.",
+  "declares_empty": true,
+  "declares_empty_note": "This family places NO STATIC OBJECT, but it does place exactly one MOVING vehicle under scenario control (the oncoming car). The empty lists are therefore still a declaration rather than missing measurement: positional attribution is inapplicable in principle to an actor that is driving, not unmeasured. The oncoming car is identified instead by the actor id recorded in the displacement sidecar under 'oncoming.actor_id'. This family MUST be run with FBP_NO_BACKGROUND=1, which makes it the only vehicle in the world, so a traffic_collisions count of 1 identifies it uniquely. See the README.",
+  "ego_half_length_m": 2.45,
+  "attrib_slack_m": 1.0,
+  "scenarios": {
+    "Generalization_StateRecoveryOncomingCar_0280_006_lateral_sweep_v01": [],
+    "Generalization_StateRecoveryOncomingCar_0280_006_lateral_sweep_v02": [],
+    "Generalization_StateRecoveryOncomingCar_0280_006_lateral_sweep_v03": [],
+    "Generalization_StateRecoveryOncomingCar_0280_006_lateral_sweep_v04": [],
+    "Generalization_StateRecoveryOncomingCar_0280_006_lateral_sweep_v05": [],
+    "Generalization_StateRecoveryOncomingCar_0280_006_lateral_sweep_v06": [],
+    "Generalization_StateRecoveryOncomingCar_0280_006_lateral_sweep_v07": [],
+    "Generalization_StateRecoveryOncomingCar_0280_006_lateral_sweep_v08": [],
+    "Generalization_StateRecoveryOncomingCar_0280_006_lateral_sweep_v09": [],
+    "Generalization_StateRecoveryOncomingCar_0280_006_lateral_sweep_v10": [],
+    "Generalization_StateRecoveryOncomingCar_0280_006_lateral_sweep_v11": [],
+    "Generalization_StateRecoveryOncomingCar_0280_006_lateral_sweep_v12": [],
+    "Generalization_StateRecoveryOncomingCar_0280_006_lateral_sweep_v13": [],
+    "Generalization_StateRecoveryOncomingCar_0280_006_lateral_sweep_v14": [],
+    "Generalization_StateRecoveryOncomingCar_0280_006_lateral_sweep_v15": [],
+    "Generalization_StateRecoveryOncomingCar_0280_006_lateral_sweep_v16": [],
+    "Generalization_StateRecoveryOncomingCar_0280_006_lateral_sweep_v17": []
+  }
+}

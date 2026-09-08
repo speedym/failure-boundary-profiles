@@ -284,7 +284,15 @@ class RouteScenario(BasicScenario):
         behavior.add_child(scenario_triggerer)  # Tick the ScenarioTriggerer before the scenarios
 
         # Add the Background Activity
-        behavior.add_child(BackgroundBehavior(self.ego_vehicles[0], self.route, name="BackgroundActivity"))
+        # SCL fork: FBP_NO_BACKGROUND=1 omits the background activity entirely.
+        # It cannot be switched off from a route file - BackgroundBehavior
+        # spawns its road actors in initialise(), before any scenario trigger
+        # fires, and BackgroundActivityParametrizer only caps later additions
+        # while its zeroed counts collapse the speed radius and leave the
+        # traffic crawling instead of gone. Traffic-free control condition
+        # only; campaigns across this flag are not comparable.
+        if os.environ.get('FBP_NO_BACKGROUND') != '1':
+            behavior.add_child(BackgroundBehavior(self.ego_vehicles[0], self.route, name="BackgroundActivity"))
 
         behavior.add_children(scenario_behaviors)
         return behavior

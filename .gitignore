@@ -218,3 +218,7 @@ cython_debug/
 *.zip
 # FBP: attribution catalogs are data, not results - exempt from *.json above
 !failure_boundary_profiling_splits/**/attribution.json
+# FBP: family route XMLs are data, not results - exempt from *.xml above
+!failure_boundary_profiling_splits/**/routes/*.xml
+# FBP: the trajectory layer's measured ego/traffic extents - exempt from *.json above
+!failure_boundary_profiling_splits/vehicle_extents.json

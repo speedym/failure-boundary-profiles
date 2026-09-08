@@ -42,6 +42,18 @@ repeats this block so no table circulates without its policy provenance.
   empty has attribution DISABLED - every collision reports "ambiguous"
   and a warning states the contract - because partial attribution would
   misclassify the unmeasured object's contacts as traffic.
+- EXCEPTION: an attribution.json carrying top-level "declares_empty": true
+  asserts that its scenarios place no objects at all. Empty lists in such a
+  file are a declaration, not missing data, so attribution stays ENABLED and
+  contacts classify normally as traffic / pedestrian / environment. Used by
+  families that sweep ego state rather than world geometry
+  (fm_006_recovery_oncoming_car). NOTE: that family also places one
+  scenario-controlled *moving* vehicle, for which positional attribution is
+  inapplicable in principle rather than merely unmeasured -- so the wording
+  "place no objects at all" is narrower than current use. Open contract
+  question: widen this to "no object requiring positional attribution", or add
+  a separate flag. A file without the flag keeps the strict no-fallback
+  behaviour above.
 - Passability: variant assigned_family "full_static_blockage" -> blockage;
   otherwise passable. Passable variants with measured
   minimum_free_corridor_width < 2.297 m (the fm_002 policy floor) are
@@ -59,6 +71,10 @@ repeats this block so no table circulates without its policy provenance.
                                              correct_stop (blockage)
 - A row is ONE RUN - a sample, never "the" value for a (variant, seed):
   same-seed outcomes can bifurcate run-to-run. Aggregations report n.
+- stop_infraction_count is RECORDED per row but is NOT coded into either
+  curve: the outcome taxonomy keys on obstacle contact and completion, not
+  on rule compliance. It is carried for diagnostics only; any family that
+  wants to score on it needs a taxonomy decision first.
 """
 from __future__ import annotations
 
@@ -125,6 +141,7 @@ class RunRow:
     environment_collisions: int
     ambiguous_collisions: int
     min_speed_count: int
+    stop_infraction_count: int = 0
     events: list = field(default_factory=list)
     source: str = ""
 
@@ -138,13 +155,16 @@ def policy_header() -> str:
 # --- catalog loading -------------------------------------------------------
 
 MEASURED_NUMERIC = ("minimum_free_corridor_width", "maximum_route_intrusion",
-                    "required_lateral_deviation", "closest_approach_distance")
+                    "required_lateral_deviation", "closest_approach_distance",
+                    "lateral_displacement", "heading_error_deg",
+                    "handback_speed")
 
 
 def load_catalogs(splits_dir: Path):
-    """scenario_id -> (family, variant dict); scenario_id -> [PlacedObject]."""
+    """scenario_id -> (family, variant dict); -> [PlacedObject]; declared-empty ids."""
     variants: dict[str, tuple[str, dict]] = {}
     attribution: dict[str, list[PlacedObject]] = {}
+    declared_empty: set[str] = set()
     for fam_dir in sorted(p for p in splits_dir.iterdir() if p.is_dir()):
         cat = fam_dir / "variants.csv"
         if not cat.exists():
@@ -168,9 +188,12 @@ def load_catalogs(splits_dir: Path):
         attr = fam_dir / "attribution.json"
         if attr.exists():
             doc = json.loads(attr.read_text())
+            declares_empty = bool(doc.get("declares_empty"))
             for sid, objs in (doc.get("scenarios") or {}).items():
                 attribution[sid] = [PlacedObject(**o) for o in objs]
-    return variants, attribution
+                if declares_empty and not objs:
+                    declared_empty.add(sid)
+    return variants, attribution, declared_empty
 
 
 # --- input discovery -------------------------------------------------------
@@ -267,7 +290,7 @@ def outcome_for(completed: bool, obstacle_contacts: int, late: bool,
 # --- scoring ---------------------------------------------------------------
 
 def score_run_dirs(run_dirs: list[Path], splits_dir: Path):
-    variants, attribution = load_catalogs(splits_dir)
+    variants, attribution, declared_empty = load_catalogs(splits_dir)
     rows, unmatched, warnings = [], [], []
     warned_disabled = set()
 
@@ -280,7 +303,9 @@ def score_run_dirs(run_dirs: list[Path], splits_dir: Path):
                 continue
             family, var = hit
             objects = attribution.get(scenario_id, [])
-            if not objects and scenario_id not in warned_disabled:
+            declares_no_objects = scenario_id in declared_empty
+            if not objects and not declares_no_objects \
+                    and scenario_id not in warned_disabled:
                 warned_disabled.add(scenario_id)
                 warnings.append(
                     f"{scenario_id}: no attribution entries - placed-object "
@@ -289,7 +314,7 @@ def score_run_dirs(run_dirs: list[Path], splits_dir: Path):
                     "footprint); obstacle attribution DISABLED for this "
                     "scenario")
             counts, events = classify_events(record, objects)
-            if not objects:
+            if not objects and not declares_no_objects:
                 total = sum(counts.values())
                 counts = dict(obstacle=0, traffic=0, pedestrian=0,
                               environment=0, ambiguous=total)
@@ -323,6 +348,7 @@ def score_run_dirs(run_dirs: list[Path], splits_dir: Path):
                 environment_collisions=counts["environment"],
                 ambiguous_collisions=counts["ambiguous"],
                 min_speed_count=len(infractions.get("min_speed_infractions") or []),
+                stop_infraction_count=len(infractions.get("stop_infraction") or []),
                 events=events,
                 source=f"{run_dir.name}/{path.relative_to(run_dir)}"))
     return rows, unmatched, warnings
@@ -342,6 +368,7 @@ CSV_FIELDS = [
     "outcome", "driving_score", "score_route", "duration_game", "late_commit",
     "obstacle_collisions", "traffic_collisions", "pedestrian_collisions",
     "environment_collisions", "ambiguous_collisions", "min_speed_count",
+    "stop_infraction_count",
     "minimum_free_corridor_width", "maximum_route_intrusion", "source",
 ]
 
