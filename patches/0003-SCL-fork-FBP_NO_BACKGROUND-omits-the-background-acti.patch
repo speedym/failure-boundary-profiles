@@ -1,0 +1,65 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Ellington Kirby <ellingtonkirby31@gmail.com>
+Date: Thu, 3 Sep 2026 00:00:00 +0200
+Subject: [PATCH 3/3] SCL fork: FBP_NO_BACKGROUND=1 omits the background
+ activity
+
+The state-recovery families need a traffic-free control condition, and
+background traffic cannot be switched off from a route file.
+BackgroundBehavior spawns its road actors in initialise() - before any
+scenario trigger can fire - and BackgroundActivityParametrizer only caps
+later additions rather than despawning. Worse, zeroing its counts feeds
+_get_road_radius() (background_activity.py:298-306), collapsing the
+speed-control radius to one spawn distance: measured on Town13, the same
+ten vehicles remained but mean speed halved (16.43 -> 7.68 m/s), turning
+moving traffic into crawling obstacles.
+
+The flag is read at behaviour-tree construction so the activity is never
+built. Default (unset or 0) is upstream behaviour. Both route_scenario
+copies (leaderboard + scenario_runner) changed together.
+
+Scoring-semantics change: campaigns run with and without this flag are
+not comparable.
+---
+diff --git a/leaderboard/leaderboard/scenarios/route_scenario.py b/leaderboard/leaderboard/scenarios/route_scenario.py
+index 96b2137..844bd01 100644
+--- a/leaderboard/leaderboard/scenarios/route_scenario.py
++++ b/leaderboard/leaderboard/scenarios/route_scenario.py
+@@ -401,7 +401,15 @@ class RouteScenario(BasicScenario):
+         self.scenario_triggerer = scenario_triggerer
+ 
+         # Add the Background Activity
+-        behavior.add_child(BackgroundBehavior(self.ego_vehicles[0], self.route, name="BackgroundActivity"))
++        # SCL fork: FBP_NO_BACKGROUND=1 omits the background activity entirely.
++        # It cannot be switched off from a route file - BackgroundBehavior
++        # spawns its road actors in initialise(), before any scenario trigger
++        # fires, and BackgroundActivityParametrizer only caps later additions
++        # while its zeroed counts collapse the speed radius and leave the
++        # traffic crawling instead of gone. Traffic-free control condition
++        # only; campaigns across this flag are not comparable.
++        if os.environ.get('FBP_NO_BACKGROUND') != '1':
++            behavior.add_child(BackgroundBehavior(self.ego_vehicles[0], self.route, name="BackgroundActivity"))
+ 
+         behavior.add_children(scenario_behaviors)
+         return behavior
+diff --git a/scenario_runner/srunner/scenarios/route_scenario.py b/scenario_runner/srunner/scenarios/route_scenario.py
+index 204db22..6c86b26 100644
+--- a/scenario_runner/srunner/scenarios/route_scenario.py
++++ b/scenario_runner/srunner/scenarios/route_scenario.py
+@@ -284,7 +284,15 @@ class RouteScenario(BasicScenario):
+         behavior.add_child(scenario_triggerer)  # Tick the ScenarioTriggerer before the scenarios
+ 
+         # Add the Background Activity
+-        behavior.add_child(BackgroundBehavior(self.ego_vehicles[0], self.route, name="BackgroundActivity"))
++        # SCL fork: FBP_NO_BACKGROUND=1 omits the background activity entirely.
++        # It cannot be switched off from a route file - BackgroundBehavior
++        # spawns its road actors in initialise(), before any scenario trigger
++        # fires, and BackgroundActivityParametrizer only caps later additions
++        # while its zeroed counts collapse the speed radius and leave the
++        # traffic crawling instead of gone. Traffic-free control condition
++        # only; campaigns across this flag are not comparable.
++        if os.environ.get('FBP_NO_BACKGROUND') != '1':
++            behavior.add_child(BackgroundBehavior(self.ego_vehicles[0], self.route, name="BackgroundActivity"))
+ 
+         behavior.add_children(scenario_behaviors)
+         return behavior
