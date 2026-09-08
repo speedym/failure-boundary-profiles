@@ -73,7 +73,10 @@ BOOTSTRAP_B = 10_000
 BOOTSTRAP_SEED = 20260805
 WILSON_Z = 1.96
 ORIENTATION_FALLBACK = {"minimum_free_corridor_width": +1,
-                        "maximum_route_intrusion": -1}
+                        "maximum_route_intrusion": -1,
+                        # fm_006: recovery gets harder the further the ego is
+                        # displaced, so success falls with x.
+                        "lateral_displacement": -1}
 
 # family -> (axis metric, categorical?). Derived in the internal pipeline
 # from each family's plan (the scheduled factor); frozen here for the

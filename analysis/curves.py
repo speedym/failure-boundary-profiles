@@ -23,6 +23,7 @@ Default measured axis per family (override with --metric):
     fm_002_corridor_pincer   minimum_free_corridor_width
     fm_004_threshold_sweep   minimum_free_corridor_width
     fm_005_hero              maximum_route_intrusion
+    fm_006_recovery_oncoming_car  lateral_displacement
 fm_003_asset_swap sweeps a categorical axis (asset identity): curves are
 emitted per target label instead of per numeric x.
 """
@@ -44,6 +45,7 @@ FAMILY_METRIC = {
     "fm_002_corridor_pincer": "minimum_free_corridor_width",
     "fm_004_threshold_sweep": "minimum_free_corridor_width",
     "fm_005_hero": "maximum_route_intrusion",
+    "fm_006_recovery_oncoming_car": "lateral_displacement",
 }
 CATEGORICAL_FAMILIES = {"fm_003_asset_swap"}
 
