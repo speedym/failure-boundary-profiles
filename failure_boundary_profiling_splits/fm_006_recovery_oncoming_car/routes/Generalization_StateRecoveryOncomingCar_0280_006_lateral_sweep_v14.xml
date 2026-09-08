@@ -1,0 +1,31 @@
+<routes>
+  <route id="280000614" town="Town13">
+    <weathers>
+      <weather route_percentage="0" cloudiness="10.0" precipitation="0.0" precipitation_deposits="0.0" wetness="0.0" wind_intensity="5.0" sun_azimuth_angle="220.0" sun_altitude_angle="45.0" fog_density="2.0" fog_distance="0.75" fog_falloff="0.25" scattering_intensity="1.0" mie_scattering_scale="0.0" />
+      <weather route_percentage="100" cloudiness="10.0" precipitation="0.0" precipitation_deposits="0.0" wetness="0.0" wind_intensity="5.0" sun_azimuth_angle="220.0" sun_altitude_angle="45.0" fog_density="2.0" fog_distance="0.75" fog_falloff="0.25" scattering_intensity="1.0" mie_scattering_scale="0.0" />
+    </weathers>
+    <waypoints>
+      <position x="4403.2" y="4726.6" z="147.3"/>
+      <position x="4404.6" y="4406.6" z="148.0"/>
+    </waypoints>
+    <scenarios>
+      <scenario name="StateRecoveryOncomingCar" type="StateRecovery">
+        <lateral_offset value="-6.5"/>
+        <heading_offset value="0.0"/>
+        <handback_speed value="6.0"/>
+        <recovery_distance value="120.0"/>
+        <recovery_timeout value="60.0"/>
+        <reacquire_distance value="1.5"/>
+        <require_surface value="1"/>
+        <clearance_patience value="3.0"/>
+        <oncoming_enable value="1"/>
+        <oncoming_model value="vehicle.tesla.model3"/>
+        <oncoming_lane value="1"/>
+        <oncoming_gap value="60.0"/>
+        <oncoming_speed value="8.0"/>
+        <oncoming_start value="handback"/>
+        <trigger_point x="4403.6" y="4636.6" z="147.4" yaw="-89.7"/>
+      </scenario>
+    </scenarios>
+  </route>
+</routes>
