@@ -4,7 +4,7 @@ The routes are standard CARLA leaderboard route XMLs and run under the [Fail2Dri
 
 ## 1. CARLA
 
-Install **CARLA 0.9.15** (the release that ships Town13, which all routes use). A GPU with 8 GB+ VRAM is recommended. Run the server headless:
+Install **CARLA 0.9.15** (the release that ships Town13, which the static-obstacle routes use, and Town03, which the oncoming-flow routes use). A GPU with 8 GB+ VRAM is recommended. Run the server headless:
 
 ```bash
 ${CARLA_ROOT}/CarlaUE4.sh -RenderOffscreen
@@ -40,7 +40,7 @@ Run one route through the harness evaluator (leaderboard-style flags):
 
 ```bash
 python leaderboard/leaderboard/leaderboard_evaluator.py \
-  --routes ${WORK_DIR}/failure_boundary_profiling_splits/fm_001_intrusion_sweep/routes/Generalization_PassableObstacles_1060_001_intrusion_sweep_v01.xml \
+  --routes ${WORK_DIR}/scl_families/fm_001_intrusion_sweep/routes/Generalization_PassableObstacles_1060_001_intrusion_sweep_v01.xml \
   --agent <agent entry point> \
   --agent-config <checkpoint dir> \
   --track SENSORS \

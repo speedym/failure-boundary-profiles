@@ -1,0 +1,41 @@
+{
+ "declaration_kind": "campaign_declaration/v0.1",
+ "campaign_id": "campaign_carla_v01",
+ "backend": "fail2drive",
+ "family": {
+  "family_id": "fm_003_asset_swap",
+  "manifest_path": "artifacts/examples/solved_families/fm_003_asset_swap.json",
+  "manifest_sha256": "b6941429fd8342a4fb0d32734c98a04ec08b16996cfb2607786f9bea889f9fd6"
+ },
+ "declared_grid": {
+  "variants": [
+   "Generalization_CustomObstacles_1026_003_asset_swap_v01",
+   "Generalization_CustomObstacles_1026_003_asset_swap_v03",
+   "Generalization_CustomObstacles_1026_003_asset_swap_v05",
+   "Generalization_CustomObstacles_1026_003_asset_swap_v09",
+   "Generalization_CustomObstacles_1026_003_asset_swap_v10",
+   "Generalization_CustomObstacles_1026_003_asset_swap_v12",
+   "Generalization_CustomObstacles_1026_003_asset_swap_v13",
+   "Generalization_CustomObstacles_1026_003_asset_swap_v14",
+   "Generalization_CustomObstacles_1026_003_asset_swap_v17",
+   "Generalization_CustomObstacles_1026_003_asset_swap_v18",
+   "Generalization_CustomObstacles_1026_003_asset_swap_v19",
+   "Generalization_CustomObstacles_1026_003_asset_swap_v20",
+   "Generalization_CustomObstacles_1026_003_asset_swap_v22",
+   "Generalization_CustomObstacles_1026_003_asset_swap_v23"
+  ],
+  "models": [
+   "bridgedrive",
+   "lead",
+   "pdm_lite_expert",
+   "tfpp"
+  ],
+  "seeds": [
+   0
+  ],
+  "expert": true,
+  "reference_model": "pdm_lite_expert"
+ },
+ "results_subtree": "campaign_carla_v01/fm_003_asset_swap",
+ "note": "Asset swap on the 1026 open road (categorical axis): fourteen identities at matched geometry, four agents, one seed. No v0.2 findings: the emitter refuses categorical axes (recorded S15 debt). Certified bundle content id c4a08d86f2a4, family sub-id 70261eba345a; axis asset_identity."
+}

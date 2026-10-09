@@ -1,0 +1,40 @@
+{
+ "declaration_kind": "campaign_declaration/v0.1",
+ "campaign_id": "campaign_carla_v04",
+ "backend": "fail2drive",
+ "family": {
+  "family_id": "fm_011_flow_speed_sweep",
+  "manifest_path": "artifacts/examples/solved_families/fm_011_flow_speed_sweep.json",
+  "manifest_sha256": "d09a148d931dbe3d5c86093120d3b483ef39a1061ee5d828ec57c75f0f506183"
+ },
+ "declared_grid": {
+  "variants": [
+   "route_002269_011_flow_speed_sweep_v01",
+   "route_002269_011_flow_speed_sweep_v02",
+   "route_002269_011_flow_speed_sweep_v03",
+   "route_002269_011_flow_speed_sweep_v04",
+   "route_002269_011_flow_speed_sweep_v05",
+   "route_002269_011_flow_speed_sweep_v06",
+   "route_002269_011_flow_speed_sweep_v07",
+   "route_002269_011_flow_speed_sweep_v08",
+   "route_002269_011_flow_speed_sweep_v09",
+   "route_002269_011_flow_speed_sweep_v10",
+   "route_002269_011_flow_speed_sweep_v11"
+  ],
+  "models": [
+   "bridgedrive",
+   "lead",
+   "pdm_lite_expert",
+   "tfpp"
+  ],
+  "seeds": [
+   0,
+   1,
+   2
+  ],
+  "expert": true,
+  "reference_model": "pdm_lite_expert"
+ },
+ "results_subtree": "campaign_carla_v04/fm_011_flow_speed_sweep",
+ "note": "Oncoming-flow SPEED sweep at Town03 junction 103 (fm_011): eleven crossing-time-gap variants x four agents x three traffic seeds, scored for p_go / p_clean against the v3 map-lane zone; the campaign the flow instrument was certified on."
+}

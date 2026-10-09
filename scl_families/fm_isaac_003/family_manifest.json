@@ -1,0 +1,334 @@
+{
+ "family_id": "fm_isaac_003",
+ "axis": "minimum_free_corridor_width",
+ "origin": {
+  "plan_id": "ap_008_isaac_pushcart_narrowing",
+  "request_id": "ar_008_isaac_pushcart_narrowing",
+  "capability_profile_id": "isaac_gauntlet_v0.3",
+  "family_spec_sha256": "e35c48f73aad7cf4437d3227781adabad28303ce9abc5769073210c05d144ff9",
+  "compiled_by": "scl_core.backends.isaac via the unified engine"
+ },
+ "operation": {
+  "kind": "op_reposition_entity",
+  "relation": "pincer_spanning",
+  "region": "region_constriction_band",
+  "anchor": "region_aisle_a",
+  "clearance_to_walls_m": 0.3
+ },
+ "pool": [
+  "pallet_01",
+  "pallet_02",
+  "pallet_03",
+  "pallet_04",
+  "pallet_05",
+  "pallet_06",
+  "pallet_07",
+  "pallet_08",
+  "pallet_09",
+  "pallet_10",
+  "pallet_11",
+  "pallet_12",
+  "pallet_13",
+  "pallet_14",
+  "pallet_15",
+  "pallet_16",
+  "pallet_17",
+  "pallet_18",
+  "pallet_19",
+  "pallet_20",
+  "pallet_21",
+  "pallet_22",
+  "pushcart_01",
+  "pushcart_02"
+ ],
+ "realization": {
+  "realizer_id": "floor_stock_pincer",
+  "module": "adapters/isaac/aisle_gauntlet/build_reposition_stage.py",
+  "realization_mode": "static_authored",
+  "orientation_vocabulary": "absolute_quarter_turns",
+  "certification": {
+   "method": "scan_composed",
+   "countersignature": "campaign_eve_stage_scan",
+   "required": true
+  },
+  "blocked_integrity": "static_collider: immovable by construction; the dynamic-body mass floor does not apply to this realization mode"
+ },
+ "certification": {
+  "method": "scan_composed",
+  "scan_sha256": "586ce9ee3e523a027ea47710c7ca49a3da23e5583250c456abe762389cebec03",
+  "asset_registry_sha256": "95e7f2e6e6106dcac9386a376ee37567925ccf96b795b440f9b434f111b731a9",
+  "attestation_note": "blocked-claim eligibility gated on the registry's measured max_traversable_width_m per member asset (principle 10)",
+  "countersignature": {
+   "kind": "campaign_eve_stage_scan",
+   "required": true,
+   "file": "countersignature.json",
+   "note": "fail-closed: the campaign preflight refuses cells for this family until a fresh zero-diff stage-scan countersignature exists beside this manifest"
+  }
+ },
+ "timeout_s": 64.3,
+ "n_reps_per_brain": 5,
+ "brains": [
+  "x_mobility"
+ ],
+ "expert_reference": {
+  "n_reps": 1,
+  "deterministic": true
+ },
+ "frame": {
+  "aisle_a_centerline_x": -4.805,
+  "aisle_a_x_faces": [
+   -8.61,
+   -1.0
+  ],
+  "aisle_b_x_range": [
+   0.39,
+   8.0
+  ],
+  "shelf_y_span": [
+   -4.49,
+   13.13
+  ],
+  "constriction_y": 4.5,
+  "constriction_zone_y": [
+   3.0,
+   6.0
+  ],
+  "start_pose": {
+   "xy": [
+    -4.805,
+    -6.5
+   ],
+   "yaw_deg": 90
+  },
+  "goal_xy": [
+   -4.3,
+   13.97
+  ],
+  "carter_bbox_m": {
+   "x": 0.7284,
+   "y": 0.8958,
+   "z": 0.6945
+  },
+  "carter_collision_width_m": 0.4942,
+  "rack_rows_x": [
+   [
+    -9.91,
+    -8.73
+   ],
+   [
+    -0.91,
+    0.27
+   ],
+   [
+    8.09,
+    9.27
+   ]
+  ],
+  "rack_rows_y": [
+   -3.8,
+   12.5
+  ]
+ },
+ "variants": [
+  {
+   "stem": "stock_w2p50",
+   "target_width_m": 2.5,
+   "measured_gap_m": 2.5,
+   "assignment": "passable",
+   "certified": true,
+   "members_used": [
+    "pallet_01",
+    "pallet_02",
+    "pushcart_01",
+    "pushcart_02"
+   ],
+   "stage_sha256": "5f9f2df0919889c92ae67f42c5b2cb28d9b4fe933104eab18d94dd32254c3012",
+   "cert_core_sha256": "54cbfd044abdf98f03575e1afc821ab58eca90656a6108f68cfb1fc75c2864a5",
+   "verdict": "accepted"
+  },
+  {
+   "stem": "stock_w2p00",
+   "target_width_m": 2.0,
+   "measured_gap_m": 2.0,
+   "assignment": "passable",
+   "certified": true,
+   "members_used": [
+    "pallet_01",
+    "pallet_02",
+    "pushcart_01",
+    "pushcart_02"
+   ],
+   "stage_sha256": "abcc35f0ab2a6123dc234ae57f53cae01532c261899f610fa0f9500911f3e1bf",
+   "cert_core_sha256": "e9add90cb0eec3b9e04f4aa9a3c7d4b5b13bb189f3a71e59b899fcb40061358c",
+   "verdict": "accepted"
+  },
+  {
+   "stem": "stock_w1p50",
+   "target_width_m": 1.5,
+   "measured_gap_m": 1.5,
+   "assignment": "passable",
+   "certified": true,
+   "members_used": [
+    "pallet_01",
+    "pallet_02",
+    "pushcart_01",
+    "pushcart_02"
+   ],
+   "stage_sha256": "ae41c979f6591d729b9df12278961ec923d850b824ec47a43497560733b9c9ab",
+   "cert_core_sha256": "85ef689493caae9b6929682fa909790608d9b882c77655a2b1a7cff1029d0aa6",
+   "verdict": "accepted"
+  },
+  {
+   "stem": "stock_w1p00",
+   "target_width_m": 1.0,
+   "measured_gap_m": 1.0,
+   "assignment": "passable",
+   "certified": true,
+   "members_used": [
+    "pallet_01",
+    "pallet_02",
+    "pushcart_01",
+    "pushcart_02"
+   ],
+   "stage_sha256": "f5111005659e6e75bae42ad8c6546e9931084a46377fec94641e3972e536e6d7",
+   "cert_core_sha256": "b7bcb87e69edce48c0e15b1bfa126b8a2d8a45a58380a474e386244bde0799f0",
+   "verdict": "accepted"
+  },
+  {
+   "stem": "stock_w0p80",
+   "target_width_m": 0.8,
+   "measured_gap_m": 0.8,
+   "assignment": "passable",
+   "certified": true,
+   "members_used": [
+    "pallet_01",
+    "pallet_02",
+    "pushcart_01",
+    "pushcart_02"
+   ],
+   "stage_sha256": "f7f90f9db3cbba0126d9f84c3208cd8c5158d6468044eefa3f469779c9d48839",
+   "cert_core_sha256": "68541ccc85e7292fbb20375dda2952a64b5608e0632653d82e6103566fa0afbd",
+   "verdict": "accepted"
+  },
+  {
+   "stem": "stock_w0p65",
+   "target_width_m": 0.65,
+   "measured_gap_m": 0.65,
+   "assignment": "passable",
+   "certified": true,
+   "members_used": [
+    "pallet_01",
+    "pallet_02",
+    "pushcart_01",
+    "pushcart_02"
+   ],
+   "stage_sha256": "8ace5113bf08aa014b1c188cc36a7a7fc0beb02083a5b0f063a410d87aae7ec2",
+   "cert_core_sha256": "d7598d8c41a4b516c5823552c47b18674de5a87e9cde52c3dfa09140c167fb1f",
+   "verdict": "accepted"
+  },
+  {
+   "stem": "stock_w0p58",
+   "target_width_m": 0.58,
+   "measured_gap_m": 0.58,
+   "assignment": "passable",
+   "certified": true,
+   "members_used": [
+    "pallet_01",
+    "pallet_02",
+    "pushcart_01",
+    "pushcart_02"
+   ],
+   "stage_sha256": "ca32e0c58cd032387242252a7260443efac5f8ccecb6e6f210e3415130b0ed7e",
+   "cert_core_sha256": "533738659d3aa0f4f34019f3c96f80d79406a3087754953851ff6875b907f6ce",
+   "verdict": "accepted"
+  },
+  {
+   "stem": "stock_w0p54",
+   "target_width_m": 0.54,
+   "measured_gap_m": 0.54,
+   "assignment": "passable",
+   "certified": true,
+   "members_used": [
+    "pallet_01",
+    "pallet_02",
+    "pushcart_01",
+    "pushcart_02"
+   ],
+   "stage_sha256": "ca9e71efbdb9c105643246f58ac57a48beedbb3814fc30901e5463db15f8201d",
+   "cert_core_sha256": "3fb98b97364e0caa28d0a054c0db360713a74ca4b95675cc0b01850a6f660554",
+   "verdict": "accepted"
+  },
+  {
+   "stem": "stock_w0p45",
+   "target_width_m": 0.45,
+   "measured_gap_m": 0.45,
+   "assignment": "blocked",
+   "certified": true,
+   "members_used": [
+    "pallet_01",
+    "pallet_02",
+    "pallet_03",
+    "pallet_04",
+    "pushcart_01",
+    "pushcart_02"
+   ],
+   "stage_sha256": "346cd66f9f66dedcb99a69a4c6c92eee0120e52eaf72f32234df06f287af5a6d",
+   "cert_core_sha256": "c29fb7f530aa88b1993867f9f6e0c0f81274dec35cfc7371874527beb787571e",
+   "verdict": "accepted"
+  },
+  {
+   "stem": "stock_w0p30",
+   "target_width_m": 0.3,
+   "measured_gap_m": 0.3,
+   "assignment": "blocked",
+   "certified": true,
+   "members_used": [
+    "pallet_01",
+    "pallet_02",
+    "pallet_03",
+    "pallet_04",
+    "pushcart_01",
+    "pushcart_02"
+   ],
+   "stage_sha256": "28fdc4bf5320986a4588ed0064331dbc749c1e3484736f0591fe8021be8eb416",
+   "cert_core_sha256": "a5ac30770d0b6a4f8b5041ed6b981e55b68f5bc9c7a8b40c5441af9d31a46c25",
+   "verdict": "accepted"
+  },
+  {
+   "stem": "stock_w0p15",
+   "target_width_m": 0.15,
+   "measured_gap_m": 0.15,
+   "assignment": "blocked",
+   "certified": true,
+   "members_used": [
+    "pallet_01",
+    "pallet_02",
+    "pallet_03",
+    "pallet_04",
+    "pushcart_01",
+    "pushcart_02"
+   ],
+   "stage_sha256": "614c3db19a4fb81268677320b16fcae0663b974edef40e470f89a6a2ce5ecd97",
+   "cert_core_sha256": "f284d0f1dc728b914f85dc4e216c8083a773b1e492482b41dcdf1d12b78618ac",
+   "verdict": "accepted"
+  },
+  {
+   "stem": "stock_w0p00",
+   "target_width_m": 0.0,
+   "measured_gap_m": 0.0,
+   "assignment": "blocked",
+   "certified": true,
+   "members_used": [
+    "pallet_01",
+    "pallet_02",
+    "pallet_03",
+    "pallet_04",
+    "pushcart_01",
+    "pushcart_02"
+   ],
+   "stage_sha256": "8ff879afcea61379385be32729fe1fb7884c18560228a162380ce4f0fa4a7fc6",
+   "cert_core_sha256": "30dbe147a9faa50e6c578a4cf8d746d1b40c07fbe2648e8b935e61b8bcd4d297",
+   "verdict": "accepted"
+  }
+ ]
+}

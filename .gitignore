@@ -218,3 +218,9 @@ cython_debug/
 *.zip
 # FBP: attribution catalogs are data, not results - exempt from *.json above
 !failure_boundary_profiling_splits/**/attribution.json
+
+# SCL: scl/ is a generated export of the measurement chain (scripts/export_public_repo.py in the private
+# repository); every file under it is listed by hash in scl/PUBLIC_EXPORT.json and nothing under it is ignored
+!/scl/**
+# SCL: scl_families/ is the generated per-family view the same export writes (routes or manifest, catalog, checksums)
+!/scl_families/**

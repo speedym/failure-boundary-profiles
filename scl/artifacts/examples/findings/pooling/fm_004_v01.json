@@ -1,0 +1,9 @@
+{
+ "pooling_kind": "campaign_pooling/v0.1",
+ "pool_id": "fm_004_v01",
+ "family_id": "fm_004_threshold_sweep",
+ "campaigns": [
+  "campaign_carla_v01"
+ ],
+ "note": "The Charger gauntlet as the paper reads it: v01 alone (five seeds). Boundary justification: which campaigns a paper figure pools is a paper-level choice no procedure can derive (the atlas of 2026-08 chose these); delete this and the pooled document for the family cannot be regenerated."
+}

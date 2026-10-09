@@ -1,0 +1,9 @@
+{
+ "pooling_kind": "campaign_pooling/v0.1",
+ "pool_id": "fm_002_v07",
+ "family_id": "fm_002_corridor_pincer",
+ "campaigns": [
+  "campaign_carla_v07"
+ ],
+ "note": "SimLingo (the VLM sensor agent) on fm_002_corridor_pincer, v07 alone (three traffic seeds, no reference agent): joins the atlas (F2) as one more sensor-agent column the way the 2026-09-19 extension took PlanT 2.0. Boundary justification: which campaign extends the atlas is a paper-level choice (2026-09-22)."
+}

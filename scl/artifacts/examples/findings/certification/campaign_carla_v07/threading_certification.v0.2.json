@@ -1,0 +1,252 @@
+{
+ "report_kind": "threading_certification/v0.2",
+ "driver_sha256": "f120f817ab7a9f1cd3868fb295e297b0e6016d66d42a903f1432745f427a6596",
+ "emitter_sha256": "5cd647f780c1a5d9b7cbe66ea9337b6078bf902249eb7d7e2ba4ffdf31284f91",
+ "estimator_sha256": "be9beb7f3a3c6d255c03f8c16cf6a25ffff1ef612e12b2c9ef9da94ff94b4cab",
+ "stats_tool_sha256": "03f320fb8ad436c5c5e9493a109e3a9dea0d8af54272349dc88e241f003e042b",
+ "evidence_rule": "canon holds findings and declarations; the scored tables and family snapshots are evidence and live in the certified campaign bundles, referenced here by bundle content id, member path and MANIFEST-listed member hash",
+ "campaigns": {
+  "campaign_carla_v07": {
+   "fm_001_intrusion_sweep": {
+    "campaign_declaration": {
+     "path": "artifacts/examples/campaigns/campaign_carla_v07/fm_001_intrusion_sweep.json",
+     "sha256": "0d179799d97aab7c1f10d893513ee9877982af017017e059ccb75ff6ff090fde"
+    },
+    "bundle": {
+     "path": "campaign_carla_v07.zip",
+     "bundle_kind": "campaign_bundle/v0.3",
+     "zip_sha256": "d3203cd8f50400d1a94c445c13733f468c8ab275bc319064b7b6c275c02a49c2",
+     "content_id_sha256": "f7ec8997d16dcf48ea977942759fc279bd95b9c0f29dfcac9278c126cc9d948e",
+     "family_sub_id_sha256": "76a5e02f03f5ab831ba13c5cdfd2c44c9a797ea206a5a9f1852b8e2ccd051d2a"
+    },
+    "derived_bundle": {
+     "path": "campaign_carla_v07_derived.zip",
+     "bundle_kind": "derived_bundle/v0.3",
+     "zip_sha256": "229a0019f68ee38bd2eb91256bb8d15f4740bcaf889e6751692564d47004ce4e",
+     "content_id_sha256": "2520c2ec90ded51114ff0abd03611d36c7392db5d8efe2304f338da9fe4a847a",
+     "source_snapshot_sha256": "ec324b9f889852ffe3f7a9d2d3c69598f9040e3f4d51f30ce12ebdfd9a138de4"
+    },
+    "family_manifest_sha256": "fbd200aabb00009ba358b3a21894eafae93cc5b3cec5d7864a337d761e8d285c",
+    "axis": "maximum_route_intrusion",
+    "coverage": {
+     "models": [
+      "simlingo"
+     ],
+     "seeds": [
+      0,
+      1,
+      2
+     ],
+     "variants": 12
+    },
+    "evidence": {
+     "bundle_content_id_sha256": "f7ec8997d16dcf48ea977942759fc279bd95b9c0f29dfcac9278c126cc9d948e",
+     "members": {
+      "campaign_carla_v07/fm_001_intrusion_sweep/family_snapshot/fm_001_intrusion_sweep.json": "fbd200aabb00009ba358b3a21894eafae93cc5b3cec5d7864a337d761e8d285c"
+     },
+     "derived_content_id_sha256": "2520c2ec90ded51114ff0abd03611d36c7392db5d8efe2304f338da9fe4a847a",
+     "derived_members": {
+      "campaign_carla_v07/fm_001_intrusion_sweep/scoring_out/scored_rows.jsonl": "1329c2d7590813c2948425bbfe7dacd95f37042caeab8da15da6a7ac35a2054a"
+     }
+    },
+    "axis_kind": "numeric",
+    "stats_sha256": "6bd394a14a1ef7e6ae56bc0b07e6817b08ffcb5f98d9f40fbb759e54832c583a",
+    "documents": {
+     "fs_campaign_carla_v07_fm_001_intrusion_sweep_simlingo.v0.2.json": "f13dbc93bbe7ae9d350ed3bb39bd19565813415d0fceaa39219ead97673eb2d3"
+    }
+   },
+   "fm_002_corridor_pincer": {
+    "campaign_declaration": {
+     "path": "artifacts/examples/campaigns/campaign_carla_v07/fm_002_corridor_pincer.json",
+     "sha256": "1a5cff0ed10ac5c03a71502a021139d45a06283a4136a0121d0ad9bc74982396"
+    },
+    "bundle": {
+     "path": "campaign_carla_v07.zip",
+     "bundle_kind": "campaign_bundle/v0.3",
+     "zip_sha256": "d3203cd8f50400d1a94c445c13733f468c8ab275bc319064b7b6c275c02a49c2",
+     "content_id_sha256": "f7ec8997d16dcf48ea977942759fc279bd95b9c0f29dfcac9278c126cc9d948e",
+     "family_sub_id_sha256": "967c67f6eab86b314c02b739bf5f390a36dae46d319393b98874b136689720c0"
+    },
+    "derived_bundle": {
+     "path": "campaign_carla_v07_derived.zip",
+     "bundle_kind": "derived_bundle/v0.3",
+     "zip_sha256": "229a0019f68ee38bd2eb91256bb8d15f4740bcaf889e6751692564d47004ce4e",
+     "content_id_sha256": "2520c2ec90ded51114ff0abd03611d36c7392db5d8efe2304f338da9fe4a847a",
+     "source_snapshot_sha256": "ec324b9f889852ffe3f7a9d2d3c69598f9040e3f4d51f30ce12ebdfd9a138de4"
+    },
+    "family_manifest_sha256": "1f0120bb5e0bbd2eefe61bd5d5e99693d04d44828cde23f0d2d88f07c2ba711d",
+    "axis": "minimum_free_corridor_width",
+    "coverage": {
+     "models": [
+      "simlingo"
+     ],
+     "seeds": [
+      0,
+      1,
+      2
+     ],
+     "variants": 10
+    },
+    "evidence": {
+     "bundle_content_id_sha256": "f7ec8997d16dcf48ea977942759fc279bd95b9c0f29dfcac9278c126cc9d948e",
+     "members": {
+      "campaign_carla_v07/fm_002_corridor_pincer/family_snapshot/fm_002_corridor_pincer.json": "1f0120bb5e0bbd2eefe61bd5d5e99693d04d44828cde23f0d2d88f07c2ba711d"
+     },
+     "derived_content_id_sha256": "2520c2ec90ded51114ff0abd03611d36c7392db5d8efe2304f338da9fe4a847a",
+     "derived_members": {
+      "campaign_carla_v07/fm_002_corridor_pincer/scoring_out/scored_rows.jsonl": "0b70eb927c035fd86342a73a90a4d2b78a7fe0536ae2219d793d6b9f2c37832f"
+     }
+    },
+    "axis_kind": "numeric",
+    "stats_sha256": "539bb53b234310b32cb2fd287a5bb23b83c716a0169cb06f768be99f0fc9dc7d",
+    "documents": {
+     "fs_campaign_carla_v07_fm_002_corridor_pincer_simlingo.v0.2.json": "b385e535c35f878898787fba9a9892ddce6cbb5c31ef044029c03a8b6e07f6a6"
+    }
+   },
+   "fm_003_asset_swap": {
+    "campaign_declaration": {
+     "path": "artifacts/examples/campaigns/campaign_carla_v07/fm_003_asset_swap.json",
+     "sha256": "d93afcfc1739cb4985356e8484964fef44b5dea2343c4aad4148c2a802913b56"
+    },
+    "bundle": {
+     "path": "campaign_carla_v07.zip",
+     "bundle_kind": "campaign_bundle/v0.3",
+     "zip_sha256": "d3203cd8f50400d1a94c445c13733f468c8ab275bc319064b7b6c275c02a49c2",
+     "content_id_sha256": "f7ec8997d16dcf48ea977942759fc279bd95b9c0f29dfcac9278c126cc9d948e",
+     "family_sub_id_sha256": "4ac0d96a335af4bb1c6ce9b2fe8d2cc410eb3555f72229fe28a2fc43836c7020"
+    },
+    "derived_bundle": {
+     "path": "campaign_carla_v07_derived.zip",
+     "bundle_kind": "derived_bundle/v0.3",
+     "zip_sha256": "229a0019f68ee38bd2eb91256bb8d15f4740bcaf889e6751692564d47004ce4e",
+     "content_id_sha256": "2520c2ec90ded51114ff0abd03611d36c7392db5d8efe2304f338da9fe4a847a",
+     "source_snapshot_sha256": "ec324b9f889852ffe3f7a9d2d3c69598f9040e3f4d51f30ce12ebdfd9a138de4"
+    },
+    "family_manifest_sha256": "b6941429fd8342a4fb0d32734c98a04ec08b16996cfb2607786f9bea889f9fd6",
+    "axis": "asset_identity",
+    "coverage": {
+     "models": [
+      "simlingo"
+     ],
+     "seeds": [
+      0,
+      1,
+      2
+     ],
+     "variants": 14
+    },
+    "evidence": {
+     "bundle_content_id_sha256": "f7ec8997d16dcf48ea977942759fc279bd95b9c0f29dfcac9278c126cc9d948e",
+     "members": {
+      "campaign_carla_v07/fm_003_asset_swap/family_snapshot/fm_003_asset_swap.json": "b6941429fd8342a4fb0d32734c98a04ec08b16996cfb2607786f9bea889f9fd6"
+     },
+     "derived_content_id_sha256": "2520c2ec90ded51114ff0abd03611d36c7392db5d8efe2304f338da9fe4a847a",
+     "derived_members": {
+      "campaign_carla_v07/fm_003_asset_swap/scoring_out/scored_rows.jsonl": "cbfa86cbf9f8d2e54ca9aee666f21ea114abd9a93d49e4d4831d54b8b96103b1"
+     }
+    },
+    "axis_kind": "categorical",
+    "stats_sha256": "2e76a73771e73fae96bfccee86bec2c32e90775312216c7e45add1242d345e0c",
+    "documents": {
+     "fs_campaign_carla_v07_fm_003_asset_swap_simlingo.v0.2.json": "3739e04f0c2d24ac97b099685b341b15116b9a8303475f3cd0b833655c288864"
+    }
+   },
+   "fm_004_threshold_sweep": {
+    "campaign_declaration": {
+     "path": "artifacts/examples/campaigns/campaign_carla_v07/fm_004_threshold_sweep.json",
+     "sha256": "b41cbeb48c7dd55a10f671243ee55ce619ca63cc4a76184a0cd7278040afbe8e"
+    },
+    "bundle": {
+     "path": "campaign_carla_v07.zip",
+     "bundle_kind": "campaign_bundle/v0.3",
+     "zip_sha256": "d3203cd8f50400d1a94c445c13733f468c8ab275bc319064b7b6c275c02a49c2",
+     "content_id_sha256": "f7ec8997d16dcf48ea977942759fc279bd95b9c0f29dfcac9278c126cc9d948e",
+     "family_sub_id_sha256": "b9372693ff8b0c3b7edca90a82dc65f80084eab224b65c9ca992905ea307d093"
+    },
+    "derived_bundle": {
+     "path": "campaign_carla_v07_derived.zip",
+     "bundle_kind": "derived_bundle/v0.3",
+     "zip_sha256": "229a0019f68ee38bd2eb91256bb8d15f4740bcaf889e6751692564d47004ce4e",
+     "content_id_sha256": "2520c2ec90ded51114ff0abd03611d36c7392db5d8efe2304f338da9fe4a847a",
+     "source_snapshot_sha256": "ec324b9f889852ffe3f7a9d2d3c69598f9040e3f4d51f30ce12ebdfd9a138de4"
+    },
+    "family_manifest_sha256": "f275c14ac24715211e8af7d57d6fb962df3b2f9358e0f7df444e2ab68c70b9e1",
+    "axis": "minimum_free_corridor_width",
+    "coverage": {
+     "models": [
+      "simlingo"
+     ],
+     "seeds": [
+      0,
+      1,
+      2
+     ],
+     "variants": 12
+    },
+    "evidence": {
+     "bundle_content_id_sha256": "f7ec8997d16dcf48ea977942759fc279bd95b9c0f29dfcac9278c126cc9d948e",
+     "members": {
+      "campaign_carla_v07/fm_004_threshold_sweep/family_snapshot/fm_004_threshold_sweep.json": "f275c14ac24715211e8af7d57d6fb962df3b2f9358e0f7df444e2ab68c70b9e1"
+     },
+     "derived_content_id_sha256": "2520c2ec90ded51114ff0abd03611d36c7392db5d8efe2304f338da9fe4a847a",
+     "derived_members": {
+      "campaign_carla_v07/fm_004_threshold_sweep/scoring_out/scored_rows.jsonl": "b732e1e610feb17ee2e014396d1a9ca4d8617e3accb4a55274c5929363263665"
+     }
+    },
+    "axis_kind": "numeric",
+    "stats_sha256": "9b55f74c9c187e7410aa72c2c8d962eb3aac8d8fe1a54524f68a6e4b4b4f89a5",
+    "documents": {
+     "fs_campaign_carla_v07_fm_004_threshold_sweep_simlingo.v0.2.json": "b8a57c77c9d5883795da7c02377bd454779223e88bac6f1a98549ee515001772"
+    }
+   },
+   "fm_005_hero": {
+    "campaign_declaration": {
+     "path": "artifacts/examples/campaigns/campaign_carla_v07/fm_005_hero.json",
+     "sha256": "606cb5100ea08180425d4185cad883b4a1395eb302043fea26725fd01edf234e"
+    },
+    "bundle": {
+     "path": "campaign_carla_v07.zip",
+     "bundle_kind": "campaign_bundle/v0.3",
+     "zip_sha256": "d3203cd8f50400d1a94c445c13733f468c8ab275bc319064b7b6c275c02a49c2",
+     "content_id_sha256": "f7ec8997d16dcf48ea977942759fc279bd95b9c0f29dfcac9278c126cc9d948e",
+     "family_sub_id_sha256": "4f741f99df4fd6a5bb88da1b2229a93cb28009a22c0f0909dc9eddf69fe38027"
+    },
+    "derived_bundle": {
+     "path": "campaign_carla_v07_derived.zip",
+     "bundle_kind": "derived_bundle/v0.3",
+     "zip_sha256": "229a0019f68ee38bd2eb91256bb8d15f4740bcaf889e6751692564d47004ce4e",
+     "content_id_sha256": "2520c2ec90ded51114ff0abd03611d36c7392db5d8efe2304f338da9fe4a847a",
+     "source_snapshot_sha256": "ec324b9f889852ffe3f7a9d2d3c69598f9040e3f4d51f30ce12ebdfd9a138de4"
+    },
+    "family_manifest_sha256": "6582a2d0e03c92ae53f3c0d03911556dfa2b7e51b21607f75728f28ff4ded94a",
+    "axis": "maximum_route_intrusion",
+    "coverage": {
+     "models": [
+      "simlingo"
+     ],
+     "seeds": [
+      0,
+      1,
+      2
+     ],
+     "variants": 12
+    },
+    "evidence": {
+     "bundle_content_id_sha256": "f7ec8997d16dcf48ea977942759fc279bd95b9c0f29dfcac9278c126cc9d948e",
+     "members": {
+      "campaign_carla_v07/fm_005_hero/family_snapshot/fm_005_hero.json": "6582a2d0e03c92ae53f3c0d03911556dfa2b7e51b21607f75728f28ff4ded94a"
+     },
+     "derived_content_id_sha256": "2520c2ec90ded51114ff0abd03611d36c7392db5d8efe2304f338da9fe4a847a",
+     "derived_members": {
+      "campaign_carla_v07/fm_005_hero/scoring_out/scored_rows.jsonl": "47017a4bf28c4d7a9e3269047c19684009de77bf22eeab6b7bee256e2bbf1b16"
+     }
+    },
+    "axis_kind": "numeric",
+    "stats_sha256": "d9815c8b540fa670db41112fb8666f8bb355a051ec4add18bd01c456fc430a0a",
+    "documents": {
+     "fs_campaign_carla_v07_fm_005_hero_simlingo.v0.2.json": "35dc7f1009c182fe7dea9786175d3dea757aecd7938b2b266320bd4dd58dde85"
+    }
+   }
+  }
+ }
+}

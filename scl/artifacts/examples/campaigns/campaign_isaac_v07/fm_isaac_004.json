@@ -1,0 +1,46 @@
+{
+ "declaration_kind": "campaign_declaration/v0.2",
+ "campaign_id": "campaign_isaac_v07",
+ "backend": "isaac",
+ "family": {
+  "family_id": "fm_isaac_004",
+  "manifest_path": "artifacts/examples/solved_families/isaac/fm_isaac_004/family_manifest.json",
+  "manifest_sha256": "f310e771310f1657379f6a81eec017dd593118f11d47606d4af70cbc621cad24"
+ },
+ "declared_grid": {
+  "variants": [
+   "comp_w0p00",
+   "comp_w0p15",
+   "comp_w0p30",
+   "comp_w0p40",
+   "comp_w0p45",
+   "comp_w0p58",
+   "comp_w0p65",
+   "comp_w0p75",
+   "comp_w0p90",
+   "comp_w1p20",
+   "comp_w1p80",
+   "comp_w2p50"
+  ],
+  "models": [
+   "expert",
+   "x_mobility_fusion_v3",
+   "x_mobility_vis_full"
+  ],
+  "repetitions": [
+   0,
+   1,
+   2,
+   3,
+   4
+  ],
+  "repetition_axis": {
+   "kind": "policy_reps",
+   "note": "the sim is audited bit-exact (M0): repetitions sample policy stochasticity, there are no traffic seeds - the CARLA analog axis is traffic_seed_strata"
+  },
+  "expert": true,
+  "reference_model": "expert"
+ },
+ "results_subtree": "campaign_isaac_v07/fm_isaac_004",
+ "note": "The two SCL X-Mobility v0.1 fine-tunes (vis_full_policy, fusion_v3; F54) on the three certified warehouse families, five policy samples each, the expert as reference; Isaac Sim 5.1 on L4 boxes cloned from the 2026-09-08 image, the store's vintage, so the six stock-brain campaigns v01 to v06 are the control and the stock brain is not re-run (Milan 2026-09-27). fm_isaac_001 and fm_isaac_003 overlap the release's training demonstrations (ar_006, ar_008); fm_isaac_004 (ar_007) was never trained on. One campaign id, one family per box, gathered before the freeze."
+}

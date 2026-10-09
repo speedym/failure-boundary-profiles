@@ -1,0 +1,147 @@
+{
+ "report_kind": "flow_certification/v0.7",
+ "driver_sha256": "c248a5bc034c64da727a4b9ae8d29a5b30ea3024a33158a4102832df0ad7b6c5",
+ "evidence_rule": "canon holds findings and declarations; the raw bundle holds the evidence and the derived bundle holds one interpretation of it keyed by the raw content id, one derived bundle per campaign whichever chains scored it; per-run rows are derived members, referenced here by both content ids, member path and member hash; every scored input is a MANIFEST-listed raw member; the derived bundle's snapshot id equals the one this tree lays",
+ "campaigns": {
+  "campaign_carla_v05": {
+   "fm_012_source_dist_interval_sweep": {
+    "campaign_declaration": {
+     "path": "artifacts/examples/campaigns/campaign_carla_v05/fm_012_source_dist_interval_sweep.json",
+     "sha256": "1dbce3c57b54153692f949979aea4c6595edf90f60dac1af691a04d5b29bc65f"
+    },
+    "coverage": {
+     "models_x_seeds": 12,
+     "variants": [
+      "route_002269_012_source_dist_interval_sweep_v01",
+      "route_002269_012_source_dist_interval_sweep_v02",
+      "route_002269_012_source_dist_interval_sweep_v03",
+      "route_002269_012_source_dist_interval_sweep_v04",
+      "route_002269_012_source_dist_interval_sweep_v05",
+      "route_002269_012_source_dist_interval_sweep_v06",
+      "route_002269_012_source_dist_interval_sweep_v07",
+      "route_002269_012_source_dist_interval_sweep_v08",
+      "route_002269_012_source_dist_interval_sweep_v09",
+      "route_002269_012_source_dist_interval_sweep_v10",
+      "route_002269_012_source_dist_interval_sweep_v11"
+     ],
+     "expected_cells": 132,
+     "found_cells": 132,
+     "missing_cells": []
+    },
+    "freshness": {
+     "rows": 132,
+     "input_files_sha256": "6095d2a0283dc50cfabaac5ad80a8ff6cc03a40e9e86d3e1a62c78b0952ee185",
+     "scorer_sha256": "84a21f7d6e25de345653f6922dc8bd0f3201e37adf70c2c8a071bca7ea2b9849",
+     "geometry_sha256": "ae36a18a0d04b9ae5fbb56f01b4b303ecf16c5ac739c3eb81f416dc0b27e89b5",
+     "zone_path": "artifacts/examples/scoring_instruments/carla_flow_conflict_zone_town03_j103_r144.json",
+     "instrument_zone_version": "flow_conflict_zone/v3.map_lane",
+     "gap_certificate": {
+      "path": "artifacts/examples/scoring_instruments/carla_flow_gap_certificate_fm_012_source_dist_interval_sweep.json",
+      "sha256": "38c0a14a9a02f15e26437f29fc8cf5c9ce064565da20b2d8e57458f0d29052a3",
+      "kind": "flow_gap_certificate/v0.1"
+     },
+     "family_manifest_sha256": "e713dcfe97567425cab1ca2d743e3b6d44d85a16c16c03f5b4c80595c6fe0543",
+     "campaign_declaration": {
+      "path": "artifacts/examples/campaigns/campaign_carla_v05/fm_012_source_dist_interval_sweep.json",
+      "sha256": "1dbce3c57b54153692f949979aea4c6595edf90f60dac1af691a04d5b29bc65f"
+     }
+    },
+    "replay": {
+     "aggregates_sha256": {
+      "flow_realized_per_seed.csv": "1f2336e6775f912ba7620b8f41bc0eb7eb24d8d44e14fcc19726507294ddd319",
+      "flow_figure_data.json": "cb0e44fd357a33237b3f2f0cc84e095312ba2d3b6dec0f30e6e0a067b0276d5d",
+      "flow_realized_per_seed.jsonl": "72fa8f72b7035a53b24258bd6223b8a3e6588adeca7bcc59c63625cf040f20e8",
+      "flow_per_variant_model.jsonl": "4819e12b3b015c68f40536e63a250e09b913fac01928efa7c191dad7db14630d",
+      "scoring_provenance.json": "9163c9e6d736104a3765a9921086a168c19e4e7ecd2d44315995f92c013aec4d",
+      "flow_per_variant_model.csv": "f45c4cdf28b7549768e494238fabb22b59dd2313cc3e65d47cb23ca8b7eb4fbd",
+      "flow_per_variant.jsonl": "aa797e28cef8353ca35ced89815885a055c3f9e98839d1e9dfbbe27718e7dda3",
+      "flow_per_variant.csv": "d66ada7ce5599c32b4bcc50bf53a05f07fa29a00d2b5c5e1e797d9280d47bb50",
+      "flow_reference_per_variant.jsonl": "93001322725097cc2b37d17697c40fd5ed85d9b8c729c55010e421950df14616",
+      "flow_reference_per_variant.csv": "cbbb57c1aadd2907ac2de24de9b6232a6b22de3eb07f9b9f2478c51086abcd6d",
+      "flow_summary.txt": "acb1c928def26f9b4824ec2e5a9b41daa304b941714eec316e29b94022e7a0ca",
+      "flow_runs.jsonl": "bf3595bd391a890dbcadb1ade3415ccea8f87ed254d1384232a7474f88d4dbe4"
+     },
+     "findings_sha256": {
+      "fs_campaign_carla_v05_fm_012_source_dist_interval_sweep_bridgedrive.v0.2.json": "f434b4d89d16e01722727eb4ea0ebc0bdb33dec9c9884670fc3f62148d527b33",
+      "fs_campaign_carla_v05_fm_012_source_dist_interval_sweep_lead.v0.2.json": "ffc31eb61226e488217ea214252f7812240184c0f322f3fea6083ca84c34c343",
+      "fs_campaign_carla_v05_fm_012_source_dist_interval_sweep_tfpp.v0.2.json": "ac83c2ec4c54e14345f79362951cf733dafc0bd1aca1a4f1e75af89a5df11900",
+      "fs_campaign_carla_v05_fm_012_source_dist_interval_sweep_pdm_lite_expert.v0.2.json": "b86c8f24e67488f9629be3dc3f89bd19aaa4f5754ef5877db76faae1ef544151"
+     },
+     "audit_reproduced": true,
+     "evidence_rows_reproduced": true,
+     "campaign_declaration_sha256": "1dbce3c57b54153692f949979aea4c6595edf90f60dac1af691a04d5b29bc65f",
+     "source_snapshot_sha256": "8e77f08ff9af8d825faf16ac5ef436f05eaf87658789f6fdc64ccf6a46715cfa"
+    },
+    "documents": {
+     "fs_campaign_carla_v05_fm_012_source_dist_interval_sweep_bridgedrive.v0.2.json": "f434b4d89d16e01722727eb4ea0ebc0bdb33dec9c9884670fc3f62148d527b33",
+     "fs_campaign_carla_v05_fm_012_source_dist_interval_sweep_lead.v0.2.json": "ffc31eb61226e488217ea214252f7812240184c0f322f3fea6083ca84c34c343",
+     "fs_campaign_carla_v05_fm_012_source_dist_interval_sweep_tfpp.v0.2.json": "ac83c2ec4c54e14345f79362951cf733dafc0bd1aca1a4f1e75af89a5df11900",
+     "fs_campaign_carla_v05_fm_012_source_dist_interval_sweep_pdm_lite_expert.v0.2.json": "b86c8f24e67488f9629be3dc3f89bd19aaa4f5754ef5877db76faae1ef544151"
+    },
+    "audit": {
+     "runs_checked": 132,
+     "independent_sat_mismatches": 0,
+     "oncoming_evidence_removed_entry_changes": 0,
+     "zone_depends_on_run_evidence": false,
+     "unresolved_count": 0
+    },
+    "remeasurement": {
+     "runs": 132,
+     "unmeasured_go": 0,
+     "approximated_corridors": 0,
+     "clean_without_measured_go_count": 0,
+     "repeated_outputs_identical": true,
+     "repeated_findings_identical": true,
+     "gap_certificate": {
+      "path": "artifacts/examples/scoring_instruments/carla_flow_gap_certificate_fm_012_source_dist_interval_sweep.json",
+      "sha256": "38c0a14a9a02f15e26437f29fc8cf5c9ce064565da20b2d8e57458f0d29052a3"
+     }
+    },
+    "map_check": {
+     "cells": 12,
+     "recordings_checked": 132,
+     "ego_spawns_checked": 132,
+     "scenario_spawns_checked": 4867
+    },
+    "bundle": {
+     "path": "campaign_carla_v05.zip",
+     "bundle_kind": "campaign_bundle/v0.2",
+     "zip_sha256": "84a05d6c2ab8c48afbbf4facb9fb23b75a23e5f2064e2da5d2447fa51a2c4cbf",
+     "content_id_sha256": "b28ef250d1ee009023a67097d80e690e07c2a831bacb0e82ca1d45d8794616a1",
+     "family_sub_id_sha256": "b28ef250d1ee009023a67097d80e690e07c2a831bacb0e82ca1d45d8794616a1"
+    },
+    "derived_bundle": {
+     "path": "campaign_carla_v05_derived.zip",
+     "bundle_kind": "derived_bundle/v0.3",
+     "zip_sha256": "5d81c957f23feb37d508be641f19e6cace174280b49dd4dd76c14cf97ea72a35",
+     "content_id_sha256": "1df3635e9c3dc16e8867abd45dbff0b86e0bc9676a6b532a15c0015458d88aa4",
+     "source_snapshot_sha256": "8e77f08ff9af8d825faf16ac5ef436f05eaf87658789f6fdc64ccf6a46715cfa",
+     "writer_sha256": "2b6ba5d40749cb472daaf533d70147e25554b3f1c4b4bfab83430e387645adc6",
+     "families": [
+      "fm_012_source_dist_interval_sweep"
+     ],
+     "reproduced_raw_members": [
+      "campaign_carla_v05/fm_012_source_dist_interval_sweep/flow_stats/flow_realized_per_seed.csv"
+     ]
+    },
+    "evidence": {
+     "bundle_content_id_sha256": "b28ef250d1ee009023a67097d80e690e07c2a831bacb0e82ca1d45d8794616a1",
+     "raw_inputs": {
+      "count": 264,
+      "input_files_sha256": "6095d2a0283dc50cfabaac5ad80a8ff6cc03a40e9e86d3e1a62c78b0952ee185",
+      "all_listed": true
+     },
+     "derived_content_id_sha256": "1df3635e9c3dc16e8867abd45dbff0b86e0bc9676a6b532a15c0015458d88aa4",
+     "derived_members": {
+      "campaign_carla_v05/fm_012_source_dist_interval_sweep/audit/commitment_audit_rows.json": "0018890a7fca72e745d8575538d32f71b59e967f20b2f354d897b984407dc298",
+      "campaign_carla_v05/fm_012_source_dist_interval_sweep/audit/remeasurement_rows.json": "078701526ebd2637f1736aaecef405a79e4662125ee319024caa9a88519b7066",
+      "campaign_carla_v05/fm_012_source_dist_interval_sweep/audit/map_check_recordings.json": "773e882ac75c4120de74b5d98f916d3a18b60aaf46445376c45a9d16d7a80a7e",
+      "campaign_carla_v05/fm_012_source_dist_interval_sweep/audit/commitment_audit.json": "dba8f366da524a49773db8f03e398c51503b354d9bc8bc9bd4898a24d9c14075",
+      "campaign_carla_v05/fm_012_source_dist_interval_sweep/audit/remeasurement.json": "aa1c8ff3c2bb4be4ea6e73828de398bb18ae718925431592d19613da1348b23c",
+      "campaign_carla_v05/fm_012_source_dist_interval_sweep/audit/map_verification.json": "756e680e5e91fbf1e9e53d1c7fca79e2cc973c59fc090af86698fd6996f8df97"
+     }
+    }
+   }
+  }
+ }
+}

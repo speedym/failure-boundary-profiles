@@ -1,0 +1,40 @@
+{
+ "declaration_kind": "campaign_declaration/v0.1",
+ "campaign_id": "campaign_carla_v03",
+ "backend": "fail2drive",
+ "family": {
+  "family_id": "fm_001_intrusion_sweep",
+  "manifest_path": "artifacts/examples/solved_families/fm_001_intrusion_sweep.json",
+  "manifest_sha256": "fbd200aabb00009ba358b3a21894eafae93cc5b3cec5d7864a337d761e8d285c"
+ },
+ "declared_grid": {
+  "variants": [
+   "Generalization_PassableObstacles_1060_001_intrusion_sweep_v01",
+   "Generalization_PassableObstacles_1060_001_intrusion_sweep_v02",
+   "Generalization_PassableObstacles_1060_001_intrusion_sweep_v03",
+   "Generalization_PassableObstacles_1060_001_intrusion_sweep_v04",
+   "Generalization_PassableObstacles_1060_001_intrusion_sweep_v05",
+   "Generalization_PassableObstacles_1060_001_intrusion_sweep_v06",
+   "Generalization_PassableObstacles_1060_001_intrusion_sweep_v07",
+   "Generalization_PassableObstacles_1060_001_intrusion_sweep_v08",
+   "Generalization_PassableObstacles_1060_001_intrusion_sweep_v09",
+   "Generalization_PassableObstacles_1060_001_intrusion_sweep_v10",
+   "Generalization_PassableObstacles_1060_001_intrusion_sweep_v11",
+   "Generalization_PassableObstacles_1060_001_intrusion_sweep_v12"
+  ],
+  "models": [
+   "bridgedrive",
+   "lead",
+   "pdm_lite_expert",
+   "tfpp"
+  ],
+  "seeds": [
+   1,
+   2
+  ],
+  "expert": true,
+  "reference_model": "pdm_lite_expert"
+ },
+ "results_subtree": "campaign_carla_v03/fm_001_intrusion_sweep",
+ "note": "Intrusion sweep seed extension: twelve variants, four agents, seeds 1 and 2, completing three seeds with campaign_carla_v02. Certified bundle content id 17cfc46befd7, family sub-id 17cfc46befd7; axis maximum_route_intrusion."
+}

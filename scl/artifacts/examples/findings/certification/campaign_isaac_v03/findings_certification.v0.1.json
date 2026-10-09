@@ -1,0 +1,65 @@
+{
+ "campaigns": {
+  "campaign_isaac_v03": {
+   "fm_isaac_004": {
+    "bundle": {
+     "bundle_kind": "campaign_bundle/v0.2",
+     "content_id_sha256": "828e348bd5679ddcb3b2dfa69e964bb3fad73fea6649faed5f5080bcddf8d5df",
+     "family_sub_id_sha256": "828e348bd5679ddcb3b2dfa69e964bb3fad73fea6649faed5f5080bcddf8d5df",
+     "path": "campaign_isaac_v03.zip",
+     "zip_sha256": "6bdf330189b19e4797aaa7c8c4cc189d46ad3e6459c34fb311251961bcc1bcb1"
+    },
+    "campaign_declaration": {
+     "path": "artifacts/examples/campaigns/campaign_isaac_v03/fm_isaac_004.json",
+     "sha256": "fa36ead160184f537b7974bda47fbe0af08a9861661406ac01575906c22855a2"
+    },
+    "chain": "isaac",
+    "coverage": {
+     "models": [
+      "expert",
+      "x_mobility"
+     ],
+     "repetitions": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "variants": 10
+    },
+    "derived_bundle": {
+     "bundle_kind": "derived_bundle/v0.3",
+     "content_id_sha256": "a57707c4dbc0304b0480d449d78016becf0fafe166ea4b8a1f558beca62814d7",
+     "families": [
+      "fm_isaac_004"
+     ],
+     "path": "campaign_isaac_v03_derived.zip",
+     "source_snapshot_sha256": "743d1c3d8a749977d6ed42bd8d74bf7d0d8593bf9e3906dc98b4fc560a5dbda0",
+     "zip_sha256": "57958ecf5b1d347f92b14aedfbd5b888d7ceada94bfbcde0ebe837ba0e65dc1b"
+    },
+    "documents": {
+     "fs_campaign_isaac_v03_fm_isaac_004_x_mobility.v0.2.json": "2784ad8ca53bd36d6411bc7d06cd0f9c107dafe5387de5dfe8e0b786643a6941"
+    },
+    "evidence": {
+     "bundle_content_id_sha256": "828e348bd5679ddcb3b2dfa69e964bb3fad73fea6649faed5f5080bcddf8d5df",
+     "derived_content_id_sha256": "a57707c4dbc0304b0480d449d78016becf0fafe166ea4b8a1f558beca62814d7",
+     "derived_members": {
+      "campaign_isaac_v03/fm_isaac_004/go_clean/go_clean_rows.jsonl": "c3309016e72708354e189d2d3092de371729964de6c40abd801fc37988b7e8e6",
+      "campaign_isaac_v03/fm_isaac_004/go_clean/go_clean_summary.json": "2197f836fbd6cd62d80db071ea1d8e464688f9321ea8a1cd1e612be28ee6f8fc",
+      "campaign_isaac_v03/fm_isaac_004/scoring_out/scored_runs.json": "6cbbce6367e35e553dae63171e73f145f5f4f7ab04405df595b7755f8f93ec19"
+     },
+     "members": {
+      "campaign_isaac_v03/fm_isaac_004/family_snapshot/family_manifest.json": "c6a737b0ed43e2159755627d2b57cd05f338f66f09c692cbc7003cc2bda7e51c"
+     }
+    },
+    "family_manifest_sha256": "c6a737b0ed43e2159755627d2b57cd05f338f66f09c692cbc7003cc2bda7e51c"
+   }
+  }
+ },
+ "driver_sha256": "c4338e519b37bf1485464760d3f2d5f85fa20a22b1676461b9af0446038d012e",
+ "emitter_sha256": "3f2a2bb42483b8441e0838ce692efc1299d9df7e997cf7316d5c17b15f85d6b9",
+ "estimator_sha256": "be9beb7f3a3c6d255c03f8c16cf6a25ffff1ef612e12b2c9ef9da94ff94b4cab",
+ "evidence_rule": "canon holds findings and declarations; the raw bundle holds the evidence and the derived bundle holds one interpretation keyed by the raw content id; every entry binds the declaration by hash, the family snapshot as a raw member, the scored table and the go/clean derivation as derived members, and every document by hash, byte-equal to its derived member",
+ "report_kind": "findings_certification/v0.1"
+}

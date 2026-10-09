@@ -1,0 +1,40 @@
+{
+ "declaration_kind": "campaign_declaration/v0.2",
+ "campaign_id": "campaign_carla_v08",
+ "backend": "fail2drive",
+ "family": {
+  "family_id": "fm_011_flow_speed_sweep",
+  "manifest_path": "artifacts/examples/solved_families/fm_011_flow_speed_sweep.json",
+  "manifest_sha256": "d09a148d931dbe3d5c86093120d3b483ef39a1061ee5d828ec57c75f0f506183"
+ },
+ "declared_grid": {
+  "variants": [
+   "route_002269_011_flow_speed_sweep_v01",
+   "route_002269_011_flow_speed_sweep_v02",
+   "route_002269_011_flow_speed_sweep_v03",
+   "route_002269_011_flow_speed_sweep_v04",
+   "route_002269_011_flow_speed_sweep_v05",
+   "route_002269_011_flow_speed_sweep_v06",
+   "route_002269_011_flow_speed_sweep_v07",
+   "route_002269_011_flow_speed_sweep_v08",
+   "route_002269_011_flow_speed_sweep_v09",
+   "route_002269_011_flow_speed_sweep_v10",
+   "route_002269_011_flow_speed_sweep_v11"
+  ],
+  "models": [
+   "hipad"
+  ],
+  "repetitions": [
+   0,
+   1,
+   2
+  ],
+  "repetition_axis": {
+   "kind": "traffic_seed_strata",
+   "note": "the sim is measurably nondeterministic: each run is a Bernoulli sample, seeds are strata - the Isaac analog axis is policy_reps"
+  },
+  "expert": false
+ },
+ "results_subtree": "campaign_carla_v08/fm_011_flow_speed_sweep",
+ "note": "HiP-AD (six-camera sensor agent, Bench2Drive lineage) on all seven CARLA families, traffic seeds 0 to 2; no reference agent in this campaign, the expert cells of v01 to v05 are read beside it at the figure (ruling 2026-09-14); the asset swap is in, since a sensor agent sees the asset; the first HiP-AD campaign is also the ledger's check on the install-time teardown abort (F28), read from the route logs"
+}

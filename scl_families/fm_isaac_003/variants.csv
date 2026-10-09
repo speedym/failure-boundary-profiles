@@ -1,0 +1,13 @@
+stem,target_width_m,measured_gap_m,assignment,certified,verdict
+stock_w2p50,2.5,2.5,passable,True,accepted
+stock_w2p00,2.0,2.0,passable,True,accepted
+stock_w1p50,1.5,1.5,passable,True,accepted
+stock_w1p00,1.0,1.0,passable,True,accepted
+stock_w0p80,0.8,0.8,passable,True,accepted
+stock_w0p65,0.65,0.65,passable,True,accepted
+stock_w0p58,0.58,0.58,passable,True,accepted
+stock_w0p54,0.54,0.54,passable,True,accepted
+stock_w0p45,0.45,0.45,blocked,True,accepted
+stock_w0p30,0.3,0.3,blocked,True,accepted
+stock_w0p15,0.15,0.15,blocked,True,accepted
+stock_w0p00,0.0,0.0,blocked,True,accepted

@@ -1,8 +1,7 @@
-This repository contains two kinds of material under two licenses.
+This repository contains three kinds of material under two licenses.
 
 1. Scenario families, variant catalogs, checksums, and project documentation
-   (failure_boundary_profiling_splits/, SHA256SUMS, docs/, README.md,
-    CITATION.cff):
+   (scl_families/, docs/, README.md, CITATION.cff):
 
    Creative Commons Attribution 4.0 International (CC BY 4.0).
    Full text: https://creativecommons.org/licenses/by/4.0/legalcode
@@ -10,7 +9,16 @@ This repository contains two kinds of material under two licenses.
 
    Copyright (c) 2026 Social Chaos Lab / Milan Bulat
 
-2. The bundled Fail2Drive evaluation harness (all remaining directories,
+2. The measurement chain under scl/ (the scoring, certification, bundling
+   and figure tools of the Social Chaos Lab pipeline, exported with the
+   instruments, manifests and records they read) and verify_scl_export.py:
+
+   MIT License.
+   Copyright (c) 2026 Social Chaos Lab / Milan Bulat
+   The MIT terms below apply, with this copyright notice in place of the
+   harness authors' notice.
+
+3. The bundled Fail2Drive evaluation harness (all remaining directories,
    including leaderboard/, scenario_runner/, team_code/, toolbox/, tools/,
    assets/, fail2drive_split/) and the fork patches in patches/:
 

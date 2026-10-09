@@ -1,7 +1,7 @@
 # Candidate sweep axes
 
 Working notes on factors we could sweep beyond the five families currently in
-[`failure_boundary_profiling_splits/`](../failure_boundary_profiling_splits). Nothing here has been
+[`scl_families/`](../scl_families). Nothing here has been
 generated, validated, or measured - these are proposals, with the harness knob for each one located
 and its semantics verified against the vendored tree at `bceb18a`. Line references are to that tree.
 

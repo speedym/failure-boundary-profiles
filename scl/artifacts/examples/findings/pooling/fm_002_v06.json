@@ -1,0 +1,9 @@
+{
+ "pooling_kind": "campaign_pooling/v0.1",
+ "pool_id": "fm_002_v06",
+ "family_id": "fm_002_corridor_pincer",
+ "campaigns": [
+  "campaign_carla_v06"
+ ],
+ "note": "PlanT 2.0 under its three checkpoints on fm_002_corridor_pincer, v06 alone (three traffic seeds): the atlas extension of 2026-09-19 draws it as one agent with three thin traces, and the checkpoint-versus-seed figure reads its per-seed rows. Boundary justification: which campaign extends the atlas is a paper-level choice."
+}

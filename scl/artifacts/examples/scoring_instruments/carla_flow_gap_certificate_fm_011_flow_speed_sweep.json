@@ -1,0 +1,874 @@
+{
+ "certificate_kind": "flow_gap_certificate/v0.1",
+ "family_id": "fm_011_flow_speed_sweep",
+ "produced_date": "2026-10-06",
+ "definition": "three bands per variant and seed from the realized traffic at the crossing against the vehicle's kinematic floors: usable (fits a crossing from rest), conditional (fits a rolling crossing only), wait (fits neither); 'wait' is the blocked analog and a rule, not a physical impossibility",
+ "margin_s": 0.5,
+ "zone": {
+  "sha256": "ae36a18a0d04b9ae5fbb56f01b4b303ecf16c5ac739c3eb81f416dc0b27e89b5"
+ },
+ "crossing_region": {
+  "reference_run": {
+   "campaign": "campaign_carla_v04",
+   "agent": "pdm_lite_expert",
+   "seed": "seed_0",
+   "variant": 1
+  },
+  "area_m2": 13.47,
+  "bounds": [
+   -9.7,
+   129.06,
+   0.66,
+   132.52
+  ]
+ },
+ "vehicle": {
+  "ego_half_extents_m": [
+   2.446,
+   0.918
+  ],
+  "peak_accel_mps2": 7.04,
+  "peak_accel_n_runs": 297,
+  "speed_limit_mps": 16.667,
+  "crossing_path_m": 13.534,
+  "crossing_path_n_runs": 102
+ },
+ "floors": {
+  "from_rest_s": 2.025,
+  "from_rest_distance_p10_m": 14.44,
+  "measured_clearing_from_rest": {
+   "n": 34,
+   "min_s": 2.15,
+   "p10_s": 2.6,
+   "median_s": 2.95,
+   "expert_median_s": 2.95
+  },
+  "rolling_reference_s": 1.001,
+  "rolling_reference_entry_speed_mps": 13.518,
+  "rolling_n_runs": 102
+ },
+ "thresholds_s": {
+  "usable_at_least": 2.525,
+  "conditional_at_least": 1.501
+ },
+ "variants": [
+  {
+   "variant": 1,
+   "scenario_id": "route_002269_011_flow_speed_sweep_v01",
+   "band": "usable",
+   "seed_bands": {
+    "seed_0": "usable",
+    "seed_1": "usable",
+    "seed_2": "usable"
+   },
+   "usable_window_s": {
+    "seed_0": 5.85,
+    "seed_1": 6.35,
+    "seed_2": 6.7
+   }
+  },
+  {
+   "variant": 2,
+   "scenario_id": "route_002269_011_flow_speed_sweep_v02",
+   "band": "usable",
+   "seed_bands": {
+    "seed_0": "usable",
+    "seed_1": "usable",
+    "seed_2": "usable"
+   },
+   "usable_window_s": {
+    "seed_0": 3.65,
+    "seed_1": 3.3,
+    "seed_2": 3.5
+   }
+  },
+  {
+   "variant": 3,
+   "scenario_id": "route_002269_011_flow_speed_sweep_v03",
+   "band": "usable",
+   "seed_bands": {
+    "seed_0": "usable",
+    "seed_1": "usable",
+    "seed_2": "usable"
+   },
+   "usable_window_s": {
+    "seed_0": 4.025,
+    "seed_1": 3.025,
+    "seed_2": 3.7
+   }
+  },
+  {
+   "variant": 4,
+   "scenario_id": "route_002269_011_flow_speed_sweep_v04",
+   "band": "usable",
+   "seed_bands": {
+    "seed_0": "usable",
+    "seed_1": "usable",
+    "seed_2": "usable"
+   },
+   "usable_window_s": {
+    "seed_0": 3.35,
+    "seed_1": 3.0,
+    "seed_2": 2.95
+   }
+  },
+  {
+   "variant": 5,
+   "scenario_id": "route_002269_011_flow_speed_sweep_v05",
+   "band": "conditional",
+   "seed_bands": {
+    "seed_0": "conditional",
+    "seed_1": "conditional",
+    "seed_2": "conditional"
+   },
+   "usable_window_s": {
+    "seed_0": 2.25,
+    "seed_1": 2.2,
+    "seed_2": 2.325
+   }
+  },
+  {
+   "variant": 6,
+   "scenario_id": "route_002269_011_flow_speed_sweep_v06",
+   "band": "conditional",
+   "seed_bands": {
+    "seed_0": "conditional",
+    "seed_1": "conditional",
+    "seed_2": "conditional"
+   },
+   "usable_window_s": {
+    "seed_0": 1.875,
+    "seed_1": 1.75,
+    "seed_2": 2.075
+   }
+  },
+  {
+   "variant": 7,
+   "scenario_id": "route_002269_011_flow_speed_sweep_v07",
+   "band": "conditional",
+   "seed_bands": {
+    "seed_0": "conditional",
+    "seed_1": "conditional",
+    "seed_2": "conditional"
+   },
+   "usable_window_s": {
+    "seed_0": 2.15,
+    "seed_1": 1.875,
+    "seed_2": 1.55
+   }
+  },
+  {
+   "variant": 8,
+   "scenario_id": "route_002269_011_flow_speed_sweep_v08",
+   "band": "wait",
+   "seed_bands": {
+    "seed_0": "wait",
+    "seed_1": "wait",
+    "seed_2": "wait"
+   },
+   "usable_window_s": {
+    "seed_0": 1.4,
+    "seed_1": 1.125,
+    "seed_2": 1.325
+   }
+  },
+  {
+   "variant": 9,
+   "scenario_id": "route_002269_011_flow_speed_sweep_v09",
+   "band": "wait",
+   "seed_bands": {
+    "seed_0": "wait",
+    "seed_1": "wait",
+    "seed_2": "wait"
+   },
+   "usable_window_s": {
+    "seed_0": 1.1,
+    "seed_1": 1.1,
+    "seed_2": 1.1
+   }
+  },
+  {
+   "variant": 10,
+   "scenario_id": "route_002269_011_flow_speed_sweep_v10",
+   "band": "wait",
+   "seed_bands": {
+    "seed_0": "wait",
+    "seed_1": "wait",
+    "seed_2": "wait"
+   },
+   "usable_window_s": {
+    "seed_0": 0.9,
+    "seed_1": 0.9,
+    "seed_2": 0.9
+   }
+  },
+  {
+   "variant": 11,
+   "scenario_id": "route_002269_011_flow_speed_sweep_v11",
+   "band": "mixed",
+   "seed_bands": {
+    "seed_0": "wait",
+    "seed_1": "conditional",
+    "seed_2": "wait"
+   },
+   "usable_window_s": {
+    "seed_0": 0.75,
+    "seed_1": 2.125,
+    "seed_2": 0.75
+   }
+  }
+ ],
+ "seeds": [
+  {
+   "variant": 1,
+   "seed": "seed_0",
+   "scenario_id": "route_002269_011_flow_speed_sweep_v01",
+   "flow_speed_mps": 3.02,
+   "spawn_headway_s": 8.4,
+   "local_headway_s": 8.4,
+   "headway_source": "spawn_interval",
+   "local_headway_spread_s": null,
+   "occupancy_s": 2.55,
+   "usable_window_s": 5.85,
+   "band": "usable",
+   "n_runs": 9,
+   "n_unperturbed": 8
+  },
+  {
+   "variant": 1,
+   "seed": "seed_1",
+   "scenario_id": "route_002269_011_flow_speed_sweep_v01",
+   "flow_speed_mps": 3.03,
+   "spawn_headway_s": 8.4,
+   "local_headway_s": 8.4,
+   "headway_source": "spawn_interval",
+   "local_headway_spread_s": null,
+   "occupancy_s": 2.05,
+   "usable_window_s": 6.35,
+   "band": "usable",
+   "n_runs": 9,
+   "n_unperturbed": 6
+  },
+  {
+   "variant": 1,
+   "seed": "seed_2",
+   "scenario_id": "route_002269_011_flow_speed_sweep_v01",
+   "flow_speed_mps": 3.03,
+   "spawn_headway_s": 8.9,
+   "local_headway_s": 8.95,
+   "headway_source": "spawn_interval",
+   "local_headway_spread_s": null,
+   "occupancy_s": 2.25,
+   "usable_window_s": 6.7,
+   "band": "usable",
+   "n_runs": 9,
+   "n_unperturbed": 8
+  },
+  {
+   "variant": 2,
+   "seed": "seed_0",
+   "scenario_id": "route_002269_011_flow_speed_sweep_v02",
+   "flow_speed_mps": 3.81,
+   "spawn_headway_s": 6.6,
+   "local_headway_s": 6.6,
+   "headway_source": "local",
+   "local_headway_spread_s": [
+    6.6,
+    6.6
+   ],
+   "occupancy_s": 2.95,
+   "usable_window_s": 3.65,
+   "band": "usable",
+   "n_runs": 9,
+   "n_unperturbed": 8
+  },
+  {
+   "variant": 2,
+   "seed": "seed_1",
+   "scenario_id": "route_002269_011_flow_speed_sweep_v02",
+   "flow_speed_mps": 3.81,
+   "spawn_headway_s": 6.6,
+   "local_headway_s": 6.65,
+   "headway_source": "local",
+   "local_headway_spread_s": [
+    6.55,
+    6.7
+   ],
+   "occupancy_s": 3.35,
+   "usable_window_s": 3.3,
+   "band": "usable",
+   "n_runs": 9,
+   "n_unperturbed": 7
+  },
+  {
+   "variant": 2,
+   "seed": "seed_2",
+   "scenario_id": "route_002269_011_flow_speed_sweep_v02",
+   "flow_speed_mps": 3.811,
+   "spawn_headway_s": 6.65,
+   "local_headway_s": 6.55,
+   "headway_source": "local",
+   "local_headway_spread_s": [
+    6.3,
+    6.85
+   ],
+   "occupancy_s": 3.05,
+   "usable_window_s": 3.5,
+   "band": "usable",
+   "n_runs": 9,
+   "n_unperturbed": 8
+  },
+  {
+   "variant": 3,
+   "seed": "seed_0",
+   "scenario_id": "route_002269_011_flow_speed_sweep_v03",
+   "flow_speed_mps": 4.601,
+   "spawn_headway_s": 5.5,
+   "local_headway_s": 5.4,
+   "headway_source": "local",
+   "local_headway_spread_s": [
+    5.4,
+    5.4
+   ],
+   "occupancy_s": 1.375,
+   "usable_window_s": 4.025,
+   "band": "usable",
+   "n_runs": 9,
+   "n_unperturbed": 8
+  },
+  {
+   "variant": 3,
+   "seed": "seed_1",
+   "scenario_id": "route_002269_011_flow_speed_sweep_v03",
+   "flow_speed_mps": 4.601,
+   "spawn_headway_s": 5.5,
+   "local_headway_s": 5.5,
+   "headway_source": "local",
+   "local_headway_spread_s": [
+    5.5,
+    5.6
+   ],
+   "occupancy_s": 2.475,
+   "usable_window_s": 3.025,
+   "band": "usable",
+   "n_runs": 9,
+   "n_unperturbed": 8
+  },
+  {
+   "variant": 3,
+   "seed": "seed_2",
+   "scenario_id": "route_002269_011_flow_speed_sweep_v03",
+   "flow_speed_mps": 4.66,
+   "spawn_headway_s": 5.5,
+   "local_headway_s": 5.4,
+   "headway_source": "local",
+   "local_headway_spread_s": [
+    5.4,
+    5.4
+   ],
+   "occupancy_s": 1.7,
+   "usable_window_s": 3.7,
+   "band": "usable",
+   "n_runs": 9,
+   "n_unperturbed": 8
+  },
+  {
+   "variant": 4,
+   "seed": "seed_0",
+   "scenario_id": "route_002269_011_flow_speed_sweep_v04",
+   "flow_speed_mps": 5.52,
+   "spawn_headway_s": 4.75,
+   "local_headway_s": 4.75,
+   "headway_source": "local",
+   "local_headway_spread_s": [
+    4.6,
+    4.75
+   ],
+   "occupancy_s": 1.4,
+   "usable_window_s": 3.35,
+   "band": "usable",
+   "n_runs": 9,
+   "n_unperturbed": 6
+  },
+  {
+   "variant": 4,
+   "seed": "seed_1",
+   "scenario_id": "route_002269_011_flow_speed_sweep_v04",
+   "flow_speed_mps": 5.461,
+   "spawn_headway_s": 4.75,
+   "local_headway_s": 4.75,
+   "headway_source": "local",
+   "local_headway_spread_s": [
+    4.65,
+    4.75
+   ],
+   "occupancy_s": 1.75,
+   "usable_window_s": 3.0,
+   "band": "usable",
+   "n_runs": 9,
+   "n_unperturbed": 8
+  },
+  {
+   "variant": 4,
+   "seed": "seed_2",
+   "scenario_id": "route_002269_011_flow_speed_sweep_v04",
+   "flow_speed_mps": 5.461,
+   "spawn_headway_s": 4.725,
+   "local_headway_s": 4.55,
+   "headway_source": "local",
+   "local_headway_spread_s": [
+    4.55,
+    4.8
+   ],
+   "occupancy_s": 1.6,
+   "usable_window_s": 2.95,
+   "band": "usable",
+   "n_runs": 9,
+   "n_unperturbed": 7
+  },
+  {
+   "variant": 5,
+   "seed": "seed_0",
+   "scenario_id": "route_002269_011_flow_speed_sweep_v05",
+   "flow_speed_mps": 6.27,
+   "spawn_headway_s": 4.2,
+   "local_headway_s": 4.05,
+   "headway_source": "local",
+   "local_headway_spread_s": [
+    4.05,
+    4.05
+   ],
+   "occupancy_s": 1.8,
+   "usable_window_s": 2.25,
+   "band": "conditional",
+   "n_runs": 9,
+   "n_unperturbed": 4
+  },
+  {
+   "variant": 5,
+   "seed": "seed_1",
+   "scenario_id": "route_002269_011_flow_speed_sweep_v05",
+   "flow_speed_mps": 6.277,
+   "spawn_headway_s": 4.25,
+   "local_headway_s": 4.15,
+   "headway_source": "local",
+   "local_headway_spread_s": [
+    3.95,
+    4.2
+   ],
+   "occupancy_s": 1.95,
+   "usable_window_s": 2.2,
+   "band": "conditional",
+   "n_runs": 9,
+   "n_unperturbed": 5
+  },
+  {
+   "variant": 5,
+   "seed": "seed_2",
+   "scenario_id": "route_002269_011_flow_speed_sweep_v05",
+   "flow_speed_mps": 6.24,
+   "spawn_headway_s": 4.2,
+   "local_headway_s": 4.05,
+   "headway_source": "local",
+   "local_headway_spread_s": [
+    4.05,
+    4.05
+   ],
+   "occupancy_s": 1.725,
+   "usable_window_s": 2.325,
+   "band": "conditional",
+   "n_runs": 9,
+   "n_unperturbed": 4
+  },
+  {
+   "variant": 6,
+   "seed": "seed_0",
+   "scenario_id": "route_002269_011_flow_speed_sweep_v06",
+   "flow_speed_mps": 7.019,
+   "spawn_headway_s": 3.7,
+   "local_headway_s": 3.475,
+   "headway_source": "local",
+   "local_headway_spread_s": [
+    3.35,
+    3.6
+   ],
+   "occupancy_s": 1.6,
+   "usable_window_s": 1.875,
+   "band": "conditional",
+   "n_runs": 9,
+   "n_unperturbed": 2
+  },
+  {
+   "variant": 6,
+   "seed": "seed_1",
+   "scenario_id": "route_002269_011_flow_speed_sweep_v06",
+   "flow_speed_mps": 7.02,
+   "spawn_headway_s": 3.7,
+   "local_headway_s": 3.525,
+   "headway_source": "local",
+   "local_headway_spread_s": [
+    3.4,
+    3.65
+   ],
+   "occupancy_s": 1.775,
+   "usable_window_s": 1.75,
+   "band": "conditional",
+   "n_runs": 9,
+   "n_unperturbed": 3
+  },
+  {
+   "variant": 6,
+   "seed": "seed_2",
+   "scenario_id": "route_002269_011_flow_speed_sweep_v06",
+   "flow_speed_mps": 7.031,
+   "spawn_headway_s": 3.65,
+   "local_headway_s": 3.575,
+   "headway_source": "local",
+   "local_headway_spread_s": [
+    3.4,
+    3.6
+   ],
+   "occupancy_s": 1.5,
+   "usable_window_s": 2.075,
+   "band": "conditional",
+   "n_runs": 9,
+   "n_unperturbed": 4
+  },
+  {
+   "variant": 7,
+   "seed": "seed_0",
+   "scenario_id": "route_002269_011_flow_speed_sweep_v07",
+   "flow_speed_mps": 7.991,
+   "spawn_headway_s": 3.25,
+   "local_headway_s": 3.1,
+   "headway_source": "local",
+   "local_headway_spread_s": [
+    3.1,
+    3.1
+   ],
+   "occupancy_s": 0.95,
+   "usable_window_s": 2.15,
+   "band": "conditional",
+   "n_runs": 9,
+   "n_unperturbed": 2
+  },
+  {
+   "variant": 7,
+   "seed": "seed_1",
+   "scenario_id": "route_002269_011_flow_speed_sweep_v07",
+   "flow_speed_mps": 8.04,
+   "spawn_headway_s": 3.2,
+   "local_headway_s": 3.05,
+   "headway_source": "local",
+   "local_headway_spread_s": [
+    2.95,
+    3.15
+   ],
+   "occupancy_s": 1.175,
+   "usable_window_s": 1.875,
+   "band": "conditional",
+   "n_runs": 9,
+   "n_unperturbed": 2
+  },
+  {
+   "variant": 7,
+   "seed": "seed_2",
+   "scenario_id": "route_002269_011_flow_speed_sweep_v07",
+   "flow_speed_mps": 8.001,
+   "spawn_headway_s": 3.225,
+   "local_headway_s": 2.85,
+   "headway_source": "local",
+   "local_headway_spread_s": [
+    2.75,
+    2.95
+   ],
+   "occupancy_s": 1.3,
+   "usable_window_s": 1.55,
+   "band": "conditional",
+   "n_runs": 9,
+   "n_unperturbed": 3
+  },
+  {
+   "variant": 8,
+   "seed": "seed_0",
+   "scenario_id": "route_002269_011_flow_speed_sweep_v08",
+   "flow_speed_mps": 10.001,
+   "spawn_headway_s": 2.65,
+   "local_headway_s": 2.55,
+   "headway_source": "local",
+   "local_headway_spread_s": [
+    2.25,
+    2.65
+   ],
+   "occupancy_s": 1.15,
+   "usable_window_s": 1.4,
+   "band": "wait",
+   "n_runs": 9,
+   "n_unperturbed": 1
+  },
+  {
+   "variant": 8,
+   "seed": "seed_1",
+   "scenario_id": "route_002269_011_flow_speed_sweep_v08",
+   "flow_speed_mps": 10.021,
+   "spawn_headway_s": 2.6,
+   "local_headway_s": 2.325,
+   "headway_source": "local",
+   "local_headway_spread_s": [
+    1.95,
+    2.55
+   ],
+   "occupancy_s": 1.2,
+   "usable_window_s": 1.125,
+   "band": "wait",
+   "n_runs": 9,
+   "n_unperturbed": 4
+  },
+  {
+   "variant": 8,
+   "seed": "seed_2",
+   "scenario_id": "route_002269_011_flow_speed_sweep_v08",
+   "flow_speed_mps": 10.001,
+   "spawn_headway_s": 2.65,
+   "local_headway_s": 2.4,
+   "headway_source": "local",
+   "local_headway_spread_s": [
+    2.25,
+    2.55
+   ],
+   "occupancy_s": 1.075,
+   "usable_window_s": 1.325,
+   "band": "wait",
+   "n_runs": 9,
+   "n_unperturbed": 3
+  },
+  {
+   "variant": 9,
+   "seed": "seed_0",
+   "scenario_id": "route_002269_011_flow_speed_sweep_v09",
+   "flow_speed_mps": 13.001,
+   "spawn_headway_s": 2.0,
+   "local_headway_s": 1.95,
+   "headway_source": "local",
+   "local_headway_spread_s": [
+    1.75,
+    2.05
+   ],
+   "occupancy_s": 0.85,
+   "usable_window_s": 1.1,
+   "band": "wait",
+   "n_runs": 9,
+   "n_unperturbed": 2
+  },
+  {
+   "variant": 9,
+   "seed": "seed_1",
+   "scenario_id": "route_002269_011_flow_speed_sweep_v09",
+   "flow_speed_mps": 13.001,
+   "spawn_headway_s": 2.0,
+   "local_headway_s": 1.95,
+   "headway_source": "local",
+   "local_headway_spread_s": [
+    1.35,
+    2.05
+   ],
+   "occupancy_s": 0.85,
+   "usable_window_s": 1.1,
+   "band": "wait",
+   "n_runs": 9,
+   "n_unperturbed": 3
+  },
+  {
+   "variant": 9,
+   "seed": "seed_2",
+   "scenario_id": "route_002269_011_flow_speed_sweep_v09",
+   "flow_speed_mps": 13.001,
+   "spawn_headway_s": 2.0,
+   "local_headway_s": 1.95,
+   "headway_source": "local",
+   "local_headway_spread_s": [
+    1.25,
+    2.05
+   ],
+   "occupancy_s": 0.85,
+   "usable_window_s": 1.1,
+   "band": "wait",
+   "n_runs": 9,
+   "n_unperturbed": 3
+  },
+  {
+   "variant": 10,
+   "seed": "seed_0",
+   "scenario_id": "route_002269_011_flow_speed_sweep_v10",
+   "flow_speed_mps": 15.058,
+   "spawn_headway_s": 1.6,
+   "local_headway_s": 1.6,
+   "headway_source": "local",
+   "local_headway_spread_s": [
+    1.35,
+    1.7
+   ],
+   "occupancy_s": 0.7,
+   "usable_window_s": 0.9,
+   "band": "wait",
+   "n_runs": 9,
+   "n_unperturbed": 1
+  },
+  {
+   "variant": 10,
+   "seed": "seed_1",
+   "scenario_id": "route_002269_011_flow_speed_sweep_v10",
+   "flow_speed_mps": 16.002,
+   "spawn_headway_s": 1.6,
+   "local_headway_s": 1.6,
+   "headway_source": "local",
+   "local_headway_spread_s": [
+    1.4,
+    1.7
+   ],
+   "occupancy_s": 0.7,
+   "usable_window_s": 0.9,
+   "band": "wait",
+   "n_runs": 9,
+   "n_unperturbed": 1
+  },
+  {
+   "variant": 10,
+   "seed": "seed_2",
+   "scenario_id": "route_002269_011_flow_speed_sweep_v10",
+   "flow_speed_mps": 16.001,
+   "spawn_headway_s": 1.6,
+   "local_headway_s": 1.6,
+   "headway_source": "local",
+   "local_headway_spread_s": [
+    1.0,
+    1.7
+   ],
+   "occupancy_s": 0.7,
+   "usable_window_s": 0.9,
+   "band": "wait",
+   "n_runs": 9,
+   "n_unperturbed": 2
+  },
+  {
+   "variant": 11,
+   "seed": "seed_0",
+   "scenario_id": "route_002269_011_flow_speed_sweep_v11",
+   "flow_speed_mps": 19.962,
+   "spawn_headway_s": 1.3,
+   "local_headway_s": 1.3,
+   "headway_source": "local",
+   "local_headway_spread_s": [
+    1.1,
+    1.4
+   ],
+   "occupancy_s": 0.55,
+   "usable_window_s": 0.75,
+   "band": "wait",
+   "n_runs": 9,
+   "n_unperturbed": 1
+  },
+  {
+   "variant": 11,
+   "seed": "seed_1",
+   "scenario_id": "route_002269_011_flow_speed_sweep_v11",
+   "flow_speed_mps": 17.938,
+   "spawn_headway_s": 1.35,
+   "local_headway_s": 3.1,
+   "headway_source": "local",
+   "local_headway_spread_s": [
+    1.0,
+    4.4
+   ],
+   "occupancy_s": 0.975,
+   "usable_window_s": 2.125,
+   "band": "conditional",
+   "n_runs": 9,
+   "n_unperturbed": 4
+  },
+  {
+   "variant": 11,
+   "seed": "seed_2",
+   "scenario_id": "route_002269_011_flow_speed_sweep_v11",
+   "flow_speed_mps": 19.966,
+   "spawn_headway_s": 1.3,
+   "local_headway_s": 1.3,
+   "headway_source": "local",
+   "local_headway_spread_s": [
+    1.0,
+    1.4
+   ],
+   "occupancy_s": 0.55,
+   "usable_window_s": 0.75,
+   "band": "wait",
+   "n_runs": 9,
+   "n_unperturbed": 2
+  }
+ ],
+ "counts": {
+  "usable": 4,
+  "conditional": 3,
+  "wait": 3,
+  "mixed": 1,
+  "unmeasured": 0,
+  "defect": 0
+ },
+ "defects": {
+  "register": {
+   "path": "artifacts/examples/scoring_instruments/carla_scenario_defects.json",
+   "sha256": "14ec9861c894e55d9ed8637c152fa6315a860a26783e874005c0745779db1360",
+   "kind": "scenario_defects/v0.2"
+  },
+  "applied": []
+ },
+ "method": {
+  "crossing_region": "union of the ego's oriented body polygons from zone entry to exit on the reference clean crossing, clipped to the declared lane polygon",
+  "local_headway": "front-to-front time between consecutive scenario cars' first intersection with the crossing region; occupancy = a car's first to last intersection",
+  "usable_window": "median local headway minus median occupancy over unperturbed runs (no collision; no entry during the flow, or a clean crossing); spawn-interval headway when no local headway could be measured (a platoon)",
+  "standstill": "the last stretch of >= 0.5 s below 0.2 m/s ending before the zone entry, within 20.0 m of path of it",
+  "acceleration": "max speed change over 0.5 s windows after the first 1.0 s, p50 across runs",
+  "floor_from_rest": "time to cover the p10 standstill-to-exit distance from rest at the measured acceleration, capped at the speed limit",
+  "rolling_reference": "crossing path length (median of crossing duration x entry speed over clean rolling crossings) over the median entry speed of those crossings",
+  "bands": "usable: window >= floor_from_rest + margin; conditional: window >= rolling_reference + margin; else wait; a variant is mixed when its seeds disagree",
+  "platoon": "a seed whose spawn-interval headway is no longer than a car's occupancy of the crossing has no window between cars (nose to tail); its window is spawn headway minus occupancy, never the per-car arrival measurement, hence wait"
+ },
+ "provenance": {
+  "tool": "flow_gap_certificate.py",
+  "tool_sha256": "3f387348542646377e26f562b6141ffbb4ca70e30178aaba317cc0468dbe9565",
+  "inputs": [
+   {
+    "zip": "campaign_carla_v04.zip",
+    "campaign_id": "campaign_carla_v04",
+    "runs": 132,
+    "manifest_sha256": "62ae7b6a14484f46fbb7e387fd31780e28980c4d8f5b4e4d8f165f1c4c606b7f",
+    "bundler_sha256": "3d41db4dfa10b07bbb30627f230d8d1fb9db2b810bf1111425205d2d6d7789ca",
+    "produced_date": "2026-09-08"
+   },
+   {
+    "zip": "campaign_carla_v06.zip",
+    "campaign_id": "campaign_carla_v06",
+    "runs": 99,
+    "manifest_sha256": "7be0b77d4c1aa179453435d2ba2884d656481efd2deec78a60805c59bfca6af5",
+    "bundler_sha256": "9f3af93647773121ae8654724457df5cc7193d60b24d2b0b6aa2692ac8bcc7b2",
+    "produced_date": "2026-09-16"
+   },
+   {
+    "zip": "campaign_carla_v07.zip",
+    "campaign_id": "campaign_carla_v07",
+    "runs": 33,
+    "manifest_sha256": "f7ec8997d16dcf48ea977942759fc279bd95b9c0f29dfcac9278c126cc9d948e",
+    "bundler_sha256": "9f3af93647773121ae8654724457df5cc7193d60b24d2b0b6aa2692ac8bcc7b2",
+    "produced_date": "2026-09-19"
+   },
+   {
+    "zip": "campaign_carla_v08.zip",
+    "campaign_id": "campaign_carla_v08",
+    "runs": 33,
+    "manifest_sha256": "9a13166b5181d5f05345c68d47e3fe3f6f243039b38afa32c6abe6bfef33fd65",
+    "bundler_sha256": "9f3af93647773121ae8654724457df5cc7193d60b24d2b0b6aa2692ac8bcc7b2",
+    "produced_date": "2026-09-21"
+   }
+  ],
+  "n_runs": 297
+ }
+}
