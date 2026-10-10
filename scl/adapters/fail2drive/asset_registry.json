@@ -1,0 +1,6574 @@
+{
+ "schema_version": "f2d_asset_registry/v0.1",
+ "source_fingerprints": {
+  "adapters/fail2drive/asset_enrichment.json": "bf568a6e7d35010429474783ec1a117563bde24232ebbc93a1c811869109748c",
+  "adapters/fail2drive/scripts/Asset_toolbox/blueprint_extents.json": "c476a2da3b3e5743e004ddd6b569391239667b6d7be335af15b9e3bf34582392",
+  "adapters/fail2drive/scripts/Asset_toolbox/mesh_extents.json": "52843cf8c0f56687e61d31b9f929848d4a1f0aa990632bff10d2bf681a30e9e7",
+  "artifacts/examples/carla_extracts/scenarios/Generalization_CustomObstacles_1026.json": "87ad356366d606ba5ca7ca856907af9c3e2b1790e488c13627ec1370d8020bae",
+  "artifacts/examples/carla_extracts/scenarios/Generalization_CustomObstacles_1026_003_asset_swap_v01.json": "a018a1cdb3adc39713691e5c2306cd2cb356cad1ba1d741f6d3fc0a825f68a1a",
+  "artifacts/examples/carla_extracts/scenarios/Generalization_CustomObstacles_1026_003_asset_swap_v02.json": "36516dbbfe4e54bb606d4c15a23b711ee3a3b795b40c8476f0e46fbcaffb2537",
+  "artifacts/examples/carla_extracts/scenarios/Generalization_CustomObstacles_1026_003_asset_swap_v03.json": "b302107639c8cf71b799c7c7e1cbcb188541e89c486f264f1a180ae743f562de",
+  "artifacts/examples/carla_extracts/scenarios/Generalization_CustomObstacles_1026_003_asset_swap_v05.json": "80194a29f0af9981d7bbd4a579567df4c4d0665436125a60bd05132669d28198",
+  "artifacts/examples/carla_extracts/scenarios/Generalization_CustomObstacles_1026_003_asset_swap_v07.json": "e872854d6987058e76b88db4d4e3019e92c08f662c961ebdb885562b6f3629e4",
+  "artifacts/examples/carla_extracts/scenarios/Generalization_CustomObstacles_1026_003_asset_swap_v08.json": "6b892816ea178f9074b1877d1d4331b2e0891a58d3917f84759cddd4e9f15cb2",
+  "artifacts/examples/carla_extracts/scenarios/Generalization_CustomObstacles_1026_003_asset_swap_v09.json": "76affbca4e4cba63141cf51bcc5278cad06d4f47e9414152baf86736c94f98d0",
+  "artifacts/examples/carla_extracts/scenarios/Generalization_CustomObstacles_1026_003_asset_swap_v10.json": "fe4ce984e5aa7d482c1e1342c70cf6ea21e00d52ac102cb3c850cfe4aa6fe6d0",
+  "artifacts/examples/carla_extracts/scenarios/Generalization_CustomObstacles_1026_003_asset_swap_v11.json": "81c4a91fa098b859ccf59f994cffe54c8c562fd5215e22a36ef98b4e1d2fcd00",
+  "artifacts/examples/carla_extracts/scenarios/Generalization_CustomObstacles_1026_003_asset_swap_v12.json": "3dcb2b63acfa6ca5433ea6ecb4d084a70bcf38bd34a7c4ae67f7e32e9a6cc4d7",
+  "artifacts/examples/carla_extracts/scenarios/Generalization_CustomObstacles_1026_003_asset_swap_v13.json": "1317a5e7f02a0593969a1fe950132d0d8d0eb132245bccd93a36b5ebea185bc2",
+  "artifacts/examples/carla_extracts/scenarios/Generalization_CustomObstacles_1026_003_asset_swap_v14.json": "fd9bd2d5845ea01f48aeba70ee0106ccffaaffec6d2b120abed727e33bd41bd3",
+  "artifacts/examples/carla_extracts/scenarios/Generalization_CustomObstacles_1026_003_asset_swap_v15.json": "5c5d31cd4db588f32cb70dc9fdfdb61cbb7827755b0c4322df67450d26ef9826",
+  "artifacts/examples/carla_extracts/scenarios/Generalization_CustomObstacles_1026_003_asset_swap_v16.json": "d5e923f198307afdb3c15c35a050c3900a64ed18bcac2665097dcdbe4291f0d6",
+  "artifacts/examples/carla_extracts/scenarios/Generalization_CustomObstacles_1026_003_asset_swap_v17.json": "6acae11242b5d1782fb6cc56f60610f1758b59854dc239298094556cc4b4731d",
+  "artifacts/examples/carla_extracts/scenarios/Generalization_CustomObstacles_1026_003_asset_swap_v18.json": "93f689474eeb1e8aef0d83fe954a25942874c5ea075dc389670aab36ad7b5038",
+  "artifacts/examples/carla_extracts/scenarios/Generalization_CustomObstacles_1026_003_asset_swap_v19.json": "7f34d6a9d476881d66087383b4a93fbf10128c21bb17555d027139ec80fde567",
+  "artifacts/examples/carla_extracts/scenarios/Generalization_CustomObstacles_1026_003_asset_swap_v20.json": "5adc16959bbca9718612d41eddf8ac19ebe19c2726e1c39275537bc70ca5fcae",
+  "artifacts/examples/carla_extracts/scenarios/Generalization_CustomObstacles_1026_003_asset_swap_v21.json": "965d6e1763611a264cba28b60ea62fb71826d9bc8b12a98b1bf3e28b5f45f4b5",
+  "artifacts/examples/carla_extracts/scenarios/Generalization_CustomObstacles_1026_003_asset_swap_v22.json": "b8f0b9e824d46600727b258d6b29de0427e0cbe27c519b3c3a86f2d9d6c730cb",
+  "artifacts/examples/carla_extracts/scenarios/Generalization_CustomObstacles_1026_003_asset_swap_v23.json": "dc0ed5a61d2b46cefe6619d73de47edd28a9fa7963c63d0cc8f94f6d59815453",
+  "artifacts/examples/carla_extracts/scenarios/Generalization_CustomObstacles_1026_005_hero_v06.json": "f5c4392b9ba739f0960b283ac9f8c6b3bfc4033e77d83e84e37f60d48c6d526f",
+  "artifacts/examples/carla_extracts/scenarios/Generalization_FullyBlocked_1030.json": "96edb0477efac0d2a103cc232b424fcf6920e5207fb6184da46e7b0682c4efff",
+  "artifacts/examples/carla_extracts/scenarios/Generalization_FullyBlocked_1031.json": "6f6979b99220f98737761a71c8753f6f816438ac39d893b871bc11ac19faa754",
+  "artifacts/examples/carla_extracts/scenarios/Generalization_PassableObstacles_1060.json": "bb352b3704d44d67aae48bccb3f4ae3e8ab3bf091a48fb03e67cfd68fad7fd75",
+  "artifacts/examples/carla_extracts/scenarios/Generalization_PassableObstacles_1060_001_intrusion_sweep_v04.json": "24c6b2624a1d180a2271a2ddb28a3e9bc8a8e2267fd083d489c01e7959765089",
+  "artifacts/examples/carla_extracts/scenarios/Generalization_PassableObstacles_1060_002_corridor_pincer_v01.json": "c0e97a40ccd14a090bd60ad3829d88809c7ab195e42839b4d9613710d2f63b75",
+  "artifacts/examples/carla_extracts/scenarios/Generalization_PassableObstacles_1061.json": "46a88b274ff4efaee7186e58f80fac5d271ab7c7dee8b5020bb7b8ee88ee1282"
+ },
+ "rows": [
+  {
+   "asset_id": "asset_advertisement",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.advertisement"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "advertisement",
+    "static",
+    "collidable"
+   ],
+   "semantic_class": "advertisement",
+   "enriched": false,
+   "attributes": {
+    "size": "medium"
+   },
+   "footprint": {
+    "half_extents": [
+     0.7746,
+     0.1434,
+     1.2214
+    ],
+    "center_offset": [
+     0.0,
+     0.0,
+     1.2214
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_atm",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.atm"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "atm",
+    "static",
+    "collidable"
+   ],
+   "semantic_class": "atm",
+   "enriched": false,
+   "attributes": {
+    "size": "medium"
+   },
+   "footprint": {
+    "half_extents": [
+     0.3566,
+     0.4369,
+     1.1379
+    ],
+    "center_offset": [
+     0.0,
+     -0.0545,
+     1.1379
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_highway_barrier",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.autobahn"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "autobahn",
+    "static",
+    "collidable",
+    "highway_barrier",
+    "roadside_object",
+    "barrier_object"
+   ],
+   "semantic_class": "highway_barrier",
+   "enriched": true,
+   "attributes": {
+    "size": "huge"
+   },
+   "footprint": {
+    "half_extents": [
+     3.3333,
+     2.5,
+     0.2
+    ],
+    "center_offset": [
+     0.0,
+     0.0,
+     -0.2
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": "Guardrail segment; blockage-capable."
+  },
+  {
+   "asset_id": "asset_barbeque_grill",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.barbeque"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "barbeque",
+    "static",
+    "collidable",
+    "barbeque_grill",
+    "roadside_object",
+    "unusual_roadside_object"
+   ],
+   "semantic_class": "barbeque_grill",
+   "enriched": true,
+   "attributes": {
+    "size": "small"
+   },
+   "footprint": {
+    "half_extents": [
+     0.4728,
+     0.2494,
+     0.632
+    ],
+    "center_offset": [
+     0.0,
+     0.0,
+     0.6337
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": "verified_stable",
+   "notes": null
+  },
+  {
+   "asset_id": "asset_barrel",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.barrel"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "barrel",
+    "static",
+    "collidable",
+    "roadside_object"
+   ],
+   "semantic_class": "barrel",
+   "enriched": true,
+   "attributes": {
+    "size": "small"
+   },
+   "footprint": {
+    "half_extents": [
+     0.2298,
+     0.2357,
+     0.4034
+    ],
+    "center_offset": [
+     0.012,
+     0.0,
+     0.4034
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": "tips_or_rolls",
+   "notes": null
+  },
+  {
+   "asset_id": "asset_bench01",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.bench01"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "bench01",
+    "static",
+    "collidable"
+   ],
+   "semantic_class": "bench01",
+   "enriched": false,
+   "attributes": {
+    "size": "medium"
+   },
+   "footprint": {
+    "half_extents": [
+     0.772,
+     0.3679,
+     0.4849
+    ],
+    "center_offset": [
+     -0.0023,
+     0.0268,
+     0.4721
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_bench02",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.bench02"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "bench02",
+    "static",
+    "collidable"
+   ],
+   "semantic_class": "bench02",
+   "enriched": false,
+   "attributes": {
+    "size": "medium"
+   },
+   "footprint": {
+    "half_extents": [
+     0.7818,
+     0.2723,
+     0.2545
+    ],
+    "center_offset": [
+     0.0,
+     0.0,
+     0.2545
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_bench03",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.bench03"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "bench03",
+    "static",
+    "collidable"
+   ],
+   "semantic_class": "bench03",
+   "enriched": false,
+   "attributes": {
+    "size": "medium"
+   },
+   "footprint": {
+    "half_extents": [
+     0.7917,
+     0.2563,
+     0.2563
+    ],
+    "center_offset": [
+     0.0,
+     0.0,
+     0.2563
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_bike_helmet",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.bike helmet"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "bike_helmet",
+    "static",
+    "collidable"
+   ],
+   "semantic_class": "bike_helmet",
+   "enriched": false,
+   "attributes": {
+    "size": "tiny"
+   },
+   "footprint": {
+    "half_extents": [
+     0.0928,
+     0.1385,
+     0.0856
+    ],
+    "center_offset": [
+     -0.0001,
+     -0.017,
+     -0.0504
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_waste_bin",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.bin"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "bin",
+    "static",
+    "collidable",
+    "waste_bin",
+    "roadside_object"
+   ],
+   "semantic_class": "waste_bin",
+   "enriched": true,
+   "attributes": {
+    "size": "medium"
+   },
+   "footprint": {
+    "half_extents": [
+     0.2741,
+     0.3191,
+     0.5296
+    ],
+    "center_offset": [
+     0.0,
+     -0.0,
+     0.5349
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": "verified_stable",
+   "notes": "ar_005 names waste bins. Preferred over trashcan01-05 for the waste_bin alias."
+  },
+  {
+   "asset_id": "asset_box01",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.box01"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "box01",
+    "static",
+    "collidable"
+   ],
+   "semantic_class": "box01",
+   "enriched": false,
+   "attributes": {
+    "size": "small"
+   },
+   "footprint": {
+    "half_extents": [
+     0.3261,
+     0.3261,
+     0.3458
+    ],
+    "center_offset": [
+     -0.0,
+     0.0,
+     0.3402
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_box02",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.box02"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "box02",
+    "static",
+    "collidable"
+   ],
+   "semantic_class": "box02",
+   "enriched": false,
+   "attributes": {
+    "size": "small"
+   },
+   "footprint": {
+    "half_extents": [
+     0.3243,
+     0.3243,
+     0.3243
+    ],
+    "center_offset": [
+     0.0,
+     0.0,
+     0.3243
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_cardboard_box",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.box03"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "box03",
+    "static",
+    "collidable",
+    "cardboard_box",
+    "roadside_object"
+   ],
+   "semantic_class": "cardboard_box",
+   "enriched": true,
+   "attributes": {
+    "size": "small"
+   },
+   "footprint": {
+    "half_extents": [
+     0.3304,
+     0.335,
+     0.3243
+    ],
+    "center_offset": [
+     0.0,
+     0.0,
+     0.3178
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": "verified_stable",
+   "notes": "The F2D-used box variant; box01/box02/creasedbox01-03 keep mechanical identities."
+  },
+  {
+   "asset_id": "asset_brick_wall",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.brickwall"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "brickwall",
+    "static",
+    "collidable",
+    "brick_wall",
+    "roadside_object",
+    "barrier_object"
+   ],
+   "semantic_class": "brick_wall",
+   "enriched": true,
+   "attributes": {
+    "size": "huge"
+   },
+   "footprint": {
+    "half_extents": [
+     2.0,
+     1.5,
+     0.15
+    ],
+    "center_offset": [
+     0.0,
+     0.0,
+     -0.15
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": "Blockage-capable. Provenance resolved: WallAssets-registered, not stock. WallAssets/Config/WallAssets.Package.json registers prop 'Brickwall' -> /Game/WallAssets/Static/Wall/Brickwall/brick_brickwall; stock Carla/Config/Default.Package.json has no brick/wall prop (verified f2d commit 72fea27). Measured via the blueprint route (blueprint_extents.json); the pack's mesh files are non-SM_ so the SM_-only mesh inventory does not list them (WallAssets = 0 mesh rows). Sibling static.prop.autobahn/asset_highway_barrier is WallAssets-registered the same way."
+  },
+  {
+   "asset_id": "asset_briefcase",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.briefcase"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "briefcase",
+    "static",
+    "collidable"
+   ],
+   "semantic_class": "briefcase",
+   "enriched": false,
+   "attributes": {
+    "size": "small"
+   },
+   "footprint": {
+    "half_extents": [
+     0.2717,
+     0.0906,
+     0.2164
+    ],
+    "center_offset": [
+     -0.0,
+     0.0218,
+     -0.2162
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_brokentile01",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.brokentile01"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "brokentile01",
+    "static",
+    "collidable"
+   ],
+   "semantic_class": "brokentile01",
+   "enriched": false,
+   "attributes": {
+    "size": "tiny"
+   },
+   "footprint": {
+    "half_extents": [
+     0.0672,
+     0.088,
+     0.0033
+    ],
+    "center_offset": [
+     0.1814,
+     -0.0362,
+     0.0033
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_brokentile02",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.brokentile02"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "brokentile02",
+    "static",
+    "collidable"
+   ],
+   "semantic_class": "brokentile02",
+   "enriched": false,
+   "attributes": {
+    "size": "tiny"
+   },
+   "footprint": {
+    "half_extents": [
+     0.1048,
+     0.0761,
+     0.0038
+    ],
+    "center_offset": [
+     0.4402,
+     -0.0052,
+     0.0038
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_brokentile03",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.brokentile03"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "brokentile03",
+    "static",
+    "collidable"
+   ],
+   "semantic_class": "brokentile03",
+   "enriched": false,
+   "attributes": {
+    "size": "tiny"
+   },
+   "footprint": {
+    "half_extents": [
+     0.0772,
+     0.0725,
+     0.0042
+    ],
+    "center_offset": [
+     0.7187,
+     -0.0009,
+     0.0042
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_brokentile04",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.brokentile04"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "brokentile04",
+    "static",
+    "collidable"
+   ],
+   "semantic_class": "brokentile04",
+   "enriched": false,
+   "attributes": {
+    "size": "tiny"
+   },
+   "footprint": {
+    "half_extents": [
+     0.0649,
+     0.0632,
+     0.0051
+    ],
+    "center_offset": [
+     0.0046,
+     -0.0079,
+     0.0058
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_busstop",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.busstop"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "busstop",
+    "static",
+    "collidable"
+   ],
+   "semantic_class": "busstop",
+   "enriched": false,
+   "attributes": {
+    "size": "big"
+   },
+   "footprint": {
+    "half_extents": [
+     1.938,
+     0.9468,
+     1.3695
+    ],
+    "center_offset": [
+     0.3669,
+     0.1772,
+     1.3695
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_busstoplb",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.busstoplb"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "busstoplb",
+    "static",
+    "collidable"
+   ],
+   "semantic_class": "busstoplb",
+   "enriched": false,
+   "attributes": {
+    "size": "big"
+   },
+   "footprint": {
+    "half_extents": [
+     0.9468,
+     1.938,
+     1.3695
+    ],
+    "center_offset": [
+     -0.1772,
+     0.3669,
+     1.3695
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_calibrator",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.calibrator"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "calibrator",
+    "static",
+    "collidable"
+   ],
+   "semantic_class": "calibrator",
+   "enriched": false,
+   "attributes": {
+    "size": "small"
+   },
+   "footprint": {
+    "half_extents": [
+     0.7738,
+     0.3451,
+     0.101
+    ],
+    "center_offset": [
+     0.0018,
+     0.0,
+     0.0
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_chainbarrier",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.chainbarrier"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "chainbarrier",
+    "static",
+    "collidable"
+   ],
+   "semantic_class": "chainbarrier",
+   "enriched": false,
+   "attributes": {
+    "size": "medium"
+   },
+   "footprint": {
+    "half_extents": [
+     0.7471,
+     0.1193,
+     0.4444
+    ],
+    "center_offset": [
+     0.6278,
+     0.0,
+     0.4444
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_chainbarrierend",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.chainbarrierend"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "chainbarrierend",
+    "static",
+    "collidable"
+   ],
+   "semantic_class": "chainbarrierend",
+   "enriched": false,
+   "attributes": {
+    "size": "small"
+   },
+   "footprint": {
+    "half_extents": [
+     0.1193,
+     0.1193,
+     0.4444
+    ],
+    "center_offset": [
+     0.0,
+     0.0,
+     0.4444
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_clothcontainer",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.clothcontainer"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "clothcontainer",
+    "static",
+    "collidable"
+   ],
+   "semantic_class": "clothcontainer",
+   "enriched": false,
+   "attributes": {
+    "size": "medium"
+   },
+   "footprint": {
+    "half_extents": [
+     0.6197,
+     0.9433,
+     0.9051
+    ],
+    "center_offset": [
+     0.0,
+     0.0144,
+     0.9051
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_clothesline",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.clothesline"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "clothesline",
+    "static",
+    "collidable",
+    "roadside_object",
+    "unusual_roadside_object"
+   ],
+   "semantic_class": "clothesline",
+   "enriched": true,
+   "attributes": {
+    "size": "big"
+   },
+   "footprint": {
+    "half_extents": [
+     3.3262,
+     0.559,
+     1.0305
+    ],
+    "center_offset": [
+     -0.0516,
+     0.0244,
+     0.9739
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": "Spanning/overhead prop - placement semantics differ from ground obstacles; solver support for spanning placement does not exist yet. audit_tolerance_m relaxed to 30mm: the hanging laundry is simulated cloth, so in-scene extents deviate from the isolated sweep by more than the rigid-prop 10mm (1061 instances: up to ~22mm vs census-under-rotation). Census stays canonical; the relaxed audit still catches wrong bindings."
+  },
+  {
+   "asset_id": "asset_colacan",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.colacan"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "colacan",
+    "static",
+    "collidable"
+   ],
+   "semantic_class": "colacan",
+   "enriched": false,
+   "attributes": {
+    "size": "tiny"
+   },
+   "footprint": {
+    "half_extents": [
+     0.0341,
+     0.0358,
+     0.0548
+    ],
+    "center_offset": [
+     -0.0036,
+     -0.0,
+     0.0522
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_construction_cone",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.constructioncone"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "constructioncone",
+    "static",
+    "collidable",
+    "construction_cone",
+    "roadside_object",
+    "construction_object"
+   ],
+   "semantic_class": "construction_cone",
+   "enriched": true,
+   "attributes": {
+    "size": "small"
+   },
+   "footprint": {
+    "half_extents": [
+     0.172,
+     0.172,
+     0.2929
+    ],
+    "center_offset": [
+     0.0,
+     0.0,
+     0.2929
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_cargo_container",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.container"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "container",
+    "static",
+    "collidable",
+    "cargo_container",
+    "roadside_object",
+    "barrier_object"
+   ],
+   "semantic_class": "cargo_container",
+   "enriched": true,
+   "attributes": {
+    "size": "medium"
+   },
+   "footprint": {
+    "half_extents": [
+     0.9659,
+     0.5062,
+     0.8571
+    ],
+    "center_offset": [
+     0.0,
+     1.1013,
+     0.8571
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": "Blockage-capable (full_static_blockage material)."
+  },
+  {
+   "asset_id": "asset_creasedbox01",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.creasedbox01"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "creasedbox01",
+    "static",
+    "collidable"
+   ],
+   "semantic_class": "creasedbox01",
+   "enriched": false,
+   "attributes": {
+    "size": "small"
+   },
+   "footprint": {
+    "half_extents": [
+     0.4044,
+     0.3565,
+     0.0589
+    ],
+    "center_offset": [
+     0.0449,
+     0.0,
+     0.0547
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_creasedbox02",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.creasedbox02"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "creasedbox02",
+    "static",
+    "collidable"
+   ],
+   "semantic_class": "creasedbox02",
+   "enriched": false,
+   "attributes": {
+    "size": "small"
+   },
+   "footprint": {
+    "half_extents": [
+     0.8166,
+     0.3565,
+     0.1058
+    ],
+    "center_offset": [
+     0.097,
+     0.0,
+     0.1058
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_creasedbox03",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.creasedbox03"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "creasedbox03",
+    "static",
+    "collidable"
+   ],
+   "semantic_class": "creasedbox03",
+   "enriched": false,
+   "attributes": {
+    "size": "small"
+   },
+   "footprint": {
+    "half_extents": [
+     0.8344,
+     0.3565,
+     0.0109
+    ],
+    "center_offset": [
+     0.1148,
+     0.0,
+     0.0109
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_dirtdebris01",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.dirtdebris01"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "dirtdebris01",
+    "static",
+    "collidable"
+   ],
+   "semantic_class": "dirtdebris01",
+   "enriched": false,
+   "attributes": {
+    "size": "small"
+   },
+   "footprint": {
+    "half_extents": [
+     0.9287,
+     0.757,
+     0.0745
+    ],
+    "center_offset": [
+     0.0,
+     0.0,
+     0.0659
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_dirtdebris02",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.dirtdebris02"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "dirtdebris02",
+    "static",
+    "collidable"
+   ],
+   "semantic_class": "dirtdebris02",
+   "enriched": false,
+   "attributes": {
+    "size": "small"
+   },
+   "footprint": {
+    "half_extents": [
+     0.9287,
+     0.757,
+     0.0745
+    ],
+    "center_offset": [
+     0.0,
+     0.0,
+     0.0659
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_dirtdebris03",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.dirtdebris03"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "dirtdebris03",
+    "static",
+    "collidable"
+   ],
+   "semantic_class": "dirtdebris03",
+   "enriched": false,
+   "attributes": {
+    "size": "small"
+   },
+   "footprint": {
+    "half_extents": [
+     0.9287,
+     0.757,
+     0.0942
+    ],
+    "center_offset": [
+     0.0,
+     0.0,
+     0.0856
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_dog_house",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.doghouse"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "doghouse",
+    "static",
+    "collidable",
+    "dog_house",
+    "roadside_object",
+    "unusual_roadside_object"
+   ],
+   "semantic_class": "dog_house",
+   "enriched": true,
+   "attributes": {
+    "size": "small"
+   },
+   "footprint": {
+    "half_extents": [
+     0.5396,
+     0.6361,
+     0.5468
+    ],
+    "center_offset": [
+     0.0,
+     0.0,
+     0.4832
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": "verified_stable",
+   "notes": null
+  },
+  {
+   "asset_id": "asset_mobile_food_cart",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.foodcart"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "foodcart",
+    "static",
+    "collidable",
+    "mobile_food_cart",
+    "roadside_object",
+    "unusual_roadside_object"
+   ],
+   "semantic_class": "mobile_food_cart",
+   "enriched": true,
+   "attributes": {
+    "size": "medium"
+   },
+   "footprint": {
+    "half_extents": [
+     1.1423,
+     2.3192,
+     1.7866
+    ],
+    "center_offset": [
+     -0.4513,
+     0.3892,
+     1.7834
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": "sinks",
+   "notes": "Chapter 1 canonical replacement object (ar_005 hero request)."
+  },
+  {
+   "asset_id": "asset_fountain",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.fountain"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "fountain",
+    "static",
+    "collidable"
+   ],
+   "semantic_class": "fountain",
+   "enriched": false,
+   "attributes": {
+    "size": "big"
+   },
+   "footprint": {
+    "half_extents": [
+     4.2009,
+     4.2009,
+     3.4622
+    ],
+    "center_offset": [
+     0.0,
+     0.0,
+     3.4622
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_garbage01",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.garbage01"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "garbage01",
+    "static",
+    "collidable"
+   ],
+   "semantic_class": "garbage01",
+   "enriched": false,
+   "attributes": {
+    "size": "tiny"
+   },
+   "footprint": {
+    "half_extents": [
+     0.0267,
+     0.0267,
+     0.0434
+    ],
+    "center_offset": [
+     -0.1281,
+     -0.2605,
+     0.0434
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_garbage02",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.garbage02"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "garbage02",
+    "static",
+    "collidable"
+   ],
+   "semantic_class": "garbage02",
+   "enriched": false,
+   "attributes": {
+    "size": "tiny"
+   },
+   "footprint": {
+    "half_extents": [
+     0.0267,
+     0.0267,
+     0.0046
+    ],
+    "center_offset": [
+     -0.154,
+     -0.101,
+     0.0046
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_garbage03",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.garbage03"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "garbage03",
+    "static",
+    "collidable"
+   ],
+   "semantic_class": "garbage03",
+   "enriched": false,
+   "attributes": {
+    "size": "tiny"
+   },
+   "footprint": {
+    "half_extents": [
+     0.0298,
+     0.0297,
+     0.0396
+    ],
+    "center_offset": [
+     -0.2087,
+     0.002,
+     0.0396
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_garbage04",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.garbage04"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "garbage04",
+    "static",
+    "collidable"
+   ],
+   "semantic_class": "garbage04",
+   "enriched": false,
+   "attributes": {
+    "size": "tiny"
+   },
+   "footprint": {
+    "half_extents": [
+     0.0286,
+     0.0278,
+     0.0344
+    ],
+    "center_offset": [
+     -0.108,
+     -0.2051,
+     0.0344
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_garbage05",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.garbage05"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "garbage05",
+    "static",
+    "collidable"
+   ],
+   "semantic_class": "garbage05",
+   "enriched": false,
+   "attributes": {
+    "size": "tiny"
+   },
+   "footprint": {
+    "half_extents": [
+     0.1159,
+     0.1163,
+     0.0288
+    ],
+    "center_offset": [
+     0.0371,
+     -0.1957,
+     0.0264
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_garbage06",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.garbage06"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "garbage06",
+    "static",
+    "collidable"
+   ],
+   "semantic_class": "garbage06",
+   "enriched": false,
+   "attributes": {
+    "size": "tiny"
+   },
+   "footprint": {
+    "half_extents": [
+     0.1831,
+     0.1067,
+     0.0384
+    ],
+    "center_offset": [
+     0.1862,
+     0.3349,
+     0.038
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_gardenlamp",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.gardenlamp"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "gardenlamp",
+    "static",
+    "collidable"
+   ],
+   "semantic_class": "gardenlamp",
+   "enriched": false,
+   "attributes": {
+    "size": "small"
+   },
+   "footprint": {
+    "half_extents": [
+     0.1486,
+     0.1406,
+     0.3239
+    ],
+    "center_offset": [
+     0.0,
+     0.0,
+     0.3239
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_glasscontainer",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.glasscontainer"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "glasscontainer",
+    "static",
+    "collidable"
+   ],
+   "semantic_class": "glasscontainer",
+   "enriched": false,
+   "attributes": {
+    "size": "medium"
+   },
+   "footprint": {
+    "half_extents": [
+     0.9774,
+     1.0044,
+     0.8942
+    ],
+    "center_offset": [
+     -0.0015,
+     0.0067,
+     0.8942
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_garden_gnome",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.gnome"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "gnome",
+    "static",
+    "collidable",
+    "garden_gnome",
+    "roadside_object",
+    "unusual_roadside_object"
+   ],
+   "semantic_class": "garden_gnome",
+   "enriched": true,
+   "attributes": {
+    "size": "small"
+   },
+   "footprint": {
+    "half_extents": [
+     0.1833,
+     0.1878,
+     0.4415
+    ],
+    "center_offset": [
+     0.0006,
+     0.0187,
+     0.4415
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": "10 F2D split scenarios."
+  },
+  {
+   "asset_id": "asset_guitar_case",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.guitarcase"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "guitarcase",
+    "static",
+    "collidable",
+    "guitar_case",
+    "roadside_object",
+    "unusual_roadside_object"
+   ],
+   "semantic_class": "guitar_case",
+   "enriched": true,
+   "attributes": {
+    "size": "small"
+   },
+   "footprint": {
+    "half_extents": [
+     0.6212,
+     0.0626,
+     0.2472
+    ],
+    "center_offset": [
+     -0.0365,
+     0.003,
+     -0.2204
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": "falls_through",
+   "notes": null
+  },
+  {
+   "asset_id": "asset_hay_bale",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.haybale"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "haybale",
+    "static",
+    "collidable",
+    "hay_bale",
+    "roadside_object",
+    "unusual_roadside_object"
+   ],
+   "semantic_class": "hay_bale",
+   "enriched": true,
+   "attributes": {
+    "size": "medium"
+   },
+   "footprint": {
+    "half_extents": [
+     0.6239,
+     0.5967,
+     0.5975
+    ],
+    "center_offset": [
+     -0.0017,
+     0.0026,
+     0.0039
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": "tips_or_rolls",
+   "notes": "7 F2D split scenarios; haybalelb is a separate blueprint/row."
+  },
+  {
+   "asset_id": "asset_haybalelb",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.haybalelb"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "haybalelb",
+    "static",
+    "collidable"
+   ],
+   "semantic_class": "haybalelb",
+   "enriched": false,
+   "attributes": {
+    "size": "medium"
+   },
+   "footprint": {
+    "half_extents": [
+     0.6239,
+     0.5967,
+     0.5975
+    ],
+    "center_offset": [
+     -0.0017,
+     0.0026,
+     0.4876
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_iron_plank",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.ironplank"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "ironplank",
+    "static",
+    "collidable",
+    "iron_plank",
+    "roadside_object",
+    "construction_object"
+   ],
+   "semantic_class": "iron_plank",
+   "enriched": true,
+   "attributes": {
+    "size": "small"
+   },
+   "footprint": {
+    "half_extents": [
+     0.7259,
+     0.5872,
+     0.0103
+    ],
+    "center_offset": [
+     0.0,
+     0.0,
+     0.0103
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": "verified_stable",
+   "notes": null
+  },
+  {
+   "asset_id": "asset_kiosk_01",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.kiosk_01"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "kiosk_01",
+    "static",
+    "collidable"
+   ],
+   "semantic_class": "kiosk_01",
+   "enriched": false,
+   "attributes": {
+    "size": "medium"
+   },
+   "footprint": {
+    "half_extents": [
+     0.8126,
+     0.827,
+     1.6227
+    ],
+    "center_offset": [
+     0.0,
+     0.0144,
+     1.6227
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_mailbox",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.mailbox"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "mailbox",
+    "static",
+    "collidable",
+    "roadside_object"
+   ],
+   "semantic_class": "mailbox",
+   "enriched": true,
+   "attributes": {
+    "size": "small"
+   },
+   "footprint": {
+    "half_extents": [
+     0.2633,
+     0.2192,
+     0.5786
+    ],
+    "center_offset": [
+     0.1935,
+     -0.177,
+     0.5786
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": "verified_stable",
+   "notes": null
+  },
+  {
+   "asset_id": "asset_maptable",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.maptable"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "maptable",
+    "static",
+    "collidable"
+   ],
+   "semantic_class": "maptable",
+   "enriched": false,
+   "attributes": {
+    "size": "medium"
+   },
+   "footprint": {
+    "half_extents": [
+     0.7866,
+     0.3085,
+     0.5905
+    ],
+    "center_offset": [
+     0.0,
+     0.2932,
+     0.5905
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_mobile",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.mobile"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "mobile",
+    "static",
+    "collidable"
+   ],
+   "semantic_class": "mobile",
+   "enriched": false,
+   "attributes": {
+    "size": "tiny"
+   },
+   "footprint": {
+    "half_extents": [
+     0.0402,
+     0.0036,
+     0.0832
+    ],
+    "center_offset": [
+     0.0,
+     0.0036,
+     0.0832
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_motorhelmet",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.motorhelmet"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "motorhelmet",
+    "static",
+    "collidable"
+   ],
+   "semantic_class": "motorhelmet",
+   "enriched": false,
+   "attributes": {
+    "size": "small"
+   },
+   "footprint": {
+    "half_extents": [
+     0.1002,
+     0.1296,
+     0.129
+    ],
+    "center_offset": [
+     -0.0,
+     -0.0423,
+     -0.0966
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_pergola",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.pergola"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "pergola",
+    "static",
+    "collidable"
+   ],
+   "semantic_class": "pergola",
+   "enriched": false,
+   "attributes": {
+    "size": "big"
+   },
+   "footprint": {
+    "half_extents": [
+     2.5147,
+     2.5425,
+     1.7708
+    ],
+    "center_offset": [
+     0.0,
+     0.0,
+     1.5425
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_plantpot01",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.plantpot01"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "plantpot01",
+    "static",
+    "collidable"
+   ],
+   "semantic_class": "plantpot01",
+   "enriched": false,
+   "attributes": {
+    "size": "small"
+   },
+   "footprint": {
+    "half_extents": [
+     0.5446,
+     0.2379,
+     0.2787
+    ],
+    "center_offset": [
+     0.0,
+     0.0,
+     0.2787
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_plantpot02",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.plantpot02"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "plantpot02",
+    "static",
+    "collidable"
+   ],
+   "semantic_class": "plantpot02",
+   "enriched": false,
+   "attributes": {
+    "size": "small"
+   },
+   "footprint": {
+    "half_extents": [
+     0.5256,
+     0.2154,
+     0.2435
+    ],
+    "center_offset": [
+     0.0,
+     0.0,
+     0.2435
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_plantpot03",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.plantpot03"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "plantpot03",
+    "static",
+    "collidable"
+   ],
+   "semantic_class": "plantpot03",
+   "enriched": false,
+   "attributes": {
+    "size": "small"
+   },
+   "footprint": {
+    "half_extents": [
+     0.5256,
+     0.2154,
+     0.2435
+    ],
+    "center_offset": [
+     0.0,
+     0.0,
+     0.2435
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_plantpot04",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.plantpot04"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "plantpot04",
+    "static",
+    "collidable"
+   ],
+   "semantic_class": "plantpot04",
+   "enriched": false,
+   "attributes": {
+    "size": "small"
+   },
+   "footprint": {
+    "half_extents": [
+     2.4837,
+     0.3683,
+     0.0624
+    ],
+    "center_offset": [
+     0.0,
+     0.0,
+     0.0624
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_plantpot05",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.plantpot05"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "plantpot05",
+    "static",
+    "collidable"
+   ],
+   "semantic_class": "plantpot05",
+   "enriched": false,
+   "attributes": {
+    "size": "small"
+   },
+   "footprint": {
+    "half_extents": [
+     0.2001,
+     0.2001,
+     0.14
+    ],
+    "center_offset": [
+     0.0,
+     0.0,
+     0.14
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_plantpot06",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.plantpot06"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "plantpot06",
+    "static",
+    "collidable"
+   ],
+   "semantic_class": "plantpot06",
+   "enriched": false,
+   "attributes": {
+    "size": "small"
+   },
+   "footprint": {
+    "half_extents": [
+     0.7966,
+     0.7966,
+     0.4248
+    ],
+    "center_offset": [
+     0.0,
+     0.0,
+     0.4248
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_plantpot07",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.plantpot07"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "plantpot07",
+    "static",
+    "collidable"
+   ],
+   "semantic_class": "plantpot07",
+   "enriched": false,
+   "attributes": {
+    "size": "small"
+   },
+   "footprint": {
+    "half_extents": [
+     0.2473,
+     0.2379,
+     0.2787
+    ],
+    "center_offset": [
+     -0.0,
+     0.0,
+     0.2787
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_plantpot08",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.plantpot08"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "plantpot08",
+    "static",
+    "collidable"
+   ],
+   "semantic_class": "plantpot08",
+   "enriched": false,
+   "attributes": {
+    "size": "small"
+   },
+   "footprint": {
+    "half_extents": [
+     0.2652,
+     0.2652,
+     0.2444
+    ],
+    "center_offset": [
+     0.0,
+     0.0,
+     0.2444
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_plastic_bag",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.plasticbag"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "plasticbag",
+    "static",
+    "collidable",
+    "plastic_bag",
+    "roadside_object",
+    "debris_object"
+   ],
+   "semantic_class": "plastic_bag",
+   "enriched": true,
+   "attributes": {
+    "size": "small"
+   },
+   "footprint": {
+    "half_extents": [
+     0.1555,
+     0.2013,
+     0.2762
+    ],
+    "center_offset": [
+     0.0,
+     0.008,
+     -0.2503
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_plastic_chair",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.plasticchair"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "plasticchair",
+    "static",
+    "collidable",
+    "plastic_chair",
+    "roadside_object"
+   ],
+   "semantic_class": "plastic_chair",
+   "enriched": true,
+   "attributes": {
+    "size": "small"
+   },
+   "footprint": {
+    "half_extents": [
+     0.3652,
+     0.3752,
+     0.6357
+    ],
+    "center_offset": [
+     0.0,
+     0.0,
+     0.6357
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": "verified_stable",
+   "notes": null
+  },
+  {
+   "asset_id": "asset_plastic_table",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.plastictable"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "plastictable",
+    "static",
+    "collidable",
+    "plastic_table",
+    "roadside_object"
+   ],
+   "semantic_class": "plastic_table",
+   "enriched": true,
+   "attributes": {
+    "size": "medium"
+   },
+   "footprint": {
+    "half_extents": [
+     1.2411,
+     1.2411,
+     1.2399
+    ],
+    "center_offset": [
+     0.0,
+     0.0,
+     1.2399
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": "verified_stable",
+   "notes": null
+  },
+  {
+   "asset_id": "asset_platformgarbage01",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.platformgarbage01"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "platformgarbage01",
+    "static",
+    "collidable"
+   ],
+   "semantic_class": "platformgarbage01",
+   "enriched": false,
+   "attributes": {
+    "size": "medium"
+   },
+   "footprint": {
+    "half_extents": [
+     1.8166,
+     0.8557,
+     0.1658
+    ],
+    "center_offset": [
+     0.0,
+     0.0,
+     0.0481
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_purse",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.purse"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "purse",
+    "static",
+    "collidable"
+   ],
+   "semantic_class": "purse",
+   "enriched": false,
+   "attributes": {
+    "size": "small"
+   },
+   "footprint": {
+    "half_extents": [
+     0.0796,
+     0.1663,
+     0.2926
+    ],
+    "center_offset": [
+     -0.2611,
+     0.0576,
+     1.1799
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_screenshot1",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.screenshot1"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "screenshot1",
+    "static",
+    "collidable"
+   ],
+   "semantic_class": "screenshot1",
+   "enriched": false,
+   "attributes": {
+    "size": "huge"
+   },
+   "footprint": {
+    "half_extents": [
+     4.0,
+     2.0,
+     0.25
+    ],
+    "center_offset": [
+     0.0,
+     0.0,
+     -0.25
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "excluded",
+   "exclusion_reason": "ImageOnObject texture plane, not a physical obstacle",
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_screenshot2",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.screenshot2"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "screenshot2",
+    "static",
+    "collidable"
+   ],
+   "semantic_class": "screenshot2",
+   "enriched": false,
+   "attributes": {
+    "size": "huge"
+   },
+   "footprint": {
+    "half_extents": [
+     4.0,
+     2.0,
+     0.25
+    ],
+    "center_offset": [
+     0.0,
+     0.0,
+     -0.25
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "excluded",
+   "exclusion_reason": "ImageOnObject texture plane, not a physical obstacle",
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_shoppingbag",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.shoppingbag"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "shoppingbag",
+    "static",
+    "collidable"
+   ],
+   "semantic_class": "shoppingbag",
+   "enriched": false,
+   "attributes": {
+    "size": "small"
+   },
+   "footprint": {
+    "half_extents": [
+     0.2372,
+     0.1216,
+     0.3003
+    ],
+    "center_offset": [
+     -0.0067,
+     -0.0063,
+     -0.2812
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_shopping_cart",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.shoppingcart"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "shoppingcart",
+    "static",
+    "collidable",
+    "shopping_cart",
+    "roadside_object",
+    "unusual_roadside_object"
+   ],
+   "semantic_class": "shopping_cart",
+   "enriched": true,
+   "attributes": {
+    "size": "medium"
+   },
+   "footprint": {
+    "half_extents": [
+     0.3347,
+     0.6038,
+     0.5397
+    ],
+    "center_offset": [
+     -0.161,
+     0.58,
+     -0.5397
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": "falls_through",
+   "notes": null
+  },
+  {
+   "asset_id": "asset_shopping_trolley",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.shoppingtrolley"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "shoppingtrolley",
+    "static",
+    "collidable",
+    "shopping_trolley",
+    "roadside_object",
+    "unusual_roadside_object"
+   ],
+   "semantic_class": "shopping_trolley",
+   "enriched": true,
+   "attributes": {
+    "size": "small"
+   },
+   "footprint": {
+    "half_extents": [
+     0.2528,
+     0.1656,
+     0.5468
+    ],
+    "center_offset": [
+     -0.0,
+     0.0889,
+     -0.5318
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": "falls_through",
+   "notes": null
+  },
+  {
+   "asset_id": "asset_playground_slide",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.slide"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "slide",
+    "static",
+    "collidable",
+    "playground_slide",
+    "roadside_object",
+    "unusual_roadside_object"
+   ],
+   "semantic_class": "playground_slide",
+   "enriched": true,
+   "attributes": {
+    "size": "big"
+   },
+   "footprint": {
+    "half_extents": [
+     0.4713,
+     2.0612,
+     0.9883
+    ],
+    "center_offset": [
+     -0.1642,
+     1.5795,
+     0.9929
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": "verified_stable",
+   "notes": null
+  },
+  {
+   "asset_id": "asset_street_barrier",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.streetbarrier"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "streetbarrier",
+    "static",
+    "collidable",
+    "street_barrier",
+    "roadside_object",
+    "barrier_object"
+   ],
+   "semantic_class": "street_barrier",
+   "enriched": true,
+   "attributes": {
+    "size": "small"
+   },
+   "footprint": {
+    "half_extents": [
+     0.6075,
+     0.1858,
+     0.5346
+    ],
+    "center_offset": [
+     0.0,
+     0.0,
+     0.5348
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": "verified_stable",
+   "notes": "Most-used F2D split prop (11 scenarios)."
+  },
+  {
+   "asset_id": "asset_streetfountain",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.streetfountain"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "streetfountain",
+    "static",
+    "collidable"
+   ],
+   "semantic_class": "streetfountain",
+   "enriched": false,
+   "attributes": {
+    "size": "small"
+   },
+   "footprint": {
+    "half_extents": [
+     0.1435,
+     0.3351,
+     0.6297
+    ],
+    "center_offset": [
+     0.0,
+     0.1715,
+     0.6297
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_streetsign",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.streetsign"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "streetsign",
+    "static",
+    "collidable"
+   ],
+   "semantic_class": "streetsign",
+   "enriched": false,
+   "attributes": {
+    "size": "small"
+   },
+   "footprint": {
+    "half_extents": [
+     0.5322,
+     0.0626,
+     1.0772
+    ],
+    "center_offset": [
+     0.0,
+     -0.0,
+     1.0772
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_streetsign01",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.streetsign01"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "streetsign01",
+    "static",
+    "collidable"
+   ],
+   "semantic_class": "streetsign01",
+   "enriched": false,
+   "attributes": {
+    "size": "medium"
+   },
+   "footprint": {
+    "half_extents": [
+     1.2352,
+     0.1515,
+     1.939
+    ],
+    "center_offset": [
+     0.0021,
+     -0.0262,
+     1.939
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_streetsign04",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.streetsign04"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "streetsign04",
+    "static",
+    "collidable"
+   ],
+   "semantic_class": "streetsign04",
+   "enriched": false,
+   "attributes": {
+    "size": "small"
+   },
+   "footprint": {
+    "half_extents": [
+     0.5854,
+     0.0624,
+     1.3864
+    ],
+    "center_offset": [
+     0.0,
+     0.0,
+     1.3864
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_swing",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.swing"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "swing",
+    "static",
+    "collidable"
+   ],
+   "semantic_class": "swing",
+   "enriched": false,
+   "attributes": {
+    "size": "medium"
+   },
+   "footprint": {
+    "half_extents": [
+     2.0526,
+     0.7884,
+     1.2862
+    ],
+    "center_offset": [
+     0.0,
+     0.0,
+     1.2801
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_swingcouch",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.swingcouch"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "swingcouch",
+    "static",
+    "collidable"
+   ],
+   "semantic_class": "swingcouch",
+   "enriched": false,
+   "attributes": {
+    "size": "medium"
+   },
+   "footprint": {
+    "half_extents": [
+     0.6787,
+     1.1812,
+     1.1247
+    ],
+    "center_offset": [
+     -0.0039,
+     -0.2054,
+     1.1381
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_table",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.table"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "table",
+    "static",
+    "collidable"
+   ],
+   "semantic_class": "table",
+   "enriched": false,
+   "attributes": {
+    "size": "medium"
+   },
+   "footprint": {
+    "half_extents": [
+     1.0781,
+     1.0759,
+     0.4232
+    ],
+    "center_offset": [
+     0.0,
+     0.0,
+     0.4188
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_traffic_cone",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.trafficcone01"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "trafficcone01",
+    "static",
+    "collidable",
+    "traffic_cone",
+    "roadside_object",
+    "construction_object"
+   ],
+   "semantic_class": "traffic_cone",
+   "enriched": true,
+   "attributes": {
+    "size": "small"
+   },
+   "footprint": {
+    "half_extents": [
+     0.4414,
+     0.4411,
+     0.5667
+    ],
+    "center_offset": [
+     0.0,
+     -0.0002,
+     0.5665
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": "verified_stable",
+   "notes": "The F2D-used cone variant; trafficcone02 keeps its mechanical identity."
+  },
+  {
+   "asset_id": "asset_trafficcone02",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.trafficcone02"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "trafficcone02",
+    "static",
+    "collidable"
+   ],
+   "semantic_class": "trafficcone02",
+   "enriched": false,
+   "attributes": {
+    "size": "small"
+   },
+   "footprint": {
+    "half_extents": [
+     0.2278,
+     0.1973,
+     0.5915
+    ],
+    "center_offset": [
+     0.0,
+     0.0,
+     0.5915
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_traffic_warning",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.trafficwarning"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "trafficwarning",
+    "static",
+    "collidable",
+    "traffic_warning_sign",
+    "roadside_object",
+    "construction_object"
+   ],
+   "semantic_class": "traffic_warning_sign",
+   "enriched": true,
+   "attributes": {
+    "size": "big"
+   },
+   "footprint": {
+    "half_extents": [
+     1.1867,
+     1.4353,
+     1.7848
+    ],
+    "center_offset": [
+     0.0,
+     0.0,
+     1.7848
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": "verified_stable",
+   "notes": null
+  },
+  {
+   "asset_id": "asset_trampoline",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.trampoline"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "trampoline",
+    "static",
+    "collidable",
+    "roadside_object",
+    "unusual_roadside_object"
+   ],
+   "semantic_class": "trampoline",
+   "enriched": true,
+   "attributes": {
+    "size": "big"
+   },
+   "footprint": {
+    "half_extents": [
+     2.0658,
+     2.0658,
+     1.4009
+    ],
+    "center_offset": [
+     0.0,
+     0.0,
+     1.4003
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": "verified_stable",
+   "notes": null
+  },
+  {
+   "asset_id": "asset_trash_bag",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.trashbag"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "trashbag",
+    "static",
+    "collidable",
+    "trash_bag",
+    "roadside_object",
+    "debris_object"
+   ],
+   "semantic_class": "trash_bag",
+   "enriched": true,
+   "attributes": {
+    "size": "small"
+   },
+   "footprint": {
+    "half_extents": [
+     0.189,
+     0.2148,
+     0.351
+    ],
+    "center_offset": [
+     0.0011,
+     -0.0025,
+     0.3527
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_trashcan01",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.trashcan01"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "trashcan01",
+    "static",
+    "collidable"
+   ],
+   "semantic_class": "trashcan01",
+   "enriched": false,
+   "attributes": {
+    "size": "small"
+   },
+   "footprint": {
+    "half_extents": [
+     0.3176,
+     0.2839,
+     0.4241
+    ],
+    "center_offset": [
+     0.0,
+     0.0,
+     0.4241
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_trashcan02",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.trashcan02"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "trashcan02",
+    "static",
+    "collidable"
+   ],
+   "semantic_class": "trashcan02",
+   "enriched": false,
+   "attributes": {
+    "size": "small"
+   },
+   "footprint": {
+    "half_extents": [
+     0.2619,
+     0.2568,
+     0.5227
+    ],
+    "center_offset": [
+     0.0,
+     0.0,
+     0.5227
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_trashcan03",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.trashcan03"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "trashcan03",
+    "static",
+    "collidable"
+   ],
+   "semantic_class": "trashcan03",
+   "enriched": false,
+   "attributes": {
+    "size": "small"
+   },
+   "footprint": {
+    "half_extents": [
+     0.3147,
+     0.2727,
+     0.4668
+    ],
+    "center_offset": [
+     -0.002,
+     -0.0129,
+     0.4668
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_trashcan04",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.trashcan04"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "trashcan04",
+    "static",
+    "collidable"
+   ],
+   "semantic_class": "trashcan04",
+   "enriched": false,
+   "attributes": {
+    "size": "small"
+   },
+   "footprint": {
+    "half_extents": [
+     0.3944,
+     0.2902,
+     0.5082
+    ],
+    "center_offset": [
+     0.0,
+     0.0,
+     0.5059
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_trashcan05",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.trashcan05"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "trashcan05",
+    "static",
+    "collidable"
+   ],
+   "semantic_class": "trashcan05",
+   "enriched": false,
+   "attributes": {
+    "size": "small"
+   },
+   "footprint": {
+    "half_extents": [
+     0.3944,
+     0.2902,
+     0.5082
+    ],
+    "center_offset": [
+     0.0,
+     0.0,
+     0.5059
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_travel_suitcase",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.travelcase"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "travelcase",
+    "static",
+    "collidable",
+    "travel_suitcase",
+    "roadside_object",
+    "unusual_roadside_object"
+   ],
+   "semantic_class": "travel_suitcase",
+   "enriched": true,
+   "attributes": {
+    "size": "small"
+   },
+   "footprint": {
+    "half_extents": [
+     0.2837,
+     0.1638,
+     0.6313
+    ],
+    "center_offset": [
+     0.0133,
+     0.1424,
+     -0.6255
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": "falls_through",
+   "notes": null
+  },
+  {
+   "asset_id": "asset_vending_machine",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.vendingmachine"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "vendingmachine",
+    "static",
+    "collidable",
+    "vending_machine",
+    "roadside_object",
+    "unusual_roadside_object"
+   ],
+   "semantic_class": "vending_machine",
+   "enriched": true,
+   "attributes": {
+    "size": "medium"
+   },
+   "footprint": {
+    "half_extents": [
+     0.4347,
+     0.5532,
+     1.0537
+    ],
+    "center_offset": [
+     -0.0487,
+     0.0,
+     0.9801
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "scenario_sidecar",
+     "method": "in-scene spawn + trigger-time physics settle + actor.bounding_box readback",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": "Generalization_PassableObstacles_1060.json"
+    }
+   },
+   "cross_checks": [
+    {
+     "source": "blueprint_extents",
+     "ref": "static.prop.vendingmachine",
+     "half_extents": [
+      0.4364,
+      0.551,
+      1.0541
+     ],
+     "max_delta_m": 0.0022
+    }
+   ],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": "verified_stable",
+   "notes": "Hero scenario object (Generalization_PassableObstacles_1060); in-scene settle-verified sidecar measurements exist. Matches importer ASSET_LIFTING id."
+  },
+  {
+   "asset_id": "asset_warningaccident",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.warningaccident"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "warningaccident",
+    "static",
+    "collidable"
+   ],
+   "semantic_class": "warningaccident",
+   "enriched": false,
+   "attributes": {
+    "size": "medium"
+   },
+   "footprint": {
+    "half_extents": [
+     0.6525,
+     0.5275,
+     0.9301
+    ],
+    "center_offset": [
+     0.0,
+     0.0066,
+     0.9294
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_warningconstruction",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.warningconstruction"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "warningconstruction",
+    "static",
+    "collidable"
+   ],
+   "semantic_class": "warningconstruction",
+   "enriched": false,
+   "attributes": {
+    "size": "medium"
+   },
+   "footprint": {
+    "half_extents": [
+     0.6525,
+     0.5275,
+     0.9301
+    ],
+    "center_offset": [
+     0.0,
+     0.0066,
+     0.9294
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_wateringcan",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "static.prop.wateringcan"
+   },
+   "actor_category": "static_prop",
+   "semantic_tags": [
+    "wateringcan",
+    "static",
+    "collidable"
+   ],
+   "semantic_class": "wateringcan",
+   "enriched": false,
+   "attributes": {
+    "size": "small"
+   },
+   "footprint": {
+    "half_extents": [
+     0.0352,
+     0.097,
+     0.0674
+    ],
+    "center_offset": [
+     0.0,
+     0.0214,
+     0.0674
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_audi_a2",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "vehicle.audi.a2"
+   },
+   "actor_category": "vehicle",
+   "semantic_tags": [
+    "audi_a2",
+    "vehicle",
+    "collidable"
+   ],
+   "semantic_class": "audi_a2",
+   "enriched": false,
+   "attributes": {
+    "base_type": "car",
+    "special_type": "",
+    "number_of_wheels": "4",
+    "generation": "1"
+   },
+   "footprint": {
+    "half_extents": [
+     1.8527,
+     0.8943,
+     0.7745
+    ],
+    "center_offset": [
+     0.0,
+     0.0003,
+     0.7818
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_audi_etron",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "vehicle.audi.etron"
+   },
+   "actor_category": "vehicle",
+   "semantic_tags": [
+    "audi_etron",
+    "vehicle",
+    "collidable"
+   ],
+   "semantic_class": "audi_etron",
+   "enriched": false,
+   "attributes": {
+    "base_type": "car",
+    "special_type": "electric",
+    "number_of_wheels": "4",
+    "generation": "1"
+   },
+   "footprint": {
+    "half_extents": [
+     2.4279,
+     1.0164,
+     0.8247
+    ],
+    "center_offset": [
+     -0.0036,
+     0.0,
+     0.8205
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_audi_tt",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "vehicle.audi.tt"
+   },
+   "actor_category": "vehicle",
+   "semantic_tags": [
+    "audi_tt",
+    "vehicle",
+    "collidable"
+   ],
+   "semantic_class": "audi_tt",
+   "enriched": false,
+   "attributes": {
+    "base_type": "car",
+    "special_type": "",
+    "number_of_wheels": "4",
+    "generation": "1"
+   },
+   "footprint": {
+    "half_extents": [
+     2.0906,
+     0.9971,
+     0.6926
+    ],
+    "center_offset": [
+     -0.0004,
+     -0.0,
+     0.6926
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_bh_crossbike",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "vehicle.bh.crossbike"
+   },
+   "actor_category": "vehicle",
+   "semantic_tags": [
+    "bh_crossbike",
+    "vehicle",
+    "collidable"
+   ],
+   "semantic_class": "bh_crossbike",
+   "enriched": false,
+   "attributes": {
+    "base_type": "bicycle",
+    "special_type": "",
+    "number_of_wheels": "2",
+    "generation": "1"
+   },
+   "footprint": {
+    "half_extents": [
+     0.7547,
+     0.433,
+     0.8062
+    ],
+    "center_offset": [
+     0.0,
+     0.0,
+     0.8082
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_bmw_grandtourer",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "vehicle.bmw.grandtourer"
+   },
+   "actor_category": "vehicle",
+   "semantic_tags": [
+    "bmw_grandtourer",
+    "vehicle",
+    "collidable"
+   ],
+   "semantic_class": "bmw_grandtourer",
+   "enriched": false,
+   "attributes": {
+    "base_type": "",
+    "special_type": "",
+    "number_of_wheels": "4",
+    "generation": "1"
+   },
+   "footprint": {
+    "half_extents": [
+     2.3055,
+     1.1209,
+     0.8336
+    ],
+    "center_offset": [
+     0.0,
+     -0.0005,
+     0.7651
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_carlamotors_carlacola",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "vehicle.carlamotors.carlacola"
+   },
+   "actor_category": "vehicle",
+   "semantic_tags": [
+    "carlamotors_carlacola",
+    "vehicle",
+    "collidable"
+   ],
+   "semantic_class": "carlamotors_carlacola",
+   "enriched": false,
+   "attributes": {
+    "base_type": "truck",
+    "special_type": "",
+    "number_of_wheels": "4",
+    "generation": "1"
+   },
+   "footprint": {
+    "half_extents": [
+     2.6019,
+     1.3135,
+     1.2337
+    ],
+    "center_offset": [
+     0.0,
+     0.0,
+     1.2337
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_european_hgv",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "vehicle.carlamotors.european_hgv"
+   },
+   "actor_category": "vehicle",
+   "semantic_tags": [
+    "carlamotors_european_hgv",
+    "vehicle",
+    "collidable",
+    "heavy_goods_vehicle",
+    "truck"
+   ],
+   "semantic_class": "heavy_goods_vehicle",
+   "enriched": true,
+   "attributes": {
+    "base_type": "truck",
+    "special_type": "",
+    "number_of_wheels": "6",
+    "generation": "2"
+   },
+   "footprint": {
+    "half_extents": [
+     3.9679,
+     1.4455,
+     1.731
+    ],
+    "center_offset": [
+     0.0127,
+     0.0053,
+     1.7306
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "scenario_sidecar",
+     "method": "in-scene spawn + trigger-time physics settle + actor.bounding_box readback",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": "Generalization_FullyBlocked_1030.json"
+    }
+   },
+   "cross_checks": [
+    {
+     "source": "blueprint_extents",
+     "ref": "vehicle.carlamotors.european_hgv",
+     "half_extents": [
+      3.9679,
+      1.4455,
+      1.731
+     ],
+     "max_delta_m": 0.0
+    }
+   ],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": "Canonical full-blockage blocker (scenario_ir_1030). asset_id and aliases keep the established human vocabulary the IR fixtures carry; judgment moved here from the backend registry's former curated table when blueprint_info became registry-backed."
+  },
+  {
+   "asset_id": "asset_carlamotors_firetruck",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "vehicle.carlamotors.firetruck"
+   },
+   "actor_category": "vehicle",
+   "semantic_tags": [
+    "carlamotors_firetruck",
+    "vehicle",
+    "collidable"
+   ],
+   "semantic_class": "carlamotors_firetruck",
+   "enriched": false,
+   "attributes": {
+    "base_type": "truck",
+    "special_type": "emergency",
+    "number_of_wheels": "4",
+    "generation": "2"
+   },
+   "footprint": {
+    "half_extents": [
+     4.234,
+     1.4455,
+     1.9137
+    ],
+    "center_offset": [
+     -0.2534,
+     0.0053,
+     1.9133
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_chevrolet_impala",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "vehicle.chevrolet.impala"
+   },
+   "actor_category": "vehicle",
+   "semantic_tags": [
+    "chevrolet_impala",
+    "vehicle",
+    "collidable"
+   ],
+   "semantic_class": "chevrolet_impala",
+   "enriched": false,
+   "attributes": {
+    "base_type": "car",
+    "special_type": "",
+    "number_of_wheels": "4",
+    "generation": "1"
+   },
+   "footprint": {
+    "half_extents": [
+     2.6787,
+     1.0166,
+     0.7053
+    ],
+    "center_offset": [
+     0.0001,
+     0.0018,
+     0.7015
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_citroen_c3",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "vehicle.citroen.c3"
+   },
+   "actor_category": "vehicle",
+   "semantic_tags": [
+    "citroen_c3",
+    "vehicle",
+    "collidable"
+   ],
+   "semantic_class": "citroen_c3",
+   "enriched": false,
+   "attributes": {
+    "base_type": "car",
+    "special_type": "",
+    "number_of_wheels": "4",
+    "generation": "1"
+   },
+   "footprint": {
+    "half_extents": [
+     1.9938,
+     0.9254,
+     0.8086
+    ],
+    "center_offset": [
+     0.0,
+     0.0024,
+     0.7619
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_diamondback_century",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "vehicle.diamondback.century"
+   },
+   "actor_category": "vehicle",
+   "semantic_tags": [
+    "diamondback_century",
+    "vehicle",
+    "collidable"
+   ],
+   "semantic_class": "diamondback_century",
+   "enriched": false,
+   "attributes": {
+    "base_type": "bicycle",
+    "special_type": "",
+    "number_of_wheels": "2",
+    "generation": "1"
+   },
+   "footprint": {
+    "half_extents": [
+     0.8281,
+     0.2912,
+     0.8099
+    ],
+    "center_offset": [
+     0.0,
+     0.0,
+     0.8157
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_dodge_charger_2020",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "vehicle.dodge.charger_2020"
+   },
+   "actor_category": "vehicle",
+   "semantic_tags": [
+    "dodge_charger_2020",
+    "vehicle",
+    "collidable"
+   ],
+   "semantic_class": "dodge_charger_2020",
+   "enriched": false,
+   "attributes": {
+    "base_type": "car",
+    "special_type": "",
+    "number_of_wheels": "4",
+    "generation": "2"
+   },
+   "footprint": {
+    "half_extents": [
+     2.5039,
+     0.9408,
+     0.7674
+    ],
+    "center_offset": [
+     -0.0053,
+     0.0,
+     0.7656
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [
+    {
+     "source": "mesh_extents",
+     "ref": "/Game/Carla/Static/Car/4Wheeled/ParkedVehicles/Charger/SM_ChargerParked.SM_ChargerParked",
+     "half_extents": [
+      2.5039,
+      1.0485,
+      0.7674
+     ],
+     "max_delta_m": 0.1077
+    }
+   ],
+   "mirror_delta_m": 0.1077,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_dodge_charger_police",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "vehicle.dodge.charger_police"
+   },
+   "actor_category": "vehicle",
+   "semantic_tags": [
+    "dodge_charger_police",
+    "vehicle",
+    "collidable"
+   ],
+   "semantic_class": "dodge_charger_police",
+   "enriched": false,
+   "attributes": {
+    "base_type": "car",
+    "special_type": "emergency",
+    "number_of_wheels": "4",
+    "generation": "1"
+   },
+   "footprint": {
+    "half_extents": [
+     2.4871,
+     1.0192,
+     0.7711
+    ],
+    "center_offset": [
+     0.0236,
+     0.0006,
+     0.7927
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_dodge_charger_police_2020",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "vehicle.dodge.charger_police_2020"
+   },
+   "actor_category": "vehicle",
+   "semantic_tags": [
+    "dodge_charger_police_2020",
+    "vehicle",
+    "collidable"
+   ],
+   "semantic_class": "dodge_charger_police_2020",
+   "enriched": false,
+   "attributes": {
+    "base_type": "car",
+    "special_type": "emergency",
+    "number_of_wheels": "4",
+    "generation": "2"
+   },
+   "footprint": {
+    "half_extents": [
+     2.6188,
+     0.9649,
+     0.8192
+    ],
+    "center_offset": [
+     0.1095,
+     0.0,
+     0.8174
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_ford_ambulance",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "vehicle.ford.ambulance"
+   },
+   "actor_category": "vehicle",
+   "semantic_tags": [
+    "ford_ambulance",
+    "vehicle",
+    "collidable"
+   ],
+   "semantic_class": "ford_ambulance",
+   "enriched": false,
+   "attributes": {
+    "base_type": "van",
+    "special_type": "emergency",
+    "number_of_wheels": "4",
+    "generation": "2"
+   },
+   "footprint": {
+    "half_extents": [
+     3.1828,
+     1.1756,
+     1.2157
+    ],
+    "center_offset": [
+     -0.2886,
+     0.0019,
+     1.2156
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_ford_crown",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "vehicle.ford.crown"
+   },
+   "actor_category": "vehicle",
+   "semantic_tags": [
+    "ford_crown",
+    "vehicle",
+    "collidable"
+   ],
+   "semantic_class": "ford_crown",
+   "enriched": false,
+   "attributes": {
+    "base_type": "car",
+    "special_type": "taxi",
+    "number_of_wheels": "4",
+    "generation": "2"
+   },
+   "footprint": {
+    "half_extents": [
+     2.6828,
+     0.9004,
+     0.7875
+    ],
+    "center_offset": [
+     0.1854,
+     0.0,
+     0.7684
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_ford_mustang",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "vehicle.ford.mustang"
+   },
+   "actor_category": "vehicle",
+   "semantic_tags": [
+    "ford_mustang",
+    "vehicle",
+    "collidable"
+   ],
+   "semantic_class": "ford_mustang",
+   "enriched": false,
+   "attributes": {
+    "base_type": "car",
+    "special_type": "",
+    "number_of_wheels": "4",
+    "generation": "1"
+   },
+   "footprint": {
+    "half_extents": [
+     2.3588,
+     0.9474,
+     0.6505
+    ],
+    "center_offset": [
+     0.0321,
+     -0.0,
+     0.6505
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_gazelle_omafiets",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "vehicle.gazelle.omafiets"
+   },
+   "actor_category": "vehicle",
+   "semantic_tags": [
+    "gazelle_omafiets",
+    "vehicle",
+    "collidable"
+   ],
+   "semantic_class": "gazelle_omafiets",
+   "enriched": false,
+   "attributes": {
+    "base_type": "bicycle",
+    "special_type": "",
+    "number_of_wheels": "2",
+    "generation": "1"
+   },
+   "footprint": {
+    "half_extents": [
+     0.9217,
+     0.3295,
+     0.8879
+    ],
+    "center_offset": [
+     -0.01,
+     0.0,
+     0.8946
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_harley-davidson_low_rider",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "vehicle.harley-davidson.low_rider"
+   },
+   "actor_category": "vehicle",
+   "semantic_tags": [
+    "harley-davidson_low_rider",
+    "vehicle",
+    "collidable"
+   ],
+   "semantic_class": "harley-davidson_low_rider",
+   "enriched": false,
+   "attributes": {
+    "base_type": "motorcycle",
+    "special_type": "",
+    "number_of_wheels": "2",
+    "generation": "1"
+   },
+   "footprint": {
+    "half_extents": [
+     1.1751,
+     0.3831,
+     0.8247
+    ],
+    "center_offset": [
+     0.0,
+     0.0,
+     0.8246
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_jeep_wrangler_rubicon",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "vehicle.jeep.wrangler_rubicon"
+   },
+   "actor_category": "vehicle",
+   "semantic_tags": [
+    "jeep_wrangler_rubicon",
+    "vehicle",
+    "collidable"
+   ],
+   "semantic_class": "jeep_wrangler_rubicon",
+   "enriched": false,
+   "attributes": {
+    "base_type": "car",
+    "special_type": "",
+    "number_of_wheels": "4",
+    "generation": "1"
+   },
+   "footprint": {
+    "half_extents": [
+     1.9331,
+     0.9526,
+     0.939
+    ],
+    "center_offset": [
+     0.0002,
+     0.001,
+     0.9323
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_kawasaki_ninja",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "vehicle.kawasaki.ninja"
+   },
+   "actor_category": "vehicle",
+   "semantic_tags": [
+    "kawasaki_ninja",
+    "vehicle",
+    "collidable"
+   ],
+   "semantic_class": "kawasaki_ninja",
+   "enriched": false,
+   "attributes": {
+    "base_type": "motorcycle",
+    "special_type": "",
+    "number_of_wheels": "2",
+    "generation": "1"
+   },
+   "footprint": {
+    "half_extents": [
+     1.0218,
+     0.3985,
+     0.7616
+    ],
+    "center_offset": [
+     0.0,
+     0.0,
+     0.7689
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_lincoln_mkz_2017",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "vehicle.lincoln.mkz_2017"
+   },
+   "actor_category": "vehicle",
+   "semantic_tags": [
+    "lincoln_mkz_2017",
+    "vehicle",
+    "collidable"
+   ],
+   "semantic_class": "lincoln_mkz_2017",
+   "enriched": false,
+   "attributes": {
+    "base_type": "car",
+    "special_type": "",
+    "number_of_wheels": "4",
+    "generation": "1"
+   },
+   "footprint": {
+    "half_extents": [
+     2.4508,
+     1.0642,
+     0.7554
+    ],
+    "center_offset": [
+     0.004,
+     0.0,
+     0.7189
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_lincoln_mkz_2020",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "vehicle.lincoln.mkz_2020"
+   },
+   "actor_category": "vehicle",
+   "semantic_tags": [
+    "lincoln_mkz_2020",
+    "vehicle",
+    "collidable"
+   ],
+   "semantic_class": "lincoln_mkz_2020",
+   "enriched": false,
+   "attributes": {
+    "base_type": "car",
+    "special_type": "",
+    "number_of_wheels": "4",
+    "generation": "2"
+   },
+   "footprint": {
+    "half_extents": [
+     2.4462,
+     0.9184,
+     0.7451
+    ],
+    "center_offset": [
+     -0.0063,
+     0.0,
+     0.7488
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_mercedes_coupe",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "vehicle.mercedes.coupe"
+   },
+   "actor_category": "vehicle",
+   "semantic_tags": [
+    "mercedes_coupe",
+    "vehicle",
+    "collidable"
+   ],
+   "semantic_class": "mercedes_coupe",
+   "enriched": false,
+   "attributes": {
+    "base_type": "car",
+    "special_type": "",
+    "number_of_wheels": "4",
+    "generation": "1"
+   },
+   "footprint": {
+    "half_extents": [
+     2.5134,
+     1.0758,
+     0.8253
+    ],
+    "center_offset": [
+     -0.0,
+     -0.0008,
+     0.6668
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_mercedes_coupe_2020",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "vehicle.mercedes.coupe_2020"
+   },
+   "actor_category": "vehicle",
+   "semantic_tags": [
+    "mercedes_coupe_2020",
+    "vehicle",
+    "collidable"
+   ],
+   "semantic_class": "mercedes_coupe_2020",
+   "enriched": false,
+   "attributes": {
+    "base_type": "car",
+    "special_type": "",
+    "number_of_wheels": "4",
+    "generation": "2"
+   },
+   "footprint": {
+    "half_extents": [
+     2.3368,
+     0.9059,
+     0.721
+    ],
+    "center_offset": [
+     -0.0026,
+     0.0,
+     0.7204
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_mercedes_sprinter",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "vehicle.mercedes.sprinter"
+   },
+   "actor_category": "vehicle",
+   "semantic_tags": [
+    "mercedes_sprinter",
+    "vehicle",
+    "collidable"
+   ],
+   "semantic_class": "mercedes_sprinter",
+   "enriched": false,
+   "attributes": {
+    "base_type": "van",
+    "special_type": "",
+    "number_of_wheels": "4",
+    "generation": "2"
+   },
+   "footprint": {
+    "half_extents": [
+     2.9576,
+     0.9942,
+     1.2803
+    ],
+    "center_offset": [
+     -0.0105,
+     0.0041,
+     1.2882
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_micro_microlino",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "vehicle.micro.microlino"
+   },
+   "actor_category": "vehicle",
+   "semantic_tags": [
+    "micro_microlino",
+    "vehicle",
+    "collidable"
+   ],
+   "semantic_class": "micro_microlino",
+   "enriched": false,
+   "attributes": {
+    "base_type": "car",
+    "special_type": "electric",
+    "number_of_wheels": "4",
+    "generation": "1"
+   },
+   "footprint": {
+    "half_extents": [
+     1.1036,
+     0.7405,
+     0.688
+    ],
+    "center_offset": [
+     0.0,
+     -0.0001,
+     0.6772
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_mini_cooper_s",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "vehicle.mini.cooper_s"
+   },
+   "actor_category": "vehicle",
+   "semantic_tags": [
+    "mini_cooper_s",
+    "vehicle",
+    "collidable"
+   ],
+   "semantic_class": "mini_cooper_s",
+   "enriched": false,
+   "attributes": {
+    "base_type": "",
+    "special_type": "",
+    "number_of_wheels": "4",
+    "generation": "1"
+   },
+   "footprint": {
+    "half_extents": [
+     1.9029,
+     0.9851,
+     0.7375
+    ],
+    "center_offset": [
+     0.0,
+     -0.0001,
+     0.693
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_mini_cooper_s_2021",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "vehicle.mini.cooper_s_2021"
+   },
+   "actor_category": "vehicle",
+   "semantic_tags": [
+    "mini_cooper_s_2021",
+    "vehicle",
+    "collidable"
+   ],
+   "semantic_class": "mini_cooper_s_2021",
+   "enriched": false,
+   "attributes": {
+    "base_type": "car",
+    "special_type": "",
+    "number_of_wheels": "4",
+    "generation": "2"
+   },
+   "footprint": {
+    "half_extents": [
+     2.2763,
+     1.0485,
+     0.8836
+    ],
+    "center_offset": [
+     -0.0313,
+     -0.0,
+     0.891
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_mitsubishi_fusorosa",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "vehicle.mitsubishi.fusorosa"
+   },
+   "actor_category": "vehicle",
+   "semantic_tags": [
+    "mitsubishi_fusorosa",
+    "vehicle",
+    "collidable"
+   ],
+   "semantic_class": "mitsubishi_fusorosa",
+   "enriched": false,
+   "attributes": {
+    "base_type": "Bus",
+    "special_type": "",
+    "number_of_wheels": "4",
+    "generation": "2"
+   },
+   "footprint": {
+    "half_extents": [
+     5.1363,
+     1.9721,
+     2.1264
+    ],
+    "center_offset": [
+     -0.4452,
+     -0.1209,
+     2.1274
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_nissan_micra",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "vehicle.nissan.micra"
+   },
+   "actor_category": "vehicle",
+   "semantic_tags": [
+    "nissan_micra",
+    "vehicle",
+    "collidable"
+   ],
+   "semantic_class": "nissan_micra",
+   "enriched": false,
+   "attributes": {
+    "base_type": "car",
+    "special_type": "",
+    "number_of_wheels": "4",
+    "generation": "1"
+   },
+   "footprint": {
+    "half_extents": [
+     1.8167,
+     0.9226,
+     0.7506
+    ],
+    "center_offset": [
+     0.0,
+     0.001,
+     0.7812
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_nissan_patrol",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "vehicle.nissan.patrol"
+   },
+   "actor_category": "vehicle",
+   "semantic_tags": [
+    "nissan_patrol",
+    "vehicle",
+    "collidable"
+   ],
+   "semantic_class": "nissan_patrol",
+   "enriched": false,
+   "attributes": {
+    "base_type": "car",
+    "special_type": "",
+    "number_of_wheels": "4",
+    "generation": "1"
+   },
+   "footprint": {
+    "half_extents": [
+     2.3023,
+     0.9658,
+     0.9274
+    ],
+    "center_offset": [
+     -0.0574,
+     0.0002,
+     0.9351
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_nissan_patrol_2021",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "vehicle.nissan.patrol_2021"
+   },
+   "actor_category": "vehicle",
+   "semantic_tags": [
+    "nissan_patrol_2021",
+    "vehicle",
+    "collidable"
+   ],
+   "semantic_class": "nissan_patrol_2021",
+   "enriched": false,
+   "attributes": {
+    "base_type": "car",
+    "special_type": "",
+    "number_of_wheels": "4",
+    "generation": "2"
+   },
+   "footprint": {
+    "half_extents": [
+     2.7829,
+     1.075,
+     1.0226
+    ],
+    "center_offset": [
+     0.0284,
+     -0.0,
+     1.0167
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_seat_leon",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "vehicle.seat.leon"
+   },
+   "actor_category": "vehicle",
+   "semantic_tags": [
+    "seat_leon",
+    "vehicle",
+    "collidable"
+   ],
+   "semantic_class": "seat_leon",
+   "enriched": false,
+   "attributes": {
+    "base_type": "car",
+    "special_type": "",
+    "number_of_wheels": "4",
+    "generation": "1"
+   },
+   "footprint": {
+    "half_extents": [
+     2.0964,
+     0.9081,
+     0.7369
+    ],
+    "center_offset": [
+     -0.0001,
+     -0.0016,
+     0.7396
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_tesla_cybertruck",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "vehicle.tesla.cybertruck"
+   },
+   "actor_category": "vehicle",
+   "semantic_tags": [
+    "tesla_cybertruck",
+    "vehicle",
+    "collidable"
+   ],
+   "semantic_class": "tesla_cybertruck",
+   "enriched": false,
+   "attributes": {
+    "base_type": "truck",
+    "special_type": "electric",
+    "number_of_wheels": "4",
+    "generation": "2"
+   },
+   "footprint": {
+    "half_extents": [
+     3.1368,
+     1.1948,
+     1.0491
+    ],
+    "center_offset": [
+     0.0,
+     0.0,
+     1.0491
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_tesla_model3",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "vehicle.tesla.model3"
+   },
+   "actor_category": "vehicle",
+   "semantic_tags": [
+    "tesla_model3",
+    "vehicle",
+    "collidable"
+   ],
+   "semantic_class": "tesla_model3",
+   "enriched": false,
+   "attributes": {
+    "base_type": "car",
+    "special_type": "electric",
+    "number_of_wheels": "4",
+    "generation": "1"
+   },
+   "footprint": {
+    "half_extents": [
+     2.3959,
+     1.0817,
+     0.7438
+    ],
+    "center_offset": [
+     0.0292,
+     0.0,
+     0.7359
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_toyota_prius",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "vehicle.toyota.prius"
+   },
+   "actor_category": "vehicle",
+   "semantic_tags": [
+    "toyota_prius",
+    "vehicle",
+    "collidable"
+   ],
+   "semantic_class": "toyota_prius",
+   "enriched": false,
+   "attributes": {
+    "base_type": "car",
+    "special_type": "electric",
+    "number_of_wheels": "4",
+    "generation": "1"
+   },
+   "footprint": {
+    "half_extents": [
+     2.2568,
+     1.0034,
+     0.7624
+    ],
+    "center_offset": [
+     0.002,
+     -0.0004,
+     0.7242
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_vespa_zx125",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "vehicle.vespa.zx125"
+   },
+   "actor_category": "vehicle",
+   "semantic_tags": [
+    "vespa_zx125",
+    "vehicle",
+    "collidable"
+   ],
+   "semantic_class": "vespa_zx125",
+   "enriched": false,
+   "attributes": {
+    "base_type": "motorcycle",
+    "special_type": "",
+    "number_of_wheels": "2",
+    "generation": "1"
+   },
+   "footprint": {
+    "half_extents": [
+     0.9086,
+     0.433,
+     0.795
+    ],
+    "center_offset": [
+     0.01,
+     0.0,
+     0.7946
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_volkswagen_t2",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "vehicle.volkswagen.t2"
+   },
+   "actor_category": "vehicle",
+   "semantic_tags": [
+    "volkswagen_t2",
+    "vehicle",
+    "collidable"
+   ],
+   "semantic_class": "volkswagen_t2",
+   "enriched": false,
+   "attributes": {
+    "base_type": "van",
+    "special_type": "",
+    "number_of_wheels": "4",
+    "generation": "1"
+   },
+   "footprint": {
+    "half_extents": [
+     2.2402,
+     1.0347,
+     1.0189
+    ],
+    "center_offset": [
+     0.0013,
+     -0.0005,
+     1.0145
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_volkswagen_t2_2021",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "vehicle.volkswagen.t2_2021"
+   },
+   "actor_category": "vehicle",
+   "semantic_tags": [
+    "volkswagen_t2_2021",
+    "vehicle",
+    "collidable"
+   ],
+   "semantic_class": "volkswagen_t2_2021",
+   "enriched": false,
+   "attributes": {
+    "base_type": "van",
+    "special_type": "",
+    "number_of_wheels": "4",
+    "generation": "2"
+   },
+   "footprint": {
+    "half_extents": [
+     2.2211,
+     0.8873,
+     0.9936
+    ],
+    "center_offset": [
+     0.1167,
+     -0.0004,
+     0.9912
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  },
+  {
+   "asset_id": "asset_yamaha_yzf",
+   "binding": {
+    "kind": "blueprint",
+    "ref": "vehicle.yamaha.yzf"
+   },
+   "actor_category": "vehicle",
+   "semantic_tags": [
+    "yamaha_yzf",
+    "vehicle",
+    "collidable"
+   ],
+   "semantic_class": "yamaha_yzf",
+   "enriched": false,
+   "attributes": {
+    "base_type": "motorcycle",
+    "special_type": "",
+    "number_of_wheels": "2",
+    "generation": "1"
+   },
+   "footprint": {
+    "half_extents": [
+     1.0954,
+     0.433,
+     0.7652
+    ],
+    "center_offset": [
+     0.0,
+     0.0,
+     0.7746
+    ],
+    "scale_basis": 1.0,
+    "provenance": {
+     "source": "blueprint_extents",
+     "method": "blueprint spawn + actor.bounding_box readback, physics off, actor frame, raw scale",
+     "carla_server_version": "0.9.15.2-dirty",
+     "f2d_repo_commit": "72fea2777424d1c92ebbac79e720e9f6725c2a4d",
+     "measured_on": "2026-07-25",
+     "detail": null
+    }
+   },
+   "cross_checks": [],
+   "mirror_delta_m": null,
+   "validation_status": "ready",
+   "exclusion_reason": null,
+   "rest_dynamics": null,
+   "notes": null
+  }
+ ]
+}

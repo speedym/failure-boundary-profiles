@@ -1,0 +1,9 @@
+{
+ "pooling_kind": "campaign_pooling/v0.1",
+ "pool_id": "fm_001_v09",
+ "family_id": "fm_001_intrusion_sweep",
+ "campaigns": [
+  "campaign_carla_v09"
+ ],
+ "note": "TFv6 in its flagship instantiation, RegNetY-032 (F52; the paper's roster row `lead` is the ResNet-34 instantiation), on the machine intrusion sweep, v09 alone (three traffic seeds, no reference agent; Gino's farm, the roster's box): joins the atlas as the flagship column beside the ResNet-34 one, the way the 2026-09-22 extension took HiP-AD. Boundary justification: which campaign extends the atlas is a paper-level choice (Milan 2026-09-29, \"really curious to see if the flagship performed significantly better\")."
+}

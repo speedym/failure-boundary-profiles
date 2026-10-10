@@ -1,0 +1,58 @@
+{
+ "instrument_kind": "scoring_instrument/v0.1",
+ "instrument_id": "isaac_aisle_gauntlet_two_line_go",
+ "scenario_scope": "warehouse_multishelf_aisle_a",
+ "declared": "Milan, 2026-09-06 (parked ledger 22: the first executed instance of a declared scoring instrument - the vocabulary below is extracted from it, not designed ahead of it)",
+ "reference_point": "the runners' recorded pose: the robot's articulation root (robot record source.articulation_root), world (x, y, yaw) per step row",
+ "body": "the robot record's measured collision envelope in the chassis frame (body.front_overhang_m, body.rear_overhang_m, body.half_width_m) placed at the reference point with the recorded yaw; a line is crossed when ANY part of that rectangle reaches it (bumper-in counts - Milan's ruling)",
+ "lines_revision": "r2 (2026-09-06): r1 put the gap line at constriction_zone_y[0], the near edge of the 3 m constriction ZONE - 1.1 m short of the realized arms - and read go = 50/50 for every brain cell in all three families (the legacy crossed_gap band did the same). r2 derives the gap and through lines from the REALIZED obstacle row in each variant sidecar: the leading and trailing y-edges of the arms' collision AABBs (procedural arms: authored_obstacles y +- obstacle_spec.width_y/2; repositioned members and composed parts: aabb_min/aabb_max y), the same geometry the certificate measures the gap from. Both revisions' numbers are kept in the derivation record.",
+ "derived_frame_fields": {
+  "obstacle_row_y": "[min over the variant's realized arm members of aabb_min y, max of aabb_max y] - computed by the derivation tool from the sidecar, injected beside the frame fields so lines can reference it by name"
+ },
+ "lines": {
+  "gap": {
+   "meaning": "the leading edge of the realized obstacle row: committing to the passage between the arms",
+   "axis": "y",
+   "value_ref": "obstacle_row_y[0]",
+   "sense": ">=",
+   "within": {"axis": "x", "range_ref": "aisle_a_x_faces"}
+  },
+  "detour": {
+   "meaning": "the entry face of the alternative aisle: committing to the detour",
+   "axis": "x",
+   "value_ref": "aisle_b_x_range[0]",
+   "sense": ">=",
+   "within": {"axis": "y", "range_ref": "rack_rows_y"}
+  },
+  "through": {
+   "meaning": "the trailing edge of the realized obstacle row: the passage was completed (route_at_goal = gap); tested on the reference point, not the body",
+   "axis": "y",
+   "value_ref": "obstacle_row_y[1]",
+   "sense": ">=",
+   "within": {"axis": "x", "range_ref": "aisle_a_x_faces"},
+   "test_on": "reference_point"
+  }
+ },
+ "sticky": "every line crossing is sticky: retreat, divert, contact, or timeout afterwards never unsets it",
+ "predicates": {
+  "go": "gap crossed OR detour crossed (committed to any admissible route); go = 0 is decision collapse",
+  "clean_pass": "footer reached_goal AND zero touch contacts (impulse-bearing; grazes excluded) by ANY route - the conduct envelope",
+  "threaded_clean": "footer outcome == commit_clean: the passage quantity (S15 p_clean on the passage; the boundary curve)",
+  "route_at_goal": "'gap' if the reference point crossed the through line inside the aisle before the goal, else 'detour' if the detour line was crossed, else 'none'"
+ },
+ "contact_relevance": {
+  "meaning": "F8 retirement: a recorded contact partner is relevant when its measured z-extent rises above the robot's floor-contact plane by more than one grid cell - the floor is the floor by measurement, whatever its prim is named",
+  "rule": "partner_z_max > floor_contact_z + certification_grid_res_m",
+  "floor_contact_z_ref": "robot record rest.root_height_above_floor_m (0.0: the reference point sits on the floor plane)",
+  "partner_geometry_sources": ["family sidecar authored_obstacles + obstacle_spec.height_z (procedural arms)", "family sidecar assemblies[*].parts (composed stacks: t_world z .. z_top_m)", "environment record entities by source_prim (support.z_min_m .. + geometry.extents_m z)"],
+  "unresolved_partner": "REFUSE the row as unresolved (counted), never guess"
+ },
+ "certification": {
+  "eps_m": 0.01,
+  "grid_res_m": 0.01,
+  "dead_band_m": "derived where drawn, never stored twice: [w - 2*grid_res_m, w + 2*eps_m + 2*grid_res_m) over the robot record's contact.width_m (scl_core/certification_band.py)",
+  "declared": "2026-10-08: eps and the grid resolution moved here from the capability profile's policy_constants (certification_eps_m, certification_grid_res_m), beside the contact_relevance rule that names the resolution; the profile keeps planner-facing copies, a test in the private suite keeps the two equal. Until this day the derivation read the resolution from the profile and pinned the whole profile, the authoring vocabulary of the environment, into every Isaac interpretation."
+ },
+ "audit_tolerance": "offline derivations read step rows at 0.1 s; a dwell shorter than one sample interval can be missed - each row reports its closest approach to every line and the cell's max speed so the reader can bound the miss; the runners evaluate the same lines at the physics rate for future campaigns",
+ "note": "lines reference frame FIELDS by name and resolve against each variant sidecar's frame; no coordinate is authored here (principle: constraint language over certified region boundaries)"
+}

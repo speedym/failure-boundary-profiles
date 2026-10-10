@@ -1,0 +1,926 @@
+{
+  "schema_version": "family_manifest/v0.3",
+  "manifest_id": "fm_003_asset_swap",
+  "family_id": "passable_static_obstacle",
+  "plan_ref": "ap_003_asset_swap",
+  "request_ref": "ar_003_asset_swap",
+  "capability_profile_id": "openroad_f2d_passable_v0.1",
+  "source_ir_ref": {
+    "path": "artifacts/examples/imported_ir/scenario_ir_1026.json",
+    "schema_version": "scenario_ir/v0.3",
+    "content_hash": "sha256:d7b092dd6c7a1c5f7ec68ce88f871a989cae2277719df30d1941b4412f41db84"
+  },
+  "provenance": {
+    "solver": "scl_solver/0.2.0",
+    "geometry_algorithm_version": "1.1",
+    "route_key": "19e2abee794a671455db519deb04878b75b878bc66f23e1416fe9352d12d1680",
+    "policy_constants": {
+      "ego_clearance_margin_m": 0.1,
+      "ego_mirror_allowance_m": 0.13,
+      "placement_band_lateral_m": 4.0
+    },
+    "realization_tolerance_m": 0.005
+  },
+  "effective_domain": {
+    "factor_id": "asset_identity",
+    "candidates": [
+      "asset_barbeque_grill",
+      "asset_barrel",
+      "asset_cardboard_box",
+      "asset_construction_cone",
+      "asset_dog_house",
+      "asset_garden_gnome",
+      "asset_guitar_case",
+      "asset_hay_bale",
+      "asset_iron_plank",
+      "asset_mailbox",
+      "asset_mobile_food_cart",
+      "asset_plastic_chair",
+      "asset_plastic_table",
+      "asset_playground_slide",
+      "asset_shopping_cart",
+      "asset_shopping_trolley",
+      "asset_street_barrier",
+      "asset_traffic_cone",
+      "asset_traffic_warning",
+      "asset_trampoline",
+      "asset_travel_suitcase",
+      "asset_vending_machine",
+      "asset_waste_bin"
+    ],
+    "binding_note": "categorical enumerate mode: one variant per candidate in deterministic asset_id order; geometry HELD via con_metric_within_tolerance (maximum_route_intrusion<=0.1, minimum_free_corridor_width<=0.1); family_uniform references {'minimum_free_corridor_width': 8.0004} resolved from the native control variant; orientation fit-first (yaw in {0, 90} minimizing lateral extent, recorded in placements)"
+  },
+  "expected_count": 23,
+  "accepted_count": 14,
+  "variants": [
+    {
+      "scenario_id": "Generalization_CustomObstacles_1026_003_asset_swap_v01",
+      "route_id": "102600301",
+      "index": 1,
+      "delta_ref": "deltas/sd_003_asset_swap_v01.json",
+      "target": "asset_barbeque_grill",
+      "realized": [
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_1",
+          "param": "y",
+          "value": 1.5009
+        }
+      ],
+      "measured": {
+        "minimum_free_corridor_width": 8.0016,
+        "maximum_route_intrusion": 0.4984,
+        "required_lateral_deviation": 0.0,
+        "closest_approach_distance": 0.3331
+      },
+      "checks": {
+        "validator_static_collision_free": "pass",
+        "validator_placement_region": "pass",
+        "validator_stable_support": "pass",
+        "validator_connected_ego_passage": "pass",
+        "validator_family_membership": "pass",
+        "validator_metric_tolerance": "pass",
+        "validator_backend_compiles": "pass"
+      },
+      "verdict": "accepted",
+      "reject_reasons": [],
+      "output_file": "backend_outputs/Generalization_CustomObstacles_1026_003_asset_swap_v01.xml"
+    },
+    {
+      "scenario_id": "Generalization_CustomObstacles_1026_003_asset_swap_v02",
+      "route_id": "102600302",
+      "index": 2,
+      "delta_ref": "deltas/sd_003_asset_swap_v02.json",
+      "target": "asset_barrel",
+      "realized": [
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_1",
+          "param": "y",
+          "value": 1.5085
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_1",
+          "param": "yaw",
+          "value": 90.0
+        }
+      ],
+      "measured": {
+        "minimum_free_corridor_width": 8.0404,
+        "maximum_route_intrusion": 0.4596,
+        "required_lateral_deviation": 0.0,
+        "closest_approach_distance": 0.3719
+      },
+      "checks": {
+        "validator_static_collision_free": "pass",
+        "validator_placement_region": "pass",
+        "validator_stable_support": "pass",
+        "validator_connected_ego_passage": "pass",
+        "validator_family_membership": "pass",
+        "validator_metric_tolerance": "pass",
+        "validator_backend_compiles": "pass"
+      },
+      "verdict": "rejected",
+      "reject_reasons": [
+        "rest_dynamics: tips_or_rolls (enrichment fact, countersign-evidenced) - the asset does not hold an authored static pose and cannot serve a static-obstacle family"
+      ],
+      "output_file": null
+    },
+    {
+      "scenario_id": "Generalization_CustomObstacles_1026_003_asset_swap_v03",
+      "route_id": "102600303",
+      "index": 3,
+      "delta_ref": "deltas/sd_003_asset_swap_v03.json",
+      "target": "asset_cardboard_box",
+      "realized": [
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_1",
+          "param": "y",
+          "value": 1.5807
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_1",
+          "param": "yaw",
+          "value": 90.0
+        }
+      ],
+      "measured": {
+        "minimum_free_corridor_width": 7.9999,
+        "maximum_route_intrusion": 0.5001,
+        "required_lateral_deviation": 0.0,
+        "closest_approach_distance": 0.3315
+      },
+      "checks": {
+        "validator_static_collision_free": "pass",
+        "validator_placement_region": "pass",
+        "validator_stable_support": "pass",
+        "validator_connected_ego_passage": "pass",
+        "validator_family_membership": "pass",
+        "validator_metric_tolerance": "pass",
+        "validator_backend_compiles": "pass"
+      },
+      "verdict": "accepted",
+      "reject_reasons": [],
+      "output_file": "backend_outputs/Generalization_CustomObstacles_1026_003_asset_swap_v03.xml"
+    },
+    {
+      "scenario_id": "Generalization_CustomObstacles_1026_003_asset_swap_v04",
+      "route_id": "102600304",
+      "index": 4,
+      "delta_ref": "deltas/sd_003_asset_swap_v04.json",
+      "target": "asset_construction_cone",
+      "realized": [
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_1",
+          "param": "y",
+          "value": 1.5783
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_1",
+          "param": "yaw",
+          "value": 90.0
+        }
+      ],
+      "measured": {
+        "minimum_free_corridor_width": 8.1564,
+        "maximum_route_intrusion": 0.3436,
+        "required_lateral_deviation": 0.0,
+        "closest_approach_distance": 0.488
+      },
+      "checks": {
+        "validator_static_collision_free": "pass",
+        "validator_placement_region": "pass",
+        "validator_stable_support": "pass",
+        "validator_connected_ego_passage": "pass",
+        "validator_family_membership": "pass",
+        "validator_metric_tolerance": "fail",
+        "validator_backend_compiles": "pass"
+      },
+      "verdict": "rejected",
+      "reject_reasons": [
+        "validator_metric_tolerance: maximum_route_intrusion measured 0.3436 vs reference 0.5 (tol 0.1)",
+        "validator_metric_tolerance: minimum_free_corridor_width measured 8.1564 vs reference 8.0004 (tol 0.1)"
+      ],
+      "output_file": null
+    },
+    {
+      "scenario_id": "Generalization_CustomObstacles_1026_003_asset_swap_v05",
+      "route_id": "102600305",
+      "index": 5,
+      "delta_ref": "deltas/sd_003_asset_swap_v05.json",
+      "target": "asset_dog_house",
+      "realized": [
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_1",
+          "param": "y",
+          "value": 1.7899
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_1",
+          "param": "yaw",
+          "value": 90.0
+        }
+      ],
+      "measured": {
+        "minimum_free_corridor_width": 8.0004,
+        "maximum_route_intrusion": 0.4996,
+        "required_lateral_deviation": 0.0,
+        "closest_approach_distance": 0.332
+      },
+      "checks": {
+        "validator_static_collision_free": "pass",
+        "validator_placement_region": "pass",
+        "validator_stable_support": "pass",
+        "validator_connected_ego_passage": "pass",
+        "validator_family_membership": "pass",
+        "validator_metric_tolerance": "pass",
+        "validator_backend_compiles": "pass"
+      },
+      "verdict": "accepted",
+      "reject_reasons": [],
+      "output_file": "backend_outputs/Generalization_CustomObstacles_1026_003_asset_swap_v05.xml"
+    },
+    {
+      "scenario_id": "Generalization_CustomObstacles_1026_003_asset_swap_v06",
+      "route_id": "102600306",
+      "index": 6,
+      "delta_ref": "deltas/sd_003_asset_swap_v06.json",
+      "target": "asset_garden_gnome",
+      "realized": [
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_1",
+          "param": "y",
+          "value": 1.5438
+        }
+      ],
+      "measured": {
+        "minimum_free_corridor_width": 8.1242,
+        "maximum_route_intrusion": 0.3756,
+        "required_lateral_deviation": 0.0,
+        "closest_approach_distance": 0.4557
+      },
+      "checks": {
+        "validator_static_collision_free": "pass",
+        "validator_placement_region": "pass",
+        "validator_stable_support": "pass",
+        "validator_connected_ego_passage": "pass",
+        "validator_family_membership": "pass",
+        "validator_metric_tolerance": "fail",
+        "validator_backend_compiles": "pass"
+      },
+      "verdict": "rejected",
+      "reject_reasons": [
+        "validator_metric_tolerance: maximum_route_intrusion measured 0.3756 vs reference 0.5 (tol 0.1)",
+        "validator_metric_tolerance: minimum_free_corridor_width measured 8.1242 vs reference 8.0004 (tol 0.1)"
+      ],
+      "output_file": null
+    },
+    {
+      "scenario_id": "Generalization_CustomObstacles_1026_003_asset_swap_v07",
+      "route_id": "102600307",
+      "index": 7,
+      "delta_ref": "deltas/sd_003_asset_swap_v07.json",
+      "target": "asset_guitar_case",
+      "realized": [
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_1",
+          "param": "y",
+          "value": 1.908
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_1",
+          "param": "yaw",
+          "value": 90.0
+        }
+      ],
+      "measured": {
+        "minimum_free_corridor_width": 8.0001,
+        "maximum_route_intrusion": 0.4999,
+        "required_lateral_deviation": 0.0,
+        "closest_approach_distance": 0.3317
+      },
+      "checks": {
+        "validator_static_collision_free": "pass",
+        "validator_placement_region": "pass",
+        "validator_stable_support": "pass",
+        "validator_connected_ego_passage": "pass",
+        "validator_family_membership": "pass",
+        "validator_metric_tolerance": "pass",
+        "validator_backend_compiles": "pass"
+      },
+      "verdict": "rejected",
+      "reject_reasons": [
+        "rest_dynamics: falls_through (enrichment fact, countersign-evidenced) - the asset does not hold an authored static pose and cannot serve a static-obstacle family"
+      ],
+      "output_file": null
+    },
+    {
+      "scenario_id": "Generalization_CustomObstacles_1026_003_asset_swap_v08",
+      "route_id": "102600308",
+      "index": 8,
+      "delta_ref": "deltas/sd_003_asset_swap_v08.json",
+      "target": "asset_hay_bale",
+      "realized": [
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_1",
+          "param": "y",
+          "value": 1.8444
+        }
+      ],
+      "measured": {
+        "minimum_free_corridor_width": 8.0001,
+        "maximum_route_intrusion": 0.4999,
+        "required_lateral_deviation": 0.0,
+        "closest_approach_distance": 0.3317
+      },
+      "checks": {
+        "validator_static_collision_free": "pass",
+        "validator_placement_region": "pass",
+        "validator_stable_support": "pass",
+        "validator_connected_ego_passage": "pass",
+        "validator_family_membership": "pass",
+        "validator_metric_tolerance": "pass",
+        "validator_backend_compiles": "pass"
+      },
+      "verdict": "rejected",
+      "reject_reasons": [
+        "rest_dynamics: tips_or_rolls (enrichment fact, countersign-evidenced) - the asset does not hold an authored static pose and cannot serve a static-obstacle family"
+      ],
+      "output_file": null
+    },
+    {
+      "scenario_id": "Generalization_CustomObstacles_1026_003_asset_swap_v09",
+      "route_id": "102600309",
+      "index": 9,
+      "delta_ref": "deltas/sd_003_asset_swap_v09.json",
+      "target": "asset_iron_plank",
+      "realized": [
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_1",
+          "param": "y",
+          "value": 1.8375
+        }
+      ],
+      "measured": {
+        "minimum_free_corridor_width": 7.9999,
+        "maximum_route_intrusion": 0.5001,
+        "required_lateral_deviation": 0.0,
+        "closest_approach_distance": 0.3315
+      },
+      "checks": {
+        "validator_static_collision_free": "pass",
+        "validator_placement_region": "pass",
+        "validator_stable_support": "pass",
+        "validator_connected_ego_passage": "pass",
+        "validator_family_membership": "pass",
+        "validator_metric_tolerance": "pass",
+        "validator_backend_compiles": "pass"
+      },
+      "verdict": "accepted",
+      "reject_reasons": [],
+      "output_file": "backend_outputs/Generalization_CustomObstacles_1026_003_asset_swap_v09.xml"
+    },
+    {
+      "scenario_id": "Generalization_CustomObstacles_1026_003_asset_swap_v10",
+      "route_id": "102600310",
+      "index": 10,
+      "delta_ref": "deltas/sd_003_asset_swap_v10.json",
+      "target": "asset_mailbox",
+      "realized": [
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_1",
+          "param": "y",
+          "value": 1.7081
+        }
+      ],
+      "measured": {
+        "minimum_free_corridor_width": 8.0618,
+        "maximum_route_intrusion": 0.4382,
+        "required_lateral_deviation": 0.0,
+        "closest_approach_distance": 0.3933
+      },
+      "checks": {
+        "validator_static_collision_free": "pass",
+        "validator_placement_region": "pass",
+        "validator_stable_support": "pass",
+        "validator_connected_ego_passage": "pass",
+        "validator_family_membership": "pass",
+        "validator_metric_tolerance": "pass",
+        "validator_backend_compiles": "pass"
+      },
+      "verdict": "accepted",
+      "reject_reasons": [],
+      "output_file": "backend_outputs/Generalization_CustomObstacles_1026_003_asset_swap_v10.xml"
+    },
+    {
+      "scenario_id": "Generalization_CustomObstacles_1026_003_asset_swap_v11",
+      "route_id": "102600311",
+      "index": 11,
+      "delta_ref": "deltas/sd_003_asset_swap_v11.json",
+      "target": "asset_mobile_food_cart",
+      "realized": [
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_1",
+          "param": "y",
+          "value": 2.8439
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_1",
+          "param": "yaw",
+          "value": 90.0
+        }
+      ],
+      "measured": {
+        "minimum_free_corridor_width": 7.9995,
+        "maximum_route_intrusion": 0.5005,
+        "required_lateral_deviation": 0.0,
+        "closest_approach_distance": 0.3311
+      },
+      "checks": {
+        "validator_static_collision_free": "pass",
+        "validator_placement_region": "pass",
+        "validator_stable_support": "pass",
+        "validator_connected_ego_passage": "pass",
+        "validator_family_membership": "pass",
+        "validator_metric_tolerance": "pass",
+        "validator_backend_compiles": "pass"
+      },
+      "verdict": "rejected",
+      "reject_reasons": [
+        "rest_dynamics: sinks (enrichment fact, countersign-evidenced) - the asset does not hold an authored static pose and cannot serve a static-obstacle family"
+      ],
+      "output_file": null
+    },
+    {
+      "scenario_id": "Generalization_CustomObstacles_1026_003_asset_swap_v12",
+      "route_id": "102600312",
+      "index": 12,
+      "delta_ref": "deltas/sd_003_asset_swap_v12.json",
+      "target": "asset_plastic_chair",
+      "realized": [
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_1",
+          "param": "y",
+          "value": 1.6155
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_1",
+          "param": "yaw",
+          "value": 90.0
+        }
+      ],
+      "measured": {
+        "minimum_free_corridor_width": 8.0002,
+        "maximum_route_intrusion": 0.4998,
+        "required_lateral_deviation": 0.0,
+        "closest_approach_distance": 0.3318
+      },
+      "checks": {
+        "validator_static_collision_free": "pass",
+        "validator_placement_region": "pass",
+        "validator_stable_support": "pass",
+        "validator_connected_ego_passage": "pass",
+        "validator_family_membership": "pass",
+        "validator_metric_tolerance": "pass",
+        "validator_backend_compiles": "pass"
+      },
+      "verdict": "accepted",
+      "reject_reasons": [],
+      "output_file": "backend_outputs/Generalization_CustomObstacles_1026_003_asset_swap_v12.xml"
+    },
+    {
+      "scenario_id": "Generalization_CustomObstacles_1026_003_asset_swap_v13",
+      "route_id": "102600313",
+      "index": 13,
+      "delta_ref": "deltas/sd_003_asset_swap_v13.json",
+      "target": "asset_plastic_table",
+      "realized": [
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_1",
+          "param": "y",
+          "value": 2.4914
+        }
+      ],
+      "measured": {
+        "minimum_free_corridor_width": 7.9996,
+        "maximum_route_intrusion": 0.5004,
+        "required_lateral_deviation": 0.0,
+        "closest_approach_distance": 0.3311
+      },
+      "checks": {
+        "validator_static_collision_free": "pass",
+        "validator_placement_region": "pass",
+        "validator_stable_support": "pass",
+        "validator_connected_ego_passage": "pass",
+        "validator_family_membership": "pass",
+        "validator_metric_tolerance": "pass",
+        "validator_backend_compiles": "pass"
+      },
+      "verdict": "accepted",
+      "reject_reasons": [],
+      "output_file": "backend_outputs/Generalization_CustomObstacles_1026_003_asset_swap_v13.xml"
+    },
+    {
+      "scenario_id": "Generalization_CustomObstacles_1026_003_asset_swap_v14",
+      "route_id": "102600314",
+      "index": 14,
+      "delta_ref": "deltas/sd_003_asset_swap_v14.json",
+      "target": "asset_playground_slide",
+      "realized": [
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_1",
+          "param": "y",
+          "value": 1.8858
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_1",
+          "param": "yaw",
+          "value": 90.0
+        }
+      ],
+      "measured": {
+        "minimum_free_corridor_width": 7.9998,
+        "maximum_route_intrusion": 0.5002,
+        "required_lateral_deviation": 0.0,
+        "closest_approach_distance": 0.3313
+      },
+      "checks": {
+        "validator_static_collision_free": "pass",
+        "validator_placement_region": "pass",
+        "validator_stable_support": "pass",
+        "validator_connected_ego_passage": "pass",
+        "validator_family_membership": "pass",
+        "validator_metric_tolerance": "pass",
+        "validator_backend_compiles": "pass"
+      },
+      "verdict": "accepted",
+      "reject_reasons": [],
+      "output_file": "backend_outputs/Generalization_CustomObstacles_1026_003_asset_swap_v14.xml"
+    },
+    {
+      "scenario_id": "Generalization_CustomObstacles_1026_003_asset_swap_v15",
+      "route_id": "102600315",
+      "index": 15,
+      "delta_ref": "deltas/sd_003_asset_swap_v15.json",
+      "target": "asset_shopping_cart",
+      "realized": [
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_1",
+          "param": "y",
+          "value": 1.746
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_1",
+          "param": "yaw",
+          "value": 90.0
+        }
+      ],
+      "measured": {
+        "minimum_free_corridor_width": 7.9999,
+        "maximum_route_intrusion": 0.5001,
+        "required_lateral_deviation": 0.0,
+        "closest_approach_distance": 0.3315
+      },
+      "checks": {
+        "validator_static_collision_free": "pass",
+        "validator_placement_region": "pass",
+        "validator_stable_support": "pass",
+        "validator_connected_ego_passage": "pass",
+        "validator_family_membership": "pass",
+        "validator_metric_tolerance": "pass",
+        "validator_backend_compiles": "pass"
+      },
+      "verdict": "rejected",
+      "reject_reasons": [
+        "rest_dynamics: falls_through (enrichment fact, countersign-evidenced) - the asset does not hold an authored static pose and cannot serve a static-obstacle family"
+      ],
+      "output_file": null
+    },
+    {
+      "scenario_id": "Generalization_CustomObstacles_1026_003_asset_swap_v16",
+      "route_id": "102600316",
+      "index": 16,
+      "delta_ref": "deltas/sd_003_asset_swap_v16.json",
+      "target": "asset_shopping_trolley",
+      "realized": [
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_1",
+          "param": "y",
+          "value": 1.5031
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_1",
+          "param": "yaw",
+          "value": 90.0
+        }
+      ],
+      "measured": {
+        "minimum_free_corridor_width": 8.0003,
+        "maximum_route_intrusion": 0.4997,
+        "required_lateral_deviation": 0.0,
+        "closest_approach_distance": 0.3318
+      },
+      "checks": {
+        "validator_static_collision_free": "pass",
+        "validator_placement_region": "pass",
+        "validator_stable_support": "pass",
+        "validator_connected_ego_passage": "pass",
+        "validator_family_membership": "pass",
+        "validator_metric_tolerance": "pass",
+        "validator_backend_compiles": "pass"
+      },
+      "verdict": "rejected",
+      "reject_reasons": [
+        "rest_dynamics: falls_through (enrichment fact, countersign-evidenced) - the asset does not hold an authored static pose and cannot serve a static-obstacle family"
+      ],
+      "output_file": null
+    },
+    {
+      "scenario_id": "Generalization_CustomObstacles_1026_003_asset_swap_v17",
+      "route_id": "102600317",
+      "index": 17,
+      "delta_ref": "deltas/sd_003_asset_swap_v17.json",
+      "target": "asset_street_barrier",
+      "realized": [
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_1",
+          "param": "y",
+          "value": 1.8578
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_1",
+          "param": "yaw",
+          "value": 90.0
+        }
+      ],
+      "measured": {
+        "minimum_free_corridor_width": 8.0,
+        "maximum_route_intrusion": 0.5,
+        "required_lateral_deviation": 0.0,
+        "closest_approach_distance": 0.3316
+      },
+      "checks": {
+        "validator_static_collision_free": "pass",
+        "validator_placement_region": "pass",
+        "validator_stable_support": "pass",
+        "validator_connected_ego_passage": "pass",
+        "validator_family_membership": "pass",
+        "validator_metric_tolerance": "pass",
+        "validator_backend_compiles": "pass"
+      },
+      "verdict": "accepted",
+      "reject_reasons": [],
+      "output_file": "backend_outputs/Generalization_CustomObstacles_1026_003_asset_swap_v17.xml"
+    },
+    {
+      "scenario_id": "Generalization_CustomObstacles_1026_003_asset_swap_v18",
+      "route_id": "102600318",
+      "index": 18,
+      "delta_ref": "deltas/sd_003_asset_swap_v18.json",
+      "target": "asset_traffic_cone",
+      "realized": [
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_1",
+          "param": "y",
+          "value": 1.6916
+        }
+      ],
+      "measured": {
+        "minimum_free_corridor_width": 8.0004,
+        "maximum_route_intrusion": 0.4996,
+        "required_lateral_deviation": 0.0,
+        "closest_approach_distance": 0.332
+      },
+      "checks": {
+        "validator_static_collision_free": "pass",
+        "validator_placement_region": "pass",
+        "validator_stable_support": "pass",
+        "validator_connected_ego_passage": "pass",
+        "validator_family_membership": "pass",
+        "validator_metric_tolerance": "pass",
+        "validator_backend_compiles": "pass"
+      },
+      "verdict": "accepted",
+      "reject_reasons": [],
+      "output_file": "backend_outputs/Generalization_CustomObstacles_1026_003_asset_swap_v18.xml"
+    },
+    {
+      "scenario_id": "Generalization_CustomObstacles_1026_003_asset_swap_v19",
+      "route_id": "102600319",
+      "index": 19,
+      "delta_ref": "deltas/sd_003_asset_swap_v19.json",
+      "target": "asset_traffic_warning",
+      "realized": [
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_1",
+          "param": "y",
+          "value": 2.437
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_1",
+          "param": "yaw",
+          "value": 90.0
+        }
+      ],
+      "measured": {
+        "minimum_free_corridor_width": 7.9998,
+        "maximum_route_intrusion": 0.5002,
+        "required_lateral_deviation": 0.0,
+        "closest_approach_distance": 0.3314
+      },
+      "checks": {
+        "validator_static_collision_free": "pass",
+        "validator_placement_region": "pass",
+        "validator_stable_support": "pass",
+        "validator_connected_ego_passage": "pass",
+        "validator_family_membership": "pass",
+        "validator_metric_tolerance": "pass",
+        "validator_backend_compiles": "pass"
+      },
+      "verdict": "accepted",
+      "reject_reasons": [],
+      "output_file": "backend_outputs/Generalization_CustomObstacles_1026_003_asset_swap_v19.xml"
+    },
+    {
+      "scenario_id": "Generalization_CustomObstacles_1026_003_asset_swap_v20",
+      "route_id": "102600320",
+      "index": 20,
+      "delta_ref": "deltas/sd_003_asset_swap_v20.json",
+      "target": "asset_trampoline",
+      "realized": [
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_1",
+          "param": "y",
+          "value": 3.3161
+        }
+      ],
+      "measured": {
+        "minimum_free_corridor_width": 7.9993,
+        "maximum_route_intrusion": 0.5007,
+        "required_lateral_deviation": 0.0,
+        "closest_approach_distance": 0.3309
+      },
+      "checks": {
+        "validator_static_collision_free": "pass",
+        "validator_placement_region": "pass",
+        "validator_stable_support": "pass",
+        "validator_connected_ego_passage": "pass",
+        "validator_family_membership": "pass",
+        "validator_metric_tolerance": "pass",
+        "validator_backend_compiles": "pass"
+      },
+      "verdict": "accepted",
+      "reject_reasons": [],
+      "output_file": "backend_outputs/Generalization_CustomObstacles_1026_003_asset_swap_v20.xml"
+    },
+    {
+      "scenario_id": "Generalization_CustomObstacles_1026_003_asset_swap_v21",
+      "route_id": "102600321",
+      "index": 21,
+      "delta_ref": "deltas/sd_003_asset_swap_v21.json",
+      "target": "asset_travel_suitcase",
+      "realized": [
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_1",
+          "param": "y",
+          "value": 1.5207
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_1",
+          "param": "yaw",
+          "value": 90.0
+        }
+      ],
+      "measured": {
+        "minimum_free_corridor_width": 7.9997,
+        "maximum_route_intrusion": 0.5003,
+        "required_lateral_deviation": 0.0,
+        "closest_approach_distance": 0.3313
+      },
+      "checks": {
+        "validator_static_collision_free": "pass",
+        "validator_placement_region": "pass",
+        "validator_stable_support": "pass",
+        "validator_connected_ego_passage": "pass",
+        "validator_family_membership": "pass",
+        "validator_metric_tolerance": "pass",
+        "validator_backend_compiles": "pass"
+      },
+      "verdict": "rejected",
+      "reject_reasons": [
+        "rest_dynamics: falls_through (enrichment fact, countersign-evidenced) - the asset does not hold an authored static pose and cannot serve a static-obstacle family"
+      ],
+      "output_file": null
+    },
+    {
+      "scenario_id": "Generalization_CustomObstacles_1026_003_asset_swap_v22",
+      "route_id": "102600322",
+      "index": 22,
+      "delta_ref": "deltas/sd_003_asset_swap_v22.json",
+      "target": "asset_vending_machine",
+      "realized": [
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_1",
+          "param": "y",
+          "value": 1.7337
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_1",
+          "param": "yaw",
+          "value": 90.0
+        }
+      ],
+      "measured": {
+        "minimum_free_corridor_width": 8.0004,
+        "maximum_route_intrusion": 0.4996,
+        "required_lateral_deviation": 0.0,
+        "closest_approach_distance": 0.332
+      },
+      "checks": {
+        "validator_static_collision_free": "pass",
+        "validator_placement_region": "pass",
+        "validator_stable_support": "pass",
+        "validator_connected_ego_passage": "pass",
+        "validator_family_membership": "pass",
+        "validator_metric_tolerance": "pass",
+        "validator_backend_compiles": "pass"
+      },
+      "verdict": "accepted",
+      "reject_reasons": [],
+      "output_file": "backend_outputs/Generalization_CustomObstacles_1026_003_asset_swap_v22.xml"
+    },
+    {
+      "scenario_id": "Generalization_CustomObstacles_1026_003_asset_swap_v23",
+      "route_id": "102600323",
+      "index": 23,
+      "delta_ref": "deltas/sd_003_asset_swap_v23.json",
+      "target": "asset_waste_bin",
+      "realized": [
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_1",
+          "param": "y",
+          "value": 1.5244
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_1",
+          "param": "yaw",
+          "value": 90.0
+        }
+      ],
+      "measured": {
+        "minimum_free_corridor_width": 7.9999,
+        "maximum_route_intrusion": 0.5001,
+        "required_lateral_deviation": 0.0,
+        "closest_approach_distance": 0.3316
+      },
+      "checks": {
+        "validator_static_collision_free": "pass",
+        "validator_placement_region": "pass",
+        "validator_stable_support": "pass",
+        "validator_connected_ego_passage": "pass",
+        "validator_family_membership": "pass",
+        "validator_metric_tolerance": "pass",
+        "validator_backend_compiles": "pass"
+      },
+      "verdict": "accepted",
+      "reject_reasons": [],
+      "output_file": "backend_outputs/Generalization_CustomObstacles_1026_003_asset_swap_v23.xml"
+    }
+  ]
+}

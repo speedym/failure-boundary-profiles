@@ -1,0 +1,41 @@
+{
+ "declaration_kind": "campaign_declaration/v0.2",
+ "campaign_id": "campaign_carla_v07",
+ "backend": "fail2drive",
+ "family": {
+  "family_id": "fm_005_hero",
+  "manifest_path": "artifacts/examples/solved_families/fm_005_hero.json",
+  "manifest_sha256": "6582a2d0e03c92ae53f3c0d03911556dfa2b7e51b21607f75728f28ff4ded94a"
+ },
+ "declared_grid": {
+  "variants": [
+   "Generalization_CustomObstacles_1026_005_hero_v01",
+   "Generalization_CustomObstacles_1026_005_hero_v02",
+   "Generalization_CustomObstacles_1026_005_hero_v03",
+   "Generalization_CustomObstacles_1026_005_hero_v04",
+   "Generalization_CustomObstacles_1026_005_hero_v05",
+   "Generalization_CustomObstacles_1026_005_hero_v06",
+   "Generalization_CustomObstacles_1026_005_hero_v07",
+   "Generalization_CustomObstacles_1026_005_hero_v08",
+   "Generalization_CustomObstacles_1026_005_hero_v09",
+   "Generalization_CustomObstacles_1026_005_hero_v10",
+   "Generalization_CustomObstacles_1026_005_hero_v11",
+   "Generalization_CustomObstacles_1026_005_hero_v12"
+  ],
+  "models": [
+   "simlingo"
+  ],
+  "repetitions": [
+   0,
+   1,
+   2
+  ],
+  "repetition_axis": {
+   "kind": "traffic_seed_strata",
+   "note": "the sim is measurably nondeterministic: each run is a Bernoulli sample, seeds are strata - the Isaac analog axis is policy_reps"
+  },
+  "expert": false
+ },
+ "results_subtree": "campaign_carla_v07/fm_005_hero",
+ "note": "SimLingo (the VLM sensor agent) on all seven CARLA families, traffic seeds 0 to 2; no reference agent in this campaign, the expert cells of v01 to v05 are read beside it at the figure (ruling 2026-09-14); the asset swap is in, since a sensor agent sees the asset"
+}

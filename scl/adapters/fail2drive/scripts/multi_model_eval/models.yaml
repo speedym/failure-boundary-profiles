@@ -1,0 +1,446 @@
+# Model registry for evaluate_models.py — see README.md for setup.
+#
+# Relative paths resolve against fail2drive_root (../lead = sibling checkout).
+#
+# Per-model keys:
+#   conda_env    (required) conda/micromamba env the evaluator runs in
+#   agent        (required) leaderboard agent file
+#   agent_config checkpoint dir/file passed as --agent-config; omit for
+#                checkpoint-free agents (the PDM-Lite privileged expert)
+#   track        SENSORS or MAP (default SENSORS)
+#   cwd          evaluator working directory (default: fail2drive_root;
+#                LEAD-based agents need their own repo root to find .env)
+#   pythonpath   extra entries appended to PYTHONPATH
+#   env          extra environment variables
+#   leaderboard_root / scenario_runner_root
+#                per-model override, only if an agent needs its vendored fork
+#   min_compute_capability
+#                "M.m": the lowest CUDA compute capability the model's stack
+#                runs on. install_models.py refuses the recipe and
+#                evaluate_models.py refuses the campaign when the selected
+#                GPU (nvidia-smi) is below it - before any download, build
+#                or launch. Absent = any CUDA GPU.
+#   accepts_torch_builds
+#                true (F53, 2026-09-27): the registry-level `torch_builds`
+#                table (below, one place for the versions) may replace this
+#                entry's torch when the recipe's pinned wheel carries no
+#                kernels for the measured card's architecture
+#                (torch.cuda.get_arch_list() against nvidia-smi's compute
+#                capability; the cu124 wheels stop at sm_90, the RTX 5090 is
+#                sm_120). install_models.py then installs, of the table's
+#                packages, those the env already holds, from the table's
+#                index, and measures again; both runners refuse such an
+#                environment at preflight, before the simulator starts. A
+#                swapped env is a distinct vintage of the agent (the
+#                environment block is inside the fingerprint). Absent: a
+#                refusal on such a card (SimLingo, HiP-AD: no Blackwell torch
+#                exists for their py3.8 stacks; a new entry until tested).
+#   environment_extensions
+#                distribution names whose versions the run-time environment
+#                record names beside python, torch and CUDA (F18 f): the
+#                compiled or separately pinned packages that decide which
+#                kernels run. Absent = none beyond torch.
+#   source       (required) THE declaration of what runs - the one place a
+#                model's expected identity is written down (ledger F27,
+#                2026-09-12). install_models.py installs TO it;
+#                evaluate_models.py measures the disk against it at
+#                campaign start, refuses any difference and records the
+#                measured identity into campaign_meta.model_identity in
+#                portable form. Vocabulary (model_sources.CONTRACT):
+#                  implementation: url + commit of the checkout at `cwd`
+#                                  (url null + label for one of OUR
+#                                  checkouts: no URL is ever recorded for
+#                                  our repositories, UPSTREAM_PIN pins
+#                                  the fork); modified_tracked lists the
+#                                  recipe's own edits, anything else
+#                                  modified refuses
+#                  weights:        url + kind (git_clone: revision +
+#                                  path_in_repo, the checkpoint lies in a
+#                                  clone of url; download: fetched files)
+#                                  + content: sha256 for a file
+#                                  agent_config, files {relpath: {sha256
+#                                  [, url]}} = the exact content of a
+#                                  directory agent_config (an undeclared
+#                                  file beside the weights refuses: the
+#                                  LEAD-family loaders take EVERY .pth in
+#                                  the directory)
+#                  backbone:       a second Hugging Face artifact the
+#                                  agent resolves by name offline (url +
+#                                  revision + the local snapshot it reads)
+#                  overlay:        a second repository copied into the
+#                                  implementation checkout (url + commit
+#                                  + path + modified_tracked)
+#                A checkout's remote is compared with the declared url and
+#                never copied (it can name a private repo or carry a
+#                token). Pins declared 2026-09-12 from the TANKGIRL
+#                installs of 2026-07-21 (tfpp, lead, bridgedrive) and the
+#                PR 28 recipes (simlingo, hipad, plant2); the v01-v03
+#                bundles' route logs show lead loading three weight files
+#                and bridgedrive one, as declared here.
+
+
+# F53 (2026-09-27): the ONE table of torch builds per card architecture, applied to the entries
+# that accept it (accepts_torch_builds) when their pinned wheel carries no kernels for the card;
+# the Isaac registry (adapters/isaac/scripts/multi_model_eval/models.json) carries the same table,
+# and a test keeps the two equal. On a farm 4090 (sm_89, inside every pinned list) nothing fires.
+torch_builds:
+  sm_120:
+    index: https://download.pytorch.org/whl/cu128
+    packages: [torch==2.7.1, torchvision==0.22.1, torchaudio==2.7.1]
+
+models:
+  # PDM-Lite privileged expert (Fail2Drive's data-collection autopilot) -
+  # the REFERENCE channel, not a competitor: drives from ground-truth
+  # simulator state (Track.MAP, no sensors, no checkpoint). Its per-variant
+  # result separates "scenario is genuinely hard" from "model is weak":
+  # read expert-vs-model gap, never its score alongside model scores.
+  pdm_lite_expert:
+    conda_env: fail2drive
+    # Wrapper around team_code/autopilot.py - adapts the data-collection
+    # agent contract to the stock evaluator; see agents/pdm_lite_agent.py.
+    agent: agents/pdm_lite_agent.py
+    track: MAP
+    source:
+      implementation:
+        url: null     # the Fail2Drive fork itself (team_code/autopilot.py)
+        label: fail2drive fork (UPSTREAM_PIN)
+    env:
+      # Chase-cam frames -> mp4 per route (the autopilot's own viz is
+      # in-world debug drawing only). Drop to "0" to skip video output.
+      DEBUG_CHALLENGE: "1"
+
+  tfpp:
+    conda_env: fail2drive
+    accepts_torch_builds: true   # F53: the registry's torch_builds may replace this env's torch on a newer card
+    # Wrapper around team_code/sensor_agent.py; see agents/tfpp_viz_agent.py.
+    agent: agents/tfpp_viz_agent.py
+    agent_config: checkpoints/tfpp
+    track: MAP
+    source:
+      implementation:
+        url: null     # team_code/sensor_agent.py of the Fail2Drive fork
+        label: fail2drive fork (UPSTREAM_PIN)
+      weights:
+        # SimonGer/TFv5 all_towns, seed 0 of the three published; the
+        # agent ensembles every .pth in the directory, so ONE file here
+        # means one net (the paper's TF++ row is the authors' setting,
+        # not established as one or three). Repo revision 3fd4f084 (main,
+        # last modified 2026-03-22); hashes = the HF LFS object and the
+        # file as fetched.
+        url: https://huggingface.co/SimonGer/TFv5
+        kind: download
+        files:
+          model_0030_0.pth:
+            url: https://huggingface.co/SimonGer/TFv5/resolve/3fd4f084437fe66e8a0212514d85a060e450742a/all_towns/model_0030_0.pth
+            sha256: d6fbdc28f7398354beadc7cf6765d866457c957f7b470c88ba206e73311a3b44
+          config.json:
+            url: https://huggingface.co/SimonGer/TFv5/resolve/3fd4f084437fe66e8a0212514d85a060e450742a/all_towns/config.json
+            sha256: 895e3e9704ceda443169ca32aaef2712b1becf2d42473d7273071ec6ceda113e
+    env:
+      DEBUG_CHALLENGE: "1"  # enables visualization frames aka Video
+
+  # The cvpr2026 branch's layout matches the public HF checkpoints; pinned
+  # to its head of 2026-06-26 (a README commit on top of the BridgeDrive
+  # base below), unchanged since. The agent loads every model*.pth in
+  # agent_config: three files = the three-seed ensemble (TFv6).
+  lead:
+    conda_env: lead
+    accepts_torch_builds: true   # F53: the registry's torch_builds may replace this env's torch on a newer card
+    cwd: ../lead
+    agent: ../lead/lead/inference/sensor_agent.py
+    agent_config: ../lead/outputs/checkpoints/tfv6_resnet34
+    track: SENSORS
+    source:
+      implementation:
+        url: https://github.com/kesai-labs/lead
+        commit: 730bc1a2f44d5f28312dd55f0ca958e94a24c038
+      weights:
+        url: https://huggingface.co/ln2697/tfv6
+        kind: git_clone
+        revision: 2b3173e7af78392d4472c53cf2e1c2b003b53105
+        path_in_repo: tfv6_resnet34
+        files:
+          config.json:
+            sha256: ec40ffe05a88287948fe52a32bdbd3eee24a5b1bc51d171124c6781663741abf
+          model_0030_0.pth:
+            sha256: 7ce71a2e70a9e75c0bf60d842ee2e7976ffff94f4a96e3763de0fe550ec780ce
+          model_0030_1.pth:
+            sha256: fe3c9fe315fedfd5a9fc0d859e405028c28ff8f60b7edcd86613cd0a7c8d3cd6
+          model_0030_2.pth:
+            sha256: 197947ff0f20e58d52e38aae87617296335d3482af8b59a27efb37a3422678bc
+    pythonpath:
+      - ../lead
+    env:
+      IS_BENCH2DRIVE: "0"
+      PLANNER_TYPE: only_traj
+      LEAD_CLOSED_LOOP_CONFIG: "produce_debug_video=True" #To Avoid Video Set to False
+
+  # The flagship configuration the LEAD paper reports (RegNetY-032 image and
+  # LiDAR backbones; the same single 1152x384 camera, LiDAR and four radars
+  # as tfv6_resnet34: the two config.json files differ only in the two
+  # architecture keys and training bookkeeping). A SEPARATE pinned entry,
+  # never a replacement (F52, 2026-09-27): the same checkout and env as
+  # `lead`, a second folder of the same weights clone at the same revision,
+  # three seed checkpoints loaded as the ensemble. Hashes read from the HF
+  # LFS pointers at revision 2b3173e7.
+  lead_regnety032:
+    conda_env: lead
+    accepts_torch_builds: true   # F53: the registry's torch_builds may replace this env's torch on a newer card
+    cwd: ../lead
+    agent: ../lead/lead/inference/sensor_agent.py
+    agent_config: ../lead/outputs/checkpoints/tfv6_regnety032
+    track: SENSORS
+    source:
+      implementation:
+        url: https://github.com/kesai-labs/lead
+        commit: 730bc1a2f44d5f28312dd55f0ca958e94a24c038
+      weights:
+        url: https://huggingface.co/ln2697/tfv6
+        kind: git_clone
+        revision: 2b3173e7af78392d4472c53cf2e1c2b003b53105
+        path_in_repo: tfv6_regnety032
+        files:
+          config.json:
+            sha256: 93b638106283fac7925fbd574c19e913e51776daccb537b8de42c1586ae2eedd
+          model_0030_0.pth:
+            sha256: 94468196d3cd55b99ce22df9aeb88f478f83b0dd7af78fcb8e737bad30d1c76c
+          model_0030_1.pth:
+            sha256: 3fcbf59ec6ff6c4f1ffb86a3db838fdf734ad781e09747ad0732f97daaa37819
+          model_0030_2.pth:
+            sha256: 5bcc8e68432c8afe783ab1264a51766cc284af818c37020d08be76a7dc163cf3
+    pythonpath:
+      - ../lead
+    env:
+      IS_BENCH2DRIVE: "0"
+      PLANNER_TYPE: only_traj
+      LEAD_CLOSED_LOOP_CONFIG: "produce_debug_video=True"
+
+  bridgedrive:
+    conda_env: lead-bd
+    accepts_torch_builds: true   # F53: the registry's torch_builds may replace this env's torch on a newer card
+    cwd: ../lead-bridgedrive
+    agent: ../lead-bridgedrive/lead/inference/sensor_agent_bridgedrive.py
+    agent_config: ../lead-bridgedrive/outputs/local_training/bridgedrive_k60
+    track: SENSORS
+    source:
+      # A LEAD clone at a pinned commit with the BridgeDrive overlay copied
+      # in (install_models.py): the overlay's copies are the three declared
+      # modified files (config_training.py also carries the installer's
+      # portable gpu_name fallback).
+      implementation:
+        url: https://github.com/kesai-labs/lead
+        commit: 156afed46562884be77ec51f2b09aa60b7634c98
+        modified_tracked:
+          - lead/inference/config_closed_loop.py
+          - lead/training/config_training.py
+          - lead/training/logger.py
+      overlay:
+        url: https://github.com/shuliu-ethz/BridgeDrive
+        commit: 7085552f49a26adca35bf257b2b77e5ead67b889
+        path: ../BridgeDrive
+        modified_tracked:   # the installer points its copy script at our paths
+          - BridgeDrive_adaptation_LEAD/utils_file_transfer.py
+      weights:
+        # The clone IS agent_config. Revision d2b4b992 holds ONE checkpoint
+        # (m1); HF main gained model_BridgeDrive_m2_k60_0030.pth on
+        # 2026-08-22, which the agent (prefix "model") would load as a
+        # second net - the exact-content rule keeps it out. config.json is
+        # the installer's deterministic plan_anchor_path patch (hash of the
+        # patched file).
+        url: https://huggingface.co/liushu-ethz/BridgeDrive
+        kind: git_clone
+        revision: d2b4b992504f260c90d7a7c5a6c48174b5679c55
+        path_in_repo: .
+        modified_tracked:
+          - config.json
+        files:
+          .gitattributes:
+            sha256: 11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361
+          README.md:
+            sha256: 0aae0e408cfa10e2ecef87be8ee4ad6dd7094d1e5f70dc1dd0284e95767cad60
+          config.json:
+            sha256: 9ca01110f2c5680464c2ec1c3bbf93049e4c58ed38f0e8de3ed8ad39ce0d42a6
+          model_BridgeDrive_m1_k60_0030.pth:
+            sha256: 413513d83e81059f9b36a9a1cd6f5c38dd0f879e4b8dc7cfa82b6da971181ca7
+    pythonpath:
+      - ../lead-bridgedrive
+    env:
+      IS_BENCH2DRIVE: "0"
+      PLANNER_TYPE: only_traj
+      LEAD_CLOSED_LOOP_CONFIG: "steer_modality=route throttle_modality=target_speed brake_modality=target_speed step_num=20 diffusion_speed=False" # To avoid Video modify and append "produce_debug_video=False"
+      LEAD_TRAINING_CONFIG: "diffusion_speed=False"
+
+  # SimLingo (RenzKa/simlingo public release - what the Fail2Drive paper
+  # says it ran: "original checkpoints and evaluation code provided by the
+  # authors"). The only release the authors made, frozen 2025-08-25, seven
+  # months before the paper (2026-04-09); byte-for-byte paper provenance is
+  # not published (no commit, checksum or seed in the paper). What is
+  # established: nothing else was ever released - the driving agent
+  # (team_code/) has not changed since at least 2025-07-25, the checkpoint
+  # was uploaded once on 2025-06-25, the backbone's last revision is
+  # 2025-03-25. Vision-language agent: ONE front camera, no LiDAR, no map.
+  # The wrapper reproduces the Fail2Drive plugin-branch recipe for running
+  # it under this leaderboard; see agents/simlingo_agent.py and README.md.
+  simlingo:
+    conda_env: simlingo
+    # flash-attention 2.x kernels run on Ampere or newer only (sm_80+): the
+    # recipe's kernel check and every evaluation fail on a Pascal card
+    # (TANKGIRL's P5000 is 6.1), so both tools refuse up front.
+    min_compute_capability: "8.0"
+    environment_extensions: [flash-attn]
+    # Upstream resolves its InternVL2 snapshot (pretrained/) and the overlay
+    # font (arial.ttf) relative to the working directory.
+    cwd: ../simlingo
+    agent: agents/simlingo_agent.py
+    # <ckpt dir>/pytorch_model.pt; the hydra config is found three levels up
+    # (outputs/simlingo/.hydra/config.yaml) - the HF layout, keep it intact.
+    # The clone revision pins that config with the weights (a modified
+    # tracked file in the clone refuses).
+    agent_config: ../simlingo/outputs/simlingo/checkpoints/epoch=013.ckpt/pytorch_model.pt
+    track: SENSORS
+    source:
+      implementation:
+        url: https://github.com/RenzKa/simlingo
+        commit: 743b243afd6cf5ff51b9fa1f8cac86f22d569684
+      weights:
+        # Only the merged fp32 weights (2.5 GB) are pulled; the deepspeed
+        # shards beside them (checkpoint/) are training state, never loaded.
+        url: https://huggingface.co/RenzKa/simlingo
+        kind: git_clone
+        revision: 26c7c89e797d4e25bbf640013317af8da26a5454
+        path_in_repo: simlingo/checkpoints/epoch=013.ckpt/pytorch_model.pt
+        sha256: ec8943723d266ee9f5f56f45d153a163b22616960bfccb741965ea5daa700d28
+      backbone:
+        # The checkpoint was trained on it; the agent resolves tokenizer,
+        # preprocessing and executable remote code by name from the hub
+        # cache (HF_HUB_OFFLINE=1 below, so `main` there must BE this
+        # revision) and the conversation template from the local snapshot.
+        url: https://huggingface.co/OpenGVLab/InternVL2-1B
+        revision: 0d75ccd166b1d0b79446ae6c5d1a4a667f1e6187
+        snapshot: ../simlingo/pretrained/InternVL2-1B
+    pythonpath:
+      - ../simlingo
+    env:
+      # Upstream's overlay frames (predicted route/speed waypoints + the
+      # model's text answer), one per 5th step -> stitched mp4 plays at 4x
+      # sim speed. Drop to "0" to skip video output.
+      DEBUG_CHALLENGE: "1"
+      # The agent resolves its InternVL2 backbone (tokenizer, preprocessing,
+      # remote code) from the Hub cache by name; offline, it can only be the
+      # snapshot the installer pinned and verified - never a moved `main`.
+      HF_HUB_OFFLINE: "1"
+
+  # HiP-AD (nullmax-vision/HiP-AD public release, main of 2025-10-21; the
+  # repo has two commits, both that day - what the Fail2Drive paper says it
+  # ran: "original checkpoints and evaluation code provided by the
+  # authors"; per-run provenance is not published). Six cameras, no LiDAR,
+  # no map; mmdet3d/Sparse4D-style stack with a compiled CUDA op and
+  # flash-attention (py3.8, torch 1.13 + cu117; the build recipe lives in
+  # install_models.py). The wrapper reproduces the Fail2Drive plugin-branch
+  # recipe for running Bench2Drive agents under this leaderboard; see
+  # agents/hipad_agent.py and README.md.
+  hipad:
+    conda_env: hipad
+    # flash-attention built from source targets sm_80, the deformable
+    # aggregation op is built for 8.0/8.6 (+PTX): Ampere or newer only.
+    min_compute_capability: "8.0"
+    # The deformable-aggregation op is built in place (setup.py develop) and
+    # publishes no distribution name; its cubin targets are recorded by the
+    # installer's build check, not here (F18 f, open).
+    environment_extensions: [flash-attn, mmcv-full, mmdet]
+    # Upstream resolves its plugin package, k-means anchors and the config
+    # relative to the checkout root (its own launch script cd's there).
+    cwd: ../HiP-AD
+    agent: agents/hipad_agent.py
+    agent_config: ../HiP-AD/ckpts/hipad_stage2.pth
+    track: SENSORS
+    source:
+      implementation:
+        url: https://github.com/nullmax-vision/HiP-AD
+        commit: 9610ed83a89145433fe77da04a0077b42013994c
+        modified_tracked:   # upstream README step 3: project_dir pinned by the installer
+          - projects/configs/hipad_b2d_stage2.py
+      weights:
+        # The release asset, saved inside the checkout; sha256 measured
+        # 2026-09-11 on first download.
+        url: https://github.com/nullmax-vision/HiP-AD/releases/download/weighs/hipad_stage2.pth
+        kind: download
+        sha256: 7711b693293533463732d8a3efa8d5148d203344aad727a4661cb84263613956
+    pythonpath:
+      - ../HiP-AD
+      - ../HiP-AD/bench2drive/leaderboard   # provides team_code
+    env:
+      # Model config, relative to cwd (upstream: TEAM_CONFIG=<cfg>+<ckpt>).
+      HIPAD_CONFIG: projects/configs/hipad_b2d_stage2.py
+      # Upstream's own launch script sets it; the agent's tick() reads the
+      # top-down camera that sensors() only declares under this flag.
+      IS_BENCH2DRIVE: "True"
+      # Merged six-camera + BEV + plan overlay every 2nd step -> stitched
+      # mp4 plays at 2x sim speed. Drop to "0" to skip video output.
+      DEBUG_CHALLENGE: "1"
+
+  # PlanT 2.0 (autonomousvision/plant2 public release - what the Fail2Drive
+  # paper says it ran: "original checkpoints and evaluation code provided by
+  # the authors", same group and first author as Fail2Drive; per-run
+  # provenance is not published). Pinned to main as of 2026-04-22: the last
+  # Python change is the 2025-12-01 "Polishing" commit, everything after is
+  # routes/README, so any evaluation since then ran this code. PRIVILEGED
+  # object-level planner: Track.MAP, reads the world through
+  # CarlaDataProvider, no cameras except the optional viz one. Inherits
+  # carla_garage's data-collection base like the expert, so the wrapper
+  # mirrors agents/pdm_lite_agent.py; see agents/plant2_agent.py.
+  #
+  # HF SimonGer/PlanT2 ships three training seeds (epoch=029_final_{1,2,3},
+  # hashes = the HF LFS objects at revision e81b261f); the paper does not
+  # say which seed(s) Fail2Drive ran (roster decision 2026-09-12: run all
+  # three as declared agents). One entry per seed, sharing the checkout and
+  # the environment; plant2 is seed 1, the upstream README's example.
+  plant2: &plant2
+    conda_env: plant2
+    accepts_torch_builds: true   # F53: the registry's torch_builds may replace this env's torch on a newer card
+    cwd: ../plant2
+    agent: agents/plant2_agent.py
+    agent_config: ../plant2/checkpoints/epoch=029_final_1.ckpt
+    track: MAP
+    source:
+      implementation: &plant2_implementation
+        url: https://github.com/autonomousvision/plant2
+        commit: 6269e5a43c6f6b984d2bd97e3ec4a025ebefbeef
+      weights:
+        url: https://huggingface.co/SimonGer/PlanT2
+        kind: git_clone
+        revision: e81b261f8b92b20225d020fe9b7a0470c1434d96
+        path_in_repo: epoch=029_final_1.ckpt
+        sha256: 2f896d8d7640d4b7b68bcef8615a73e9761e850870a24f914c4c908f0f2199f4
+    pythonpath:   # upstream README's PYTHONPATH tail, same order
+      - ../plant2/PlanT
+      - ../plant2/carla_garage
+    env:
+      # PLANT_VIZ overlay (object tokens + plan + front camera), one per
+      # 20th step -> stitched mp4 plays at 20x sim speed; the per-step
+      # object/plan record goes to a .txt beside it. "0" skips both.
+      DEBUG_CHALLENGE: "1"
+
+  plant2_s2:
+    <<: *plant2
+    agent_config: ../plant2/checkpoints/epoch=029_final_2.ckpt
+    source:
+      implementation: *plant2_implementation
+      weights:
+        url: https://huggingface.co/SimonGer/PlanT2
+        kind: git_clone
+        revision: e81b261f8b92b20225d020fe9b7a0470c1434d96
+        path_in_repo: epoch=029_final_2.ckpt
+        sha256: a7bcb717ea0279faf6f93cb05768c6d0e4703b40c7e81fbdd8b78964f11ac1eb
+
+  plant2_s3:
+    <<: *plant2
+    agent_config: ../plant2/checkpoints/epoch=029_final_3.ckpt
+    source:
+      implementation: *plant2_implementation
+      weights:
+        url: https://huggingface.co/SimonGer/PlanT2
+        kind: git_clone
+        revision: e81b261f8b92b20225d020fe9b7a0470c1434d96
+        path_in_repo: epoch=029_final_3.ckpt
+        sha256: 3eaa9f7ba563b133ce9918ebfa5f7c6ea0201066717553ff2275012d42c4c46a

@@ -1,0 +1,1098 @@
+{
+  "schema_version": "family_manifest/v0.3",
+  "manifest_id": "fm_005_hero",
+  "family_id": "passable_static_obstacle",
+  "layout_note": "R-sequence layout: satellite param j of variant i = frac(i*sqrt(p_j)) over dx [-3, 3] m / shallowness [margin, feasible max] / yaw [-180, 180) deg; deterministic either-axis projection into the feasible set (clamp + ordered push-apart, station separation only for pairs without lateral clearance). Stratified arrangement coverage: where the laterally-clear 'beside' regime is feasible, satellite k takes it on alternating variants ((index+k) parity) - depth over the clear band, station over the binder's length - so beside arrangements appear wherever geometry admits them. Constants: p_j from primes (2,3,5,...), margin 0.05 m, clearance 0.3 m.",
+  "plan_ref": "ap_005_hero",
+  "request_ref": "ar_005_hero",
+  "capability_profile_id": "openroad_f2d_passable_v0.1",
+  "source_ir_ref": {
+    "path": "artifacts/examples/imported_ir/scenario_ir_1026.json",
+    "schema_version": "scenario_ir/v0.3",
+    "content_hash": "sha256:d7b092dd6c7a1c5f7ec68ce88f871a989cae2277719df30d1941b4412f41db84"
+  },
+  "provenance": {
+    "solver": "scl_solver/0.2.0",
+    "geometry_algorithm_version": "1.1",
+    "route_key": "19e2abee794a671455db519deb04878b75b878bc66f23e1416fe9352d12d1680",
+    "policy_constants": {
+      "ego_clearance_margin_m": 0.1,
+      "ego_mirror_allowance_m": 0.13,
+      "placement_band_lateral_m": 4.0
+    },
+    "realization_tolerance_m": 0.005
+  },
+  "effective_domain": {
+    "factor_id": "maximum_route_intrusion",
+    "backoff_m": 0.02,
+    "intervals": [
+      {
+        "lo": 0.0,
+        "hi": 1.0909,
+        "lo_boundary": null,
+        "hi_boundary": 1.1109
+      }
+    ],
+    "binding_note": "boundaries located by coarse scan (step 0.05) + bisection over the full feasibility predicate (all hard checks incl. stable_support); added-entity baseline side: anchor_side (layout-governed: clutter accompanies the anchor; per-variant params owned by the layout stage)"
+  },
+  "expected_count": 12,
+  "accepted_count": 12,
+  "variants": [
+    {
+      "scenario_id": "Generalization_CustomObstacles_1026_005_hero_v01",
+      "route_id": "102600501",
+      "index": 1,
+      "delta_ref": "deltas/sd_005_hero_v01.json",
+      "target": 0.0,
+      "realized": [
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_1",
+          "param": "y",
+          "value": 2.304
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_2",
+          "param": "y",
+          "value": 3.0944
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_2",
+          "param": "x",
+          "value": -1.1172
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_2",
+          "param": "yaw",
+          "value": -95.02
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_3",
+          "param": "y",
+          "value": 3.9739
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_3",
+          "param": "x",
+          "value": 0.0774
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_3",
+          "param": "yaw",
+          "value": 38.0
+        }
+      ],
+      "measured": {
+        "minimum_free_corridor_width": 8.501,
+        "maximum_route_intrusion": -0.0009,
+        "required_lateral_deviation": 0.0,
+        "closest_approach_distance": 0.8325
+      },
+      "checks": {
+        "validator_static_collision_free": "pass",
+        "validator_placement_region": "pass",
+        "validator_stable_support": "pass",
+        "validator_connected_ego_passage": "pass",
+        "validator_family_membership": "pass",
+        "validator_backend_compiles": "pass"
+      },
+      "verdict": "accepted",
+      "reject_reasons": [],
+      "output_file": "backend_outputs/Generalization_CustomObstacles_1026_005_hero_v01.xml",
+      "layout": {
+        "group": "new:machine_and_bins_group",
+        "binder": "obstacle_1",
+        "satellites": [
+          {
+            "entity": "obstacle_2",
+            "dx_m": -1.0766,
+            "depth_m": 1.043,
+            "yaw_deg": -95.02,
+            "projected": true
+          },
+          {
+            "entity": "obstacle_3",
+            "dx_m": 0.1267,
+            "depth_m": 1.8032,
+            "yaw_deg": 38.0,
+            "projected": false
+          }
+        ]
+      }
+    },
+    {
+      "scenario_id": "Generalization_CustomObstacles_1026_005_hero_v02",
+      "route_id": "102600502",
+      "index": 2,
+      "delta_ref": "deltas/sd_005_hero_v02.json",
+      "target": 0.0992,
+      "realized": [
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_1",
+          "param": "y",
+          "value": 2.2048
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_2",
+          "param": "y",
+          "value": 4.1013
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_2",
+          "param": "x",
+          "value": 0.2449
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_2",
+          "param": "yaw",
+          "value": -10.03
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_3",
+          "param": "y",
+          "value": 2.9033
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_3",
+          "param": "x",
+          "value": -1.3003
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_3",
+          "param": "yaw",
+          "value": -104.0
+        }
+      ],
+      "measured": {
+        "minimum_free_corridor_width": 8.4017,
+        "maximum_route_intrusion": 0.0983,
+        "required_lateral_deviation": 0.0,
+        "closest_approach_distance": 0.7332
+      },
+      "checks": {
+        "validator_static_collision_free": "pass",
+        "validator_placement_region": "pass",
+        "validator_stable_support": "pass",
+        "validator_connected_ego_passage": "pass",
+        "validator_family_membership": "pass",
+        "validator_backend_compiles": "pass"
+      },
+      "verdict": "accepted",
+      "reject_reasons": [],
+      "output_file": "backend_outputs/Generalization_CustomObstacles_1026_005_hero_v02.xml",
+      "layout": {
+        "group": "new:machine_and_bins_group",
+        "binder": "obstacle_1",
+        "satellites": [
+          {
+            "entity": "obstacle_2",
+            "dx_m": 0.2855,
+            "depth_m": 2.0881,
+            "yaw_deg": -10.03,
+            "projected": false
+          },
+          {
+            "entity": "obstacle_3",
+            "dx_m": -1.251,
+            "depth_m": 0.9089,
+            "yaw_deg": -104.0,
+            "projected": false
+          }
+        ]
+      }
+    },
+    {
+      "scenario_id": "Generalization_CustomObstacles_1026_005_hero_v03",
+      "route_id": "102600503",
+      "index": 3,
+      "delta_ref": "deltas/sd_005_hero_v03.json",
+      "target": 0.1983,
+      "realized": [
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_1",
+          "param": "y",
+          "value": 2.1057
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_2",
+          "param": "y",
+          "value": 2.2158
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_2",
+          "param": "x",
+          "value": -1.5848
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_2",
+          "param": "yaw",
+          "value": 74.95
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_3",
+          "param": "y",
+          "value": 4.7935
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_3",
+          "param": "x",
+          "value": 0.3308
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_3",
+          "param": "yaw",
+          "value": 114.0
+        }
+      ],
+      "measured": {
+        "minimum_free_corridor_width": 8.3023,
+        "maximum_route_intrusion": 0.1977,
+        "required_lateral_deviation": 0.0,
+        "closest_approach_distance": 0.6338
+      },
+      "checks": {
+        "validator_static_collision_free": "pass",
+        "validator_placement_region": "pass",
+        "validator_stable_support": "pass",
+        "validator_connected_ego_passage": "pass",
+        "validator_family_membership": "pass",
+        "validator_backend_compiles": "pass"
+      },
+      "verdict": "accepted",
+      "reject_reasons": [],
+      "output_file": "backend_outputs/Generalization_CustomObstacles_1026_005_hero_v03.xml",
+      "layout": {
+        "group": "new:machine_and_bins_group",
+        "binder": "obstacle_1",
+        "satellites": [
+          {
+            "entity": "obstacle_2",
+            "dx_m": -1.5442,
+            "depth_m": 0.3161,
+            "yaw_deg": 74.95,
+            "projected": false
+          },
+          {
+            "entity": "obstacle_3",
+            "dx_m": 0.3801,
+            "depth_m": 2.8611,
+            "yaw_deg": 114.0,
+            "projected": false
+          }
+        ]
+      }
+    },
+    {
+      "scenario_id": "Generalization_CustomObstacles_1026_005_hero_v04",
+      "route_id": "102600504",
+      "index": 4,
+      "delta_ref": "deltas/sd_005_hero_v04.json",
+      "target": 0.2975,
+      "realized": [
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_1",
+          "param": "y",
+          "value": 2.0065
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_2",
+          "param": "y",
+          "value": 4.7415
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_2",
+          "param": "x",
+          "value": 0.0958
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_2",
+          "param": "yaw",
+          "value": 159.94
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_3",
+          "param": "y",
+          "value": 2.2749
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_3",
+          "param": "x",
+          "value": 1.0773
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_3",
+          "param": "yaw",
+          "value": -28.01
+        }
+      ],
+      "measured": {
+        "minimum_free_corridor_width": 8.2029,
+        "maximum_route_intrusion": 0.2971,
+        "required_lateral_deviation": 0.0,
+        "closest_approach_distance": 0.5344
+      },
+      "checks": {
+        "validator_static_collision_free": "pass",
+        "validator_placement_region": "pass",
+        "validator_stable_support": "pass",
+        "validator_connected_ego_passage": "pass",
+        "validator_family_membership": "pass",
+        "validator_backend_compiles": "pass"
+      },
+      "verdict": "accepted",
+      "reject_reasons": [],
+      "output_file": "backend_outputs/Generalization_CustomObstacles_1026_005_hero_v04.xml",
+      "layout": {
+        "group": "new:machine_and_bins_group",
+        "binder": "obstacle_1",
+        "satellites": [
+          {
+            "entity": "obstacle_2",
+            "dx_m": 0.1364,
+            "depth_m": 2.8948,
+            "yaw_deg": 159.94,
+            "projected": false
+          },
+          {
+            "entity": "obstacle_3",
+            "dx_m": 1.1266,
+            "depth_m": 0.4115,
+            "yaw_deg": -28.01,
+            "projected": true
+          }
+        ]
+      }
+    },
+    {
+      "scenario_id": "Generalization_CustomObstacles_1026_005_hero_v05",
+      "route_id": "102600505",
+      "index": 5,
+      "delta_ref": "deltas/sd_005_hero_v05.json",
+      "target": 0.3967,
+      "realized": [
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_1",
+          "param": "y",
+          "value": 1.9073
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_2",
+          "param": "y",
+          "value": 2.6829
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_2",
+          "param": "x",
+          "value": -2.6142
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_2",
+          "param": "yaw",
+          "value": -115.08
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_3",
+          "param": "y",
+          "value": 4.1522
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_3",
+          "param": "x",
+          "value": -0.2851
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_3",
+          "param": "yaw",
+          "value": -170.01
+        }
+      ],
+      "measured": {
+        "minimum_free_corridor_width": 8.1034,
+        "maximum_route_intrusion": 0.3966,
+        "required_lateral_deviation": 0.0,
+        "closest_approach_distance": 0.435
+      },
+      "checks": {
+        "validator_static_collision_free": "pass",
+        "validator_placement_region": "pass",
+        "validator_stable_support": "pass",
+        "validator_connected_ego_passage": "pass",
+        "validator_family_membership": "pass",
+        "validator_backend_compiles": "pass"
+      },
+      "verdict": "accepted",
+      "reject_reasons": [],
+      "output_file": "backend_outputs/Generalization_CustomObstacles_1026_005_hero_v05.xml",
+      "layout": {
+        "group": "new:machine_and_bins_group",
+        "binder": "obstacle_1",
+        "satellites": [
+          {
+            "entity": "obstacle_2",
+            "dx_m": -2.5736,
+            "depth_m": 0.9456,
+            "yaw_deg": -115.08,
+            "projected": false
+          },
+          {
+            "entity": "obstacle_3",
+            "dx_m": -0.2358,
+            "depth_m": 2.4366,
+            "yaw_deg": -170.01,
+            "projected": false
+          }
+        ]
+      }
+    },
+    {
+      "scenario_id": "Generalization_CustomObstacles_1026_005_hero_v06",
+      "route_id": "102600506",
+      "index": 6,
+      "delta_ref": "deltas/sd_005_hero_v06.json",
+      "target": 0.4959,
+      "realized": [
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_1",
+          "param": "y",
+          "value": 1.8081
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_2",
+          "param": "y",
+          "value": 3.7659
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_2",
+          "param": "x",
+          "value": -0.0534
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_2",
+          "param": "yaw",
+          "value": -30.09
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_3",
+          "param": "y",
+          "value": 2.9422
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_3",
+          "param": "x",
+          "value": 2.1977
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_3",
+          "param": "yaw",
+          "value": 47.99
+        }
+      ],
+      "measured": {
+        "minimum_free_corridor_width": 8.005,
+        "maximum_route_intrusion": 0.495,
+        "required_lateral_deviation": 0.0,
+        "closest_approach_distance": 0.3366
+      },
+      "checks": {
+        "validator_static_collision_free": "pass",
+        "validator_placement_region": "pass",
+        "validator_stable_support": "pass",
+        "validator_connected_ego_passage": "pass",
+        "validator_family_membership": "pass",
+        "validator_backend_compiles": "pass"
+      },
+      "verdict": "accepted",
+      "reject_reasons": [],
+      "output_file": "backend_outputs/Generalization_CustomObstacles_1026_005_hero_v06.xml",
+      "layout": {
+        "group": "new:machine_and_bins_group",
+        "binder": "obstacle_1",
+        "satellites": [
+          {
+            "entity": "obstacle_2",
+            "dx_m": -0.0128,
+            "depth_m": 2.0978,
+            "yaw_deg": -30.09,
+            "projected": false
+          },
+          {
+            "entity": "obstacle_3",
+            "dx_m": 2.247,
+            "depth_m": 1.2704,
+            "yaw_deg": 47.99,
+            "projected": false
+          }
+        ]
+      }
+    },
+    {
+      "scenario_id": "Generalization_CustomObstacles_1026_005_hero_v07",
+      "route_id": "102600507",
+      "index": 7,
+      "delta_ref": "deltas/sd_005_hero_v07.json",
+      "target": 0.595,
+      "realized": [
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_1",
+          "param": "y",
+          "value": 1.709
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_2",
+          "param": "y",
+          "value": 1.7819
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_2",
+          "param": "x",
+          "value": 2.3564
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_2",
+          "param": "yaw",
+          "value": 54.89
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_3",
+          "param": "y",
+          "value": 3.3114
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_3",
+          "param": "x",
+          "value": -0.0317
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_3",
+          "param": "yaw",
+          "value": -94.01
+        }
+      ],
+      "measured": {
+        "minimum_free_corridor_width": 7.9056,
+        "maximum_route_intrusion": 0.5944,
+        "required_lateral_deviation": 0.0,
+        "closest_approach_distance": 0.2372
+      },
+      "checks": {
+        "validator_static_collision_free": "pass",
+        "validator_placement_region": "pass",
+        "validator_stable_support": "pass",
+        "validator_connected_ego_passage": "pass",
+        "validator_family_membership": "pass",
+        "validator_backend_compiles": "pass"
+      },
+      "verdict": "accepted",
+      "reject_reasons": [],
+      "output_file": "backend_outputs/Generalization_CustomObstacles_1026_005_hero_v07.xml",
+      "layout": {
+        "group": "new:machine_and_bins_group",
+        "binder": "obstacle_1",
+        "satellites": [
+          {
+            "entity": "obstacle_2",
+            "dx_m": 2.397,
+            "depth_m": 0.2187,
+            "yaw_deg": 54.89,
+            "projected": false
+          },
+          {
+            "entity": "obstacle_3",
+            "dx_m": 0.0176,
+            "depth_m": 1.8602,
+            "yaw_deg": -94.01,
+            "projected": false
+          }
+        ]
+      }
+    },
+    {
+      "scenario_id": "Generalization_CustomObstacles_1026_005_hero_v08",
+      "route_id": "102600508",
+      "index": 8,
+      "delta_ref": "deltas/sd_005_hero_v08.json",
+      "target": 0.6942,
+      "realized": [
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_1",
+          "param": "y",
+          "value": 1.6098
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_2",
+          "param": "y",
+          "value": 4.5503
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_2",
+          "param": "x",
+          "value": -0.2026
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_2",
+          "param": "yaw",
+          "value": 139.88
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_3",
+          "param": "y",
+          "value": 2.2349
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_3",
+          "param": "x",
+          "value": -2.0532
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_3",
+          "param": "yaw",
+          "value": 123.99
+        }
+      ],
+      "measured": {
+        "minimum_free_corridor_width": 7.8062,
+        "maximum_route_intrusion": 0.6938,
+        "required_lateral_deviation": 0.0921,
+        "closest_approach_distance": 0.1377
+      },
+      "checks": {
+        "validator_static_collision_free": "pass",
+        "validator_placement_region": "pass",
+        "validator_stable_support": "pass",
+        "validator_connected_ego_passage": "pass",
+        "validator_family_membership": "pass",
+        "validator_backend_compiles": "pass"
+      },
+      "verdict": "accepted",
+      "reject_reasons": [],
+      "output_file": "backend_outputs/Generalization_CustomObstacles_1026_005_hero_v08.xml",
+      "layout": {
+        "group": "new:machine_and_bins_group",
+        "binder": "obstacle_1",
+        "satellites": [
+          {
+            "entity": "obstacle_2",
+            "dx_m": -0.162,
+            "depth_m": 3.0734,
+            "yaw_deg": 139.88,
+            "projected": false
+          },
+          {
+            "entity": "obstacle_3",
+            "dx_m": -2.0039,
+            "depth_m": 0.773,
+            "yaw_deg": 123.99,
+            "projected": false
+          }
+        ]
+      }
+    },
+    {
+      "scenario_id": "Generalization_CustomObstacles_1026_005_hero_v09",
+      "route_id": "102600509",
+      "index": 9,
+      "delta_ref": "deltas/sd_005_hero_v09.json",
+      "target": 0.7934,
+      "realized": [
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_1",
+          "param": "y",
+          "value": 1.5106
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_2",
+          "param": "y",
+          "value": 2.2248
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_2",
+          "param": "x",
+          "value": 1.3269
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_2",
+          "param": "yaw",
+          "value": -135.14
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_3",
+          "param": "y",
+          "value": 4.5449
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_3",
+          "param": "x",
+          "value": 0.2217
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_3",
+          "param": "yaw",
+          "value": -18.01
+        }
+      ],
+      "measured": {
+        "minimum_free_corridor_width": 7.7068,
+        "maximum_route_intrusion": 0.7932,
+        "required_lateral_deviation": 0.1915,
+        "closest_approach_distance": 0.0383
+      },
+      "checks": {
+        "validator_static_collision_free": "pass",
+        "validator_placement_region": "pass",
+        "validator_stable_support": "pass",
+        "validator_connected_ego_passage": "pass",
+        "validator_family_membership": "pass",
+        "validator_backend_compiles": "pass"
+      },
+      "verdict": "accepted",
+      "reject_reasons": [],
+      "output_file": "backend_outputs/Generalization_CustomObstacles_1026_005_hero_v09.xml",
+      "layout": {
+        "group": "new:machine_and_bins_group",
+        "binder": "obstacle_1",
+        "satellites": [
+          {
+            "entity": "obstacle_2",
+            "dx_m": 1.3675,
+            "depth_m": 0.8482,
+            "yaw_deg": -135.14,
+            "projected": false
+          },
+          {
+            "entity": "obstacle_3",
+            "dx_m": 0.271,
+            "depth_m": 3.1996,
+            "yaw_deg": -18.01,
+            "projected": false
+          }
+        ]
+      }
+    },
+    {
+      "scenario_id": "Generalization_CustomObstacles_1026_005_hero_v10",
+      "route_id": "102600510",
+      "index": 10,
+      "delta_ref": "deltas/sd_005_hero_v10.json",
+      "target": 0.8926,
+      "realized": [
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_1",
+          "param": "y",
+          "value": 1.4114
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_2",
+          "param": "y",
+          "value": 3.3703
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_2",
+          "param": "x",
+          "value": -0.3517
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_2",
+          "param": "yaw",
+          "value": -50.16
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_3",
+          "param": "y",
+          "value": 1.5269
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_3",
+          "param": "x",
+          "value": -1.1506
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_3",
+          "param": "yaw",
+          "value": -160.02
+        }
+      ],
+      "measured": {
+        "minimum_free_corridor_width": 7.6084,
+        "maximum_route_intrusion": 0.8916,
+        "required_lateral_deviation": 0.29,
+        "closest_approach_distance": 0.0
+      },
+      "checks": {
+        "validator_static_collision_free": "pass",
+        "validator_placement_region": "pass",
+        "validator_stable_support": "pass",
+        "validator_connected_ego_passage": "pass",
+        "validator_family_membership": "pass",
+        "validator_backend_compiles": "pass"
+      },
+      "verdict": "accepted",
+      "reject_reasons": [],
+      "output_file": "backend_outputs/Generalization_CustomObstacles_1026_005_hero_v10.xml",
+      "layout": {
+        "group": "new:machine_and_bins_group",
+        "binder": "obstacle_1",
+        "satellites": [
+          {
+            "entity": "obstacle_2",
+            "dx_m": -0.3111,
+            "depth_m": 2.0975,
+            "yaw_deg": -50.16,
+            "projected": false
+          },
+          {
+            "entity": "obstacle_3",
+            "dx_m": -1.1013,
+            "depth_m": 0.2755,
+            "yaw_deg": -160.02,
+            "projected": true
+          }
+        ]
+      }
+    },
+    {
+      "scenario_id": "Generalization_CustomObstacles_1026_005_hero_v11",
+      "route_id": "102600511",
+      "index": 11,
+      "delta_ref": "deltas/sd_005_hero_v11.json",
+      "target": 0.9917,
+      "realized": [
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_1",
+          "param": "y",
+          "value": 1.3123
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_2",
+          "param": "y",
+          "value": 1.2985
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_2",
+          "param": "x",
+          "value": 1.1013
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_2",
+          "param": "yaw",
+          "value": 34.83
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_3",
+          "param": "y",
+          "value": 3.6688
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_3",
+          "param": "x",
+          "value": -0.3942
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_3",
+          "param": "yaw",
+          "value": 57.98
+        }
+      ],
+      "measured": {
+        "minimum_free_corridor_width": 7.509,
+        "maximum_route_intrusion": 0.991,
+        "required_lateral_deviation": 0.3894,
+        "closest_approach_distance": 0.0
+      },
+      "checks": {
+        "validator_static_collision_free": "pass",
+        "validator_placement_region": "pass",
+        "validator_stable_support": "pass",
+        "validator_connected_ego_passage": "pass",
+        "validator_family_membership": "pass",
+        "validator_backend_compiles": "pass"
+      },
+      "verdict": "accepted",
+      "reject_reasons": [],
+      "output_file": "backend_outputs/Generalization_CustomObstacles_1026_005_hero_v11.xml",
+      "layout": {
+        "group": "new:machine_and_bins_group",
+        "binder": "obstacle_1",
+        "satellites": [
+          {
+            "entity": "obstacle_2",
+            "dx_m": 1.1419,
+            "depth_m": 0.1213,
+            "yaw_deg": 34.83,
+            "projected": true
+          },
+          {
+            "entity": "obstacle_3",
+            "dx_m": -0.3449,
+            "depth_m": 2.5084,
+            "yaw_deg": 57.98,
+            "projected": false
+          }
+        ]
+      }
+    },
+    {
+      "scenario_id": "Generalization_CustomObstacles_1026_005_hero_v12",
+      "route_id": "102600512",
+      "index": 12,
+      "delta_ref": "deltas/sd_005_hero_v12.json",
+      "target": 1.0909,
+      "realized": [
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_1",
+          "param": "y",
+          "value": 1.2131
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_2",
+          "param": "y",
+          "value": 4.3389
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_2",
+          "param": "x",
+          "value": 0.3685
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_2",
+          "param": "yaw",
+          "value": 119.81
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_3",
+          "param": "y",
+          "value": 2.0998
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_3",
+          "param": "x",
+          "value": 1.4448
+        },
+        {
+          "backend_scenario": "bs_custom_obstacle_1",
+          "entity": "obstacle_3",
+          "param": "yaw",
+          "value": -84.02
+        }
+      ],
+      "measured": {
+        "minimum_free_corridor_width": 7.4096,
+        "maximum_route_intrusion": 1.0904,
+        "required_lateral_deviation": 0.4888,
+        "closest_approach_distance": 0.0
+      },
+      "checks": {
+        "validator_static_collision_free": "pass",
+        "validator_placement_region": "pass",
+        "validator_stable_support": "pass",
+        "validator_connected_ego_passage": "pass",
+        "validator_family_membership": "pass",
+        "validator_backend_compiles": "pass"
+      },
+      "verdict": "accepted",
+      "reject_reasons": [],
+      "output_file": "backend_outputs/Generalization_CustomObstacles_1026_005_hero_v12.xml",
+      "layout": {
+        "group": "new:machine_and_bins_group",
+        "binder": "obstacle_1",
+        "satellites": [
+          {
+            "entity": "obstacle_2",
+            "dx_m": 0.4091,
+            "depth_m": 3.2829,
+            "yaw_deg": 119.81,
+            "projected": false
+          },
+          {
+            "entity": "obstacle_3",
+            "dx_m": 1.4941,
+            "depth_m": 1.1344,
+            "yaw_deg": -84.02,
+            "projected": false
+          }
+        ]
+      }
+    }
+  ]
+}

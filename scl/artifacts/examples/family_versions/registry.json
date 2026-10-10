@@ -1,0 +1,378 @@
+{
+ "families": [
+  {
+   "backend": "fail2drive",
+   "current_version": 1,
+   "family_id": "fm_001_intrusion_sweep",
+   "manifest_path": "artifacts/examples/solved_families/fm_001_intrusion_sweep.json",
+   "versions": [
+    {
+     "campaigns": [
+      "campaign_carla_v02",
+      "campaign_carla_v03",
+      "campaign_carla_v06",
+      "campaign_carla_v07",
+      "campaign_carla_v08",
+      "campaign_carla_v09"
+     ],
+     "canon_date": "2026-08-01",
+     "commit": "04103f98fe4c166cbdd29231a8d4dfa03e39151b",
+     "current": true,
+     "first_campaign": "campaign_carla_v02",
+     "label": null,
+     "manifest_sha256": "fbd200aabb00009ba358b3a21894eafae93cc5b3cec5d7864a337d761e8d285c",
+     "note": null,
+     "plan_id": "ap_001_intrusion_sweep",
+     "stage_bytes_vs_previous": null,
+     "version": 1,
+     "what_changed": "v1 (canon 2026-08-01): the machine intrusion re-solved under geometry 1.1 (the curb-aware envelope of 2026-07-30), twelve depths 0.49 to 0.68 m, every variant passable; the July solutions never entered a declared campaign. Unchanged since."
+    }
+   ]
+  },
+  {
+   "backend": "fail2drive",
+   "current_version": 1,
+   "family_id": "fm_002_corridor_pincer",
+   "manifest_path": "artifacts/examples/solved_families/fm_002_corridor_pincer.json",
+   "versions": [
+    {
+     "campaigns": [
+      "campaign_carla_v01",
+      "campaign_carla_v06",
+      "campaign_carla_v07",
+      "campaign_carla_v08",
+      "campaign_carla_v09"
+     ],
+     "canon_date": "2026-08-02",
+     "commit": "0b6dbd6ad4722088ad228b46522569bd10fc4849",
+     "current": true,
+     "first_campaign": "campaign_carla_v01",
+     "label": null,
+     "manifest_sha256": "1f0120bb5e0bbd2eefe61bd5d5e99693d04d44828cde23f0d2d88f07c2ba711d",
+     "note": null,
+     "plan_id": "ap_002_corridor_pincer",
+     "stage_bytes_vs_previous": null,
+     "version": 1,
+     "what_changed": "v1 (canon 2026-08-02): the corridor width family (corridor pincer), ten widths 3.06 to 2.32 m, every variant passable. Unchanged since."
+    }
+   ]
+  },
+  {
+   "backend": "fail2drive",
+   "current_version": 1,
+   "family_id": "fm_003_asset_swap",
+   "manifest_path": "artifacts/examples/solved_families/fm_003_asset_swap.json",
+   "versions": [
+    {
+     "campaigns": [
+      "campaign_carla_v01",
+      "campaign_carla_v02",
+      "campaign_carla_v07",
+      "campaign_carla_v08",
+      "campaign_carla_v09"
+     ],
+     "canon_date": "2026-08-02",
+     "commit": "7c7030cc47bcb3659cafbe717929679375ea9370",
+     "current": true,
+     "first_campaign": "campaign_carla_v01",
+     "label": null,
+     "manifest_sha256": "b6941429fd8342a4fb0d32734c98a04ec08b16996cfb2607786f9bea889f9fd6",
+     "note": null,
+     "plan_id": "ap_003_asset_swap",
+     "stage_bytes_vs_previous": null,
+     "version": 1,
+     "what_changed": "v1 (canon 2026-08-02): the identity ladder, 23 candidate objects at one certified pose, 14 accepted. Unchanged since."
+    }
+   ]
+  },
+  {
+   "backend": "fail2drive",
+   "current_version": 1,
+   "family_id": "fm_004_threshold_sweep",
+   "manifest_path": "artifacts/examples/solved_families/fm_004_threshold_sweep.json",
+   "versions": [
+    {
+     "campaigns": [
+      "campaign_carla_v01",
+      "campaign_carla_v06",
+      "campaign_carla_v07",
+      "campaign_carla_v08",
+      "campaign_carla_v09"
+     ],
+     "canon_date": "2026-08-01",
+     "commit": "04103f98fe4c166cbdd29231a8d4dfa03e39151b",
+     "current": true,
+     "first_campaign": "campaign_carla_v01",
+     "label": null,
+     "manifest_sha256": "f275c14ac24715211e8af7d57d6fb962df3b2f9358e0f7df444e2ab68c70b9e1",
+     "note": null,
+     "plan_id": "ap_004_threshold_sweep",
+     "stage_bytes_vs_previous": null,
+     "version": 1,
+     "what_changed": "v1 (canon 2026-08-01): the charger gauntlet, twelve widths 3.64 m to closed, the four narrowest blocked. Unchanged since."
+    }
+   ]
+  },
+  {
+   "backend": "fail2drive",
+   "current_version": 1,
+   "family_id": "fm_005_hero",
+   "manifest_path": "artifacts/examples/solved_families/fm_005_hero.json",
+   "versions": [
+    {
+     "campaigns": [
+      "campaign_carla_v01",
+      "campaign_carla_v06",
+      "campaign_carla_v07",
+      "campaign_carla_v08",
+      "campaign_carla_v09"
+     ],
+     "canon_date": "2026-08-02",
+     "commit": "0b6dbd6ad4722088ad228b46522569bd10fc4849",
+     "current": true,
+     "first_campaign": "campaign_carla_v01",
+     "label": null,
+     "manifest_sha256": "6582a2d0e03c92ae53f3c0d03911556dfa2b7e51b21607f75728f28ff4ded94a",
+     "note": null,
+     "plan_id": "ap_005_hero",
+     "stage_bytes_vs_previous": null,
+     "version": 1,
+     "what_changed": "v1 (canon 2026-08-02): the cluttered intrusion, twelve depths to 1.09 m, every variant passable. Unchanged since."
+    }
+   ]
+  },
+  {
+   "backend": "fail2drive",
+   "current_version": 1,
+   "family_id": "fm_011_flow_speed_sweep",
+   "manifest_path": "artifacts/examples/solved_families/fm_011_flow_speed_sweep.json",
+   "versions": [
+    {
+     "campaigns": [
+      "campaign_carla_v04",
+      "campaign_carla_v06",
+      "campaign_carla_v07",
+      "campaign_carla_v08",
+      "campaign_carla_v09"
+     ],
+     "canon_date": "2026-09-03",
+     "commit": "74e3c4a6c0364f88692e4de4ad2765477449fc9f",
+     "current": true,
+     "first_campaign": "campaign_carla_v04",
+     "label": null,
+     "manifest_sha256": "d09a148d931dbe3d5c86093120d3b483ef39a1061ee5d828ec57c75f0f506183",
+     "note": null,
+     "plan_id": "ap_011_flow_speed_sweep",
+     "stage_bytes_vs_previous": null,
+     "version": 1,
+     "what_changed": "v1 (canon 2026-09-03): the oncoming-flow speed sweep, eleven variants. Unchanged since."
+    }
+   ]
+  },
+  {
+   "backend": "fail2drive",
+   "current_version": 1,
+   "family_id": "fm_012_source_dist_interval_sweep",
+   "manifest_path": "artifacts/examples/solved_families/fm_012_source_dist_interval_sweep.json",
+   "versions": [
+    {
+     "campaigns": [
+      "campaign_carla_v05",
+      "campaign_carla_v06",
+      "campaign_carla_v07",
+      "campaign_carla_v08",
+      "campaign_carla_v09"
+     ],
+     "canon_date": "2026-09-03",
+     "commit": "74e3c4a6c0364f88692e4de4ad2765477449fc9f",
+     "current": true,
+     "first_campaign": "campaign_carla_v05",
+     "label": null,
+     "manifest_sha256": "e713dcfe97567425cab1ca2d743e3b6d44d85a16c16c03f5b4c80595c6fe0543",
+     "note": null,
+     "plan_id": "ap_012_source_dist_interval_sweep",
+     "stage_bytes_vs_previous": null,
+     "version": 1,
+     "what_changed": "v1 (canon 2026-09-03): the oncoming-flow spacing sweep, eleven variants (v01 registered as a scenario defect 2026-09-29, the register is an instrument, not a family change). Unchanged since."
+    }
+   ]
+  },
+  {
+   "backend": "isaac",
+   "current_version": 3,
+   "family_id": "fm_isaac_001",
+   "manifest_path": "artifacts/examples/solved_families/isaac/fm_isaac_001/family_manifest.json",
+   "versions": [
+    {
+     "campaigns": [
+      "campaign_isaac_v01"
+     ],
+     "canon_date": null,
+     "commit": null,
+     "current": false,
+     "first_campaign": "campaign_isaac_v01",
+     "label": null,
+     "manifest_sha256": "7c6e0a213f915fb1ffa2294b7c3120d36dd71ef2513db5fc920ab20e31e9144f",
+     "note": null,
+     "plan_id": null,
+     "stage_bytes_vs_previous": null,
+     "version": 1,
+     "what_changed": "v1 (built on the box 2026-08-30, never canon in this form; the raw bundle holds it): the slab pincer, ten widths 0.45 to 1.5 m, procedural 100 kg slab arms."
+    },
+    {
+     "campaigns": [
+      "campaign_isaac_v04"
+     ],
+     "canon_date": "2026-09-08",
+     "commit": "5fe0b340c9b5a8eeb04000b5d56a489f7487544a",
+     "current": false,
+     "first_campaign": "campaign_isaac_v04",
+     "label": null,
+     "manifest_sha256": "f318641cc187a818c32bc4a92c55c70fe3c20cf2168dd1efd44038e0d33e2fa7",
+     "note": null,
+     "plan_id": null,
+     "stage_bytes_vs_previous": "the four widths shared with v1 byte-identical (2026-09-08)",
+     "version": 2,
+     "what_changed": "v2 (canon 2026-09-08): widened from the self-contained re-planned prompt, twelve widths 2.5 to 0.0 m with a blocked ladder to the closed aisle; the same slabs, the four widths shared with v1 byte-identical."
+    },
+    {
+     "campaigns": [
+      "campaign_isaac_v07",
+      "campaign_isaac_v08"
+     ],
+     "canon_date": "2026-09-09",
+     "commit": "206aa929adde4c56e9331110f43c0dc6f6a2110a",
+     "current": true,
+     "first_campaign": "campaign_isaac_v07",
+     "label": null,
+     "manifest_sha256": "d22e7b15d10a8889b72f7e29b5fd759c2eb483e0fe8cf6c9634227037816d02e",
+     "note": null,
+     "plan_id": "ap_006_isaac_aisle_gauntlet",
+     "stage_bytes_vs_previous": "6 of 6 shared widths byte-identical to v2 (2026-09-09)",
+     "version": 3,
+     "what_changed": "v3 (canon 2026-09-09): regenerated from the promoted v0.3 plan (profile unification, the held slab_abstract arm): a new schedule (2.0, 1.5, 1.0, 0.8, 0.3, 0.15 m in place of 1.8, 0.9, 0.75, 0.58, 0.35, 0.2); the same slabs; side gaps measured from the rack stamp (F16 fields in the certificates)."
+    }
+   ]
+  },
+  {
+   "backend": "isaac",
+   "current_version": 3,
+   "family_id": "fm_isaac_003",
+   "manifest_path": "artifacts/examples/solved_families/isaac/fm_isaac_003/family_manifest.json",
+   "versions": [
+    {
+     "campaigns": [
+      "campaign_isaac_v02"
+     ],
+     "canon_date": "2026-09-02",
+     "commit": "0279ce364264bc9cb4f82dbbc2134ce95608e255",
+     "current": false,
+     "first_campaign": "campaign_isaac_v02",
+     "label": null,
+     "manifest_sha256": "8fd35775a74e10fd042cafa6965d564f479815fa76bc477c88006162a85a413e",
+     "note": null,
+     "plan_id": null,
+     "stage_bytes_vs_previous": null,
+     "version": 1,
+     "what_changed": "v1 (canon 2026-09-02): the floor stock, ten widths 0.45 to 2.0 m, the scene's own pushcarts and pallets repositioned."
+    },
+    {
+     "campaigns": [
+      "campaign_isaac_v05"
+     ],
+     "canon_date": "2026-09-08",
+     "commit": "5fe0b340c9b5a8eeb04000b5d56a489f7487544a",
+     "current": false,
+     "first_campaign": "campaign_isaac_v05",
+     "label": null,
+     "manifest_sha256": "29807357061e80eaf64e08b9cde3d146cbcb32b29d77a7565480227dc517b1cd",
+     "note": null,
+     "plan_id": null,
+     "stage_bytes_vs_previous": null,
+     "version": 2,
+     "what_changed": "v2 (canon 2026-09-08): widened, twelve widths 2.5 to 0.0 m with the closed aisle; the same members."
+    },
+    {
+     "campaigns": [
+      "campaign_isaac_v07",
+      "campaign_isaac_v08"
+     ],
+     "canon_date": "2026-09-09",
+     "commit": "206aa929adde4c56e9331110f43c0dc6f6a2110a",
+     "current": true,
+     "first_campaign": "campaign_isaac_v07",
+     "label": null,
+     "manifest_sha256": "345e92c241be24e532cba4aab46877a66a28b19bbbad525ffe072502b1cbe817",
+     "note": null,
+     "plan_id": "ap_008_isaac_pushcart_narrowing",
+     "stage_bytes_vs_previous": "8 of 8 shared widths byte-identical to v2 (2026-09-09)",
+     "version": 3,
+     "what_changed": "v3 (canon 2026-09-09): regenerated from the promoted v0.3 plan: a new schedule (1.0, 0.58, 0.54, 0.3, 0.15 m in place of 1.2, 0.65, 0.55, 0.35, 0.2), the same members and 0.30 m clearance; side gaps from the rack stamp."
+    }
+   ]
+  },
+  {
+   "backend": "isaac",
+   "current_version": 3,
+   "family_id": "fm_isaac_004",
+   "manifest_path": "artifacts/examples/solved_families/isaac/fm_isaac_004/family_manifest.json",
+   "versions": [
+    {
+     "campaigns": [
+      "campaign_isaac_v03"
+     ],
+     "canon_date": "2026-09-06",
+     "commit": "c926048e85ccb6ca246bda0a53d54ecb5a30d289",
+     "current": false,
+     "first_campaign": "campaign_isaac_v03",
+     "label": "pallets",
+     "manifest_sha256": "c6a737b0ed43e2159755627d2b57cd05f338f66f09c692cbc7003cc2bda7e51c",
+     "note": null,
+     "plan_id": null,
+     "stage_bytes_vs_previous": null,
+     "version": 1,
+     "what_changed": "v1 (canon 2026-09-06): the composed stacks, ten widths 0.45 to 1.5 m, two arms of PALLET stacks (SM_PaletteA_02)."
+    },
+    {
+     "campaigns": [
+      "campaign_isaac_v06"
+     ],
+     "canon_date": "2026-09-08",
+     "commit": "5fe0b340c9b5a8eeb04000b5d56a489f7487544a",
+     "current": false,
+     "first_campaign": "campaign_isaac_v06",
+     "label": "pallets",
+     "manifest_sha256": "e602af4bc56b95ec6756a4c241cfa126c8e8ef3265159c9294b782123c83fc82",
+     "note": null,
+     "plan_id": null,
+     "stage_bytes_vs_previous": null,
+     "version": 2,
+     "what_changed": "v2 (canon 2026-09-08): widened, twelve widths 2.5 to 0.0 m with the closed aisle; pallet stacks, 0.20 m wall clearance."
+    },
+    {
+     "campaigns": [
+      "campaign_isaac_v07",
+      "campaign_isaac_v08"
+     ],
+     "canon_date": "2026-09-09",
+     "commit": "206aa929adde4c56e9331110f43c0dc6f6a2110a",
+     "current": true,
+     "first_campaign": "campaign_isaac_v07",
+     "label": "cartons",
+     "manifest_sha256": "f310e771310f1657379f6a81eec017dd593118f11d47606d4af70cbc621cad24",
+     "note": null,
+     "plan_id": "ap_007_isaac_carton_pincer",
+     "stage_bytes_vs_previous": "0 of 8 shared widths identical to v2 (2026-09-09): a different obstacle",
+     "version": 3,
+     "what_changed": "v3 (canon 2026-09-09): regenerated from the promoted v0.3 plan whose held arm is carton_stock: CARTON stacks (SM_CardBoxA_02) in place of pallets, 0.30 m wall clearance, arms renamed pincer_arm_*, a new schedule (0.58, 0.4, 0.3, 0.15 m in place of 0.6, 0.55, 0.35, 0.2): a different obstacle (the stock brain re-run on it as campaign_isaac_v08)."
+    }
+   ]
+  }
+ ],
+ "note": "GENERATED by scripts/build_family_versions.py from the canon declarations and canon's current manifests, merged with overlay.json beside it (hand-written: what changed per hash); never hand-edit; a version is a label over the manifest hash the evidence binds",
+ "schema_version": "family_versions/v0.1",
+ "sources": {
+  "declarations": 48,
+  "overlay_sha256": "e04f06aab6f2e973a365cc7ea4ac3cea06bb922c9bc910d14d4445db5e40527e"
+ }
+}

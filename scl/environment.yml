@@ -1,0 +1,37 @@
+name: scl_prototype
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.12
+  - pip
+  - pydantic>=2.7
+  - numpy>=1.26
+  # occupancy_core (B1): the certification EDT/labeling engine - canon
+  # certificates were minted with scipy (ships with isaacsim on the box),
+  # so the local scan-composed path must run the SAME engine; the
+  # dilation/BFS fallbacks are claim-safe but hash-visibly different
+  - scipy>=1.11
+  - shapely>=2.0
+  - jsonschema>=4.21
+  - pytest>=8.0
+  # models.yaml is the CARLA model registry: evaluate_models.py and
+  # install_models.py read it (they run under the fail2drive env, which has
+  # PyYAML), and the registry/installer/runner tests load those modules
+  # under THIS env. Declared here so a fresh env runs the suite; an
+  # undeclared PyYAML in a developer's env passed the tests that a clean
+  # env failed (PR 28, 2026-09-12).
+  - pyyaml>=6.0
+  # paper_figures.py (Demo B item 8) - renders only; the auditable layer
+  # is the committed figure_data JSONs, which are matplotlib-free
+  - matplotlib>=3.8
+  - pip:
+      # generate_family.py --provider anthropic (official SDK; the openai
+      # provider path is stdlib-only)
+      - anthropic>=0.90
+variables:
+  # Keep the working copy free of __pycache__/ (Python only writes bytecode for
+  # imported modules; own-source caching is negligible, site-packages are
+  # precompiled at install). Personal override if you want caching anyway:
+  #   conda env config vars set PYTHONPYCACHEPREFIX=$HOME/.cache/pycache -n scl_prototype
+  PYTHONDONTWRITEBYTECODE: "1"

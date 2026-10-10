@@ -1,0 +1,17 @@
+{
+ "note": "the declared scoring instruments the launcher passes to the chain (scl campaign score / freeze-derived --instruments), one section per backend, every path relative to the repository root (the launcher resolves them against --repo-root). The full CARLA OpenDRIVE map is the launcher's --map argument, the one file outside this repository, needed by the oncoming-flow map check alone. One of each per backend today: ledger F78 keys this by zone, map, robot and environment id.",
+ "fail2drive": {
+  "zone": "artifacts/examples/scoring_instruments/carla_flow_conflict_zone_town03_j103_r144.json",
+  "map_excerpt": "artifacts/examples/carla_extracts/maps/town03_j103_r144.xodr",
+  "gap_certificates": {
+   "fm_011_flow_speed_sweep": "artifacts/examples/scoring_instruments/carla_flow_gap_certificate_fm_011_flow_speed_sweep.json",
+   "fm_012_source_dist_interval_sweep": "artifacts/examples/scoring_instruments/carla_flow_gap_certificate_fm_012_source_dist_interval_sweep.json"
+  },
+  "scenario_defects": "artifacts/examples/scoring_instruments/carla_scenario_defects.json"
+ },
+ "isaac": {
+  "robot_record": "artifacts/examples/imported_ir/robot_record_nova_carter.json",
+  "environment_record": "artifacts/examples/imported_ir/environment_record_warehouse_multishelf.json",
+  "instrument": "artifacts/examples/scoring_instruments/isaac_aisle_gauntlet_two_line_go.json"
+ }
+}

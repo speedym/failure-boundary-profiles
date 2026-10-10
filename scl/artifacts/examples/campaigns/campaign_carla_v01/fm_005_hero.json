@@ -1,0 +1,41 @@
+{
+ "declaration_kind": "campaign_declaration/v0.1",
+ "campaign_id": "campaign_carla_v01",
+ "backend": "fail2drive",
+ "family": {
+  "family_id": "fm_005_hero",
+  "manifest_path": "artifacts/examples/solved_families/fm_005_hero.json",
+  "manifest_sha256": "6582a2d0e03c92ae53f3c0d03911556dfa2b7e51b21607f75728f28ff4ded94a"
+ },
+ "declared_grid": {
+  "variants": [
+   "Generalization_CustomObstacles_1026_005_hero_v01",
+   "Generalization_CustomObstacles_1026_005_hero_v02",
+   "Generalization_CustomObstacles_1026_005_hero_v03",
+   "Generalization_CustomObstacles_1026_005_hero_v04",
+   "Generalization_CustomObstacles_1026_005_hero_v05",
+   "Generalization_CustomObstacles_1026_005_hero_v06",
+   "Generalization_CustomObstacles_1026_005_hero_v07",
+   "Generalization_CustomObstacles_1026_005_hero_v08",
+   "Generalization_CustomObstacles_1026_005_hero_v09",
+   "Generalization_CustomObstacles_1026_005_hero_v10",
+   "Generalization_CustomObstacles_1026_005_hero_v11",
+   "Generalization_CustomObstacles_1026_005_hero_v12"
+  ],
+  "models": [
+   "bridgedrive",
+   "lead",
+   "pdm_lite_expert",
+   "tfpp"
+  ],
+  "seeds": [
+   0,
+   1,
+   2
+  ],
+  "expert": true,
+  "reference_model": "pdm_lite_expert"
+ },
+ "results_subtree": "campaign_carla_v01/fm_005_hero",
+ "note": "Hero family on the 1026 open road: twelve intrusion variants, four agents, three seeds. Certified bundle content id c4a08d86f2a4, family sub-id f4e49754d9f7; axis maximum_route_intrusion."
+}

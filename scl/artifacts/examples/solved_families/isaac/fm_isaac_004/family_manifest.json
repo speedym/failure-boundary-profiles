@@ -1,0 +1,295 @@
+{
+ "family_id": "fm_isaac_004",
+ "axis": "minimum_free_corridor_width",
+ "origin": {
+  "plan_id": "ap_007_isaac_carton_pincer",
+  "request_id": "ar_007_isaac_carton_pincer",
+  "capability_profile_id": "isaac_gauntlet_v0.3",
+  "family_spec_sha256": "6e082224e66777383e8ba5429fcc797d3dde88ef64fd84b6d76362159429d176",
+  "compiled_by": "scl_core.backends.isaac via the unified engine"
+ },
+ "operation": {
+  "kind": "op_add_entity",
+  "relation": "pincer_spanning",
+  "region": "region_constriction_band",
+  "anchor": "region_aisle_a",
+  "clearance_to_walls_m": 0.3,
+  "semantic_query": {
+   "tags": [
+    "carton",
+    "warehouse_stock",
+    "stackable",
+    "static",
+    "collidable"
+   ]
+  },
+  "count": 2,
+  "names": [
+   "new:pincer_arm_left",
+   "new:pincer_arm_right"
+  ]
+ },
+ "realization": {
+  "realizer_id": "composed_stock_pincer",
+  "module": "adapters/isaac/generate_composition_family.py",
+  "realization_mode": "dynamic_settled",
+  "orientation_vocabulary": "absolute_quarter_turns",
+  "certification": {
+   "method": "scan_composed",
+   "countersignature": "settle_countersignature",
+   "required": true
+  },
+  "composition_policy": {
+   "palette_held": "asset palette and stacking pattern chosen once family-wide; per-variant unit counts solver-owned (ap_007 ruling 2026-09-05)",
+   "part_gap_min_m": 0.005,
+   "part_gap_max_m": 0.4,
+   "part_gap_provenance": "gap_max = robot 0.4942 - 2*(eps 0.01 + res 0.01) - 0.05 margin, floored to cm (the reposition family's proven margin structure); gap_min = static-collider contact clearance",
+   "phase_bias_x_m": 0.0025,
+   "phase_bias_provenance": "grid res 0.01 / 4: keeps every 5 mm-arithmetic constructed edge >= res/4 from any grid-cell boundary for both parities (the reposition family's countersign runs 1-2 lesson, 2026-09-02)",
+   "min_stack_top_m": "derived by the realizer from the registry attestation band top (stacks must cover the band the blocked claims are attested in)"
+  },
+  "blocked_integrity": {
+   "min_arm_mass_kg": 100.0,
+   "note": "dynamic realization: each certified-blocked arm's realized mass (sum of measured part masses, confirmed at settle) must reach the floor - a blocked label the robot can shove open is a lie"
+  }
+ },
+ "certification": {
+  "method": "scan_composed",
+  "scan_sha256": "586ce9ee3e523a027ea47710c7ca49a3da23e5583250c456abe762389cebec03",
+  "asset_registry_sha256": "95e7f2e6e6106dcac9386a376ee37567925ccf96b795b440f9b434f111b731a9",
+  "attestation_note": "part eligibility gated on the registry's measured max_traversable_width_m and measured mass per asset (principle 10)",
+  "countersignature": {
+   "kind": "settle_countersignature",
+   "required": true,
+   "file": "settle_countersignature.json",
+   "note": "fail-closed: the campaign preflight refuses cells for this family until the box-side settle countersignature exists beside this manifest - authored poses are predictions until settled"
+  }
+ },
+ "timeout_s": 64.3,
+ "campaign_policy_note": "deliberately absent (F2): brains, rep counts and expert policy are campaign declarations passed to the runner at invocation, never family facts",
+ "frame": {
+  "aisle_a_centerline_x": -4.805,
+  "aisle_a_x_faces": [
+   -8.61,
+   -1.0
+  ],
+  "aisle_b_x_range": [
+   0.39,
+   8.0
+  ],
+  "shelf_y_span": [
+   -4.49,
+   13.13
+  ],
+  "constriction_y": 4.5,
+  "constriction_zone_y": [
+   3.0,
+   6.0
+  ],
+  "start_pose": {
+   "xy": [
+    -4.805,
+    -6.5
+   ],
+   "yaw_deg": 90
+  },
+  "goal_xy": [
+   -4.3,
+   13.97
+  ],
+  "carter_bbox_m": {
+   "x": 0.7284,
+   "y": 0.8958,
+   "z": 0.6945
+  },
+  "carter_collision_width_m": 0.4942,
+  "rack_rows_x": [
+   [
+    -9.91,
+    -8.73
+   ],
+   [
+    -0.91,
+    0.27
+   ],
+   [
+    8.09,
+    9.27
+   ]
+  ],
+  "rack_rows_y": [
+   -3.8,
+   12.5
+  ]
+ },
+ "variants": [
+  {
+   "stem": "comp_w2p50",
+   "target_width_m": 2.5,
+   "measured_gap_m": 2.5,
+   "assignment": "passable",
+   "certified": true,
+   "assembly_masses_kg": {
+    "pincer_arm_left": 1271.759,
+    "pincer_arm_right": 1271.759
+   },
+   "stage_sha256": "5e862661f44ca23df8166b777fa566f2f30c3ff98ab20059e908b477fd07a023",
+   "cert_core_sha256": "a2a877d342ee057663bd5c7612e5780d52c50b1b6146ab2bc95d0e8259b6de25",
+   "verdict": "accepted"
+  },
+  {
+   "stem": "comp_w1p80",
+   "target_width_m": 1.8,
+   "measured_gap_m": 1.8,
+   "assignment": "passable",
+   "certified": true,
+   "assembly_masses_kg": {
+    "pincer_arm_left": 1271.759,
+    "pincer_arm_right": 1271.759
+   },
+   "stage_sha256": "09c93e6049cf37e2d938c2068f910b5343f220313cc498eaf98f86a98bf1cfd9",
+   "cert_core_sha256": "c7942aa7956863ab242877237b79ce8aa34e5b164fc79b82b5bd6bfd66406b2c",
+   "verdict": "accepted"
+  },
+  {
+   "stem": "comp_w1p20",
+   "target_width_m": 1.2,
+   "measured_gap_m": 1.2,
+   "assignment": "passable",
+   "certified": true,
+   "assembly_masses_kg": {
+    "pincer_arm_left": 1271.759,
+    "pincer_arm_right": 1271.759
+   },
+   "stage_sha256": "ede09e20694dd67ad44a19264e59361b7166baf7bca5d0e751def5b83dda65ba",
+   "cert_core_sha256": "29efedc5a1d1ae4641d4af8a047ec0295b2382f64b860032819b5c09722f6f67",
+   "verdict": "accepted"
+  },
+  {
+   "stem": "comp_w0p90",
+   "target_width_m": 0.9,
+   "measured_gap_m": 0.9,
+   "assignment": "passable",
+   "certified": true,
+   "assembly_masses_kg": {
+    "pincer_arm_left": 1271.759,
+    "pincer_arm_right": 1271.759
+   },
+   "stage_sha256": "761f706b3a050f3044fcdb452dd09480ac119209c1abb4103f60619f650f1f58",
+   "cert_core_sha256": "ba0f26ac0c0641cbd88002c988814d6b16ae06a6e78c63b2973885e0eeba3ddf",
+   "verdict": "accepted"
+  },
+  {
+   "stem": "comp_w0p75",
+   "target_width_m": 0.75,
+   "measured_gap_m": 0.75,
+   "assignment": "passable",
+   "certified": true,
+   "assembly_masses_kg": {
+    "pincer_arm_left": 1271.759,
+    "pincer_arm_right": 1271.759
+   },
+   "stage_sha256": "619bf27728968026a5dd220d551d170b4f0c43ad020b577e00405012a66b6c1c",
+   "cert_core_sha256": "4c7656537df908ec3f7652e188ed63e3cb47a9a36010e1fa99f6b3a14443ddd5",
+   "verdict": "accepted"
+  },
+  {
+   "stem": "comp_w0p65",
+   "target_width_m": 0.65,
+   "measured_gap_m": 0.65,
+   "assignment": "passable",
+   "certified": true,
+   "assembly_masses_kg": {
+    "pincer_arm_left": 1271.759,
+    "pincer_arm_right": 1271.759
+   },
+   "stage_sha256": "6ee2e638228cfb8a4e8a24e2da6840aae450b199fe5d4d35873615d86c0c5df9",
+   "cert_core_sha256": "32800404c3a4c7f97e9e18731718b2e84a20f16ecbca86339ca189cdec2e7e03",
+   "verdict": "accepted"
+  },
+  {
+   "stem": "comp_w0p58",
+   "target_width_m": 0.58,
+   "measured_gap_m": 0.58,
+   "assignment": "passable",
+   "certified": true,
+   "assembly_masses_kg": {
+    "pincer_arm_left": 1695.678,
+    "pincer_arm_right": 1695.678
+   },
+   "stage_sha256": "2f5881f121cde26b03ef3c18a1391727a5343d89cb7244effb44a12b5e39f8e6",
+   "cert_core_sha256": "fa01a54ccc82d4f349b230469ac2cbd93cf2b7b5cc9d6f74c07d9068a14cf1d5",
+   "verdict": "accepted"
+  },
+  {
+   "stem": "comp_w0p45",
+   "target_width_m": 0.45,
+   "measured_gap_m": 0.45,
+   "assignment": "blocked",
+   "certified": true,
+   "assembly_masses_kg": {
+    "pincer_arm_left": 1695.678,
+    "pincer_arm_right": 1695.678
+   },
+   "stage_sha256": "107c6ce7478cdb6375cccc85a1a834542bad57dc1d534a5e5caa4609be3b5cca",
+   "cert_core_sha256": "0a99f4f513287432bc447ee6f8d9da1a0d9987457df0b723169d464274aeef43",
+   "verdict": "accepted"
+  },
+  {
+   "stem": "comp_w0p40",
+   "target_width_m": 0.4,
+   "measured_gap_m": 0.4,
+   "assignment": "blocked",
+   "certified": true,
+   "assembly_masses_kg": {
+    "pincer_arm_left": 1695.678,
+    "pincer_arm_right": 1695.678
+   },
+   "stage_sha256": "83b872f7e9fde7161c0299314ee7738ade19c5552d93009812173c27b672a376",
+   "cert_core_sha256": "26aac6c5f2e405946b52100017c22e1738523af139c1a550fb587b0ebcd146ab",
+   "verdict": "accepted"
+  },
+  {
+   "stem": "comp_w0p30",
+   "target_width_m": 0.3,
+   "measured_gap_m": 0.3,
+   "assignment": "blocked",
+   "certified": true,
+   "assembly_masses_kg": {
+    "pincer_arm_left": 1695.678,
+    "pincer_arm_right": 1695.678
+   },
+   "stage_sha256": "4fd8fcc82bbe9fc09eb0105009d2cb3abbecf4323503834a605f34d79471594b",
+   "cert_core_sha256": "aa0d579d2a361b7daeb36c0a66cac5ac8fe3acd6135700b172d350168f3c66e8",
+   "verdict": "accepted"
+  },
+  {
+   "stem": "comp_w0p15",
+   "target_width_m": 0.15,
+   "measured_gap_m": 0.15,
+   "assignment": "blocked",
+   "certified": true,
+   "assembly_masses_kg": {
+    "pincer_arm_left": 1695.678,
+    "pincer_arm_right": 1695.678
+   },
+   "stage_sha256": "2d1a60a510128553c58b72c2242fad909a4c2605f0dc3ff86261ccf4765987bf",
+   "cert_core_sha256": "2cd6062632e1a8b786fb89fbcbb7f2ab3d9f639e7e0199bc67420cb16df6084c",
+   "verdict": "accepted"
+  },
+  {
+   "stem": "comp_w0p00",
+   "target_width_m": 0.0,
+   "measured_gap_m": 0.0,
+   "assignment": "blocked",
+   "certified": true,
+   "assembly_masses_kg": {
+    "pincer_arm_left": 1695.678,
+    "pincer_arm_right": 1695.678
+   },
+   "stage_sha256": "e79e2264d43a0dcb18e2c5ee146de48f30104fdf38bfe7ed66d8dbf37499206e",
+   "cert_core_sha256": "04ffc756d3a14aa85c9327b26c5d763ad642d857362a5a2b71f74e0cf0343217",
+   "verdict": "accepted"
+  }
+ ]
+}

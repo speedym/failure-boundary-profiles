@@ -1,0 +1,278 @@
+{
+ "schema_version": "robot_record/v0.2",
+ "robot_id": "nova_carter",
+ "source": {
+  "usd_url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.1/Isaac/Robots/NVIDIA/NovaCarter/nova_carter.usd",
+  "asset_pack_path": "Robots/NVIDIA/NovaCarter/nova_carter.usd",
+  "sha256": "03f25402bd9877c899f60c23cb3b578027219841463947d3ebdbe788a0c80d01",
+  "sha_status": "measured",
+  "sha_note": "lift_robot.py 2026-09-06 sha256 5253fecc63ba0b32: sha256 of the pack's USD file",
+  "prim_path": "/World/NovaCarter",
+  "articulation_root": "/World/NovaCarter/chassis_link",
+  "articulation_root_status": "measured",
+  "articulation_root_note": "lift_robot.py 2026-09-06 sha256 5253fecc63ba0b32: the single prim carrying ArticulationRootAPI under the mount (1 candidate(s))"
+ },
+ "body": {
+  "status": "measured",
+  "method": "lift_robot.py 2026-09-06 sha256 5253fecc63ba0b32: body stage (instance-proxy traversal, geometry-derived analytic colliders)",
+  "date": "2026-09-06",
+  "frame": "chassis local frame: +x forward, +y left, +z up; z_min_m is the collider bottom at load (0.0 = origin on the floor plane)",
+  "front_overhang_m": 0.14,
+  "rear_overhang_m": 0.5875,
+  "length_m": 0.7275,
+  "width_m": 0.4932,
+  "half_width_m": 0.2466,
+  "z_min_m": 0.0,
+  "z_max_m": 0.4799,
+  "collision_prim_count": 12,
+  "union_chassis": {
+   "min": [
+    -0.58745,
+    -0.2466,
+    0.0
+   ],
+   "max": [
+    0.14,
+    0.2466,
+    0.47988
+   ]
+  },
+  "note": "union over EVERY collision-bearing prim under the robot (wheels and casters included - whatever can touch counts); front_overhang_m is the distance from the runners' recorded reference point (articulation root) to the front-most collider"
+ },
+ "contact": {
+  "width_m": {
+   "value": 0.4942,
+   "status": "measured",
+   "method": "lift_robot.py 2026-09-06 sha256 5253fecc63ba0b32: pinch sweep along the robot's width axis, step 0.001 m: smallest contact-free gap; impulse-bearing contacts only (offset envelope reports excluded)",
+   "date": "2026-09-06",
+   "step_m": 0.001,
+   "last_touching_gap_m": 0.4932,
+   "sweep_ref": {
+    "file": "robot_lift_bundle.json",
+    "sha256": "d89d9ac33590c4f280e4c837365b0bf3f237cc149ee049c64013414fcc2a5021",
+    "points": 101
+   }
+  },
+  "length_m": {
+   "value": 0.7285,
+   "status": "measured",
+   "method": "lift_robot.py 2026-09-06 sha256 5253fecc63ba0b32: pinch sweep along the robot's length axis, step 0.001 m: smallest contact-free gap; impulse-bearing contacts only (offset envelope reports excluded)",
+   "date": "2026-09-06",
+   "step_m": 0.001,
+   "last_touching_gap_m": 0.7275,
+   "sweep_ref": {
+    "file": "robot_lift_bundle.json",
+    "sha256": "d89d9ac33590c4f280e4c837365b0bf3f237cc149ee049c64013414fcc2a5021",
+    "points": 101
+   }
+  }
+ },
+ "rest": {
+  "value": {
+   "root_height_above_floor_m": 0.0,
+   "settled_collider_bottom_m": -0.0003,
+   "settle_steps": 120
+  },
+  "status": "measured",
+  "method": "lift_robot.py 2026-09-06 sha256 5253fecc63ba0b32: settled on a flat floor, root world z and collider bottom read after settling",
+  "date": "2026-09-06"
+ },
+ "instruments": {
+  "cameras": [
+   {
+    "prim": "/World/NovaCarter/chassis_link/sensors/back_hawk/left/camera_left",
+    "chassis_xyz": [
+     -0.5637,
+     -0.075,
+     0.3459
+    ]
+   },
+   {
+    "prim": "/World/NovaCarter/chassis_link/sensors/back_hawk/right/camera_right",
+    "chassis_xyz": [
+     -0.5637,
+     0.075,
+     0.3459
+    ]
+   },
+   {
+    "prim": "/World/NovaCarter/chassis_link/sensors/back_owl/camera",
+    "chassis_xyz": [
+     -0.56774,
+     0.0,
+     0.37439
+    ]
+   },
+   {
+    "prim": "/World/NovaCarter/chassis_link/sensors/front_hawk/left/camera_left",
+    "chassis_xyz": [
+     0.1003,
+     0.075,
+     0.3459
+    ]
+   },
+   {
+    "prim": "/World/NovaCarter/chassis_link/sensors/front_hawk/right/camera_right",
+    "chassis_xyz": [
+     0.1003,
+     -0.075,
+     0.3459
+    ]
+   },
+   {
+    "prim": "/World/NovaCarter/chassis_link/sensors/front_owl/camera",
+    "chassis_xyz": [
+     0.10434,
+     0.0,
+     0.37439
+    ]
+   },
+   {
+    "prim": "/World/NovaCarter/chassis_link/sensors/left_hawk/left/camera_left",
+    "chassis_xyz": [
+     -0.43043,
+     0.15,
+     0.3459
+    ]
+   },
+   {
+    "prim": "/World/NovaCarter/chassis_link/sensors/left_hawk/right/camera_right",
+    "chassis_xyz": [
+     -0.28043,
+     0.15,
+     0.3459
+    ]
+   },
+   {
+    "prim": "/World/NovaCarter/chassis_link/sensors/left_owl/camera",
+    "chassis_xyz": [
+     -0.2317,
+     -0.1541,
+     0.34439
+    ]
+   },
+   {
+    "prim": "/World/NovaCarter/chassis_link/sensors/right_hawk/left/camera_left",
+    "chassis_xyz": [
+     -0.28044,
+     -0.15,
+     0.3459
+    ]
+   },
+   {
+    "prim": "/World/NovaCarter/chassis_link/sensors/right_hawk/right/camera_right",
+    "chassis_xyz": [
+     -0.43044,
+     -0.15,
+     0.3459
+    ]
+   },
+   {
+    "prim": "/World/NovaCarter/chassis_link/sensors/right_owl/camera",
+    "chassis_xyz": [
+     -0.2317,
+     0.1541,
+     0.34439
+    ]
+   }
+  ],
+  "cameras_status": "measured",
+  "cameras_note": "lift_robot.py 2026-09-06 sha256 5253fecc63ba0b32: every UsdGeom.Camera under the mount with its chassis-frame position; the agent pair DECLARES which one a brain consumes",
+  "dofs": [
+   {
+    "name": "joint_caster_base",
+    "joint_prim": "/World/NovaCarter/joint_caster_base",
+    "joint_type": "PhysicsRevoluteJoint",
+    "has_drive_api": true,
+    "child_link": "/World/NovaCarter/caster_frame_base",
+    "link_collider_radius_m": 0.0399,
+    "link_collider_center_chassis": [
+     -0.472,
+     0.0,
+     0.1995
+    ]
+   },
+   {
+    "name": "joint_wheel_left",
+    "joint_prim": "/World/NovaCarter/joint_wheel_left",
+    "joint_type": "PhysicsRevoluteJoint",
+    "has_drive_api": true,
+    "child_link": "/World/NovaCarter/wheel_left",
+    "link_collider_radius_m": 0.14,
+    "link_collider_center_chassis": [
+     0.0,
+     0.2066,
+     0.14
+    ]
+   },
+   {
+    "name": "joint_wheel_right",
+    "joint_prim": "/World/NovaCarter/joint_wheel_right",
+    "joint_type": "PhysicsRevoluteJoint",
+    "has_drive_api": true,
+    "child_link": "/World/NovaCarter/wheel_right",
+    "link_collider_radius_m": 0.14,
+    "link_collider_center_chassis": [
+     0.0,
+     -0.2066,
+     0.14
+    ]
+   },
+   {
+    "name": "joint_swing_left",
+    "joint_prim": "/World/NovaCarter/joint_swing_left",
+    "joint_type": "PhysicsRevoluteJoint",
+    "has_drive_api": true,
+    "child_link": "/World/NovaCarter/caster_swivel_left",
+    "link_collider_radius_m": 0.0575,
+    "link_collider_center_chassis": [
+     -0.4941,
+     0.1323,
+     0.1178
+    ]
+   },
+   {
+    "name": "joint_swing_right",
+    "joint_prim": "/World/NovaCarter/joint_swing_right",
+    "joint_type": "PhysicsRevoluteJoint",
+    "has_drive_api": true,
+    "child_link": "/World/NovaCarter/caster_swivel_right",
+    "link_collider_radius_m": 0.0575,
+    "link_collider_center_chassis": [
+     -0.4941,
+     -0.1323,
+     0.1178
+    ]
+   },
+   {
+    "name": "joint_caster_left",
+    "joint_prim": "/World/NovaCarter/joint_caster_left",
+    "joint_type": "PhysicsRevoluteJoint",
+    "has_drive_api": false,
+    "child_link": "/World/NovaCarter/caster_wheel_left",
+    "link_collider_radius_m": 0.0755,
+    "link_collider_center_chassis": [
+     -0.512,
+     0.1322,
+     0.0763
+    ]
+   },
+   {
+    "name": "joint_caster_right",
+    "joint_prim": "/World/NovaCarter/joint_caster_right",
+    "joint_type": "PhysicsRevoluteJoint",
+    "has_drive_api": false,
+    "child_link": "/World/NovaCarter/caster_wheel_right",
+    "link_collider_radius_m": 0.0755,
+    "link_collider_center_chassis": [
+     -0.512,
+     -0.1322,
+     0.0763
+    ]
+   }
+  ],
+  "dofs_status": "measured",
+  "dofs_note": "lift_robot.py 2026-09-06 sha256 5253fecc63ba0b32: articulation DOF listing after reset, joined to joint prims by name; the agent pair DECLARES which DOFs its controller drives"
+ },
+ "notes": "Robot FACTS record (agent-pair split, design B, Milan 2026-09-06): everything here is a measured property of the embodiment. Choices made about the robot for a given brain (camera, drive joints, actuation model) live in agent_pair/v0.1 documents that bind to this record by content hash. Pending values follow measured-or-pending: consumers refuse them loudly."
+}

@@ -1,0 +1,42 @@
+{
+ "declaration_kind": "campaign_declaration/v0.2",
+ "campaign_id": "campaign_carla_v06",
+ "backend": "fail2drive",
+ "family": {
+  "family_id": "fm_012_source_dist_interval_sweep",
+  "manifest_path": "artifacts/examples/solved_families/fm_012_source_dist_interval_sweep.json",
+  "manifest_sha256": "e713dcfe97567425cab1ca2d743e3b6d44d85a16c16c03f5b4c80595c6fe0543"
+ },
+ "declared_grid": {
+  "variants": [
+   "route_002269_012_source_dist_interval_sweep_v01",
+   "route_002269_012_source_dist_interval_sweep_v02",
+   "route_002269_012_source_dist_interval_sweep_v03",
+   "route_002269_012_source_dist_interval_sweep_v04",
+   "route_002269_012_source_dist_interval_sweep_v05",
+   "route_002269_012_source_dist_interval_sweep_v06",
+   "route_002269_012_source_dist_interval_sweep_v07",
+   "route_002269_012_source_dist_interval_sweep_v08",
+   "route_002269_012_source_dist_interval_sweep_v09",
+   "route_002269_012_source_dist_interval_sweep_v10",
+   "route_002269_012_source_dist_interval_sweep_v11"
+  ],
+  "models": [
+   "plant2",
+   "plant2_s2",
+   "plant2_s3"
+  ],
+  "repetitions": [
+   0,
+   1,
+   2
+  ],
+  "repetition_axis": {
+   "kind": "traffic_seed_strata",
+   "note": "the sim is measurably nondeterministic: each run is a Bernoulli sample, seeds are strata - the Isaac analog axis is policy_reps"
+  },
+  "expert": false
+ },
+ "results_subtree": "campaign_carla_v06/fm_012_source_dist_interval_sweep",
+ "note": "PlanT 2.0 (three checkpoints) on the six CARLA families minus the asset swap, traffic seeds 0 to 2; no reference agent in this campaign, the expert cells of v01 to v05 are read beside it at the figure (ruling 2026-09-14)"
+}
