@@ -39,6 +39,12 @@ can bound what a sub-sample dwell could have missed.
 
 The grid resolution comes from the instrument's `certification` block (2026-10-08; until then from
 the capability profile, which this tool then pinned into every interpretation).
+The three instruments this derivation is handed (the scoring instrument, the robot record, the
+environment record) are pinned in the summary's provenance by repository-relative path AND sha256,
+one entry per role (`provenance.instruments`), the shape every CARLA document pins files in, so a
+checkout can be checked against the interpretation and a stale check can tell the pin from a content
+id (2026-10-10, ledger F81; until then by hash alone). The emitter copies the block into every
+findings document.
 """
 import argparse
 import hashlib
@@ -52,6 +58,7 @@ _ROOT = Path(__file__).resolve().parents[4]
 if str(_ROOT) not in sys.path:
     sys.path.insert(0, str(_ROOT))
 from scl_core.certification_band import certification  # noqa: E402  (the band: one formula, one place)
+from scl_core.records import portable_path  # noqa: E402  (stdlib-only core: a pin's path is repo-relative or refused)
 
 TERMINAL = ("expert_run_footer", "brain_run_footer")
 
@@ -77,6 +84,16 @@ def run_pins_check(meta: dict, robot_record_sha: str, family_manifest_sha: str, 
 
 def _sha(p: Path) -> str:
     return hashlib.sha256(p.read_bytes()).hexdigest()
+
+
+def instrument_pins(instrument: Path, robot_record: Path, environment_record: Path, root=_ROOT) -> dict:
+    """The declared instruments by role, each as {"path": repo-relative, "sha256"}: the one shape a document
+    pins a file in (the CARLA certifiers, the declarations), so a tree can be checked against the
+    interpretation and `scl campaign stale` can tell the pin from a content id (F81). A path outside the
+    repository refuses: the record stays portable, and the public clone writes the same bytes."""
+    return {role: {"path": portable_path(path, root), "sha256": _sha(Path(path))}
+            for role, path in (("instrument", instrument), ("robot_record", robot_record),
+                               ("environment_record", environment_record))}
 
 
 def resolve_ref(frame: dict, ref: str):
@@ -358,10 +375,8 @@ def main() -> int:
                     "criterion in the runners"),
         "provenance": {
             "tool_sha256": _sha(Path(__file__).resolve()),
-            "instrument_sha256": _sha(args.instrument),
             "instrument_id": inst["instrument_id"],
-            "robot_record_sha256": _sha(args.robot_record),
-            "environment_record_sha256": _sha(args.environment_record),
+            "instruments": instrument_pins(args.instrument, args.robot_record, args.environment_record),
             "family_manifest_sha256": _sha(args.family / "family_manifest.json"),
             "run_pins": pinned,
             "instrument_change": instrument_change or None,

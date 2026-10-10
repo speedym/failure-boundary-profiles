@@ -30,23 +30,23 @@
     },
     "derived_bundle": {
      "bundle_kind": "derived_bundle/v0.3",
-     "content_id_sha256": "1c0cf2cb2147943fc4dfb32801fa65e8cc15fd928db43a46a119047a93fdbe88",
+     "content_id_sha256": "5c4900af35a874b4e5f6378a9c86ee51ada72896b0a1f792bd388e1c767c5f1f",
      "families": [
       "fm_isaac_001"
      ],
      "path": "campaign_isaac_v01_derived.zip",
-     "source_snapshot_sha256": "743d1c3d8a749977d6ed42bd8d74bf7d0d8593bf9e3906dc98b4fc560a5dbda0",
-     "zip_sha256": "49211da2d7591999e1c0df5cf292262e8a6db35b7d36885910f7a36730473651"
+     "source_snapshot_sha256": "c0d3260adc0ffd494d3cde2a48011f68a7e643b71f5d420ba75bca2c7f0482e2",
+     "zip_sha256": "8e9453424f79efa17de394f677ed958ca896e84e937ef546ad6c82fbf664e2ba"
     },
     "documents": {
-     "fs_campaign_isaac_v01_fm_isaac_001_x_mobility.v0.2.json": "8d2b752bb5a1a9549ab2257714d81a54ea73e7d3adf8c24abe44d937540091ac"
+     "fs_campaign_isaac_v01_fm_isaac_001_x_mobility.v0.2.json": "cde43e53987c7aa2695e5177f5f9be368948bf5610fbbce36b167cf9b47a34e4"
     },
     "evidence": {
      "bundle_content_id_sha256": "c39e4a3a91601a177e52513160af723bee707252e485405ca0a21cddcea88378",
-     "derived_content_id_sha256": "1c0cf2cb2147943fc4dfb32801fa65e8cc15fd928db43a46a119047a93fdbe88",
+     "derived_content_id_sha256": "5c4900af35a874b4e5f6378a9c86ee51ada72896b0a1f792bd388e1c767c5f1f",
      "derived_members": {
       "campaign_isaac_v01/fm_isaac_001/go_clean/go_clean_rows.jsonl": "723266039c8d5d8d07ad4528b77236a971e0d17d66743858fc4442d0e08e925b",
-      "campaign_isaac_v01/fm_isaac_001/go_clean/go_clean_summary.json": "f556beeddbbfe0d68f1bb5e742cbc3639e2fc157708dcb32b6f5827425a97048",
+      "campaign_isaac_v01/fm_isaac_001/go_clean/go_clean_summary.json": "c0f00b938895c0a777feb98c4772f17b32459f0d3b929cb702d9210b785d96d8",
       "campaign_isaac_v01/fm_isaac_001/scoring_out/scored_runs.json": "c2dc5ed82cd2a2dd8b0f1ef0e5c153aaba7aa8101f79f86297ef1c7016e1d8e8"
      },
      "members": {

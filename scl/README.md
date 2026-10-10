@@ -16,7 +16,7 @@ The words the code uses, in the order a reader meets them.
 - **Re-stamp and instrument change**: the launcher's verdict when two interpretations of one campaign are compared: a re-stamp when every value is equal and only provenance moved, an instrument change when any value moved.
 - **Pool**: the scored rows of one family over the campaigns a pooling spec names, fitted together. The paper's figures read pools, never one campaign.
 - **Family realization and version**: a family id names a lineage; its manifest's hash names one realization of it; the version registry gives each realization a readable label.
-- **Verb**: a subcommand of the launcher `scl/scripts/campaign.py`. The verbs for this tree are `score`, `freeze-derived`, `store-derived`, `compare-lineages` and `prune-cache`. The others serve the private side and stop here: `run` and `freeze-raw` start and freeze a simulator run (the runners are not released), `rebuild-register` rewrites the private campaign notes and a test fixture and runs the private test suite, `table` renders the private campaign notes, `next-id` numbers the next campaign.
+- **Verb**: a subcommand of the launcher `scl/scripts/campaign.py`. The verbs for this tree are `score`, `freeze-derived`, `store-derived`, `compare-lineages`, `prune-cache` and `stale`. The others serve the private side and stop here: `run` and `freeze-raw` start and freeze a simulator run (the runners are not released), `rebuild-register` rewrites the private campaign notes and a test fixture and runs the private test suite, `table` renders the private campaign notes, `next-id` numbers the next campaign.
 
 ## What is here
 
@@ -77,6 +77,14 @@ conda run -n scl_prototype python scl/scripts/unpack_campaign_bundle.py campaign
 ```
 
 A source the tree does not hold at the listed hash is reported by path and the unpack refuses.
+
+To ask the same question of every bundle at once, the launcher's `stale` verb reads each derived bundle the certification records name, without unpacking it, and compares its listed sources, the inputs its scoring stamps name and the files its documents name with this tree, by hash:
+
+```sh
+python scl/scripts/campaign.py --repo-root "$(pwd)/scl" stale --bundles /path/to/derived/zips
+```
+
+One row per campaign; exit 0 when every bundle verifies, 1 when any lists a file this tree does not hold as the bundle recorded it. The private pipeline runs it before every export, so the bundles that ship with a tree verify against that tree.
 
 ## Re-score a raw bundle
 

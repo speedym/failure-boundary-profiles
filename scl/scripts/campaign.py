@@ -33,6 +33,11 @@ canon directory.
     prune-cache   [--archive DIR] [--cache DIR]
                                     remove the interpretation-cache entries no certification record pins
                                     (the cache sits beside the archive, F72; store-derived runs this)
+    stale         --bundles DIR [--campaign ID ...] [--out FILE]
+                                    every interpretation the records pin against this checkout: its listed
+                                    sources, its scoring stamps' canon inputs and its documents' path pins by
+                                    hash, both backends; exit 1 when any is stale. The re-stamp set is read
+                                    here, never inferred from where the values could move (F81)
     table         [--write] [--check]  the campaign register blocks of both CAMPAIGN_NOTES from canon
     next-id       --backend fail2drive|isaac
 
@@ -54,7 +59,7 @@ Stdlib only and 3.10-compatible: this script runs on any python3, and every
 tool it spawns runs through the conda env that tool is keyed to, inferred,
 never configured: the runner-side verbs (run, freeze-raw) use the backend's
 runner env (fail2drive, isaacsim: a farm node or the Isaac box needs nothing
-else), the central verbs (score, freeze-derived, store-derived, rebuild-register) use scl_prototype.
+else), the central verbs (score, freeze-derived, store-derived, rebuild-register, stale) use scl_prototype.
 Each agent's own env is the runner's business (models.yaml). --conda-exe
 names the launcher (conda, micromamba).
 """
@@ -996,6 +1001,24 @@ def cmd_compare_lineages(args):
     return subprocess.run(argv).returncode
 
 
+def cmd_stale(args):
+    """Every pinned interpretation against this checkout (scripts/stale_interpretations.py): exit 0 when
+    all verify, 1 when any is stale, 2 on a refusal; the tool's own table, not a plan. The re-stamp set
+    is read here over both backends, never inferred from where the values could move (F81, 2026-10-09:
+    the shared driver moved with an Isaac-only re-stamp and staled all nine CARLA bundles)."""
+    root = Path(args.repo_root).resolve()
+    argv = conda_python(CENTRAL_ENV, args.conda_exe) + [str(root / "scripts/stale_interpretations.py"),
+                                                         "--repo-root", str(root), "--bundles", str(Path(args.bundles).resolve())]
+    for campaign in args.campaign or []:
+        argv += ["--campaign", campaign]
+    if args.out:
+        argv += ["--out", str(args.out)]
+    if args.plan_only:
+        print("  " + " ".join(argv))
+        return 0
+    return subprocess.run(argv).returncode
+
+
 def cmd_table(args):
     root = Path(args.repo_root).resolve()
     drift = []
@@ -1136,6 +1159,13 @@ def main(argv=None) -> int:
     p.add_argument("--cache", default=None, help="the cache to prune (default: <archive>/interpretations)")
     p.add_argument("--plan-only", action="store_true")
     p.set_defaults(func=cmd_prune_cache)
+    p = sub.add_parser("stale", help="every interpretation the records pin against this checkout, both backends: "
+                                      "listed sources, canon inputs and path pins by hash; exit 1 when any is stale (F81)")
+    p.add_argument("--bundles", required=True, help="the archive directory holding the derived zips the records pin")
+    p.add_argument("--campaign", action="append", default=None, help="one campaign (repeatable); default every one with records")
+    p.add_argument("--out", default=None, help="write the rows as a stale_interpretations/v0.1 report here")
+    p.add_argument("--plan-only", action="store_true")
+    p.set_defaults(func=cmd_stale)
     p = sub.add_parser("table", help="the campaign register blocks of both CAMPAIGN_NOTES")
     p.add_argument("--write", action="store_true")
     p.add_argument("--check", action="store_true", help="exit 1 when a block is stale")
