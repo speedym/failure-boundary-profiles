@@ -31,26 +31,26 @@
     },
     "derived_bundle": {
      "bundle_kind": "derived_bundle/v0.3",
-     "content_id_sha256": "da6423401aa19ffaf9aed7339b6d66c2db5bd015496ff499ae78aeba76872a5b",
+     "content_id_sha256": "c4b6840638a6da4a6b0aba1d3fcf80d585ba03ecca06b73c11c87cd068f0b80a",
      "families": [
       "fm_isaac_001",
       "fm_isaac_003",
       "fm_isaac_004"
      ],
      "path": "campaign_isaac_v07_derived.zip",
-     "source_snapshot_sha256": "743d1c3d8a749977d6ed42bd8d74bf7d0d8593bf9e3906dc98b4fc560a5dbda0",
-     "zip_sha256": "cd9f3792dacba52db8183df4e08fbadd18b5470193fd9d63ccdd734c454fced2"
+     "source_snapshot_sha256": "c0d3260adc0ffd494d3cde2a48011f68a7e643b71f5d420ba75bca2c7f0482e2",
+     "zip_sha256": "7c5f2e7ef7b5dee75aed7b4ef65299d528c3a95adbf7bc4a6e2785ded4f76b29"
     },
     "documents": {
-     "fs_campaign_isaac_v07_fm_isaac_001_x_mobility_fusion_v3.v0.2.json": "367aca92ae47d77ec18fde16d478510197914a43d502f3c58240ba83ae5b75a3",
-     "fs_campaign_isaac_v07_fm_isaac_001_x_mobility_vis_full.v0.2.json": "77db9b6d14632da2d8450347d699bd31ae9baa5348e572baba047dcbcce37cd4"
+     "fs_campaign_isaac_v07_fm_isaac_001_x_mobility_fusion_v3.v0.2.json": "58ba018c9ef2c932dbe64ae7a5a22ad29b48c013297424fc5b364df2e16c3d39",
+     "fs_campaign_isaac_v07_fm_isaac_001_x_mobility_vis_full.v0.2.json": "55d34255c922b57571164e1c6b50aef6a8a141d3c06f7037f8f7fd481c1d26c5"
     },
     "evidence": {
      "bundle_content_id_sha256": "5577a120855ccb2da0fb3a8a05b53ad7d7b13bd3b86f5c0313e535caef9f16c5",
-     "derived_content_id_sha256": "da6423401aa19ffaf9aed7339b6d66c2db5bd015496ff499ae78aeba76872a5b",
+     "derived_content_id_sha256": "c4b6840638a6da4a6b0aba1d3fcf80d585ba03ecca06b73c11c87cd068f0b80a",
      "derived_members": {
       "campaign_isaac_v07/fm_isaac_001/go_clean/go_clean_rows.jsonl": "89e8532c924eb06995adf7a21c34b055d1cb7b633763ac7fa401ffbf5edb5502",
-      "campaign_isaac_v07/fm_isaac_001/go_clean/go_clean_summary.json": "30294d4678083b4d16c8d57c056cbd3786cb46f55fa913562b0a7cf45246006c",
+      "campaign_isaac_v07/fm_isaac_001/go_clean/go_clean_summary.json": "9e35bdf326b3069dda64d8103891db55f93ecf3b4b383628bd095f0388d4cc6a",
       "campaign_isaac_v07/fm_isaac_001/scoring_out/scored_runs.json": "7a054fc58f7af58acd4f1b4f927ec906ff0dbacdd37b5c7c72c82563947dce5a"
      },
      "members": {
@@ -89,26 +89,26 @@
     },
     "derived_bundle": {
      "bundle_kind": "derived_bundle/v0.3",
-     "content_id_sha256": "da6423401aa19ffaf9aed7339b6d66c2db5bd015496ff499ae78aeba76872a5b",
+     "content_id_sha256": "c4b6840638a6da4a6b0aba1d3fcf80d585ba03ecca06b73c11c87cd068f0b80a",
      "families": [
       "fm_isaac_001",
       "fm_isaac_003",
       "fm_isaac_004"
      ],
      "path": "campaign_isaac_v07_derived.zip",
-     "source_snapshot_sha256": "743d1c3d8a749977d6ed42bd8d74bf7d0d8593bf9e3906dc98b4fc560a5dbda0",
-     "zip_sha256": "cd9f3792dacba52db8183df4e08fbadd18b5470193fd9d63ccdd734c454fced2"
+     "source_snapshot_sha256": "c0d3260adc0ffd494d3cde2a48011f68a7e643b71f5d420ba75bca2c7f0482e2",
+     "zip_sha256": "7c5f2e7ef7b5dee75aed7b4ef65299d528c3a95adbf7bc4a6e2785ded4f76b29"
     },
     "documents": {
-     "fs_campaign_isaac_v07_fm_isaac_003_x_mobility_fusion_v3.v0.2.json": "4e3688ae2b416df6ed2abb68e16d3762cf6a5ee2fcaa7bb56ab89ba5d35f8df2",
-     "fs_campaign_isaac_v07_fm_isaac_003_x_mobility_vis_full.v0.2.json": "a4cd0aca1da7109e9e961e5520fcfd8f8e24c208805c47a34d455e6d227dfc47"
+     "fs_campaign_isaac_v07_fm_isaac_003_x_mobility_fusion_v3.v0.2.json": "31c7cb67c3cf78d68877a4269075225e77a4174d33d8310f32385d8683c6761b",
+     "fs_campaign_isaac_v07_fm_isaac_003_x_mobility_vis_full.v0.2.json": "552ebeba6403cecb066f479a052862b0f015aacf127cd15a1034b22486895280"
     },
     "evidence": {
      "bundle_content_id_sha256": "5577a120855ccb2da0fb3a8a05b53ad7d7b13bd3b86f5c0313e535caef9f16c5",
-     "derived_content_id_sha256": "da6423401aa19ffaf9aed7339b6d66c2db5bd015496ff499ae78aeba76872a5b",
+     "derived_content_id_sha256": "c4b6840638a6da4a6b0aba1d3fcf80d585ba03ecca06b73c11c87cd068f0b80a",
      "derived_members": {
       "campaign_isaac_v07/fm_isaac_003/go_clean/go_clean_rows.jsonl": "1e18e268932b715f0070a314dc97946b23a3eabccac54d66d2deb0dfa4350729",
-      "campaign_isaac_v07/fm_isaac_003/go_clean/go_clean_summary.json": "bdf540bf8970d45db39f1797ef9e72deb2b456f93e09797f0df1a11201a2d782",
+      "campaign_isaac_v07/fm_isaac_003/go_clean/go_clean_summary.json": "f7adbbbe40a7cba26211f0efe96e8230cd6373df33ae2a7cd504218295f1f4ca",
       "campaign_isaac_v07/fm_isaac_003/scoring_out/scored_runs.json": "c25e948d20c0376e0706cf6ff357f949beb8109573655d3c35dfcd9947c307f1"
      },
      "members": {
@@ -147,26 +147,26 @@
     },
     "derived_bundle": {
      "bundle_kind": "derived_bundle/v0.3",
-     "content_id_sha256": "da6423401aa19ffaf9aed7339b6d66c2db5bd015496ff499ae78aeba76872a5b",
+     "content_id_sha256": "c4b6840638a6da4a6b0aba1d3fcf80d585ba03ecca06b73c11c87cd068f0b80a",
      "families": [
       "fm_isaac_001",
       "fm_isaac_003",
       "fm_isaac_004"
      ],
      "path": "campaign_isaac_v07_derived.zip",
-     "source_snapshot_sha256": "743d1c3d8a749977d6ed42bd8d74bf7d0d8593bf9e3906dc98b4fc560a5dbda0",
-     "zip_sha256": "cd9f3792dacba52db8183df4e08fbadd18b5470193fd9d63ccdd734c454fced2"
+     "source_snapshot_sha256": "c0d3260adc0ffd494d3cde2a48011f68a7e643b71f5d420ba75bca2c7f0482e2",
+     "zip_sha256": "7c5f2e7ef7b5dee75aed7b4ef65299d528c3a95adbf7bc4a6e2785ded4f76b29"
     },
     "documents": {
-     "fs_campaign_isaac_v07_fm_isaac_004_x_mobility_fusion_v3.v0.2.json": "324ad96def5eb7288c65c3b90422667d1ada033ec2765a4d71fa01a6a9401c60",
-     "fs_campaign_isaac_v07_fm_isaac_004_x_mobility_vis_full.v0.2.json": "52ca8d3196bd3178d48f8c7ae9c1bc6316ab841f181f33ff14492eadffbb991b"
+     "fs_campaign_isaac_v07_fm_isaac_004_x_mobility_fusion_v3.v0.2.json": "aca8d6a1721d5efd2fd2619502f5b5c2e4737caf4a2aecc6eeb97973b4ace9ca",
+     "fs_campaign_isaac_v07_fm_isaac_004_x_mobility_vis_full.v0.2.json": "2cfc8168e3227c1d7f6ce559c5dce61c528b3e4ab21aef8fec6df01f1a535370"
     },
     "evidence": {
      "bundle_content_id_sha256": "5577a120855ccb2da0fb3a8a05b53ad7d7b13bd3b86f5c0313e535caef9f16c5",
-     "derived_content_id_sha256": "da6423401aa19ffaf9aed7339b6d66c2db5bd015496ff499ae78aeba76872a5b",
+     "derived_content_id_sha256": "c4b6840638a6da4a6b0aba1d3fcf80d585ba03ecca06b73c11c87cd068f0b80a",
      "derived_members": {
       "campaign_isaac_v07/fm_isaac_004/go_clean/go_clean_rows.jsonl": "2f5ff9ddbd9220e3b9a93f40f968810ff19c0343eab6d7be641f4df0617ed3f1",
-      "campaign_isaac_v07/fm_isaac_004/go_clean/go_clean_summary.json": "24b7cbdbf50cd7b461b265a1a4335de58a12fe3834bd8c70fd6466a7f1f4c6f9",
+      "campaign_isaac_v07/fm_isaac_004/go_clean/go_clean_summary.json": "5281fded004cee077ac7231696d5a0430c12da6024284cb4d2b8aea4d57fed6c",
       "campaign_isaac_v07/fm_isaac_004/scoring_out/scored_runs.json": "63286b0dd733616234056373cba453e417c0483282c8e1357d21c9b6f9b897ae"
      },
      "members": {

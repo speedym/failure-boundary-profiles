@@ -169,7 +169,7 @@
    "only_public": [],
    "error": null,
    "wrote_into_clone": [],
-   "date": "2026-10-09"
+   "date": "2026-10-10"
   },
   "campaign_isaac_v02": {
    "proven": true,
@@ -186,7 +186,7 @@
    "only_public": [],
    "error": null,
    "wrote_into_clone": [],
-   "date": "2026-10-09"
+   "date": "2026-10-10"
   },
   "campaign_isaac_v03": {
    "proven": true,
@@ -203,7 +203,7 @@
    "only_public": [],
    "error": null,
    "wrote_into_clone": [],
-   "date": "2026-10-09"
+   "date": "2026-10-10"
   },
   "campaign_isaac_v04": {
    "proven": true,
@@ -220,7 +220,7 @@
    "only_public": [],
    "error": null,
    "wrote_into_clone": [],
-   "date": "2026-10-09"
+   "date": "2026-10-10"
   },
   "campaign_isaac_v05": {
    "proven": true,
@@ -237,7 +237,7 @@
    "only_public": [],
    "error": null,
    "wrote_into_clone": [],
-   "date": "2026-10-09"
+   "date": "2026-10-10"
   },
   "campaign_isaac_v06": {
    "proven": true,
@@ -254,7 +254,7 @@
    "only_public": [],
    "error": null,
    "wrote_into_clone": [],
-   "date": "2026-10-09"
+   "date": "2026-10-10"
   },
   "campaign_isaac_v07": {
    "proven": true,
@@ -271,7 +271,7 @@
    "only_public": [],
    "error": null,
    "wrote_into_clone": [],
-   "date": "2026-10-09"
+   "date": "2026-10-10"
   },
   "campaign_isaac_v08": {
    "proven": true,
@@ -288,9 +288,9 @@
    "only_public": [],
    "error": null,
    "wrote_into_clone": [],
-   "date": "2026-10-09"
+   "date": "2026-10-10"
   }
  },
- "export_commit": "3b960d308d86c46027def79a57b6d22cdd11e6d9",
+ "export_commit": "f682f48a94313449d4c2ffd4627fa2dc3953efc4",
  "note": "written by scripts/prove_public_export.py in the private repository: each campaign's raw bundle scored, frozen and bound from this clone, the launcher's verdict against the store's interpretation, and the members that differ (the source snapshot names the scoring checkout, so it always does)"
 }

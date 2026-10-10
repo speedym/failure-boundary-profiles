@@ -2,7 +2,7 @@
  "export_kind": "public_export/v0.1",
  "prefix": "scl",
  "source": {
-  "commit": "3b960d308d86c46027def79a57b6d22cdd11e6d9",
+  "commit": "f682f48a94313449d4c2ffd4627fa2dc3953efc4",
   "branch": "main",
   "clean": true,
   "modified_or_untracked": [],
@@ -18,16 +18,16 @@
   "campaign_carla_v07": "2520c2ec90ded51114ff0abd03611d36c7392db5d8efe2304f338da9fe4a847a",
   "campaign_carla_v08": "47d5e156b0f1ce3ea4fbd74d8425e33e25ca6d4c56b389f3bcc97a4d470530fe",
   "campaign_carla_v09": "78b374f6654290b4dd26b01230c0c530334b2839371529cdacf5ca8beb47780b",
-  "campaign_isaac_v01": "1c0cf2cb2147943fc4dfb32801fa65e8cc15fd928db43a46a119047a93fdbe88",
-  "campaign_isaac_v02": "cb5c86f416271977a25eb5facfc96c43fad9e4cf3829f2d525c8bf5667597892",
-  "campaign_isaac_v03": "a57707c4dbc0304b0480d449d78016becf0fafe166ea4b8a1f558beca62814d7",
-  "campaign_isaac_v04": "383190f1e0fef0459c4c7fbe8865bf2785b1a4b2a793289250dcbb71c487589b",
-  "campaign_isaac_v05": "f5abf813655f5329ecba50a4ab92c0a3559b136a0ecfc7d622b26c20487e41c1",
-  "campaign_isaac_v06": "e24f2e98f44b42f6a6108b09d77d49e927011c846933cf8a3b5bc0d6cdabf4ff",
-  "campaign_isaac_v07": "da6423401aa19ffaf9aed7339b6d66c2db5bd015496ff499ae78aeba76872a5b",
-  "campaign_isaac_v08": "f574f46017605536261eb8015915746500a7a6a4860c4a998065b3dab458587c"
+  "campaign_isaac_v01": "5c4900af35a874b4e5f6378a9c86ee51ada72896b0a1f792bd388e1c767c5f1f",
+  "campaign_isaac_v02": "8e88f7f9ff063d4b556e3deef63c7d10248e491b6009bcbeb1e1d3307ed79a51",
+  "campaign_isaac_v03": "78e7146e20e716bb3fd447b4dca2de099655b8b41bc6df859796b7cddd6a4489",
+  "campaign_isaac_v04": "1e844991e663609d7b3bc8ad43162d75439f23ec4c951097c60a0f3ae9ec55b5",
+  "campaign_isaac_v05": "073a5837b5d46aa4320e4091b3d9f92d37f3a79e9aed460eabd389b821c66954",
+  "campaign_isaac_v06": "1c708fd0bee65ee329b56d23b2601a6bb41929e0e35f2d594d5a90674a9e4bb9",
+  "campaign_isaac_v07": "c4b6840638a6da4a6b0aba1d3fcf80d585ba03ecca06b73c11c87cd068f0b80a",
+  "campaign_isaac_v08": "a1d1437fe5e1ecb67af77aafcd79333ac1733fc8fee588af1d233f1acb771731"
  },
- "n_files": 285,
+ "n_files": 286,
  "families": [
   {
    "family_id": "fm_001_intrusion_sweep",
@@ -239,15 +239,16 @@
   "scl_families/README.md": "2136d00a941b92d20cf591f446f93a80c49459e4d275ad07dd61f2092c9e4c14",
   "scl_families/SHA256SUMS": "8f62383017b621d88cdec0afbf908de05a09d2db25b665575026af03480b9717"
  },
- "pruned": [
-  "artifacts/examples/findings/certification/campaign_carla_v04/flow_certification.v0.6.json",
-  "artifacts/examples/findings/certification/campaign_carla_v05/flow_certification.v0.6.json",
-  "artifacts/examples/findings/certification/campaign_carla_v06/flow_certification.v0.6.json",
-  "artifacts/examples/findings/certification/campaign_carla_v07/flow_certification.v0.6.json",
-  "artifacts/examples/findings/certification/campaign_carla_v08/flow_certification.v0.6.json",
-  "artifacts/examples/findings/certification/campaign_carla_v09/flow_certification.v0.6.json"
- ],
+ "pruned": [],
  "code_named_dirs": {
+  "artifacts/examples/campaigns": [
+   "scripts/stale_interpretations.py",
+   "scripts/campaign.py",
+   "scripts/campaign.py",
+   "scripts/campaign.py",
+   "adapters/fail2drive/scripts/multi_model_eval/pool_campaigns.py",
+   "adapters/fail2drive/scripts/multi_model_eval/paper_figures.py"
+  ],
   "artifacts/examples/solved_families": [
    "adapters/fail2drive/scripts/multi_model_eval/score_runs.py",
    "adapters/fail2drive/scripts/multi_model_eval/boundary_stats.py",
@@ -260,13 +261,6 @@
   ],
   "artifacts/examples/backend_outputs": [
    "adapters/fail2drive/scripts/multi_model_eval/score_runs.py"
-  ],
-  "artifacts/examples/campaigns": [
-   "scripts/campaign.py",
-   "scripts/campaign.py",
-   "scripts/campaign.py",
-   "adapters/fail2drive/scripts/multi_model_eval/pool_campaigns.py",
-   "adapters/fail2drive/scripts/multi_model_eval/paper_figures.py"
   ],
   "artifacts/examples/findings": [
    "scripts/campaign.py",
@@ -422,7 +416,8 @@
    "artifacts/examples/findings/bifurcation/branch_a_ds53_7.json.gz",
    "artifacts/examples/findings/bifurcation/branch_b_ds32_2.json.gz",
    "scripts/compare_lineages.py",
-   "scripts/prune_interpretation_cache.py"
+   "scripts/prune_interpretation_cache.py",
+   "scripts/stale_interpretations.py"
   ],
   "document pin": [
    "artifacts/examples/campaigns/campaign_carla_v01/fm_002_corridor_pincer.json",
@@ -627,7 +622,7 @@
   "adapters/isaac/scripts/multi_model_eval/brain_models.py": "f63907bfa8319cca663a73c67cd514f0bf344f6f41646e52c96d3213482f42ff",
   "adapters/isaac/scripts/multi_model_eval/campaign_manifest.py": "27c432636307b5af042ff1c113845a668b6eb52d8ebe11e648a0e14c663fd07f",
   "adapters/isaac/scripts/multi_model_eval/certify_findings.py": "c4338e519b37bf1485464760d3f2d5f85fa20a22b1676461b9af0446038d012e",
-  "adapters/isaac/scripts/multi_model_eval/derive_go_clean.py": "0d97dc029d5c069a9c2c45208a5dcfc0568005364388cd791e62ca60273d468d",
+  "adapters/isaac/scripts/multi_model_eval/derive_go_clean.py": "56b77bc5966dc7f49eb53d279a2110e6afc7bd0ea03999d7e5fefcc1bc7eeb64",
   "adapters/isaac/scripts/multi_model_eval/findings_v2.py": "3f2a2bb42483b8441e0838ce692efc1299d9df7e997cf7316d5c17b15f85d6b9",
   "adapters/isaac/scripts/multi_model_eval/models.json": "dd3b1231835dac8bf3ed9487979771f21ea43869d3ec1fe46548911226886bde",
   "adapters/isaac/scripts/multi_model_eval/paper_figures.py": "f53bd9fb4854d3cea6a4e6e964e34465de789eb22d6bfee57628a34ee43ddfe1",
@@ -810,14 +805,14 @@
   "artifacts/examples/findings/certification/campaign_carla_v08/threading_certification.v0.2.json": "65cc9d8c94a8605039dd3c2b65fa201908efc54e74eddb7c8fe07d1a0385f9b3",
   "artifacts/examples/findings/certification/campaign_carla_v09/flow_certification.v0.7.json": "ee40cc9d97979cdf503834d5fb07cee7860a6ff8d24c4c4dc783ab4373d36a15",
   "artifacts/examples/findings/certification/campaign_carla_v09/threading_certification.v0.2.json": "13523ab50112d4e650e6deecaf219f4af8df16172f962c3ee86dfe005cddabb9",
-  "artifacts/examples/findings/certification/campaign_isaac_v01/findings_certification.v0.1.json": "0d170cd6df1f4bf1c13581b48200e39e3e0324f397f0a28e9765ed725fb42c3b",
-  "artifacts/examples/findings/certification/campaign_isaac_v02/findings_certification.v0.1.json": "f6f448eb2793b24fedd7320b255770ab7ff4fe9742e6048ff777e878712a676c",
-  "artifacts/examples/findings/certification/campaign_isaac_v03/findings_certification.v0.1.json": "68117e525213e7055fb095da01d03816c8eb283ad8dca52a506ec98ee1a171f4",
-  "artifacts/examples/findings/certification/campaign_isaac_v04/findings_certification.v0.1.json": "6d9b36f11d6618e766ed096b86e32b3e748975fde733353a043aa71166f34d55",
-  "artifacts/examples/findings/certification/campaign_isaac_v05/findings_certification.v0.1.json": "282c2386d3c0180e0e22ab4ba675388fd995ec140be34f93adf8d8dd47a60808",
-  "artifacts/examples/findings/certification/campaign_isaac_v06/findings_certification.v0.1.json": "c71827aef1e1f1578650a3bdf7c5a5b68483fae67c15ddfdc591db50490c6a54",
-  "artifacts/examples/findings/certification/campaign_isaac_v07/findings_certification.v0.1.json": "5b5cb050cc9f1b20d3c1882ce722be0a5d5e3c161de222aaf2e82710540380fe",
-  "artifacts/examples/findings/certification/campaign_isaac_v08/findings_certification.v0.1.json": "92ecb3905942a39fc1d252f24ec5e0d70eeebf54d0f96ad9efe0b379651f6985",
+  "artifacts/examples/findings/certification/campaign_isaac_v01/findings_certification.v0.1.json": "9d7bc73104c58e0713e20dc45a3ebf9cc671fcbd9fedc20a20aacbde65541c23",
+  "artifacts/examples/findings/certification/campaign_isaac_v02/findings_certification.v0.1.json": "35edaa85ff21562470bc34c5f0d7a6b8ccc6cd862c3e3227de48a73215c657b0",
+  "artifacts/examples/findings/certification/campaign_isaac_v03/findings_certification.v0.1.json": "080becd81a34d65e3d105a50a8e9e14c01dc4a9f403f98143a8f70e3f7b637a6",
+  "artifacts/examples/findings/certification/campaign_isaac_v04/findings_certification.v0.1.json": "8df5a85e4eda81031682c0a83bfdcfbf7f2c0995a910cff700050ba7335052cd",
+  "artifacts/examples/findings/certification/campaign_isaac_v05/findings_certification.v0.1.json": "0a5e88d446be1d531d1ebf3387b871853715e178d400fd6ee4dd55c155407f8a",
+  "artifacts/examples/findings/certification/campaign_isaac_v06/findings_certification.v0.1.json": "b1ca1b69c97aef8a850f1aff3b6ecc481dd024e817f9f7918124f8ce6a73aa8c",
+  "artifacts/examples/findings/certification/campaign_isaac_v07/findings_certification.v0.1.json": "2664853a9fe27f4e22241a57b682660e1f530dc9335d06dc35594935d470d049",
+  "artifacts/examples/findings/certification/campaign_isaac_v08/findings_certification.v0.1.json": "98ebe88cc814f84918c412e2c2f800534ca353753f6a45c0be65030dc2664fde",
   "artifacts/examples/findings/pooling/fm_001_three_seeds.json": "91dc097631e03278c2cc6935c508b58c16147cd6b180f882dc233bc3b0bc9773",
   "artifacts/examples/findings/pooling/fm_001_v06.json": "739f316e98059953cd9330ee93fa146607eed9e608559dce13d8dfb35e468bdf",
   "artifacts/examples/findings/pooling/fm_001_v07.json": "796164880dc04a69ae52c681b525881cae7c418688d7568ef136f6d910fd4dec",
@@ -873,10 +868,11 @@
   "scl_core/stats/__init__.py": "b49143fa9110e56957c6c6030f1017aba7f63d758b91959fa7bd5b27699295fc",
   "scl_core/stats/boundary.py": "be9beb7f3a3c6d255c03f8c16cf6a25ffff1ef612e12b2c9ef9da94ff94b4cab",
   "scl_core/stats/findings.py": "a84a5cc931c14d8c46cfc9c7d6167dc667a9e8e4e3dc2c288f267cefebfcd5c8",
-  "scripts/campaign.py": "2e0b9a710d2bd72bc8347fe25362aa3c028de74f4789ddf4114755fd4901777d",
+  "scripts/campaign.py": "70738b21498b67f35f963fa38905aff9eed489534971751b04a210a8d8b92ce2",
   "scripts/compare_lineages.py": "c85f2b6bf906c376cce1ef05cb5deccd0a4c442ded1bf38cfc5e9b0435017eb4",
   "scripts/prune_interpretation_cache.py": "58d35883111e0348097815558cd2808a2b2fbf8a01c3bf71f356d0fa782f5edc",
   "scripts/score_campaign.py": "7584a19d29bdfdd2c421aea854204bf37359e911db965f3a44687f4f93d1371e",
+  "scripts/stale_interpretations.py": "207db51c00238010c060de90f7c2b8de8c84fde8839b55b76f8eade34108befa",
   "scripts/unpack_campaign_bundle.py": "7bb0c4b6993b1cdf0aa00368bb1df4c0336d3a7b78b391263072e9f480e056a4"
  },
  "note": "a generated, byte-identical export of every file the results store's interpretations depend on; regenerate with scripts/export_public_repo.py in the private repository, never edit here; a derived bundle's source manifest verifies against this tree with unpack_campaign_bundle.py --verify-sources <checkout>/scl"
