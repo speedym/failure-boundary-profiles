@@ -1,0 +1,52 @@
+{
+ "declaration_kind": "campaign_declaration/v0.2",
+ "campaign_id": "campaign_isaac_v01",
+ "backend": "isaac",
+ "family": {
+  "family_id": "fm_isaac_001",
+  "manifest_path": "artifacts/examples/solved_families/isaac/fm_isaac_001/family_manifest.json",
+  "manifest_sha256": "7c6e0a213f915fb1ffa2294b7c3120d36dd71ef2513db5fc920ab20e31e9144f"
+ },
+ "declared_grid": {
+  "variants": [
+   "aisle_w0p45",
+   "aisle_w0p58",
+   "aisle_w0p75",
+   "aisle_w0p90",
+   "aisle_w0p95",
+   "aisle_w1p00",
+   "aisle_w1p05",
+   "aisle_w1p10",
+   "aisle_w1p30",
+   "aisle_w1p50"
+  ],
+  "models": [
+   "expert",
+   "x_mobility"
+  ],
+  "repetitions": [
+   0,
+   1,
+   2,
+   3,
+   4
+  ],
+  "repetition_axis": {
+   "kind": "policy_reps",
+   "note": "the sim is audited bit-exact (M0): repetitions sample policy stochasticity, there are no traffic seeds - the CARLA analog axis is traffic_seed_strata"
+  },
+  "expert": true,
+  "reference_model": "expert"
+ },
+ "results_subtree": "campaign_isaac_v01/fm_isaac_001",
+ "note": "written after the fact on 2026-09-21 from the raw bundle c39e4a3a9160 (campaign_bundle/v0.2): the grid from family_manifest legacy policy fields (brains, n_reps_per_brain, expert_reference), the family pinned as run (family_snapshot, 7c6e0a213f91)",
+ "written_after_the_fact": {
+  "date": "2026-09-21",
+  "raw_content_id_sha256": "c39e4a3a91601a177e52513160af723bee707252e485405ca0a21cddcea88378",
+  "raw_bundle_kind": "campaign_bundle/v0.2",
+  "grid_source": "family_manifest legacy policy fields (brains, n_reps_per_brain, expert_reference)",
+  "family_manifest_source": "family_snapshot/family_manifest.json",
+  "meta_location": "campaign",
+  "tool": "scripts/declare_campaign.py"
+ }
+}

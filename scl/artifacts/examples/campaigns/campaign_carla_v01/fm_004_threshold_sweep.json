@@ -1,0 +1,43 @@
+{
+ "declaration_kind": "campaign_declaration/v0.1",
+ "campaign_id": "campaign_carla_v01",
+ "backend": "fail2drive",
+ "family": {
+  "family_id": "fm_004_threshold_sweep",
+  "manifest_path": "artifacts/examples/solved_families/fm_004_threshold_sweep.json",
+  "manifest_sha256": "f275c14ac24715211e8af7d57d6fb962df3b2f9358e0f7df444e2ab68c70b9e1"
+ },
+ "declared_grid": {
+  "variants": [
+   "Generalization_PassableObstacles_1061_004_threshold_sweep_v01",
+   "Generalization_PassableObstacles_1061_004_threshold_sweep_v02",
+   "Generalization_PassableObstacles_1061_004_threshold_sweep_v03",
+   "Generalization_PassableObstacles_1061_004_threshold_sweep_v04",
+   "Generalization_PassableObstacles_1061_004_threshold_sweep_v05",
+   "Generalization_PassableObstacles_1061_004_threshold_sweep_v06",
+   "Generalization_PassableObstacles_1061_004_threshold_sweep_v07",
+   "Generalization_PassableObstacles_1061_004_threshold_sweep_v08",
+   "Generalization_PassableObstacles_1061_004_threshold_sweep_v09",
+   "Generalization_PassableObstacles_1061_004_threshold_sweep_v10",
+   "Generalization_PassableObstacles_1061_004_threshold_sweep_v11",
+   "Generalization_PassableObstacles_1061_004_threshold_sweep_v12"
+  ],
+  "models": [
+   "bridgedrive",
+   "lead",
+   "pdm_lite_expert",
+   "tfpp"
+  ],
+  "seeds": [
+   0,
+   1,
+   2,
+   3,
+   4
+  ],
+  "expert": true,
+  "reference_model": "pdm_lite_expert"
+ },
+ "results_subtree": "campaign_carla_v01/fm_004_threshold_sweep",
+ "note": "Threshold sweep on the 1061 gauntlet: twelve corridor-width variants, four agents, five seeds; the fm_004 fixtures and paper figures come from this family. Certified bundle content id c4a08d86f2a4, family sub-id 8f42a1018832; axis minimum_free_corridor_width."
+}

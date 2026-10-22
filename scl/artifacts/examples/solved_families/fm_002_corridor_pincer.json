@@ -1,0 +1,421 @@
+{
+  "schema_version": "family_manifest/v0.3",
+  "manifest_id": "fm_002_corridor_pincer",
+  "family_id": "passable_static_obstacle",
+  "plan_ref": "ap_002_corridor_pincer",
+  "request_ref": "ar_002_corridor_pincer",
+  "capability_profile_id": "hero_f2d_passable_v0.4",
+  "source_ir_ref": {
+    "path": "artifacts/examples/imported_ir/scenario_ir_1060.json",
+    "schema_version": "scenario_ir/v0.3",
+    "content_hash": "sha256:588765e6d7c8b34b8950ae0d79cf4c3f55f2aaad7591b8ff51f82803c6c7db87"
+  },
+  "provenance": {
+    "solver": "scl_solver/0.2.0",
+    "geometry_algorithm_version": "1.1",
+    "route_key": "bb4e98416fdc1cdc72a51570a971ffbc5b1276ed9733f43e5253fb81ed888d6c",
+    "policy_constants": {
+      "ego_clearance_margin_m": 0.1,
+      "ego_mirror_allowance_m": 0.13,
+      "placement_band_lateral_m": 4.0
+    },
+    "realization_tolerance_m": 0.005
+  },
+  "effective_domain": {
+    "factor_id": "minimum_free_corridor_width",
+    "backoff_m": 0.02,
+    "intervals": [
+      {
+        "lo": 2.3177,
+        "hi": 3.0597,
+        "lo_boundary": 2.2977,
+        "hi_boundary": 3.0797
+      }
+    ],
+    "binding_note": "boundaries located by coarse scan (step 0.05) + bisection over the full feasibility predicate (all hard checks incl. stable_support); added-entity baseline side: opposite_anchor (pincer heuristic - executor assumption, not plan-derived; the v2 realization-hints field replaces this)"
+  },
+  "expected_count": 10,
+  "accepted_count": 10,
+  "variants": [
+    {
+      "scenario_id": "Generalization_PassableObstacles_1060_002_corridor_pincer_v01",
+      "route_id": "106000201",
+      "index": 1,
+      "delta_ref": "deltas/sd_002_corridor_pincer_v01.json",
+      "target": 2.3177,
+      "realized": [
+        {
+          "backend_scenario": "bs_passable_obstacle_1",
+          "entity": "obstacle_2",
+          "param": "y",
+          "value": 0.6738
+        },
+        {
+          "backend_scenario": "bs_passable_obstacle_1",
+          "entity": "obstacle_3",
+          "param": "y",
+          "value": 0.6734
+        }
+      ],
+      "measured": {
+        "minimum_free_corridor_width": 2.3173,
+        "maximum_route_intrusion": 0.3716,
+        "required_lateral_deviation": 0.6611,
+        "closest_approach_distance": 0.0
+      },
+      "checks": {
+        "validator_static_collision_free": "pass",
+        "validator_placement_region": "pass",
+        "validator_stable_support": "pass",
+        "validator_connected_ego_passage": "pass",
+        "validator_family_membership": "pass",
+        "validator_backend_compiles": "pass"
+      },
+      "verdict": "accepted",
+      "reject_reasons": [],
+      "output_file": "backend_outputs/Generalization_PassableObstacles_1060_002_corridor_pincer_v01.xml"
+    },
+    {
+      "scenario_id": "Generalization_PassableObstacles_1060_002_corridor_pincer_v02",
+      "route_id": "106000202",
+      "index": 2,
+      "delta_ref": "deltas/sd_002_corridor_pincer_v02.json",
+      "target": 2.4001,
+      "realized": [
+        {
+          "backend_scenario": "bs_passable_obstacle_1",
+          "entity": "obstacle_2",
+          "param": "y",
+          "value": 0.7562
+        },
+        {
+          "backend_scenario": "bs_passable_obstacle_1",
+          "entity": "obstacle_3",
+          "param": "y",
+          "value": 0.7558
+        }
+      ],
+      "measured": {
+        "minimum_free_corridor_width": 2.3999,
+        "maximum_route_intrusion": 0.3716,
+        "required_lateral_deviation": 0.5785,
+        "closest_approach_distance": 0.0
+      },
+      "checks": {
+        "validator_static_collision_free": "pass",
+        "validator_placement_region": "pass",
+        "validator_stable_support": "pass",
+        "validator_connected_ego_passage": "pass",
+        "validator_family_membership": "pass",
+        "validator_backend_compiles": "pass"
+      },
+      "verdict": "accepted",
+      "reject_reasons": [],
+      "output_file": "backend_outputs/Generalization_PassableObstacles_1060_002_corridor_pincer_v02.xml"
+    },
+    {
+      "scenario_id": "Generalization_PassableObstacles_1060_002_corridor_pincer_v03",
+      "route_id": "106000203",
+      "index": 3,
+      "delta_ref": "deltas/sd_002_corridor_pincer_v03.json",
+      "target": 2.4826,
+      "realized": [
+        {
+          "backend_scenario": "bs_passable_obstacle_1",
+          "entity": "obstacle_2",
+          "param": "y",
+          "value": 0.8387
+        },
+        {
+          "backend_scenario": "bs_passable_obstacle_1",
+          "entity": "obstacle_3",
+          "param": "y",
+          "value": 0.8383
+        }
+      ],
+      "measured": {
+        "minimum_free_corridor_width": 2.4823,
+        "maximum_route_intrusion": 0.3716,
+        "required_lateral_deviation": 0.4961,
+        "closest_approach_distance": 0.0
+      },
+      "checks": {
+        "validator_static_collision_free": "pass",
+        "validator_placement_region": "pass",
+        "validator_stable_support": "pass",
+        "validator_connected_ego_passage": "pass",
+        "validator_family_membership": "pass",
+        "validator_backend_compiles": "pass"
+      },
+      "verdict": "accepted",
+      "reject_reasons": [],
+      "output_file": "backend_outputs/Generalization_PassableObstacles_1060_002_corridor_pincer_v03.xml"
+    },
+    {
+      "scenario_id": "Generalization_PassableObstacles_1060_002_corridor_pincer_v04",
+      "route_id": "106000204",
+      "index": 4,
+      "delta_ref": "deltas/sd_002_corridor_pincer_v04.json",
+      "target": 2.565,
+      "realized": [
+        {
+          "backend_scenario": "bs_passable_obstacle_1",
+          "entity": "obstacle_2",
+          "param": "y",
+          "value": 0.9211
+        },
+        {
+          "backend_scenario": "bs_passable_obstacle_1",
+          "entity": "obstacle_3",
+          "param": "y",
+          "value": 0.9207
+        }
+      ],
+      "measured": {
+        "minimum_free_corridor_width": 2.5643,
+        "maximum_route_intrusion": 0.3716,
+        "required_lateral_deviation": 0.4141,
+        "closest_approach_distance": 0.0
+      },
+      "checks": {
+        "validator_static_collision_free": "pass",
+        "validator_placement_region": "pass",
+        "validator_stable_support": "pass",
+        "validator_connected_ego_passage": "pass",
+        "validator_family_membership": "pass",
+        "validator_backend_compiles": "pass"
+      },
+      "verdict": "accepted",
+      "reject_reasons": [],
+      "output_file": "backend_outputs/Generalization_PassableObstacles_1060_002_corridor_pincer_v04.xml"
+    },
+    {
+      "scenario_id": "Generalization_PassableObstacles_1060_002_corridor_pincer_v05",
+      "route_id": "106000205",
+      "index": 5,
+      "delta_ref": "deltas/sd_002_corridor_pincer_v05.json",
+      "target": 2.6475,
+      "realized": [
+        {
+          "backend_scenario": "bs_passable_obstacle_1",
+          "entity": "obstacle_2",
+          "param": "y",
+          "value": 1.0036
+        },
+        {
+          "backend_scenario": "bs_passable_obstacle_1",
+          "entity": "obstacle_3",
+          "param": "y",
+          "value": 1.0032
+        }
+      ],
+      "measured": {
+        "minimum_free_corridor_width": 2.6473,
+        "maximum_route_intrusion": 0.3716,
+        "required_lateral_deviation": 0.3311,
+        "closest_approach_distance": 0.0
+      },
+      "checks": {
+        "validator_static_collision_free": "pass",
+        "validator_placement_region": "pass",
+        "validator_stable_support": "pass",
+        "validator_connected_ego_passage": "pass",
+        "validator_family_membership": "pass",
+        "validator_backend_compiles": "pass"
+      },
+      "verdict": "accepted",
+      "reject_reasons": [],
+      "output_file": "backend_outputs/Generalization_PassableObstacles_1060_002_corridor_pincer_v05.xml"
+    },
+    {
+      "scenario_id": "Generalization_PassableObstacles_1060_002_corridor_pincer_v06",
+      "route_id": "106000206",
+      "index": 6,
+      "delta_ref": "deltas/sd_002_corridor_pincer_v06.json",
+      "target": 2.7299,
+      "realized": [
+        {
+          "backend_scenario": "bs_passable_obstacle_1",
+          "entity": "obstacle_2",
+          "param": "y",
+          "value": 1.086
+        },
+        {
+          "backend_scenario": "bs_passable_obstacle_1",
+          "entity": "obstacle_3",
+          "param": "y",
+          "value": 1.0856
+        }
+      ],
+      "measured": {
+        "minimum_free_corridor_width": 2.7293,
+        "maximum_route_intrusion": 0.3716,
+        "required_lateral_deviation": 0.2491,
+        "closest_approach_distance": 0.0
+      },
+      "checks": {
+        "validator_static_collision_free": "pass",
+        "validator_placement_region": "pass",
+        "validator_stable_support": "pass",
+        "validator_connected_ego_passage": "pass",
+        "validator_family_membership": "pass",
+        "validator_backend_compiles": "pass"
+      },
+      "verdict": "accepted",
+      "reject_reasons": [],
+      "output_file": "backend_outputs/Generalization_PassableObstacles_1060_002_corridor_pincer_v06.xml"
+    },
+    {
+      "scenario_id": "Generalization_PassableObstacles_1060_002_corridor_pincer_v07",
+      "route_id": "106000207",
+      "index": 7,
+      "delta_ref": "deltas/sd_002_corridor_pincer_v07.json",
+      "target": 2.8124,
+      "realized": [
+        {
+          "backend_scenario": "bs_passable_obstacle_1",
+          "entity": "obstacle_2",
+          "param": "y",
+          "value": 1.1685
+        },
+        {
+          "backend_scenario": "bs_passable_obstacle_1",
+          "entity": "obstacle_3",
+          "param": "y",
+          "value": 1.1681
+        }
+      ],
+      "measured": {
+        "minimum_free_corridor_width": 2.8123,
+        "maximum_route_intrusion": 0.3716,
+        "required_lateral_deviation": 0.1661,
+        "closest_approach_distance": 0.0639
+      },
+      "checks": {
+        "validator_static_collision_free": "pass",
+        "validator_placement_region": "pass",
+        "validator_stable_support": "pass",
+        "validator_connected_ego_passage": "pass",
+        "validator_family_membership": "pass",
+        "validator_backend_compiles": "pass"
+      },
+      "verdict": "accepted",
+      "reject_reasons": [],
+      "output_file": "backend_outputs/Generalization_PassableObstacles_1060_002_corridor_pincer_v07.xml"
+    },
+    {
+      "scenario_id": "Generalization_PassableObstacles_1060_002_corridor_pincer_v08",
+      "route_id": "106000208",
+      "index": 8,
+      "delta_ref": "deltas/sd_002_corridor_pincer_v08.json",
+      "target": 2.8948,
+      "realized": [
+        {
+          "backend_scenario": "bs_passable_obstacle_1",
+          "entity": "obstacle_2",
+          "param": "y",
+          "value": 1.2509
+        },
+        {
+          "backend_scenario": "bs_passable_obstacle_1",
+          "entity": "obstacle_3",
+          "param": "y",
+          "value": 1.2505
+        }
+      ],
+      "measured": {
+        "minimum_free_corridor_width": 2.8943,
+        "maximum_route_intrusion": 0.3107,
+        "required_lateral_deviation": 0.0841,
+        "closest_approach_distance": 0.1459
+      },
+      "checks": {
+        "validator_static_collision_free": "pass",
+        "validator_placement_region": "pass",
+        "validator_stable_support": "pass",
+        "validator_connected_ego_passage": "pass",
+        "validator_family_membership": "pass",
+        "validator_backend_compiles": "pass"
+      },
+      "verdict": "accepted",
+      "reject_reasons": [],
+      "output_file": "backend_outputs/Generalization_PassableObstacles_1060_002_corridor_pincer_v08.xml"
+    },
+    {
+      "scenario_id": "Generalization_PassableObstacles_1060_002_corridor_pincer_v09",
+      "route_id": "106000209",
+      "index": 9,
+      "delta_ref": "deltas/sd_002_corridor_pincer_v09.json",
+      "target": 2.9773,
+      "realized": [
+        {
+          "backend_scenario": "bs_passable_obstacle_1",
+          "entity": "obstacle_2",
+          "param": "y",
+          "value": 1.3334
+        },
+        {
+          "backend_scenario": "bs_passable_obstacle_1",
+          "entity": "obstacle_3",
+          "param": "y",
+          "value": 1.333
+        }
+      ],
+      "measured": {
+        "minimum_free_corridor_width": 2.9773,
+        "maximum_route_intrusion": 0.2277,
+        "required_lateral_deviation": 0.0011,
+        "closest_approach_distance": 0.2289
+      },
+      "checks": {
+        "validator_static_collision_free": "pass",
+        "validator_placement_region": "pass",
+        "validator_stable_support": "pass",
+        "validator_connected_ego_passage": "pass",
+        "validator_family_membership": "pass",
+        "validator_backend_compiles": "pass"
+      },
+      "verdict": "accepted",
+      "reject_reasons": [],
+      "output_file": "backend_outputs/Generalization_PassableObstacles_1060_002_corridor_pincer_v09.xml"
+    },
+    {
+      "scenario_id": "Generalization_PassableObstacles_1060_002_corridor_pincer_v10",
+      "route_id": "106000210",
+      "index": 10,
+      "delta_ref": "deltas/sd_002_corridor_pincer_v10.json",
+      "target": 3.0597,
+      "realized": [
+        {
+          "backend_scenario": "bs_passable_obstacle_1",
+          "entity": "obstacle_2",
+          "param": "y",
+          "value": 1.4158
+        },
+        {
+          "backend_scenario": "bs_passable_obstacle_1",
+          "entity": "obstacle_3",
+          "param": "y",
+          "value": 1.4154
+        }
+      ],
+      "measured": {
+        "minimum_free_corridor_width": 3.0593,
+        "maximum_route_intrusion": 0.1457,
+        "required_lateral_deviation": 0.0,
+        "closest_approach_distance": 0.3109
+      },
+      "checks": {
+        "validator_static_collision_free": "pass",
+        "validator_placement_region": "pass",
+        "validator_stable_support": "pass",
+        "validator_connected_ego_passage": "pass",
+        "validator_family_membership": "pass",
+        "validator_backend_compiles": "pass"
+      },
+      "verdict": "accepted",
+      "reject_reasons": [],
+      "output_file": "backend_outputs/Generalization_PassableObstacles_1060_002_corridor_pincer_v10.xml"
+    }
+  ]
+}

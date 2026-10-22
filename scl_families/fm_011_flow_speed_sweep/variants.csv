@@ -1,0 +1,12 @@
+index,scenario_id,status,assigned_family,route_file,route_id,target
+1,route_002269_011_flow_speed_sweep_v01,accepted,,route_002269_011_flow_speed_sweep_v01.xml,226901101,3.0
+2,route_002269_011_flow_speed_sweep_v02,accepted,,route_002269_011_flow_speed_sweep_v02.xml,226901102,3.8
+3,route_002269_011_flow_speed_sweep_v03,accepted,,route_002269_011_flow_speed_sweep_v03.xml,226901103,4.6
+4,route_002269_011_flow_speed_sweep_v04,accepted,,route_002269_011_flow_speed_sweep_v04.xml,226901104,5.4
+5,route_002269_011_flow_speed_sweep_v05,accepted,,route_002269_011_flow_speed_sweep_v05.xml,226901105,6.2
+6,route_002269_011_flow_speed_sweep_v06,accepted,,route_002269_011_flow_speed_sweep_v06.xml,226901106,7.0
+7,route_002269_011_flow_speed_sweep_v07,accepted,,route_002269_011_flow_speed_sweep_v07.xml,226901107,8.0
+8,route_002269_011_flow_speed_sweep_v08,accepted,,route_002269_011_flow_speed_sweep_v08.xml,226901108,10.0
+9,route_002269_011_flow_speed_sweep_v09,accepted,,route_002269_011_flow_speed_sweep_v09.xml,226901109,13.0
+10,route_002269_011_flow_speed_sweep_v10,accepted,,route_002269_011_flow_speed_sweep_v10.xml,226901110,16.0
+11,route_002269_011_flow_speed_sweep_v11,accepted,,route_002269_011_flow_speed_sweep_v11.xml,226901111,20.0

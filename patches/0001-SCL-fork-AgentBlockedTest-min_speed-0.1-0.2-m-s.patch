@@ -1,0 +1,45 @@
+From 6dc70cb79fd31b4619772c6e028b50fc339dcf2d Mon Sep 17 00:00:00 2001
+From: Milan Bulat <speedy.milan@gmail.com>
+Date: Tue, 28 Jul 2026 15:02:52 +0200
+Subject: [PATCH 1/2] SCL fork: AgentBlockedTest min_speed 0.1 -> 0.2 m/s
+
+A creeping agent (0.1-0.2 m/s) defeats the 180 game-second blocked
+termination indefinitely; raising the threshold makes crawl-forever
+score as blocked, same as a full stop. Both route_scenario copies
+(leaderboard + scenario_runner) changed together. Scoring-semantics
+change: campaigns across this boundary are not comparable.
+
+---
+ leaderboard/leaderboard/scenarios/route_scenario.py | 2 +-
+ scenario_runner/srunner/scenarios/route_scenario.py | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/leaderboard/leaderboard/scenarios/route_scenario.py b/leaderboard/leaderboard/scenarios/route_scenario.py
+index c5e7517..96b2137 100644
+--- a/leaderboard/leaderboard/scenarios/route_scenario.py
++++ b/leaderboard/leaderboard/scenarios/route_scenario.py
+@@ -430,7 +430,7 @@ class RouteScenario(BasicScenario):
+         criteria.add_child(InRouteTest(
+             self.ego_vehicles[0], route=self.route, offroad_max=30, terminate_on_failure=True))
+         criteria.add_child(ActorBlockedTest(
+-            self.ego_vehicles[0], min_speed=0.1, max_time=180.0, terminate_on_failure=True, name="AgentBlockedTest")
++            self.ego_vehicles[0], min_speed=0.2, max_time=180.0, terminate_on_failure=True, name="AgentBlockedTest")
+         )
+ 
+         return criteria
+diff --git a/scenario_runner/srunner/scenarios/route_scenario.py b/scenario_runner/srunner/scenarios/route_scenario.py
+index 9835f11..204db22 100644
+--- a/scenario_runner/srunner/scenarios/route_scenario.py
++++ b/scenario_runner/srunner/scenarios/route_scenario.py
+@@ -311,7 +311,7 @@ class RouteScenario(BasicScenario):
+         criteria.add_child(InRouteTest(
+             self.ego_vehicles[0], route=self.route, offroad_max=30, terminate_on_failure=True))
+         criteria.add_child(ActorBlockedTest(
+-            self.ego_vehicles[0], min_speed=0.1, max_time=180.0, terminate_on_failure=True, name="AgentBlockedTest")
++            self.ego_vehicles[0], min_speed=0.2, max_time=180.0, terminate_on_failure=True, name="AgentBlockedTest")
+         )
+ 
+         for scenario in self.list_scenarios:
+-- 
+2.34.1
+

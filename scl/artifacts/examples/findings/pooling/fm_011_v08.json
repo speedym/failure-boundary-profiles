@@ -1,0 +1,16 @@
+{
+ "pooling_kind": "campaign_pooling/v0.2",
+ "pool_id": "fm_011_v08",
+ "family_id": "fm_011_flow_speed_sweep",
+ "campaigns": [
+  {
+   "id": "campaign_carla_v08",
+   "repetitions": [
+    0,
+    1,
+    2
+   ]
+  }
+ ],
+ "note": "HiP-AD on the oncoming-flow speed sweep, v08 alone: the atlas extension (no rows pool here: a flow family is scored into per-run rows and documents per agent, and a figure takes this campaign's). Boundary justification: which campaign a paper figure draws a family from is a paper-level choice no procedure can derive; delete this and the figure's the oncoming-flow speed sweep panel for HiP-AD cannot be drawn from the store."
+}

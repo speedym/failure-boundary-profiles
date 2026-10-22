@@ -1,0 +1,16 @@
+{
+ "pooling_kind": "campaign_pooling/v0.2",
+ "pool_id": "fm_005_v08",
+ "family_id": "fm_005_hero",
+ "campaigns": [
+  {
+   "id": "campaign_carla_v08",
+   "repetitions": [
+    0,
+    1,
+    2
+   ]
+  }
+ ],
+ "note": "HiP-AD (the six-camera sensor agent of Bench2Drive lineage) on fm_005_hero, v08 alone (three traffic seeds, no reference agent): joins the atlas (F2) as one more sensor-agent column the way the 2026-09-19 extension took PlanT 2.0. Boundary justification: which campaign extends the atlas is a paper-level choice (2026-09-22)."
+}

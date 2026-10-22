@@ -1,0 +1,40 @@
+{
+ "sensitivity_kind": "decision_sensitivity/v0.1",
+ "note": "The robustness check of the paper's decision-accuracy ranking (section 4, 'Robustness to the certification constants'): which declared constants the labels rest on are moved, how far, and which variant labels are overridden, one perturbation at a time. Boundary justification: how far a constant is moved and which variant is re-labelled is a paper-level question asked of finished data, which no procedure can derive from the store; delete this and the sensitivity table (TS) and the bands the paragraph prints cannot be built. Read by the CARLA figure tool through --sensitivity; no scorer reads it, nothing in the store changes when it does (2026-10-17, Milan's decisions 1 to 4 of that day: one knob row keyed by instrument kind and parameter, applied to every family holding that instrument; the override keyed by family, realization and variant id; no warehouse row, the divergence recorded in adapters/PARITY.md G36; this file beside the roster).",
+ "design": "one_at_a_time",
+ "design_note": "Every knob value is one setting with the overrides off; every override is one setting at the instruments' own values. The baseline (the instruments' own values, no override) is the reference and equals Table 2. The band per agent is over the perturbation settings; the paper reports the margin sweep and the override 'separately'.",
+ "report": {
+  "top": 2,
+  "bottom": 2,
+  "note": "the positions the paragraph claims hold at every setting: the first two held one agent each, the last two held as a set; every other agent is the middle group whose band and order changes are reported; the sweep checks each claim and records whether it holds"
+ },
+ "knobs": [
+  {
+   "instrument": "flow_gap_certificate/v0.1",
+   "parameter": "margin_s",
+   "values": [
+    0.0,
+    0.1,
+    0.2,
+    0.3,
+    0.4,
+    0.5,
+    0.6,
+    0.7,
+    0.8,
+    0.9,
+    1.0
+   ],
+   "note": "the declared slack above the measured crossing floors; each (variant, seed) window is re-banded at every value by the certificate's own rule (flow_gap_certificate.band_for) and every run re-decided under the one decision rule"
+  }
+ ],
+ "overrides": [
+  {
+   "family_id": "fm_004_threshold_sweep",
+   "manifest_sha256": "f275c14ac24715211e8af7d57d6fb962df3b2f9358e0f7df444e2ab68c70b9e1",
+   "variant": "Generalization_PassableObstacles_1061_004_threshold_sweep_v04",
+   "assignment": "passable",
+   "note": "the 2.07 m width: wider than the car body (1.84 m) and narrower than the policy floor (2.30 m), the one blocked width a lower floor would call passable; realization v1 of the registry (artifacts/examples/family_versions/registry.json)"
+  }
+ ]
+}

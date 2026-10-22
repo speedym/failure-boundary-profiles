@@ -1,0 +1,405 @@
+{
+ "scopes_kind": "paper_scopes/v0.1",
+ "note": "The words the paper prints for the parts of a numbers-document (TN) entry name, read by scripts/bind_paper_numbers.py (F97, 2026-10-19) to propose which entry a number in a sentence is bound to: an entry's family and agent words must appear in the sentence (a caption: the whole caption) for the entry to be a scoped candidate; the quantity words narrow further when several remain. Boundary justification: which words the paper uses for a family, an agent or a quantity is a paper-level choice no procedure derives from the store (the roster spec holds the agents' printed labels, this file their inflections and the families' names); delete this and the binder can only bind numbers with one covering entry. Hand-written, 2026-10-19.",
+ "families": {
+  "fm_001_intrusion_sweep": [
+   "machine intrusion",
+   "vending machine",
+   "intrusion depth",
+   "the machine",
+   "contacts the machine"
+  ],
+  "fm_002_corridor_pincer": [
+   "corridor pincer",
+   "pincer",
+   "street barrier",
+   "barriers",
+   "a barrier"
+  ],
+  "fm_003_asset_swap": [
+   "identity ladder",
+   "roadside object",
+   "ladder"
+  ],
+  "fm_004_threshold_sweep": [
+   "gauntlet",
+   "Charger",
+   "closed corridor",
+   "blocked width",
+   "passable width",
+   "parked cars"
+  ],
+  "fm_005_hero": [
+   "cluttered",
+   "clutter"
+  ],
+  "fm_011_flow_speed_sweep": [
+   "speed sweep",
+   "flow speed",
+   "flow-speed"
+  ],
+  "fm_012_source_dist_interval_sweep": [
+   "spacing sweep",
+   "spacing",
+   "car spacing"
+  ],
+  "fm_isaac_001": [
+   "slab pincer",
+   "slab arms",
+   "slab"
+  ],
+  "fm_isaac_003": [
+   "floor stock"
+  ],
+  "fm_isaac_004": [
+   "composed stacks",
+   "stacks"
+  ],
+  "flow_families": [
+   "flow families",
+   "oncoming flow",
+   "oncoming-flow",
+   "wait windows",
+   "usable window",
+   "gap certificate",
+   "certificate",
+   "margin",
+   "both sweeps"
+  ],
+  "driving_agents": [
+   "driving agents",
+   "seven agents"
+  ],
+  "warehouse": [
+   "warehouse"
+  ],
+  "sensitivity": [
+   "margin",
+   "re-labelling",
+   "relabelling",
+   "sensitivity"
+  ]
+ },
+ "agents": {
+  "pdm_lite_expert": [
+   "expert",
+   "PDM-Lite"
+  ],
+  "expert": [
+   "expert"
+  ],
+  "lead_regnety032": [
+   "TFv6"
+  ],
+  "lead": [],
+  "tfpp": [
+   "TF++"
+  ],
+  "bridgedrive": [
+   "BridgeDrive"
+  ],
+  "simlingo": [
+   "SimLingo"
+  ],
+  "hipad": [
+   "HiP-AD"
+  ],
+  "plant2": [
+   "PlanT",
+   "first checkpoint",
+   "checkpoint 1",
+   "ckpt 1"
+  ],
+  "plant2_s2": [
+   "PlanT",
+   "second checkpoint",
+   "checkpoint 2",
+   "ckpt 2"
+  ],
+  "plant2_s3": [
+   "PlanT",
+   "third checkpoint",
+   "checkpoint 3",
+   "ckpt 3"
+  ],
+  "x_mobility": [
+   "X-Mobility",
+   "released",
+   "stock"
+  ],
+  "x_mobility_fusion_v3": [
+   "head-only"
+  ],
+  "x_mobility_vis_full": [
+   "whole-model"
+  ]
+ },
+ "quantities": {
+  "decision_accuracy": [
+   "decision accuracy",
+   "accuracy",
+   "interval",
+   "scores",
+   "mean"
+  ],
+  "decision_accuracy_band": [
+   "stays",
+   "ranking",
+   "re-label",
+   "relabel",
+   "margins from"
+  ],
+  "mean_driving_score": [
+   "driving score",
+   "score",
+   "average",
+   "mean"
+  ],
+  "avg_driving_score": [
+   "driving score",
+   "score"
+  ],
+  "closed_corridor_scores": [
+   "closed corridor",
+   "stops (",
+   "continues"
+  ],
+  "score_split": [
+   "averages",
+   "average",
+   "mean",
+   "blocked widths"
+  ],
+  "p_clean.boundary": [
+   "competence",
+   "clean",
+   "passes cleanly"
+  ],
+  "p_go.boundary": [
+   "commitment",
+   "commits",
+   "goes"
+  ],
+  "passage.boundary": [
+   "passage"
+  ],
+  "wall_hours": [
+   "hours"
+  ],
+  "waits_on_wait_windows": [
+   "wait"
+  ],
+  "stops_on_blocked_and_wait": [
+   "stop"
+  ],
+  "clean_passes_on_passable_and_usable": [
+   "passes cleanly",
+   "clean pass",
+   "cleanly"
+  ],
+  "go_on_passable": [
+   "goes",
+   "commit",
+   "go"
+  ],
+  "passable.refusal": [
+   "refus"
+  ],
+  "passable.late_commit": [
+   "late"
+  ],
+  "passable.runs": [
+   "runs"
+  ],
+  "blocked.runs": [
+   "blocked runs",
+   "blocked samples",
+   "blocked"
+  ],
+  "contacts": [
+   "touches",
+   "contact"
+  ],
+  "near_misses": [
+   "near miss",
+   "near-miss",
+   "near misses"
+  ],
+  "detours": [
+   "detour"
+  ],
+  "max_obstacle_displacement_m": [
+   "displace"
+  ],
+  "variants": [
+   "variants"
+  ],
+  "blocked_variants": [
+   "blocked"
+  ],
+  "candidates": [
+   "candidate"
+  ],
+  "candidates.accepted": [
+   "accepted",
+   "pass every"
+  ],
+  "policy_floor_m": [
+   "policy floor",
+   "floor"
+  ],
+  "body_limit_m": [
+   "body width",
+   "body"
+  ],
+  "mirror_allowance_m": [
+   "mirror"
+  ],
+  "min_free_corridor_m": [
+   "free corridor",
+   "corridor"
+  ],
+  "robot_contact_width_m": [
+   "contact width"
+  ],
+  "grid_res_m": [
+   "grid",
+   "resolution"
+  ],
+  "certificate.margin_s": [
+   "margin"
+  ],
+  "certificate.peak_accel_mps2": [
+   "acceleration"
+  ],
+  "certificate.from_rest_s": [
+   "from rest"
+  ],
+  "certificate.rolling_reference_s": [
+   "rolling"
+  ],
+  "defect_variant_x": [
+   "defect",
+   "shortest"
+  ],
+  "defect_v01.spawn_headway_s": [
+   "spawned",
+   "spawn"
+  ],
+  "conditional_windows": [
+   "conditional"
+  ],
+  "commitment_per_gap": [
+   "commits",
+   "gap"
+  ],
+  "axis_range": [
+   "from",
+   "range",
+   "down to",
+   "up to"
+  ],
+  "passable.clean_thread": [
+   "passes cleanly",
+   "pass cleanly",
+   "clean pass",
+   "cleanly",
+   "clean"
+  ],
+  "passable.clean_cross": [
+   "passes cleanly",
+   "cleanly",
+   "clean",
+   "crosses cleanly"
+  ],
+  "passable.contact_thread": [
+   "contact"
+  ],
+  "passable.collision_flow": [
+   "collide",
+   "collision",
+   "contact"
+  ],
+  "passable.commit_clean": [
+   "passes cleanly",
+   "passing",
+   "cleanly"
+  ],
+  "passable.timeout_contact": [
+   "contact"
+  ],
+  "passable.timeout_clean": [
+   "stop"
+  ],
+  "blocked.correct_stop": [
+   "stop"
+  ],
+  "blocked.timeout_clean": [
+   "stop"
+  ],
+  "blocked.timeout_contact": [
+   "contact"
+  ],
+  "blocked.contact_blocked": [
+   "contact"
+  ],
+  "blocked.contact_past_blockage": [
+   "contact",
+   "continue"
+  ],
+  "blocked.anomaly_blockage_completed": [
+   "complete"
+  ],
+  "blocked.collision_flow": [
+   "collide",
+   "collision"
+  ],
+  "blocked.clean_cross": [
+   "cross"
+  ],
+  "conditional.clean_cross": [
+   "conditional",
+   "rolling"
+  ],
+  "conditional.runs": [
+   "conditional"
+  ],
+  "pass_side": [
+   "passable",
+   "passes cleanly"
+  ],
+  "wait_side": [
+   "stops on",
+   "stops",
+   "correct calls",
+   "waits",
+   "blocked"
+  ],
+  "correct_calls": [
+   "correct calls",
+   "correct"
+  ],
+  "runs": [
+   "samples",
+   "runs"
+  ],
+  "repetitions_per_variant": [
+   "seeds",
+   "policy samples",
+   "samples"
+  ],
+  "blocked_axis_range": [
+   "blocked widths",
+   "width"
+  ],
+  "max_route_intrusion_m": [
+   "intrusion"
+  ],
+  "boundary_gap": [
+   "apart"
+  ],
+  "wait_windows_per_agent": [
+   "wait windows"
+  ]
+ }
+}

@@ -1,0 +1,22 @@
+# Isaac Sim versions ADMITTED for campaigns and family tooling (ledger F21, F45; read by
+# adapters/isaac/isaacsim_pin.py). One line per version: version, the conda env that holds it,
+# the interpreter it was built with, the audit report that admitted it, and where a family's
+# physics countersignatures for it live (root = the legacy file beside the manifest, keyed =
+# <family>/attestations/<version>/). A version without a line is refused by the runner and by
+# the launcher; a second line is added only with its audit_simulator.py report on record.
+# The runner records the measured version in campaign_meta.simulator and in every run header;
+# the verifier flags a tree mixing versions. Bumping or adding a version is an instrument change
+# (principle 5): campaigns across versions are not compared without saying so.
+# One box per version (2026-09-18): 5.1 crashes under the 595 driver 6.1 needs, so each version lives on
+# its own box with the env named isaacsim there; `driver` documents the box's driver the audit ran under.
+# EVERY report, the admitting one included, lives in the results store, since a report is what a run produced
+# (principle 12), at artifacts/examples/simulator_audits/isaac/<version>/gpu/<gpu slug>__<driver>/; this pin, what
+# the runner gates on, stays with the code
+# (isaacsim_pin.report_key; ruling 2026-09-21: one shape, keyed by what the outcome depends on, never a
+# hostname; the pin is data and follows a move, so no layout is frozen by it). `audit` names the report
+# that admitted the version; m0_reference.json stays at the version level (the numbers it was admitted
+# with, its source naming the box). On record: 5.1.0.0 nvidia_l4__580.173.02 (admitting, original box);
+# 6.1.0.0 nvidia_l4__595.91.07 (admitting, the clone) and nvidia_geforce_rtx_5090__595.91.07 (TANKGIRL,
+# 2026-09-21: every section passed, CPU-PhysX M0 cells identical to the L4's, GPU-PhysX cells not).
+version=5.1.0.0 env=isaacsim python=3.11 driver=580.173.02 audit=artifacts/examples/simulator_audits/isaac/5.1.0.0/gpu/nvidia_l4__580.173.02/report.json attestations=root
+version=6.1.0.0 env=isaacsim python=3.12 driver=595.91.07 audit=artifacts/examples/simulator_audits/isaac/6.1.0.0/gpu/nvidia_l4__595.91.07/report.json attestations=keyed

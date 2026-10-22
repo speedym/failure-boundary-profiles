@@ -1,0 +1,37 @@
+{
+ "declaration_kind": "campaign_declaration/v0.1",
+ "campaign_id": "campaign_carla_v01",
+ "backend": "fail2drive",
+ "family": {
+  "family_id": "fm_002_corridor_pincer",
+  "manifest_path": "artifacts/examples/solved_families/fm_002_corridor_pincer.json",
+  "manifest_sha256": "1f0120bb5e0bbd2eefe61bd5d5e99693d04d44828cde23f0d2d88f07c2ba711d"
+ },
+ "declared_grid": {
+  "variants": [
+   "Generalization_PassableObstacles_1060_002_corridor_pincer_v01",
+   "Generalization_PassableObstacles_1060_002_corridor_pincer_v02",
+   "Generalization_PassableObstacles_1060_002_corridor_pincer_v03",
+   "Generalization_PassableObstacles_1060_002_corridor_pincer_v04",
+   "Generalization_PassableObstacles_1060_002_corridor_pincer_v05",
+   "Generalization_PassableObstacles_1060_002_corridor_pincer_v06",
+   "Generalization_PassableObstacles_1060_002_corridor_pincer_v07",
+   "Generalization_PassableObstacles_1060_002_corridor_pincer_v08",
+   "Generalization_PassableObstacles_1060_002_corridor_pincer_v09",
+   "Generalization_PassableObstacles_1060_002_corridor_pincer_v10"
+  ],
+  "models": [
+   "bridgedrive",
+   "lead",
+   "tfpp"
+  ],
+  "seeds": [
+   0,
+   1,
+   2
+  ],
+  "expert": false
+ },
+ "results_subtree": "campaign_carla_v01/fm_002_corridor_pincer",
+ "note": "Corridor pincer on the 1060 route: ten width variants, three policies, three seeds, no reference agent. Certified bundle content id c4a08d86f2a4, family sub-id 3db38fa4d205; axis minimum_free_corridor_width."
+}

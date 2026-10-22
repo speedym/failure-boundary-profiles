@@ -1,0 +1,13 @@
+stem,target_width_m,measured_gap_m,assignment,certified,verdict
+aisle_w2p50,2.5,2.5,passable,,
+aisle_w2p00,2.0,2.0,passable,,
+aisle_w1p50,1.5,1.5,passable,,
+aisle_w1p20,1.2,1.2,passable,,
+aisle_w1p00,1.0,1.0,passable,,
+aisle_w0p80,0.8,0.8,passable,,
+aisle_w0p65,0.65,0.65,passable,,
+aisle_w0p55,0.55,0.55,passable,,
+aisle_w0p45,0.45,0.45,blocked,,
+aisle_w0p30,0.3,0.3,blocked,,
+aisle_w0p15,0.15,0.15,blocked,,
+aisle_w0p00,0.0,0.0,blocked,,

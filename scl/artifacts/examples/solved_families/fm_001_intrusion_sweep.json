@@ -1,0 +1,425 @@
+{
+  "schema_version": "family_manifest/v0.3",
+  "manifest_id": "fm_001_intrusion_sweep",
+  "family_id": "passable_static_obstacle",
+  "plan_ref": "ap_001_intrusion_sweep",
+  "request_ref": "ar_001_intrusion_sweep",
+  "capability_profile_id": "hero_f2d_passable_v0.4",
+  "source_ir_ref": {
+    "path": "artifacts/examples/imported_ir/scenario_ir_1060.json",
+    "schema_version": "scenario_ir/v0.3",
+    "content_hash": "sha256:588765e6d7c8b34b8950ae0d79cf4c3f55f2aaad7591b8ff51f82803c6c7db87"
+  },
+  "provenance": {
+    "solver": "scl_solver/0.2.0",
+    "geometry_algorithm_version": "1.1",
+    "route_key": "bb4e98416fdc1cdc72a51570a971ffbc5b1276ed9733f43e5253fb81ed888d6c",
+    "policy_constants": {
+      "ego_clearance_margin_m": 0.1,
+      "ego_mirror_allowance_m": 0.13,
+      "placement_band_lateral_m": 4.0
+    },
+    "realization_tolerance_m": 0.005
+  },
+  "effective_domain": {
+    "factor_id": "maximum_route_intrusion",
+    "backoff_m": 0.02,
+    "intervals": [
+      {
+        "lo": 0.4872,
+        "hi": 0.6816,
+        "lo_boundary": 0.4672,
+        "hi_boundary": 0.7016
+      }
+    ],
+    "binding_note": "boundaries located by coarse scan (step 0.05) + bisection over the full feasibility predicate (all hard checks incl. stable_support)"
+  },
+  "expected_count": 12,
+  "accepted_count": 12,
+  "variants": [
+    {
+      "scenario_id": "Generalization_PassableObstacles_1060_001_intrusion_sweep_v01",
+      "route_id": "106000101",
+      "index": 1,
+      "delta_ref": "deltas/sd_001_intrusion_sweep_v01.json",
+      "target": 0.4872,
+      "realized": [
+        {
+          "backend_scenario": "bs_passable_obstacle_1",
+          "entity": "obstacle_1",
+          "param": "y",
+          "value": -1.3731
+        }
+      ],
+      "measured": {
+        "minimum_free_corridor_width": 2.5115,
+        "maximum_route_intrusion": 0.4852,
+        "required_lateral_deviation": 0.2586,
+        "closest_approach_distance": 0.0
+      },
+      "checks": {
+        "validator_static_collision_free": "pass",
+        "validator_placement_region": "pass",
+        "validator_stable_support": "pass",
+        "validator_connected_ego_passage": "pass",
+        "validator_family_membership": "pass",
+        "validator_backend_compiles": "pass"
+      },
+      "verdict": "accepted",
+      "reject_reasons": [],
+      "output_file": "backend_outputs/Generalization_PassableObstacles_1060_001_intrusion_sweep_v01.xml"
+    },
+    {
+      "scenario_id": "Generalization_PassableObstacles_1060_001_intrusion_sweep_v02",
+      "route_id": "106000102",
+      "index": 2,
+      "delta_ref": "deltas/sd_001_intrusion_sweep_v02.json",
+      "target": 0.5049,
+      "realized": [
+        {
+          "backend_scenario": "bs_passable_obstacle_1",
+          "entity": "obstacle_1",
+          "param": "y",
+          "value": -1.3554
+        }
+      ],
+      "measured": {
+        "minimum_free_corridor_width": 2.4935,
+        "maximum_route_intrusion": 0.5032,
+        "required_lateral_deviation": 0.2766,
+        "closest_approach_distance": 0.0
+      },
+      "checks": {
+        "validator_static_collision_free": "pass",
+        "validator_placement_region": "pass",
+        "validator_stable_support": "pass",
+        "validator_connected_ego_passage": "pass",
+        "validator_family_membership": "pass",
+        "validator_backend_compiles": "pass"
+      },
+      "verdict": "accepted",
+      "reject_reasons": [],
+      "output_file": "backend_outputs/Generalization_PassableObstacles_1060_001_intrusion_sweep_v02.xml"
+    },
+    {
+      "scenario_id": "Generalization_PassableObstacles_1060_001_intrusion_sweep_v03",
+      "route_id": "106000103",
+      "index": 3,
+      "delta_ref": "deltas/sd_001_intrusion_sweep_v03.json",
+      "target": 0.5225,
+      "realized": [
+        {
+          "backend_scenario": "bs_passable_obstacle_1",
+          "entity": "obstacle_1",
+          "param": "y",
+          "value": -1.3378
+        }
+      ],
+      "measured": {
+        "minimum_free_corridor_width": 2.4765,
+        "maximum_route_intrusion": 0.5202,
+        "required_lateral_deviation": 0.2936,
+        "closest_approach_distance": 0.0
+      },
+      "checks": {
+        "validator_static_collision_free": "pass",
+        "validator_placement_region": "pass",
+        "validator_stable_support": "pass",
+        "validator_connected_ego_passage": "pass",
+        "validator_family_membership": "pass",
+        "validator_backend_compiles": "pass"
+      },
+      "verdict": "accepted",
+      "reject_reasons": [],
+      "output_file": "backend_outputs/Generalization_PassableObstacles_1060_001_intrusion_sweep_v03.xml"
+    },
+    {
+      "scenario_id": "Generalization_PassableObstacles_1060_001_intrusion_sweep_v04",
+      "route_id": "106000104",
+      "index": 4,
+      "delta_ref": "deltas/sd_001_intrusion_sweep_v04.json",
+      "target": 0.5402,
+      "realized": [
+        {
+          "backend_scenario": "bs_passable_obstacle_1",
+          "entity": "obstacle_1",
+          "param": "y",
+          "value": -1.3201
+        }
+      ],
+      "measured": {
+        "minimum_free_corridor_width": 2.4585,
+        "maximum_route_intrusion": 0.5382,
+        "required_lateral_deviation": 0.3116,
+        "closest_approach_distance": 0.0
+      },
+      "checks": {
+        "validator_static_collision_free": "pass",
+        "validator_placement_region": "pass",
+        "validator_stable_support": "pass",
+        "validator_connected_ego_passage": "pass",
+        "validator_family_membership": "pass",
+        "validator_backend_compiles": "pass"
+      },
+      "verdict": "accepted",
+      "reject_reasons": [],
+      "output_file": "backend_outputs/Generalization_PassableObstacles_1060_001_intrusion_sweep_v04.xml"
+    },
+    {
+      "scenario_id": "Generalization_PassableObstacles_1060_001_intrusion_sweep_v05",
+      "route_id": "106000105",
+      "index": 5,
+      "delta_ref": "deltas/sd_001_intrusion_sweep_v05.json",
+      "target": 0.5579,
+      "realized": [
+        {
+          "backend_scenario": "bs_passable_obstacle_1",
+          "entity": "obstacle_1",
+          "param": "y",
+          "value": -1.3024
+        }
+      ],
+      "measured": {
+        "minimum_free_corridor_width": 2.4405,
+        "maximum_route_intrusion": 0.5562,
+        "required_lateral_deviation": 0.3296,
+        "closest_approach_distance": 0.0
+      },
+      "checks": {
+        "validator_static_collision_free": "pass",
+        "validator_placement_region": "pass",
+        "validator_stable_support": "pass",
+        "validator_connected_ego_passage": "pass",
+        "validator_family_membership": "pass",
+        "validator_backend_compiles": "pass"
+      },
+      "verdict": "accepted",
+      "reject_reasons": [],
+      "output_file": "backend_outputs/Generalization_PassableObstacles_1060_001_intrusion_sweep_v05.xml"
+    },
+    {
+      "scenario_id": "Generalization_PassableObstacles_1060_001_intrusion_sweep_v06",
+      "route_id": "106000106",
+      "index": 6,
+      "delta_ref": "deltas/sd_001_intrusion_sweep_v06.json",
+      "target": 0.5756,
+      "realized": [
+        {
+          "backend_scenario": "bs_passable_obstacle_1",
+          "entity": "obstacle_1",
+          "param": "y",
+          "value": -1.2847
+        }
+      ],
+      "measured": {
+        "minimum_free_corridor_width": 2.4235,
+        "maximum_route_intrusion": 0.5732,
+        "required_lateral_deviation": 0.3466,
+        "closest_approach_distance": 0.0
+      },
+      "checks": {
+        "validator_static_collision_free": "pass",
+        "validator_placement_region": "pass",
+        "validator_stable_support": "pass",
+        "validator_connected_ego_passage": "pass",
+        "validator_family_membership": "pass",
+        "validator_backend_compiles": "pass"
+      },
+      "verdict": "accepted",
+      "reject_reasons": [],
+      "output_file": "backend_outputs/Generalization_PassableObstacles_1060_001_intrusion_sweep_v06.xml"
+    },
+    {
+      "scenario_id": "Generalization_PassableObstacles_1060_001_intrusion_sweep_v07",
+      "route_id": "106000107",
+      "index": 7,
+      "delta_ref": "deltas/sd_001_intrusion_sweep_v07.json",
+      "target": 0.5932,
+      "realized": [
+        {
+          "backend_scenario": "bs_passable_obstacle_1",
+          "entity": "obstacle_1",
+          "param": "y",
+          "value": -1.2671
+        }
+      ],
+      "measured": {
+        "minimum_free_corridor_width": 2.4055,
+        "maximum_route_intrusion": 0.5912,
+        "required_lateral_deviation": 0.3646,
+        "closest_approach_distance": 0.0
+      },
+      "checks": {
+        "validator_static_collision_free": "pass",
+        "validator_placement_region": "pass",
+        "validator_stable_support": "pass",
+        "validator_connected_ego_passage": "pass",
+        "validator_family_membership": "pass",
+        "validator_backend_compiles": "pass"
+      },
+      "verdict": "accepted",
+      "reject_reasons": [],
+      "output_file": "backend_outputs/Generalization_PassableObstacles_1060_001_intrusion_sweep_v07.xml"
+    },
+    {
+      "scenario_id": "Generalization_PassableObstacles_1060_001_intrusion_sweep_v08",
+      "route_id": "106000108",
+      "index": 8,
+      "delta_ref": "deltas/sd_001_intrusion_sweep_v08.json",
+      "target": 0.6109,
+      "realized": [
+        {
+          "backend_scenario": "bs_passable_obstacle_1",
+          "entity": "obstacle_1",
+          "param": "y",
+          "value": -1.2494
+        }
+      ],
+      "measured": {
+        "minimum_free_corridor_width": 2.3875,
+        "maximum_route_intrusion": 0.6092,
+        "required_lateral_deviation": 0.3826,
+        "closest_approach_distance": 0.0
+      },
+      "checks": {
+        "validator_static_collision_free": "pass",
+        "validator_placement_region": "pass",
+        "validator_stable_support": "pass",
+        "validator_connected_ego_passage": "pass",
+        "validator_family_membership": "pass",
+        "validator_backend_compiles": "pass"
+      },
+      "verdict": "accepted",
+      "reject_reasons": [],
+      "output_file": "backend_outputs/Generalization_PassableObstacles_1060_001_intrusion_sweep_v08.xml"
+    },
+    {
+      "scenario_id": "Generalization_PassableObstacles_1060_001_intrusion_sweep_v09",
+      "route_id": "106000109",
+      "index": 9,
+      "delta_ref": "deltas/sd_001_intrusion_sweep_v09.json",
+      "target": 0.6286,
+      "realized": [
+        {
+          "backend_scenario": "bs_passable_obstacle_1",
+          "entity": "obstacle_1",
+          "param": "y",
+          "value": -1.2317
+        }
+      ],
+      "measured": {
+        "minimum_free_corridor_width": 2.3705,
+        "maximum_route_intrusion": 0.6262,
+        "required_lateral_deviation": 0.3996,
+        "closest_approach_distance": 0.0
+      },
+      "checks": {
+        "validator_static_collision_free": "pass",
+        "validator_placement_region": "pass",
+        "validator_stable_support": "pass",
+        "validator_connected_ego_passage": "pass",
+        "validator_family_membership": "pass",
+        "validator_backend_compiles": "pass"
+      },
+      "verdict": "accepted",
+      "reject_reasons": [],
+      "output_file": "backend_outputs/Generalization_PassableObstacles_1060_001_intrusion_sweep_v09.xml"
+    },
+    {
+      "scenario_id": "Generalization_PassableObstacles_1060_001_intrusion_sweep_v10",
+      "route_id": "106000110",
+      "index": 10,
+      "delta_ref": "deltas/sd_001_intrusion_sweep_v10.json",
+      "target": 0.6463,
+      "realized": [
+        {
+          "backend_scenario": "bs_passable_obstacle_1",
+          "entity": "obstacle_1",
+          "param": "y",
+          "value": -1.214
+        }
+      ],
+      "measured": {
+        "minimum_free_corridor_width": 2.3525,
+        "maximum_route_intrusion": 0.6442,
+        "required_lateral_deviation": 0.4176,
+        "closest_approach_distance": 0.0
+      },
+      "checks": {
+        "validator_static_collision_free": "pass",
+        "validator_placement_region": "pass",
+        "validator_stable_support": "pass",
+        "validator_connected_ego_passage": "pass",
+        "validator_family_membership": "pass",
+        "validator_backend_compiles": "pass"
+      },
+      "verdict": "accepted",
+      "reject_reasons": [],
+      "output_file": "backend_outputs/Generalization_PassableObstacles_1060_001_intrusion_sweep_v10.xml"
+    },
+    {
+      "scenario_id": "Generalization_PassableObstacles_1060_001_intrusion_sweep_v11",
+      "route_id": "106000111",
+      "index": 11,
+      "delta_ref": "deltas/sd_001_intrusion_sweep_v11.json",
+      "target": 0.6639,
+      "realized": [
+        {
+          "backend_scenario": "bs_passable_obstacle_1",
+          "entity": "obstacle_1",
+          "param": "y",
+          "value": -1.1964
+        }
+      ],
+      "measured": {
+        "minimum_free_corridor_width": 2.3345,
+        "maximum_route_intrusion": 0.6622,
+        "required_lateral_deviation": 0.4356,
+        "closest_approach_distance": 0.0
+      },
+      "checks": {
+        "validator_static_collision_free": "pass",
+        "validator_placement_region": "pass",
+        "validator_stable_support": "pass",
+        "validator_connected_ego_passage": "pass",
+        "validator_family_membership": "pass",
+        "validator_backend_compiles": "pass"
+      },
+      "verdict": "accepted",
+      "reject_reasons": [],
+      "output_file": "backend_outputs/Generalization_PassableObstacles_1060_001_intrusion_sweep_v11.xml"
+    },
+    {
+      "scenario_id": "Generalization_PassableObstacles_1060_001_intrusion_sweep_v12",
+      "route_id": "106000112",
+      "index": 12,
+      "delta_ref": "deltas/sd_001_intrusion_sweep_v12.json",
+      "target": 0.6816,
+      "realized": [
+        {
+          "backend_scenario": "bs_passable_obstacle_1",
+          "entity": "obstacle_1",
+          "param": "y",
+          "value": -1.1787
+        }
+      ],
+      "measured": {
+        "minimum_free_corridor_width": 2.3175,
+        "maximum_route_intrusion": 0.6792,
+        "required_lateral_deviation": 0.4526,
+        "closest_approach_distance": 0.0
+      },
+      "checks": {
+        "validator_static_collision_free": "pass",
+        "validator_placement_region": "pass",
+        "validator_stable_support": "pass",
+        "validator_connected_ego_passage": "pass",
+        "validator_family_membership": "pass",
+        "validator_backend_compiles": "pass"
+      },
+      "verdict": "accepted",
+      "reject_reasons": [],
+      "output_file": "backend_outputs/Generalization_PassableObstacles_1060_001_intrusion_sweep_v12.xml"
+    }
+  ]
+}

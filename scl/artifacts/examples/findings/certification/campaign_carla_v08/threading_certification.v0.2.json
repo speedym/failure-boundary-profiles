@@ -1,0 +1,293 @@
+{
+ "report_kind": "threading_certification/v0.2",
+ "driver_sha256": "ef5a3927dea114d794f6e3175ddb99530bc7b6231ebebe0fc10685ed921bfdfa",
+ "emitter_sha256": "53bf8fd336297e3f89b8e6383367ab4cf2d595131c1d5a02d2b6e2a23f85ba2c",
+ "estimator_sha256": "be9beb7f3a3c6d255c03f8c16cf6a25ffff1ef612e12b2c9ef9da94ff94b4cab",
+ "stats_tool_sha256": "7465a08fd613babb8cb52210467e098cb2188a71da914a6c5ea88f8bcbd7332d",
+ "evidence_rule": "canon holds findings and declarations; the scored tables and family snapshots are evidence and live in the certified campaign bundles, referenced here by bundle content id, member path and MANIFEST-listed member hash",
+ "campaigns": {
+  "campaign_carla_v08": {
+   "fm_001_intrusion_sweep": {
+    "campaign_declaration": {
+     "path": "artifacts/examples/campaigns/campaign_carla_v08/fm_001_intrusion_sweep.json",
+     "sha256": "7d8a12c49f71d6e771c786bd0aee99383b24806109a54799a61dbe46cc8777c5"
+    },
+    "bundle": {
+     "path": "campaign_carla_v08.zip",
+     "bundle_kind": "campaign_bundle/v0.3",
+     "zip_sha256": "c9b4a0894827e6dc2579d29cd11c58e03e8bbe01705f016df666bca678f6dac0",
+     "content_id_sha256": "9a13166b5181d5f05345c68d47e3fe3f6f243039b38afa32c6abe6bfef33fd65",
+     "family_sub_id_sha256": "8d2a5e9c13de6f8719262f6a982af93ab0db68ead598af2fd4d3e710fc2a9705"
+    },
+    "derived_bundle": {
+     "path": "campaign_carla_v08_derived.zip",
+     "bundle_kind": "derived_bundle/v0.3",
+     "zip_sha256": "fab26ff8ce3b0d1c769427255a3c161b18c5f6936ac16553b93ac3135c95c91b",
+     "content_id_sha256": "1aed11a8b5c99d3b95d9e1720f17606dbb25fd5315cd63fb59b69929c6b487d6",
+     "source_snapshot_sha256": "baa743f0e84c2eca570a700c3965995f6df886543f1babd8ae4d0cbfef824fd5"
+    },
+    "family_manifest_sha256": "fbd200aabb00009ba358b3a21894eafae93cc5b3cec5d7864a337d761e8d285c",
+    "coverage": {
+     "models": [
+      "hipad"
+     ],
+     "seeds": [
+      0,
+      1,
+      2
+     ],
+     "variants": 12
+    },
+    "evidence": {
+     "bundle_content_id_sha256": "9a13166b5181d5f05345c68d47e3fe3f6f243039b38afa32c6abe6bfef33fd65",
+     "members": {
+      "campaign_carla_v08/fm_001_intrusion_sweep/family_snapshot/fm_001_intrusion_sweep.json": "fbd200aabb00009ba358b3a21894eafae93cc5b3cec5d7864a337d761e8d285c"
+     },
+     "derived_content_id_sha256": "1aed11a8b5c99d3b95d9e1720f17606dbb25fd5315cd63fb59b69929c6b487d6",
+     "derived_members": {
+      "campaign_carla_v08/fm_001_intrusion_sweep/scoring_out/run_rows.jsonl": "a5af7eb41feb986a4f4e0a81b3e15b052c5f3e38847c47a2501c71ac0ccb51f1",
+      "campaign_carla_v08/fm_001_intrusion_sweep/stats/stats_rows.jsonl": "9e586d368b00cfcc354d01acbef55a451bacf364e99cf123b606253681f529d7"
+     }
+    },
+    "stats_sha256": "9e586d368b00cfcc354d01acbef55a451bacf364e99cf123b606253681f529d7",
+    "documents": {
+     "fs_campaign_carla_v08_fm_001_intrusion_sweep_hipad.v0.3.json": "090de3433f930e0e65874ec3103f531096b00f5f9c88a64f12c504303bd7ac94"
+    },
+    "axis": {
+     "metric": "maximum_route_intrusion",
+     "basis": "measured",
+     "unit": "m",
+     "kind": "numeric"
+    }
+   },
+   "fm_002_corridor_pincer": {
+    "campaign_declaration": {
+     "path": "artifacts/examples/campaigns/campaign_carla_v08/fm_002_corridor_pincer.json",
+     "sha256": "814a94812e8ae4b1be4c2fac9ed55bae832b18731a36624a281f28b637624d9d"
+    },
+    "bundle": {
+     "path": "campaign_carla_v08.zip",
+     "bundle_kind": "campaign_bundle/v0.3",
+     "zip_sha256": "c9b4a0894827e6dc2579d29cd11c58e03e8bbe01705f016df666bca678f6dac0",
+     "content_id_sha256": "9a13166b5181d5f05345c68d47e3fe3f6f243039b38afa32c6abe6bfef33fd65",
+     "family_sub_id_sha256": "0c58ece37a62db3567207d26feee94216beeaa36d4171d34d76f214436de7020"
+    },
+    "derived_bundle": {
+     "path": "campaign_carla_v08_derived.zip",
+     "bundle_kind": "derived_bundle/v0.3",
+     "zip_sha256": "fab26ff8ce3b0d1c769427255a3c161b18c5f6936ac16553b93ac3135c95c91b",
+     "content_id_sha256": "1aed11a8b5c99d3b95d9e1720f17606dbb25fd5315cd63fb59b69929c6b487d6",
+     "source_snapshot_sha256": "baa743f0e84c2eca570a700c3965995f6df886543f1babd8ae4d0cbfef824fd5"
+    },
+    "family_manifest_sha256": "1f0120bb5e0bbd2eefe61bd5d5e99693d04d44828cde23f0d2d88f07c2ba711d",
+    "coverage": {
+     "models": [
+      "hipad"
+     ],
+     "seeds": [
+      0,
+      1,
+      2
+     ],
+     "variants": 10
+    },
+    "evidence": {
+     "bundle_content_id_sha256": "9a13166b5181d5f05345c68d47e3fe3f6f243039b38afa32c6abe6bfef33fd65",
+     "members": {
+      "campaign_carla_v08/fm_002_corridor_pincer/family_snapshot/fm_002_corridor_pincer.json": "1f0120bb5e0bbd2eefe61bd5d5e99693d04d44828cde23f0d2d88f07c2ba711d"
+     },
+     "derived_content_id_sha256": "1aed11a8b5c99d3b95d9e1720f17606dbb25fd5315cd63fb59b69929c6b487d6",
+     "derived_members": {
+      "campaign_carla_v08/fm_002_corridor_pincer/scoring_out/run_rows.jsonl": "eab9aed68a6c0badaf016890bcc8eaa575dd5da6bb18be85b9e6cda28078a941",
+      "campaign_carla_v08/fm_002_corridor_pincer/stats/stats_rows.jsonl": "3e1de2b6d3f9e44ac087046b5627058e89a436aa58c33ebaa200e40b5adc5cff"
+     }
+    },
+    "stats_sha256": "3e1de2b6d3f9e44ac087046b5627058e89a436aa58c33ebaa200e40b5adc5cff",
+    "documents": {
+     "fs_campaign_carla_v08_fm_002_corridor_pincer_hipad.v0.3.json": "fba0247cf40625cb0eb99fe53349079520270a12cb7e5166b01200c96e0a368c"
+    },
+    "axis": {
+     "metric": "minimum_free_corridor_width",
+     "basis": "measured",
+     "unit": "m",
+     "kind": "numeric"
+    }
+   },
+   "fm_003_asset_swap": {
+    "campaign_declaration": {
+     "path": "artifacts/examples/campaigns/campaign_carla_v08/fm_003_asset_swap.json",
+     "sha256": "e0094577f18e595f69712481f48ab169b4150097bbcc04baca401eaef60e5ff1"
+    },
+    "bundle": {
+     "path": "campaign_carla_v08.zip",
+     "bundle_kind": "campaign_bundle/v0.3",
+     "zip_sha256": "c9b4a0894827e6dc2579d29cd11c58e03e8bbe01705f016df666bca678f6dac0",
+     "content_id_sha256": "9a13166b5181d5f05345c68d47e3fe3f6f243039b38afa32c6abe6bfef33fd65",
+     "family_sub_id_sha256": "4892de61dc3810e3a18fdd78be1ffbb92174e08094e5333ed01eca667a77f361"
+    },
+    "derived_bundle": {
+     "path": "campaign_carla_v08_derived.zip",
+     "bundle_kind": "derived_bundle/v0.3",
+     "zip_sha256": "fab26ff8ce3b0d1c769427255a3c161b18c5f6936ac16553b93ac3135c95c91b",
+     "content_id_sha256": "1aed11a8b5c99d3b95d9e1720f17606dbb25fd5315cd63fb59b69929c6b487d6",
+     "source_snapshot_sha256": "baa743f0e84c2eca570a700c3965995f6df886543f1babd8ae4d0cbfef824fd5"
+    },
+    "family_manifest_sha256": "b6941429fd8342a4fb0d32734c98a04ec08b16996cfb2607786f9bea889f9fd6",
+    "coverage": {
+     "models": [
+      "hipad"
+     ],
+     "seeds": [
+      0,
+      1,
+      2
+     ],
+     "variants": 14
+    },
+    "evidence": {
+     "bundle_content_id_sha256": "9a13166b5181d5f05345c68d47e3fe3f6f243039b38afa32c6abe6bfef33fd65",
+     "members": {
+      "campaign_carla_v08/fm_003_asset_swap/family_snapshot/fm_003_asset_swap.json": "b6941429fd8342a4fb0d32734c98a04ec08b16996cfb2607786f9bea889f9fd6"
+     },
+     "derived_content_id_sha256": "1aed11a8b5c99d3b95d9e1720f17606dbb25fd5315cd63fb59b69929c6b487d6",
+     "derived_members": {
+      "campaign_carla_v08/fm_003_asset_swap/scoring_out/run_rows.jsonl": "ed77b1d907e75f486966f38e8b45105fc03c64f18ded19c950cb8ea877734bb1",
+      "campaign_carla_v08/fm_003_asset_swap/stats/stats_rows.jsonl": "6b3e9dfd56babaff63044ce3c5a5cf6e4ae30096e46fa385128906a8b22a2898"
+     }
+    },
+    "stats_sha256": "6b3e9dfd56babaff63044ce3c5a5cf6e4ae30096e46fa385128906a8b22a2898",
+    "documents": {
+     "fs_campaign_carla_v08_fm_003_asset_swap_hipad.v0.3.json": "615090146db6caf856736d2f2eab24d76232b5094929b4c750f7c7a207378aef"
+    },
+    "axis": {
+     "metric": "asset_identity",
+     "basis": "level",
+     "unit": "identity",
+     "kind": "categorical",
+     "levels": [
+      "asset_barbeque_grill",
+      "asset_cardboard_box",
+      "asset_dog_house",
+      "asset_iron_plank",
+      "asset_mailbox",
+      "asset_plastic_chair",
+      "asset_plastic_table",
+      "asset_playground_slide",
+      "asset_street_barrier",
+      "asset_traffic_cone",
+      "asset_traffic_warning",
+      "asset_trampoline",
+      "asset_vending_machine",
+      "asset_waste_bin"
+     ]
+    }
+   },
+   "fm_004_threshold_sweep": {
+    "campaign_declaration": {
+     "path": "artifacts/examples/campaigns/campaign_carla_v08/fm_004_threshold_sweep.json",
+     "sha256": "39bd4fe068c637b841710554eeca3d1d258cc2ee0c2ae0f6ddbefc999c63ae60"
+    },
+    "bundle": {
+     "path": "campaign_carla_v08.zip",
+     "bundle_kind": "campaign_bundle/v0.3",
+     "zip_sha256": "c9b4a0894827e6dc2579d29cd11c58e03e8bbe01705f016df666bca678f6dac0",
+     "content_id_sha256": "9a13166b5181d5f05345c68d47e3fe3f6f243039b38afa32c6abe6bfef33fd65",
+     "family_sub_id_sha256": "bb6f1a16f47bbe958d5236b3008bab75742c11d8eee688e54048777f645d5336"
+    },
+    "derived_bundle": {
+     "path": "campaign_carla_v08_derived.zip",
+     "bundle_kind": "derived_bundle/v0.3",
+     "zip_sha256": "fab26ff8ce3b0d1c769427255a3c161b18c5f6936ac16553b93ac3135c95c91b",
+     "content_id_sha256": "1aed11a8b5c99d3b95d9e1720f17606dbb25fd5315cd63fb59b69929c6b487d6",
+     "source_snapshot_sha256": "baa743f0e84c2eca570a700c3965995f6df886543f1babd8ae4d0cbfef824fd5"
+    },
+    "family_manifest_sha256": "f275c14ac24715211e8af7d57d6fb962df3b2f9358e0f7df444e2ab68c70b9e1",
+    "coverage": {
+     "models": [
+      "hipad"
+     ],
+     "seeds": [
+      0,
+      1,
+      2
+     ],
+     "variants": 12
+    },
+    "evidence": {
+     "bundle_content_id_sha256": "9a13166b5181d5f05345c68d47e3fe3f6f243039b38afa32c6abe6bfef33fd65",
+     "members": {
+      "campaign_carla_v08/fm_004_threshold_sweep/family_snapshot/fm_004_threshold_sweep.json": "f275c14ac24715211e8af7d57d6fb962df3b2f9358e0f7df444e2ab68c70b9e1"
+     },
+     "derived_content_id_sha256": "1aed11a8b5c99d3b95d9e1720f17606dbb25fd5315cd63fb59b69929c6b487d6",
+     "derived_members": {
+      "campaign_carla_v08/fm_004_threshold_sweep/scoring_out/run_rows.jsonl": "675714b2b6a207c634ed068f163877979e76e0da3785ba16c1aebd040b8cc79c",
+      "campaign_carla_v08/fm_004_threshold_sweep/stats/stats_rows.jsonl": "28625c9103bb8141f278b63e6bdcd7a48b870149e55623b3d6f036a6b2242691"
+     }
+    },
+    "stats_sha256": "28625c9103bb8141f278b63e6bdcd7a48b870149e55623b3d6f036a6b2242691",
+    "documents": {
+     "fs_campaign_carla_v08_fm_004_threshold_sweep_hipad.v0.3.json": "72c390096739e300d918297eb4a6090f1707923b0a989307541c69aa70049c49"
+    },
+    "axis": {
+     "metric": "minimum_free_corridor_width",
+     "basis": "measured",
+     "unit": "m",
+     "kind": "numeric"
+    }
+   },
+   "fm_005_hero": {
+    "campaign_declaration": {
+     "path": "artifacts/examples/campaigns/campaign_carla_v08/fm_005_hero.json",
+     "sha256": "a02fb75dc7ed8fceb37fddc44e040df79f30ce43503654427a07ad9bfdf0d192"
+    },
+    "bundle": {
+     "path": "campaign_carla_v08.zip",
+     "bundle_kind": "campaign_bundle/v0.3",
+     "zip_sha256": "c9b4a0894827e6dc2579d29cd11c58e03e8bbe01705f016df666bca678f6dac0",
+     "content_id_sha256": "9a13166b5181d5f05345c68d47e3fe3f6f243039b38afa32c6abe6bfef33fd65",
+     "family_sub_id_sha256": "b81d2592d783f12c9847a1cae11a5f46fd284dbd61ee99f429e837e93d7eb8bf"
+    },
+    "derived_bundle": {
+     "path": "campaign_carla_v08_derived.zip",
+     "bundle_kind": "derived_bundle/v0.3",
+     "zip_sha256": "fab26ff8ce3b0d1c769427255a3c161b18c5f6936ac16553b93ac3135c95c91b",
+     "content_id_sha256": "1aed11a8b5c99d3b95d9e1720f17606dbb25fd5315cd63fb59b69929c6b487d6",
+     "source_snapshot_sha256": "baa743f0e84c2eca570a700c3965995f6df886543f1babd8ae4d0cbfef824fd5"
+    },
+    "family_manifest_sha256": "6582a2d0e03c92ae53f3c0d03911556dfa2b7e51b21607f75728f28ff4ded94a",
+    "coverage": {
+     "models": [
+      "hipad"
+     ],
+     "seeds": [
+      0,
+      1,
+      2
+     ],
+     "variants": 12
+    },
+    "evidence": {
+     "bundle_content_id_sha256": "9a13166b5181d5f05345c68d47e3fe3f6f243039b38afa32c6abe6bfef33fd65",
+     "members": {
+      "campaign_carla_v08/fm_005_hero/family_snapshot/fm_005_hero.json": "6582a2d0e03c92ae53f3c0d03911556dfa2b7e51b21607f75728f28ff4ded94a"
+     },
+     "derived_content_id_sha256": "1aed11a8b5c99d3b95d9e1720f17606dbb25fd5315cd63fb59b69929c6b487d6",
+     "derived_members": {
+      "campaign_carla_v08/fm_005_hero/scoring_out/run_rows.jsonl": "a29a086245260d27faffff59f71a5080709050291da1e11a6e54aa74bcf06be9",
+      "campaign_carla_v08/fm_005_hero/stats/stats_rows.jsonl": "7108ee57fa351fe9a6f98a2fa2ac2acc4788307400e2a7959f93535685827380"
+     }
+    },
+    "stats_sha256": "7108ee57fa351fe9a6f98a2fa2ac2acc4788307400e2a7959f93535685827380",
+    "documents": {
+     "fs_campaign_carla_v08_fm_005_hero_hipad.v0.3.json": "a22fb721d4cf8358d916d2e042c80fcc5966120863c06a1953bf209a0a8a2968"
+    },
+    "axis": {
+     "metric": "maximum_route_intrusion",
+     "basis": "measured",
+     "unit": "m",
+     "kind": "numeric"
+    }
+   }
+  }
+ }
+}

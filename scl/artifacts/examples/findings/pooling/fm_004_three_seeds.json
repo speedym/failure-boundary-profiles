@@ -1,0 +1,16 @@
+{
+ "pooling_kind": "campaign_pooling/v0.2",
+ "pool_id": "fm_004_three_seeds",
+ "family_id": "fm_004_threshold_sweep",
+ "campaigns": [
+  {
+   "id": "campaign_carla_v01",
+   "repetitions": [
+    0,
+    1,
+    2
+   ]
+  }
+ ],
+ "note": "The Charger gauntlet as the paper's protocol reads it: v01, traffic seeds 0 to 2 of its five (sec/4_experiments.tex: 'Every agent is evaluated at three traffic seeds per variant (seeds 0 to 2); where a campaign ran more seeds, only the first three are used'). Boundary justification: which runs a paper figure pools is a paper-level choice no procedure can derive; delete this and the paper's Table 1, Table 2 and gauntlet figure cannot be regenerated from the pipeline. The every-seed pool of the same campaign is fm_004_v01."
+}

@@ -1,0 +1,82 @@
+{
+ "register_kind": "scenario_defects/v0.2",
+ "note": "Declared per family: the variants (and seeds) whose REALIZED scenario is not the one they declare, with the measured evidence. One register and one kind for both axes (F66 part two, 2026-10-06; the flow-only kind flow_scenario_defects/v0.1 of F57 is retired, git history is the rollback): a flow variant whose recorded traffic is not the declared traffic (flow_gap_certificate.py --defects labels its cells `defect`, outside the three bands: no decision, no scope, excluded from Decision accuracy and T8; the measured windows stay in the certificate beside the label), and a threading variant whose placed prop is not at its certified pose when the agent arrives (boundary_stats.py and findings_carla.py --defects take its rows out of every fit and keep the stratum in the document under the assignment `defect`; findings_v2.py reads the same register for Isaac). Readers pin the register by path and hash. Deletion test: without this file the 27 runs of fm_012 v01 count as `wait` decisions although the cars had collided and reset before the ego arrived. `seeds` is \"all\" or a list of seed keys; every row names the tool that measured it (scl_core/scenario_defects.py).",
+ "entries": [
+  {
+   "family_id": "fm_012_source_dist_interval_sweep",
+   "scenario_id": "route_002269_012_source_dist_interval_sweep_v01",
+   "seeds": "all",
+   "reason": "the spawned cars collide with each other within 4 s of spawning (a 0.45 s spawn headway at 15 m/s puts them nose to tail) and every car's speed resets to a constant at 4.8 s; the flow the variant declares never exists",
+   "evidence": {
+    "tool": "adapters/fail2drive/scripts/multi_model_eval/flow_npc_collisions.py",
+    "method": "every pair of scenario cars tested frame by frame for body overlap with the certificate's geometry; a run counts only when two scenario cars touch before the ego touches anything",
+    "runs_affected": 27,
+    "runs": 27,
+    "seeds_affected": [
+     "seed_0",
+     "seed_1",
+     "seed_2"
+    ],
+    "campaigns": [
+     "campaign_carla_v05",
+     "campaign_carla_v06",
+     "campaign_carla_v07",
+     "campaign_carla_v08"
+    ],
+    "measured_date": "2026-09-29"
+   },
+   "reported_by": "Gino, from the videos (2026-09-29); measured the same day",
+   "ruling": "Milan 2026-09-29: mark fm_012 v01 as defect and re-issue"
+  },
+  {
+   "family_id": "fm_005_hero",
+   "scenario_id": "Generalization_CustomObstacles_1026_005_hero_v11",
+   "seeds": "all",
+   "reason": "the vending machine is pushed up and tipped the moment the harness lifts it to its placed pose: in all 30 runs (ten agents, three seeds, campaigns v01 and v06 to v09) it rises 15 cm and pitches 2.4 deg in the first frame after the lift, is 60 to 64 deg over and 0.3 m away one second later, and lies on its back before any car arrives; the realized intrusion is not the certified one (the neighbouring variants, 10 cm to either side, land and stand; what it hits is ledger F68)",
+   "evidence": {
+    "tool": "adapters/fail2drive/scripts/multi_model_eval/placement_rest_check.py",
+    "method": "every scenario prop's pose read from the recorder extract at its trigger lift, one second later and at its first motion past the reporting resolution (0.05 m planar, 5 deg roll plus pitch); the hero's recorded collision events bound 'before contact'; the nearest tracked actor at the onset in 3-D",
+    "report": "artifacts/runs/placement_rest_check_2026-10-06.json",
+    "report_sha256": "c5a8e38bf6ce354f01dd450f92daad50836af18f51f9204ffb9fc44c39451c0a",
+    "runs": 30,
+    "runs_unsettled": 30,
+    "settle_rotation_deg": [
+     60.2,
+     63.5
+    ],
+    "settle_displacement_m": [
+     0.292,
+     0.359
+    ],
+    "raw_onset_s_after_lift": 0.05,
+    "nearest_at_onset": "a placed bin lifted in the same frame, 1.1 m away, no footprint overlap by the registry extents",
+    "agents": [
+     "bridgedrive",
+     "hipad",
+     "lead",
+     "lead_regnety032",
+     "pdm_lite_expert",
+     "plant2",
+     "plant2_s2",
+     "plant2_s3",
+     "simlingo",
+     "tfpp"
+    ],
+    "seeds_affected": [
+     "seed_0",
+     "seed_1",
+     "seed_2"
+    ],
+    "campaigns": [
+     "campaign_carla_v01",
+     "campaign_carla_v06",
+     "campaign_carla_v07",
+     "campaign_carla_v08",
+     "campaign_carla_v09"
+    ],
+    "declared_by": "Milan, 2026-10-06 (\"let's mark v11 as defect\")",
+    "measured_date": "2026-10-06"
+   }
+  }
+ ]
+}

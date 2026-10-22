@@ -1,0 +1,65 @@
+{
+ "vocabulary_kind": "outcome_vocabulary/v0.1",
+ "chain": "threading",
+ "backend": "fail2drive",
+ "codings": {
+  "commitment": "label",
+  "clean": "label",
+  "passage": "label"
+ },
+ "outcomes": {
+  "clean_thread": {
+   "commitment": true,
+   "clean": true,
+   "passage": true
+  },
+  "contact_thread": {
+   "commitment": true,
+   "clean": false,
+   "passage": false
+  },
+  "contact_past_blockage": {
+   "commitment": true,
+   "clean": false,
+   "passage": false
+  },
+  "contact_blocked": {
+   "commitment": true,
+   "clean": false,
+   "passage": false
+  },
+  "late_commit": {
+   "commitment": true,
+   "clean": null,
+   "passage": null
+  },
+  "refusal": {
+   "commitment": false,
+   "clean": false,
+   "passage": false
+  },
+  "correct_stop": {
+   "commitment": false,
+   "clean": false,
+   "passage": false
+  },
+  "anomaly_blockage_completed": {
+   "commitment": null,
+   "clean": null,
+   "passage": null
+  },
+  "unresolved_contact": {
+   "commitment": null,
+   "clean": null,
+   "passage": null
+  }
+ },
+ "point_extras": [],
+ "meanings": {
+  "commitment": "committed to the passage (did not refuse or stop): the decision curve",
+  "clean": "reached the goal contact-free: the mission curve (one route here, so it equals passage)",
+  "passage": "clean traversal of the designated gap: the boundary quantity (equals clean for a single-route family)"
+ },
+ "document_extras": [],
+ "note": "The static-threading chain's labels (score_runs.py outcome_for) and their codings, as boundary_stats coded them until F82 (2026-10-11): a go is any label but refusal and correct_stop; clean and passage coincide because these families have one route; late_commit (the obstacle despawned before the agent committed) is neither passed nor failed; an anomaly (a contact-free completion of a certified blockage) and an unresolved contact are in no curve and counted. Boundary justification: which outcome labels count as a commitment, a clean pass or a passage is a judgment of the chain's instrument that no procedure derives from the runs; delete this and the chain's rows cannot be coded, so no curve of its families can be fitted."
+}

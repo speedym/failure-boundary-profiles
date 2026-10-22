@@ -1,0 +1,81 @@
+{
+ "vocabulary_kind": "outcome_vocabulary/v0.1",
+ "chain": "flow",
+ "backend": "fail2drive",
+ "codings": {
+  "commitment": "measured",
+  "clean": "label",
+  "passage": "label"
+ },
+ "outcomes": {
+  "clean_cross": {
+   "clean": true,
+   "passage": true
+  },
+  "collision_flow": {
+   "clean": false,
+   "passage": false
+  },
+  "collision_other": {
+   "clean": false,
+   "passage": false
+  },
+  "collision_unattributed": {
+   "clean": false,
+   "passage": false
+  },
+  "stall": {
+   "clean": false,
+   "passage": false
+  },
+  "incomplete": {
+   "clean": null,
+   "passage": null
+  }
+ },
+ "point_extras": [
+  {
+   "name": "band",
+   "annex": "gap_band",
+   "reduce": "constant"
+  },
+  {
+   "name": "x_seed_spread_s",
+   "annex": "gap_headway_s",
+   "reduce": "range"
+  }
+ ],
+ "meanings": {
+  "commitment": "the hero body enters the map-defined oncoming driving-lane conflict zone while the flow is active; sticky measured commitment (an entry after the flow's last recorded frame is recorded, not counted)",
+  "clean": "clean_cross under the flow primary-outcome coding; incomplete outcomes excluded",
+  "passage": "clean designated crossing (clean_cross); the single crossing coincides with clean"
+ },
+ "document_extras": [
+  {
+   "name": "stalls_before_go",
+   "annex": "stall_before_go",
+   "reduce": "sum"
+  },
+  {
+   "name": "stalls_after_go",
+   "annex": "stall_after_go",
+   "reduce": "sum"
+  },
+  {
+   "name": "stalls_go_unknown",
+   "annex": "stall_go_unknown",
+   "reduce": "sum"
+  },
+  {
+   "name": "clean_without_measured_go",
+   "annex": "clean_without_measured_go",
+   "reduce": "sum"
+  },
+  {
+   "name": "corridor_approximated",
+   "annex": "measured_go_corridor_approximated",
+   "reduce": "sum"
+  }
+ ],
+ "note": "The oncoming-flow chain's labels (flow_aggregate.py primary_outcome) and their codings: the commitment is MEASURED (the hero body entering the declared conflict zone while the flow is active, derive_measured_go), never read from the label; clean is clean_cross under the primary-outcome coding with waits as failures and an incomplete run in no curve; passage coincides with clean (the single crossing). The point extras carry the gap certificate's band per variant (mixed when its seeds disagree) and the spread over the variant's seeds of the certificate's headway at the crossing, the measured axis every flow row carries (F96, 2026-10-18; the nominal gap rides beside it as x_nominal). Boundary justification: which outcome labels count as a commitment, a clean pass or a passage is a judgment of the chain's instrument that no procedure derives from the runs; delete this and the chain's rows cannot be coded, so no curve of its families can be fitted."
+}

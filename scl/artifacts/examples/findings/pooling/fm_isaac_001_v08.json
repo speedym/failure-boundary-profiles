@@ -1,0 +1,18 @@
+{
+ "pooling_kind": "campaign_pooling/v0.2",
+ "pool_id": "fm_isaac_001_v08",
+ "family_id": "fm_isaac_001",
+ "campaigns": [
+  {
+   "id": "campaign_isaac_v08",
+   "repetitions": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  }
+ ],
+ "note": "The stock X-Mobility brain on the aisle gauntlet (slab pincer), v08 alone: the warehouse roster (v08 re-ran the stock brain on the current realization; the earlier stock-brain campaigns sit on other realizations). Boundary justification: which campaign a paper figure draws a family from is a paper-level choice no procedure can derive; delete this and the figure's the aisle gauntlet (slab pincer) row for the stock brain cannot be drawn from the store."
+}

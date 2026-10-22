@@ -1,0 +1,34 @@
+{
+ "spec_kind": "figure_render/v0.1",
+ "note": "The paper's render as data (F101, 2026-10-22): every tool run that produces a figure, table or number the paper prints, in the order scripts/render_paper_figures.py runs them. Paths are relative to the repository root. `driving` is the CARLA figure tool over the roster pools (the first campaigns' agents, the three-seed gauntlet pool, and the three warehouse pools of the stock brain, which the per-agent tables and the numbers document summarize beside the driving agents) with the extension pools (PlanT 2.0 v06, SimLingo v07, HiP-AD v08, TFv6 RegNetY v09, the two warehouse fine-tunes v07), writing the figures, the tables, the sensitivity table and the numbers document TN. `warehouse` is the Isaac figure tool: the stock brain from campaign v08, the two fine-tunes from v07, and the stock-versus-fine-tune pair on the composed stacks. `profiles` are the paper's profile figures (P-*, CS, PW, PV) in the paper's design, into profiles/<design>/{carla,isaac}; one design per render, so every figure file name occurs once under the output and the paper checker finds each by name. `atlas` is the scenario family figure from the raw bundles' recordings. Which pools, which brains, which figure ids and which design are the paper's choices and live here, never in code.",
+ "pooling_dir": "artifacts/examples/findings/pooling",
+ "roster": "artifacts/examples/figure_specs/paper_roster.json",
+ "sensitivity": "artifacts/examples/figure_specs/decision_sensitivity.json",
+ "paper_tables": "artifacts/examples/figure_specs/paper_tables.json",
+ "atlas": "artifacts/examples/figure_specs/scenario_atlas.json",
+ "design": "marks",
+ "profiles_dir": "profiles",
+ "driving": {
+  "roster_specs": ["fm_001_three_seeds.json", "fm_002_v01.json", "fm_003_three_seeds.json", "fm_004_three_seeds.json", "fm_005_v01.json", "fm_011_v04.json", "fm_012_v05.json",
+                   "fm_isaac_001_v08.json", "fm_isaac_003_v08.json", "fm_isaac_004_v08.json"],
+  "extension_specs": ["fm_001_v06.json", "fm_002_v06.json", "fm_004_v06.json", "fm_005_v06.json", "fm_011_v06.json", "fm_012_v06.json",
+                      "fm_001_v07.json", "fm_002_v07.json", "fm_003_v07.json", "fm_004_v07.json", "fm_005_v07.json", "fm_011_v07.json", "fm_012_v07.json",
+                      "fm_001_v08.json", "fm_002_v08.json", "fm_003_v08.json", "fm_004_v08.json", "fm_005_v08.json", "fm_011_v08.json", "fm_012_v08.json",
+                      "fm_001_v09.json", "fm_002_v09.json", "fm_003_v09.json", "fm_004_v09.json", "fm_005_v09.json", "fm_011_v09.json", "fm_012_v09.json",
+                      "fm_isaac_001_v07.json", "fm_isaac_003_v07.json", "fm_isaac_004_v07.json"],
+  "figures": ["F1", "F1D", "F2", "F3", "F4", "F5", "F6", "F7", "F8", "F9", "T1", "T2", "T3", "T5", "T6", "T7", "T8", "T9", "TS", "TL", "TN", "PT"],
+  "profile_figures": ["P-gauntlet", "P-corridor", "P-machine", "P-cluttered", "P-speed", "P-spacing", "CS"]
+ },
+ "warehouse": [
+  {"out": "isaac_stock", "specs": ["fm_isaac_001_v08.json", "fm_isaac_003_v08.json", "fm_isaac_004_v08.json"]},
+  {"out": "isaac_vis_full", "specs": ["fm_isaac_001_v07.json", "fm_isaac_003_v07.json", "fm_isaac_004_v07.json"], "brains": ["x_mobility_vis_full"]},
+  {"out": "isaac_fusion_v3", "specs": ["fm_isaac_001_v07.json", "fm_isaac_003_v07.json", "fm_isaac_004_v07.json"], "brains": ["x_mobility_fusion_v3"]},
+  {"out": "isaac_v1_v2_stacks", "specs": ["fm_isaac_004_v08.json", "fm_isaac_004_v07.json"], "brains": ["x_mobility", "x_mobility_vis_full"],
+   "family": "fm_isaac_004", "figures": ["FI2"], "panel_titles": ["v1  stock checkpoint", "v2  fine-tuned"]}
+ ],
+ "warehouse_profiles": [
+  {"specs": ["fm_isaac_001_v08.json", "fm_isaac_003_v08.json", "fm_isaac_004_v08.json", "fm_isaac_001_v07.json", "fm_isaac_003_v07.json", "fm_isaac_004_v07.json"],
+   "brains": ["x_mobility", "x_mobility_fusion_v3", "x_mobility_vis_full"], "figures": ["PW"]},
+  {"specs": ["fm_isaac_004_v08.json", "fm_isaac_004_v07.json"], "brains": ["x_mobility", "x_mobility_vis_full"], "figures": ["PV"]}
+ ]
+}

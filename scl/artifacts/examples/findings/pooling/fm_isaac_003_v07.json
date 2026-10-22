@@ -1,0 +1,18 @@
+{
+ "pooling_kind": "campaign_pooling/v0.2",
+ "pool_id": "fm_isaac_003_v07",
+ "family_id": "fm_isaac_003",
+ "campaigns": [
+  {
+   "id": "campaign_isaac_v07",
+   "repetitions": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  }
+ ],
+ "note": "The two fine-tuned brains (vis_full, fusion_v3) on the composed stacks pincer, v07 alone: the warehouse extension. Boundary justification: which campaign a paper figure draws a family from is a paper-level choice no procedure can derive; delete this and the figure's the composed stacks pincer rows for the fine-tuned brains cannot be drawn from the store."
+}

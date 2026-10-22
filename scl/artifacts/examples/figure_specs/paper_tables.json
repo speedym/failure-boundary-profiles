@@ -1,0 +1,77 @@
+{
+  "spec_kind": "paper_tables/v0.1",
+  "note": "The paper's tables as the figure tool writes them (2026-10-17): which pipeline tables each draws from, which agents in which order under which printed label, which columns in which format, and the row rules (order, bold, shading, collapse, footnote). Boundary justification: none of this can be derived from the store; delete it and the three table bodies cannot be written. The bodies hold the column spacing and the tabular; the paper's files keep the float, the font size, the caption and the label and input the body.",
+  "body_root": "fig/atlas/tables",
+  "missing": "--",
+  "formats": ["one_decimal", "two_decimals", "value_with_interval", "integer", "clean_of_runs", "text"],
+  "tables": [
+    {
+      "table": "case-study-split",
+      "body": "case_study_table_body.tex",
+      "sources": ["T7"],
+      "family": "fm_004_threshold_sweep",
+      "column_spec": "@{}lrrrrrr@{}",
+      "tabcolsep_pt": 3.5,
+      "blocks": [
+        {"agents": ["plant2", "hipad", "simlingo", "tfpp", "lead_regnety032", "bridgedrive", "pdm_lite_expert"]}
+      ],
+      "labels": {"plant2": "PlanT 2.0", "pdm_lite_expert": "Expert"},
+      "columns": [
+        {"header": "Agent"},
+        {"header": "All",     "group": "Mean DS",        "source": "T7:cells.{family}.{agent}.mean_all",          "format": "one_decimal"},
+        {"header": "Pass.",   "group": "Mean DS",        "source": "T7:cells.{family}.{agent}.mean_passable",     "format": "one_decimal"},
+        {"header": "Block.",  "group": "Mean DS",        "source": "T7:cells.{family}.{agent}.mean_blocked",      "format": "one_decimal"},
+        {"header": "$n$",     "group": "Blocked widths", "source": "T7:cells.{family}.{agent}.blocked_runs",      "format": "integer"},
+        {"header": "Stop",    "group": "Blocked widths", "source": "T7:cells.{family}.{agent}.correct_stop",      "format": "integer"},
+        {"header": "Contact", "group": "Blocked widths", "source": "T7:cells.{family}.{agent}.contact_any",       "format": "integer"}
+      ],
+      "order": {"by": "All", "descending": true},
+      "bold": null,
+      "footnote": {"marker": "$^{\\ast}$", "when": "T7:cells.{family}.{agent}.blocked_completed", "nonzero": true}
+    },
+    {
+      "table": "summary",
+      "body": "summary_table_body.tex",
+      "sources": ["T9", "TN"],
+      "column_spec": "@{}lrl@{}",
+      "tabcolsep_pt": 5,
+      "blocks": [
+        {"label": "Driving (CARLA)",
+         "agents": ["pdm_lite_expert", "lead_regnety032", "plant2", "plant2_s3", "tfpp", "plant2_s2", "hipad", "simlingo", "bridgedrive"]},
+        {"label": "Warehouse (Isaac Sim)", "agents": ["x_mobility"]}
+      ],
+      "labels": {"pdm_lite_expert": "Expert (reference)", "plant2": "PlanT 2.0 (ckpt 1)",
+                 "plant2_s2": "PlanT 2.0 (ckpt 2)", "plant2_s3": "PlanT 2.0 (ckpt 3)", "x_mobility": "X-Mobility"},
+      "columns": [
+        {"header": "Agent"},
+        {"header": "Avg.\\ DS",           "source": "TN:{agent}.avg_driving_score",     "format": "one_decimal"},
+        {"header": "Avg.\\ DA [95\\% CI]", "source": "T9:agents.{agent}.mean_accuracy", "format": "value_with_interval",
+         "interval": "T9:agents.{agent}.mean_accuracy_interval"}
+      ],
+      "order": "source",
+      "bold": {"columns": ["Avg.\\ DS", "Avg.\\ DA [95\\% CI]"], "block": "Driving (CARLA)", "value_only": true},
+      "footnote": null
+    },
+    {
+      "table": "identity",
+      "body": "identity_ladder_body.tex",
+      "sources": ["TL"],
+      "column_spec": "@{}lcccccc@{}",
+      "tabcolsep_pt": 3,
+      "rows_are": "objects",
+      "agents": ["pdm_lite_expert", "lead_regnety032", "tfpp", "bridgedrive", "simlingo", "hipad"],
+      "labels": {"pdm_lite_expert": "Expert", "bridgedrive": "BridgeD."},
+      "object_labels": {"from_id": true, "barbeque_grill": "Barbecue grill"},
+      "columns": [
+        {"header": "Object"},
+        {"header": "{agent}", "source": "TL:cells.{object}.{agent}", "format": "clean_of_runs"}
+      ],
+      "cell": {"shade_when": "clean_below_runs", "shade": "orange!25",
+               "codes": {"refusal": "R", "late_commit": "L"}, "code_separator": "\\,$\\cdot$\\,"},
+      "order": {"shaded_first": true, "then": "family"},
+      "collapse": {"when": "every_cell_clean", "label": "{n} other objects", "rule_before": "midrule"},
+      "bold": null,
+      "footnote": null
+    }
+  ]
+}

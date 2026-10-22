@@ -1,0 +1,267 @@
+{
+ "report_kind": "flow_certification/v0.8",
+ "driver_sha256": "5cf66d75608c6598c8a989acd3094a733c104ae6aed9067db7773c7a94453f64",
+ "evidence_rule": "canon holds findings and declarations; the raw bundle holds the evidence and the derived bundle holds one interpretation of it keyed by the raw content id, one derived bundle per campaign whichever chains scored it; per-run rows are derived members, referenced here by both content ids, member path and member hash; every scored input is a MANIFEST-listed raw member; the derived bundle's snapshot id equals the one this tree lays",
+ "campaigns": {
+  "campaign_carla_v07": {
+   "fm_011_flow_speed_sweep": {
+    "campaign_declaration": {
+     "path": "artifacts/examples/campaigns/campaign_carla_v07/fm_011_flow_speed_sweep.json",
+     "sha256": "360e321f97d8321a562e2c1f23fdc298225c5acf43d7708cc196abac0a45163c"
+    },
+    "coverage": {
+     "models_x_seeds": 3,
+     "variants": [
+      "route_002269_011_flow_speed_sweep_v01",
+      "route_002269_011_flow_speed_sweep_v02",
+      "route_002269_011_flow_speed_sweep_v03",
+      "route_002269_011_flow_speed_sweep_v04",
+      "route_002269_011_flow_speed_sweep_v05",
+      "route_002269_011_flow_speed_sweep_v06",
+      "route_002269_011_flow_speed_sweep_v07",
+      "route_002269_011_flow_speed_sweep_v08",
+      "route_002269_011_flow_speed_sweep_v09",
+      "route_002269_011_flow_speed_sweep_v10",
+      "route_002269_011_flow_speed_sweep_v11"
+     ],
+     "expected_cells": 33,
+     "found_cells": 33,
+     "missing_cells": []
+    },
+    "freshness": {
+     "rows": 33,
+     "input_files_sha256": "ce32a425bf3427a14cab2c9ab1e30e5308b50befd22033efd7691d15e1e49cda",
+     "scorer": {
+      "path": "adapters/fail2drive/scripts/multi_model_eval/flow_aggregate.py",
+      "sha256": "6d920d7fe24083604b4544955c5b005aa24d94e29789e71863865045a76a3f1a"
+     },
+     "vocabulary": {
+      "path": "artifacts/examples/scoring_instruments/outcome_vocabulary_flow.json",
+      "sha256": "5c44746134d018e1975d58788dc370f7ac32c5ee5153341b666d1f1c34d36516"
+     },
+     "geometry_sha256": "ae36a18a0d04b9ae5fbb56f01b4b303ecf16c5ac739c3eb81f416dc0b27e89b5",
+     "zone_path": "artifacts/examples/scoring_instruments/carla_flow_conflict_zone_town03_j103_r144.json",
+     "instrument_zone_version": "flow_conflict_zone/v3.map_lane",
+     "gap_certificate": {
+      "path": "artifacts/examples/scoring_instruments/carla_flow_gap_certificate_fm_011_flow_speed_sweep.json",
+      "sha256": "c74cb9d9711059cc25f23030717803995aa2587d4c7e1b91e9aa84029d203735",
+      "kind": "flow_gap_certificate/v0.1"
+     },
+     "family_manifest_sha256": "d09a148d931dbe3d5c86093120d3b483ef39a1061ee5d828ec57c75f0f506183",
+     "campaign_declaration": {
+      "path": "artifacts/examples/campaigns/campaign_carla_v07/fm_011_flow_speed_sweep.json",
+      "sha256": "360e321f97d8321a562e2c1f23fdc298225c5acf43d7708cc196abac0a45163c"
+     },
+     "scenario_defects": {
+      "path": "artifacts/examples/scoring_instruments/carla_scenario_defects.json",
+      "sha256": "14ec9861c894e55d9ed8637c152fa6315a860a26783e874005c0745779db1360",
+      "kind": "scenario_defects/v0.2"
+     }
+    },
+    "replay": {
+     "rows_sha256": {
+      "run_rows.jsonl": "02e6b462ca38db8b3587b1fadb8410be35e0d397ef0e730c6eab580bdd5a05ac",
+      "scoring_provenance.json": "c63a3288edc0b82f748a6a939377f4242337f7646dd04d5b154eb766a43e6287",
+      "flow_summary.txt": "7984d63ef893891b824e83a71306c90f2fd87c6c37713279924a4ba4075fd2bf"
+     },
+     "stats_sha256": {
+      "stats_provenance.json": "a97158bb6f4bcb092b9c833b8b78b6ece09d8362819ba6b3ab23c79e3d146204",
+      "stats_rows.jsonl": "1c5d1b87a607fdffaf2e3891363f73f434305b8ec4409d88230ea6b5f89b0b71"
+     },
+     "findings_sha256": {
+      "fs_campaign_carla_v07_fm_011_flow_speed_sweep_simlingo.v0.3.json": "01d4c92c7a9f75d783dbb5783e2248e6d6d53691bad7eb580df46a588002b364"
+     },
+     "audit_reproduced": true,
+     "evidence_rows_reproduced": true,
+     "campaign_declaration_sha256": "360e321f97d8321a562e2c1f23fdc298225c5acf43d7708cc196abac0a45163c",
+     "source_snapshot_sha256": "baa743f0e84c2eca570a700c3965995f6df886543f1babd8ae4d0cbfef824fd5"
+    },
+    "documents": {
+     "fs_campaign_carla_v07_fm_011_flow_speed_sweep_simlingo.v0.3.json": "01d4c92c7a9f75d783dbb5783e2248e6d6d53691bad7eb580df46a588002b364"
+    },
+    "audit": {
+     "runs_checked": 33,
+     "independent_sat_mismatches": 0,
+     "oncoming_evidence_removed_entry_changes": 0,
+     "zone_depends_on_run_evidence": false,
+     "unresolved_count": 0
+    },
+    "map_check": {
+     "cells": 3,
+     "recordings_checked": 33,
+     "ego_spawns_checked": 33,
+     "scenario_spawns_checked": 311
+    },
+    "bundle": {
+     "path": "campaign_carla_v07.zip",
+     "bundle_kind": "campaign_bundle/v0.3",
+     "zip_sha256": "d3203cd8f50400d1a94c445c13733f468c8ab275bc319064b7b6c275c02a49c2",
+     "content_id_sha256": "f7ec8997d16dcf48ea977942759fc279bd95b9c0f29dfcac9278c126cc9d948e",
+     "family_sub_id_sha256": "e50cb68d53848e5bf99ed07c2e642becbbfb8fed6196c5ed2cc1f086a8fb4027"
+    },
+    "derived_bundle": {
+     "path": "campaign_carla_v07_derived.zip",
+     "bundle_kind": "derived_bundle/v0.3",
+     "zip_sha256": "86947eb1368add5af95c98d2bfaa52d20a1ed2add3a52ac777986b4e368553e7",
+     "content_id_sha256": "2511e3b0c04d79e6b69393608f793b9d87557233c144c17cf3d0dafb3f93438d",
+     "source_snapshot_sha256": "baa743f0e84c2eca570a700c3965995f6df886543f1babd8ae4d0cbfef824fd5",
+     "writer_sha256": "ffb379bc5efa14ecb9b820f5b296872d706ec8986243db489360d93b0fc56447",
+     "families": [
+      "fm_001_intrusion_sweep",
+      "fm_002_corridor_pincer",
+      "fm_003_asset_swap",
+      "fm_004_threshold_sweep",
+      "fm_005_hero",
+      "fm_011_flow_speed_sweep",
+      "fm_012_source_dist_interval_sweep"
+     ],
+     "reproduced_raw_members": null
+    },
+    "evidence": {
+     "bundle_content_id_sha256": "f7ec8997d16dcf48ea977942759fc279bd95b9c0f29dfcac9278c126cc9d948e",
+     "raw_inputs": {
+      "count": 66,
+      "input_files_sha256": "ce32a425bf3427a14cab2c9ab1e30e5308b50befd22033efd7691d15e1e49cda",
+      "all_listed": true
+     },
+     "derived_content_id_sha256": "2511e3b0c04d79e6b69393608f793b9d87557233c144c17cf3d0dafb3f93438d",
+     "derived_members": {
+      "campaign_carla_v07/fm_011_flow_speed_sweep/audit/commitment_audit_rows.json": "e30a20da8878b993a69be0dc294a1fb96ddc037f74dbefed06503c25c3339619",
+      "campaign_carla_v07/fm_011_flow_speed_sweep/audit/map_check_recordings.json": "da838cf55f429ea88de64711db71ebbc45cd4f0a89b33580d4b688966db2edd4",
+      "campaign_carla_v07/fm_011_flow_speed_sweep/audit/commitment_audit.json": "095f7c7513e67f0fd0ee2eaa3c420483452f50018a60d96eb271b47a212a977d",
+      "campaign_carla_v07/fm_011_flow_speed_sweep/audit/map_verification.json": "08bef03a78649c294303c6b405b23193d2204b711c37ee9c71df2de3f5b4468b"
+     }
+    }
+   },
+   "fm_012_source_dist_interval_sweep": {
+    "campaign_declaration": {
+     "path": "artifacts/examples/campaigns/campaign_carla_v07/fm_012_source_dist_interval_sweep.json",
+     "sha256": "5f7d695a9ffe8f297c1490f2e924ce0ff5af981193cf6c129dc6888831b70947"
+    },
+    "coverage": {
+     "models_x_seeds": 3,
+     "variants": [
+      "route_002269_012_source_dist_interval_sweep_v01",
+      "route_002269_012_source_dist_interval_sweep_v02",
+      "route_002269_012_source_dist_interval_sweep_v03",
+      "route_002269_012_source_dist_interval_sweep_v04",
+      "route_002269_012_source_dist_interval_sweep_v05",
+      "route_002269_012_source_dist_interval_sweep_v06",
+      "route_002269_012_source_dist_interval_sweep_v07",
+      "route_002269_012_source_dist_interval_sweep_v08",
+      "route_002269_012_source_dist_interval_sweep_v09",
+      "route_002269_012_source_dist_interval_sweep_v10",
+      "route_002269_012_source_dist_interval_sweep_v11"
+     ],
+     "expected_cells": 33,
+     "found_cells": 33,
+     "missing_cells": []
+    },
+    "freshness": {
+     "rows": 33,
+     "input_files_sha256": "2a178a6fa7f6905bae16d325edf7788720811a3a859f13bdadc7b80f6f08d1c3",
+     "scorer": {
+      "path": "adapters/fail2drive/scripts/multi_model_eval/flow_aggregate.py",
+      "sha256": "6d920d7fe24083604b4544955c5b005aa24d94e29789e71863865045a76a3f1a"
+     },
+     "vocabulary": {
+      "path": "artifacts/examples/scoring_instruments/outcome_vocabulary_flow.json",
+      "sha256": "5c44746134d018e1975d58788dc370f7ac32c5ee5153341b666d1f1c34d36516"
+     },
+     "geometry_sha256": "ae36a18a0d04b9ae5fbb56f01b4b303ecf16c5ac739c3eb81f416dc0b27e89b5",
+     "zone_path": "artifacts/examples/scoring_instruments/carla_flow_conflict_zone_town03_j103_r144.json",
+     "instrument_zone_version": "flow_conflict_zone/v3.map_lane",
+     "gap_certificate": {
+      "path": "artifacts/examples/scoring_instruments/carla_flow_gap_certificate_fm_012_source_dist_interval_sweep.json",
+      "sha256": "6308ddebb55453c2562e4d07379806e957cbf67d5981e93e184739d4d70172e4",
+      "kind": "flow_gap_certificate/v0.1"
+     },
+     "family_manifest_sha256": "e713dcfe97567425cab1ca2d743e3b6d44d85a16c16c03f5b4c80595c6fe0543",
+     "campaign_declaration": {
+      "path": "artifacts/examples/campaigns/campaign_carla_v07/fm_012_source_dist_interval_sweep.json",
+      "sha256": "5f7d695a9ffe8f297c1490f2e924ce0ff5af981193cf6c129dc6888831b70947"
+     },
+     "scenario_defects": {
+      "path": "artifacts/examples/scoring_instruments/carla_scenario_defects.json",
+      "sha256": "14ec9861c894e55d9ed8637c152fa6315a860a26783e874005c0745779db1360",
+      "kind": "scenario_defects/v0.2"
+     }
+    },
+    "replay": {
+     "rows_sha256": {
+      "run_rows.jsonl": "42367a07b486c3a7ff98313931350ecf733588c04dbd57ebaa0b03c0cfd82fdb",
+      "scoring_provenance.json": "1c2cac1d75f97b7e07df668dcc0b4f8f7808fe06a89a8ea2fb7bfe91f1dd75ff",
+      "flow_summary.txt": "a8604db91fc84dbc8a7e37ddac7d9593eadf0bc469ca193dbf4b470ee4b653a2"
+     },
+     "stats_sha256": {
+      "stats_provenance.json": "26914c0da9b47ffedaa04c426078716eb590d640050b417a24992f289ce57347",
+      "stats_rows.jsonl": "f747c45a46b6be1c0124b6c0df2a6af8cd8a29bd6dce9e032b8348e1f12eb429"
+     },
+     "findings_sha256": {
+      "fs_campaign_carla_v07_fm_012_source_dist_interval_sweep_simlingo.v0.3.json": "bbc6fc73417ae2d78015e926f68efdf2691767d6320470d0c9c1cbbc57c794b6"
+     },
+     "audit_reproduced": true,
+     "evidence_rows_reproduced": true,
+     "campaign_declaration_sha256": "5f7d695a9ffe8f297c1490f2e924ce0ff5af981193cf6c129dc6888831b70947",
+     "source_snapshot_sha256": "baa743f0e84c2eca570a700c3965995f6df886543f1babd8ae4d0cbfef824fd5"
+    },
+    "documents": {
+     "fs_campaign_carla_v07_fm_012_source_dist_interval_sweep_simlingo.v0.3.json": "bbc6fc73417ae2d78015e926f68efdf2691767d6320470d0c9c1cbbc57c794b6"
+    },
+    "audit": {
+     "runs_checked": 33,
+     "independent_sat_mismatches": 0,
+     "oncoming_evidence_removed_entry_changes": 0,
+     "zone_depends_on_run_evidence": false,
+     "unresolved_count": 0
+    },
+    "map_check": {
+     "cells": 3,
+     "recordings_checked": 33,
+     "ego_spawns_checked": 33,
+     "scenario_spawns_checked": 476
+    },
+    "bundle": {
+     "path": "campaign_carla_v07.zip",
+     "bundle_kind": "campaign_bundle/v0.3",
+     "zip_sha256": "d3203cd8f50400d1a94c445c13733f468c8ab275bc319064b7b6c275c02a49c2",
+     "content_id_sha256": "f7ec8997d16dcf48ea977942759fc279bd95b9c0f29dfcac9278c126cc9d948e",
+     "family_sub_id_sha256": "c6a7777a98f62c468e71e7f1b44a02cd01c117d7a48c76241b8dd0328ca3e9e1"
+    },
+    "derived_bundle": {
+     "path": "campaign_carla_v07_derived.zip",
+     "bundle_kind": "derived_bundle/v0.3",
+     "zip_sha256": "86947eb1368add5af95c98d2bfaa52d20a1ed2add3a52ac777986b4e368553e7",
+     "content_id_sha256": "2511e3b0c04d79e6b69393608f793b9d87557233c144c17cf3d0dafb3f93438d",
+     "source_snapshot_sha256": "baa743f0e84c2eca570a700c3965995f6df886543f1babd8ae4d0cbfef824fd5",
+     "writer_sha256": "ffb379bc5efa14ecb9b820f5b296872d706ec8986243db489360d93b0fc56447",
+     "families": [
+      "fm_001_intrusion_sweep",
+      "fm_002_corridor_pincer",
+      "fm_003_asset_swap",
+      "fm_004_threshold_sweep",
+      "fm_005_hero",
+      "fm_011_flow_speed_sweep",
+      "fm_012_source_dist_interval_sweep"
+     ],
+     "reproduced_raw_members": null
+    },
+    "evidence": {
+     "bundle_content_id_sha256": "f7ec8997d16dcf48ea977942759fc279bd95b9c0f29dfcac9278c126cc9d948e",
+     "raw_inputs": {
+      "count": 66,
+      "input_files_sha256": "2a178a6fa7f6905bae16d325edf7788720811a3a859f13bdadc7b80f6f08d1c3",
+      "all_listed": true
+     },
+     "derived_content_id_sha256": "2511e3b0c04d79e6b69393608f793b9d87557233c144c17cf3d0dafb3f93438d",
+     "derived_members": {
+      "campaign_carla_v07/fm_012_source_dist_interval_sweep/audit/commitment_audit_rows.json": "1af44501dcd4249bedd7f3b4194a7c48dd16c3033dca1ee7246842484d407b74",
+      "campaign_carla_v07/fm_012_source_dist_interval_sweep/audit/map_check_recordings.json": "8ba94c6f322a591183fdeabfd138a242b254d693a25661118181f3e8d2577760",
+      "campaign_carla_v07/fm_012_source_dist_interval_sweep/audit/commitment_audit.json": "438f2e2b12d78a45a231a35a37affbd9d2b473b51d5de92ed35f6b83ed8a83d4",
+      "campaign_carla_v07/fm_012_source_dist_interval_sweep/audit/map_verification.json": "08bef03a78649c294303c6b405b23193d2204b711c37ee9c71df2de3f5b4468b"
+     }
+    }
+   }
+  }
+ }
+}

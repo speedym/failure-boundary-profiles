@@ -1,0 +1,20 @@
+{
+ "roster_kind": "figure_roster/v0.1",
+ "note": "The agents the paper's profile figures draw, in the paper's panel order, with the names the paper prints (read from the paper's generated figure sources of 2026-10-01, fig/atlas/*.tex, on 2026-10-11): TFv6 is the RegNetY-032 configuration (campaign v09), PlanT 2.0 is one panel over its three checkpoints. Boundary justification: which agents a paper figure draws, in which order and under which name, is a paper-level choice no procedure can derive from the store; delete this and the profile figures cannot be drawn.",
+ "agents": [
+  {"model": "lead_regnety032", "label": "TFv6"},
+  {"model": "tfpp", "label": "TF++"},
+  {"model": "bridgedrive", "label": "BridgeDrive"},
+  {"model": "pdm_lite_expert", "label": "Expert (PDM-Lite)", "reference": true},
+  {"model": "simlingo", "label": "SimLingo"},
+  {"model": "hipad", "label": "HiP-AD"},
+  {"model": "plant2", "label": "PlanT 2.0", "checkpoints": ["plant2", "plant2_s2", "plant2_s3"]}
+ ],
+ "case_study_pair": ["lead_regnety032", "bridgedrive"],
+ "warehouse": [
+  {"model": "x_mobility", "label": "X-Mobility (released)"},
+  {"model": "x_mobility_fusion_v3", "label": "head-only fine-tune"},
+  {"model": "x_mobility_vis_full", "label": "whole-model fine-tune"}
+ ],
+ "warehouse_pair": {"stock": "x_mobility", "fine_tune": "x_mobility_vis_full"}
+}

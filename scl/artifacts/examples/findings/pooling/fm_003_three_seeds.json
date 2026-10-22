@@ -1,0 +1,21 @@
+{
+ "pooling_kind": "campaign_pooling/v0.2",
+ "pool_id": "fm_003_three_seeds",
+ "family_id": "fm_003_asset_swap",
+ "campaigns": [
+  {
+   "id": "campaign_carla_v01",
+   "repetitions": [
+    0
+   ]
+  },
+  {
+   "id": "campaign_carla_v02",
+   "repetitions": [
+    1,
+    2
+   ]
+  }
+ ],
+ "note": "The identity ladder over three traffic seeds: seed 0 from v01, seeds 1 and 2 from v02 (the F7 caption of 2026-08-19). Boundary justification: which campaigns a paper figure pools is a paper-level choice no procedure can derive (the atlas of 2026-08 chose these); delete this and the pooled document for the family cannot be regenerated."
+}

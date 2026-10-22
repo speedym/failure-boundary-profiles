@@ -1,0 +1,86 @@
+{
+ "vocabulary_kind": "outcome_vocabulary/v0.1",
+ "chain": "warehouse",
+ "backend": "isaac",
+ "codings": {
+  "commitment": "measured",
+  "clean": "measured",
+  "passage": "label"
+ },
+ "outcomes": {
+  "commit_clean": {
+   "passage": true
+  },
+  "commit_contact": {
+   "passage": false
+  },
+  "divert_clean": {
+   "passage": false
+  },
+  "divert_contact": {
+   "passage": false
+  },
+  "timeout_clean": {
+   "passage": false
+  },
+  "timeout_contact": {
+   "passage": false
+  },
+  "anomaly_blockage_completed": {
+   "passage": null
+  },
+  "missing": {
+   "passage": null
+  }
+ },
+ "point_extras": [
+  {
+   "name": "gate_k",
+   "annex": "gate_attempt",
+   "reduce": "sum"
+  },
+  {
+   "name": "detour_k",
+   "annex": "detour_attempt",
+   "reduce": "sum"
+  }
+ ],
+ "meanings": {
+  "commitment": "committed to any admissible route: the body crossed the gap line or the detour line (sticky): the decision curve",
+  "clean": "reached the goal contact-free by any route: the conduct envelope (mission)",
+  "passage": "through the gap contact-free (commit_clean): the boundary quantity"
+ },
+ "document_extras": [
+  {
+   "name": "timeouts",
+   "annex": "timeout",
+   "reduce": "sum"
+  },
+  {
+   "name": "timeouts_no_line_crossed",
+   "annex": "timeout_no_line_crossed",
+   "reduce": "sum"
+  },
+  {
+   "name": "timeouts_after_detour",
+   "annex": "timeout_after_detour",
+   "reduce": "sum"
+  },
+  {
+   "name": "timeouts_after_gate",
+   "annex": "timeout_after_gate",
+   "reduce": "sum"
+  },
+  {
+   "name": "detour_attempts",
+   "annex": "detour_attempt",
+   "reduce": "sum"
+  },
+  {
+   "name": "entered_past_gap",
+   "annex": "entered_past_gap",
+   "reduce": "sum"
+  }
+ ],
+ "note": "The warehouse chain's labels (the runner's footer outcome, route and contact state, with a contact-free completion of a certified-blocked gap recoded to anomaly_blockage_completed by score_runs.py) and their codings: the commitment is MEASURED (the body crossing the declared gap or detour line, derive_go_clean), clean is MEASURED (goal reached with every recorded contact partner measured irrelevant, F8), passage is the label commit_clean. The point extras split each width's goes by the line crossed (gate_k, detour_k): on a blocked width the correct call is no gate crossing, the detour is the right answer. entered_past_gap counts the runs whose body was found inside aisle A beyond the obstacle row without ever crossing the gap line (lines revision r3, 2026-10-14: a crossing is a passage from the near side; the expert's detours re-enter aisle A at its far end), a diagnostic beside the commitment, not a coding. Boundary justification: which outcome labels count as a commitment, a clean pass or a passage is a judgment of the chain's instrument that no procedure derives from the runs; delete this and the chain's rows cannot be coded, so no curve of its families can be fitted."
+}

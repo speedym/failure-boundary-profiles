@@ -1,0 +1,296 @@
+{
+ "proof_kind": "public_proof/v0.1",
+ "campaigns": {
+  "campaign_carla_v01": {
+   "proven": true,
+   "path": "launcher score",
+   "verdict": "verdict: RE-STAMP",
+   "score_rc": 0,
+   "freeze_rc": 0,
+   "members_identical": 55,
+   "members_total": 56,
+   "differing": [
+    "campaign_carla_v01/source_snapshot/source_manifest.json"
+   ],
+   "only_store": [],
+   "only_public": [],
+   "error": null,
+   "wrote_into_clone": [],
+   "date": "2026-10-22"
+  },
+  "campaign_carla_v02": {
+   "proven": true,
+   "path": "launcher score",
+   "verdict": "verdict: RE-STAMP",
+   "score_rc": 0,
+   "freeze_rc": 0,
+   "members_identical": 28,
+   "members_total": 29,
+   "differing": [
+    "campaign_carla_v02/source_snapshot/source_manifest.json"
+   ],
+   "only_store": [],
+   "only_public": [],
+   "error": null,
+   "wrote_into_clone": [],
+   "date": "2026-10-22"
+  },
+  "campaign_carla_v03": {
+   "proven": true,
+   "path": "launcher score",
+   "verdict": "verdict: RE-STAMP",
+   "score_rc": 0,
+   "freeze_rc": 0,
+   "members_identical": 14,
+   "members_total": 15,
+   "differing": [
+    "campaign_carla_v03/source_snapshot/source_manifest.json"
+   ],
+   "only_store": [],
+   "only_public": [],
+   "error": null,
+   "wrote_into_clone": [],
+   "date": "2026-10-22"
+  },
+  "campaign_carla_v04": {
+   "proven": true,
+   "path": "launcher score",
+   "verdict": "verdict: RE-STAMP",
+   "score_rc": 0,
+   "freeze_rc": 0,
+   "members_identical": 14,
+   "members_total": 15,
+   "differing": [
+    "campaign_carla_v04/source_snapshot/source_manifest.json"
+   ],
+   "only_store": [],
+   "only_public": [],
+   "error": null,
+   "wrote_into_clone": [],
+   "date": "2026-10-22"
+  },
+  "campaign_carla_v05": {
+   "proven": true,
+   "path": "launcher score",
+   "verdict": "verdict: RE-STAMP",
+   "score_rc": 0,
+   "freeze_rc": 0,
+   "members_identical": 14,
+   "members_total": 15,
+   "differing": [
+    "campaign_carla_v05/source_snapshot/source_manifest.json"
+   ],
+   "only_store": [],
+   "only_public": [],
+   "error": null,
+   "wrote_into_clone": [],
+   "date": "2026-10-22"
+  },
+  "campaign_carla_v06": {
+   "proven": true,
+   "path": "launcher score",
+   "verdict": "verdict: RE-STAMP",
+   "score_rc": 0,
+   "freeze_rc": 0,
+   "members_identical": 77,
+   "members_total": 78,
+   "differing": [
+    "campaign_carla_v06/source_snapshot/source_manifest.json"
+   ],
+   "only_store": [],
+   "only_public": [],
+   "error": null,
+   "wrote_into_clone": [],
+   "date": "2026-10-22"
+  },
+  "campaign_carla_v07": {
+   "proven": true,
+   "path": "launcher score",
+   "verdict": "verdict: RE-STAMP",
+   "score_rc": 0,
+   "freeze_rc": 0,
+   "members_identical": 76,
+   "members_total": 77,
+   "differing": [
+    "campaign_carla_v07/source_snapshot/source_manifest.json"
+   ],
+   "only_store": [],
+   "only_public": [],
+   "error": null,
+   "wrote_into_clone": [],
+   "date": "2026-10-22"
+  },
+  "campaign_carla_v08": {
+   "proven": true,
+   "path": "launcher score",
+   "verdict": "verdict: RE-STAMP",
+   "score_rc": 0,
+   "freeze_rc": 0,
+   "members_identical": 76,
+   "members_total": 77,
+   "differing": [
+    "campaign_carla_v08/source_snapshot/source_manifest.json"
+   ],
+   "only_store": [],
+   "only_public": [],
+   "error": null,
+   "wrote_into_clone": [],
+   "date": "2026-10-22"
+  },
+  "campaign_carla_v09": {
+   "proven": true,
+   "path": "launcher score",
+   "verdict": "verdict: RE-STAMP",
+   "score_rc": 0,
+   "freeze_rc": 0,
+   "members_identical": 76,
+   "members_total": 77,
+   "differing": [
+    "campaign_carla_v09/source_snapshot/source_manifest.json"
+   ],
+   "only_store": [],
+   "only_public": [],
+   "error": null,
+   "wrote_into_clone": [],
+   "date": "2026-10-22"
+  },
+  "campaign_isaac_v01": {
+   "proven": true,
+   "path": "launcher score",
+   "verdict": "verdict: RE-STAMP",
+   "score_rc": 0,
+   "freeze_rc": 0,
+   "members_identical": 6,
+   "members_total": 7,
+   "differing": [
+    "campaign_isaac_v01/source_snapshot/source_manifest.json"
+   ],
+   "only_store": [],
+   "only_public": [],
+   "error": null,
+   "wrote_into_clone": [],
+   "date": "2026-10-22"
+  },
+  "campaign_isaac_v02": {
+   "proven": true,
+   "path": "launcher score",
+   "verdict": "verdict: RE-STAMP",
+   "score_rc": 0,
+   "freeze_rc": 0,
+   "members_identical": 6,
+   "members_total": 7,
+   "differing": [
+    "campaign_isaac_v02/source_snapshot/source_manifest.json"
+   ],
+   "only_store": [],
+   "only_public": [],
+   "error": null,
+   "wrote_into_clone": [],
+   "date": "2026-10-22"
+  },
+  "campaign_isaac_v03": {
+   "proven": true,
+   "path": "launcher score --accept-instrument-change",
+   "verdict": "verdict: RE-STAMP",
+   "score_rc": 0,
+   "freeze_rc": 0,
+   "members_identical": 6,
+   "members_total": 7,
+   "differing": [
+    "campaign_isaac_v03/source_snapshot/source_manifest.json"
+   ],
+   "only_store": [],
+   "only_public": [],
+   "error": null,
+   "wrote_into_clone": [],
+   "date": "2026-10-22"
+  },
+  "campaign_isaac_v04": {
+   "proven": true,
+   "path": "launcher score",
+   "verdict": "verdict: RE-STAMP",
+   "score_rc": 0,
+   "freeze_rc": 0,
+   "members_identical": 6,
+   "members_total": 7,
+   "differing": [
+    "campaign_isaac_v04/source_snapshot/source_manifest.json"
+   ],
+   "only_store": [],
+   "only_public": [],
+   "error": null,
+   "wrote_into_clone": [],
+   "date": "2026-10-22"
+  },
+  "campaign_isaac_v05": {
+   "proven": true,
+   "path": "launcher score",
+   "verdict": "verdict: RE-STAMP",
+   "score_rc": 0,
+   "freeze_rc": 0,
+   "members_identical": 6,
+   "members_total": 7,
+   "differing": [
+    "campaign_isaac_v05/source_snapshot/source_manifest.json"
+   ],
+   "only_store": [],
+   "only_public": [],
+   "error": null,
+   "wrote_into_clone": [],
+   "date": "2026-10-22"
+  },
+  "campaign_isaac_v06": {
+   "proven": true,
+   "path": "launcher score",
+   "verdict": "verdict: RE-STAMP",
+   "score_rc": 0,
+   "freeze_rc": 0,
+   "members_identical": 6,
+   "members_total": 7,
+   "differing": [
+    "campaign_isaac_v06/source_snapshot/source_manifest.json"
+   ],
+   "only_store": [],
+   "only_public": [],
+   "error": null,
+   "wrote_into_clone": [],
+   "date": "2026-10-22"
+  },
+  "campaign_isaac_v07": {
+   "proven": true,
+   "path": "launcher score",
+   "verdict": "verdict: RE-STAMP",
+   "score_rc": 0,
+   "freeze_rc": 0,
+   "members_identical": 21,
+   "members_total": 22,
+   "differing": [
+    "campaign_isaac_v07/source_snapshot/source_manifest.json"
+   ],
+   "only_store": [],
+   "only_public": [],
+   "error": null,
+   "wrote_into_clone": [],
+   "date": "2026-10-22"
+  },
+  "campaign_isaac_v08": {
+   "proven": true,
+   "path": "launcher score",
+   "verdict": "verdict: RE-STAMP",
+   "score_rc": 0,
+   "freeze_rc": 0,
+   "members_identical": 18,
+   "members_total": 19,
+   "differing": [
+    "campaign_isaac_v08/source_snapshot/source_manifest.json"
+   ],
+   "only_store": [],
+   "only_public": [],
+   "error": null,
+   "wrote_into_clone": [],
+   "date": "2026-10-22"
+  }
+ },
+ "export_commit": "36646c35aa5b938c66f902d1124b39c54de6fbcd",
+ "note": "written by scripts/prove_public_export.py in the private repository: each campaign's raw bundle scored, frozen and bound from this clone, the launcher's verdict against the store's interpretation, and the members that differ (the source snapshot names the scoring checkout, so it always does)"
+}

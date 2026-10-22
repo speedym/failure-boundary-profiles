@@ -1,0 +1,186 @@
+{
+ "campaigns": {
+  "campaign_isaac_v07": {
+   "fm_isaac_001": {
+    "bundle": {
+     "bundle_kind": "campaign_bundle/v0.3",
+     "content_id_sha256": "5577a120855ccb2da0fb3a8a05b53ad7d7b13bd3b86f5c0313e535caef9f16c5",
+     "family_sub_id_sha256": "ec56094ba7feed7ecfb1833d5e96db75f44de2a4aedc07f1b3d758bd4c3461f8",
+     "path": "campaign_isaac_v07.zip",
+     "zip_sha256": "f66c7eb8f35bfd4140749d797978005601fda31bbf1bffdb93e2c5397f5bd948"
+    },
+    "campaign_declaration": {
+     "path": "artifacts/examples/campaigns/campaign_isaac_v07/fm_isaac_001.json",
+     "sha256": "87bf69e879412a5b220ad14055d326875984c3d0dfffc5da9de332965c41f892"
+    },
+    "chain": "isaac",
+    "coverage": {
+     "models": [
+      "expert",
+      "x_mobility_fusion_v3",
+      "x_mobility_vis_full"
+     ],
+     "repetitions": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "variants": 12
+    },
+    "derived_bundle": {
+     "bundle_kind": "derived_bundle/v0.3",
+     "content_id_sha256": "2cf4e1ffd53d17366636143b3dce1b09a2b510d8c6803b9329e720c68e4d3068",
+     "families": [
+      "fm_isaac_001",
+      "fm_isaac_003",
+      "fm_isaac_004"
+     ],
+     "path": "campaign_isaac_v07_derived.zip",
+     "source_snapshot_sha256": "01bf364948cac50ce7fb5606b93f25478f48950ef4a4c70e3248232408698bfd",
+     "zip_sha256": "3c63bad4137e87a91594be451ce7552c525d768af7f476bbe2d74e4de2f2d0b6"
+    },
+    "documents": {
+     "fs_campaign_isaac_v07_fm_isaac_001_expert.v0.3.json": "b38c70e869e91e6c85cf10afa1776ad7ca798de12f5af2a2a53f9ead1dfcbb47",
+     "fs_campaign_isaac_v07_fm_isaac_001_x_mobility_fusion_v3.v0.3.json": "7ad084b928f72dcffafa37a73dc33330d412eb337bb2072c4606be78547faf79",
+     "fs_campaign_isaac_v07_fm_isaac_001_x_mobility_vis_full.v0.3.json": "84d0d1e798b9f77d2ef577eee19dd3b41075bd65f7039a82909c4c37bd7b9ad4"
+    },
+    "evidence": {
+     "bundle_content_id_sha256": "5577a120855ccb2da0fb3a8a05b53ad7d7b13bd3b86f5c0313e535caef9f16c5",
+     "derived_content_id_sha256": "2cf4e1ffd53d17366636143b3dce1b09a2b510d8c6803b9329e720c68e4d3068",
+     "derived_members": {
+      "campaign_isaac_v07/fm_isaac_001/scoring_out/run_rows.jsonl": "16a236a5ddc797aa51eddabb056643a8b56f2bc77c79fed749afd6805de8fd9f",
+      "campaign_isaac_v07/fm_isaac_001/stats/stats_rows.jsonl": "de3cef1590be9549ed1e709dbbe1fc9a5aeaac6cf718940962d77e44ed5b3af0"
+     },
+     "members": {
+      "campaign_isaac_v07/fm_isaac_001/family_snapshot/family_manifest.json": "d22e7b15d10a8889b72f7e29b5fd759c2eb483e0fe8cf6c9634227037816d02e"
+     }
+    },
+    "family_manifest_sha256": "d22e7b15d10a8889b72f7e29b5fd759c2eb483e0fe8cf6c9634227037816d02e"
+   },
+   "fm_isaac_003": {
+    "bundle": {
+     "bundle_kind": "campaign_bundle/v0.3",
+     "content_id_sha256": "5577a120855ccb2da0fb3a8a05b53ad7d7b13bd3b86f5c0313e535caef9f16c5",
+     "family_sub_id_sha256": "e9cb0680c59a1a802c7671069c2f98b2c84532e296a9c0f0d26fa9233563f530",
+     "path": "campaign_isaac_v07.zip",
+     "zip_sha256": "f66c7eb8f35bfd4140749d797978005601fda31bbf1bffdb93e2c5397f5bd948"
+    },
+    "campaign_declaration": {
+     "path": "artifacts/examples/campaigns/campaign_isaac_v07/fm_isaac_003.json",
+     "sha256": "4a12c85c1f7e91eafff7590dfefba603f86b871563c3b83d3c7c80c877d74b57"
+    },
+    "chain": "isaac",
+    "coverage": {
+     "models": [
+      "expert",
+      "x_mobility_fusion_v3",
+      "x_mobility_vis_full"
+     ],
+     "repetitions": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "variants": 12
+    },
+    "derived_bundle": {
+     "bundle_kind": "derived_bundle/v0.3",
+     "content_id_sha256": "2cf4e1ffd53d17366636143b3dce1b09a2b510d8c6803b9329e720c68e4d3068",
+     "families": [
+      "fm_isaac_001",
+      "fm_isaac_003",
+      "fm_isaac_004"
+     ],
+     "path": "campaign_isaac_v07_derived.zip",
+     "source_snapshot_sha256": "01bf364948cac50ce7fb5606b93f25478f48950ef4a4c70e3248232408698bfd",
+     "zip_sha256": "3c63bad4137e87a91594be451ce7552c525d768af7f476bbe2d74e4de2f2d0b6"
+    },
+    "documents": {
+     "fs_campaign_isaac_v07_fm_isaac_003_expert.v0.3.json": "e336b3031ef877aed37157e1bda0572302f44fdc816ec593ba11eea392d71343",
+     "fs_campaign_isaac_v07_fm_isaac_003_x_mobility_fusion_v3.v0.3.json": "3bf65c96b7d0cca8b24700618c6f365914b885f7fd609c99c8025afc8c1369b2",
+     "fs_campaign_isaac_v07_fm_isaac_003_x_mobility_vis_full.v0.3.json": "e57fc0c1353c7c4086dc6b9e313b70e8ebef30d0b25555617a97c898272606b6"
+    },
+    "evidence": {
+     "bundle_content_id_sha256": "5577a120855ccb2da0fb3a8a05b53ad7d7b13bd3b86f5c0313e535caef9f16c5",
+     "derived_content_id_sha256": "2cf4e1ffd53d17366636143b3dce1b09a2b510d8c6803b9329e720c68e4d3068",
+     "derived_members": {
+      "campaign_isaac_v07/fm_isaac_003/scoring_out/run_rows.jsonl": "abd7ae9853e461fad4d3ab4498a7d0f62b54c2c201e15bc6985ddab214ddf3ad",
+      "campaign_isaac_v07/fm_isaac_003/stats/stats_rows.jsonl": "e974bb3a9b04ececeed128e2278a0434f4482c64852f0dfe2e8d7fe8b9dd5ddd"
+     },
+     "members": {
+      "campaign_isaac_v07/fm_isaac_003/family_snapshot/family_manifest.json": "345e92c241be24e532cba4aab46877a66a28b19bbbad525ffe072502b1cbe817"
+     }
+    },
+    "family_manifest_sha256": "345e92c241be24e532cba4aab46877a66a28b19bbbad525ffe072502b1cbe817"
+   },
+   "fm_isaac_004": {
+    "bundle": {
+     "bundle_kind": "campaign_bundle/v0.3",
+     "content_id_sha256": "5577a120855ccb2da0fb3a8a05b53ad7d7b13bd3b86f5c0313e535caef9f16c5",
+     "family_sub_id_sha256": "b62816354c766d1c05963edce1b35a4fff24c7d5bec77c441a9eb6a5b2a420f9",
+     "path": "campaign_isaac_v07.zip",
+     "zip_sha256": "f66c7eb8f35bfd4140749d797978005601fda31bbf1bffdb93e2c5397f5bd948"
+    },
+    "campaign_declaration": {
+     "path": "artifacts/examples/campaigns/campaign_isaac_v07/fm_isaac_004.json",
+     "sha256": "42f0d43b5d0541f724262f5730455ea1271370d9011da318c0ec73ab2ee39e17"
+    },
+    "chain": "isaac",
+    "coverage": {
+     "models": [
+      "expert",
+      "x_mobility_fusion_v3",
+      "x_mobility_vis_full"
+     ],
+     "repetitions": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "variants": 12
+    },
+    "derived_bundle": {
+     "bundle_kind": "derived_bundle/v0.3",
+     "content_id_sha256": "2cf4e1ffd53d17366636143b3dce1b09a2b510d8c6803b9329e720c68e4d3068",
+     "families": [
+      "fm_isaac_001",
+      "fm_isaac_003",
+      "fm_isaac_004"
+     ],
+     "path": "campaign_isaac_v07_derived.zip",
+     "source_snapshot_sha256": "01bf364948cac50ce7fb5606b93f25478f48950ef4a4c70e3248232408698bfd",
+     "zip_sha256": "3c63bad4137e87a91594be451ce7552c525d768af7f476bbe2d74e4de2f2d0b6"
+    },
+    "documents": {
+     "fs_campaign_isaac_v07_fm_isaac_004_expert.v0.3.json": "e0ce2b2bf50c48d4b6892cdd32796ce4470e947a1a9c6a12198f0882c2f2f654",
+     "fs_campaign_isaac_v07_fm_isaac_004_x_mobility_fusion_v3.v0.3.json": "a645b79804ace6f9ab96dea4be7ce8b183909de3a38c2f9c344bd9538b271b97",
+     "fs_campaign_isaac_v07_fm_isaac_004_x_mobility_vis_full.v0.3.json": "94214d3c66d70befefab637a080731b224bae3f11ba0f2bb7fee769eb1750ee4"
+    },
+    "evidence": {
+     "bundle_content_id_sha256": "5577a120855ccb2da0fb3a8a05b53ad7d7b13bd3b86f5c0313e535caef9f16c5",
+     "derived_content_id_sha256": "2cf4e1ffd53d17366636143b3dce1b09a2b510d8c6803b9329e720c68e4d3068",
+     "derived_members": {
+      "campaign_isaac_v07/fm_isaac_004/scoring_out/run_rows.jsonl": "3617841b40467e1930988e8a392071197def255b38e85e0522cff91c70570156",
+      "campaign_isaac_v07/fm_isaac_004/stats/stats_rows.jsonl": "758ed421574cc29064dddc5d3de0d3727b8ce735b3bed13517ae7c325e6fced2"
+     },
+     "members": {
+      "campaign_isaac_v07/fm_isaac_004/family_snapshot/family_manifest.json": "f310e771310f1657379f6a81eec017dd593118f11d47606d4af70cbc621cad24"
+     }
+    },
+    "family_manifest_sha256": "f310e771310f1657379f6a81eec017dd593118f11d47606d4af70cbc621cad24"
+   }
+  }
+ },
+ "driver_sha256": "668e27cf0f86421a1eb540f87d8595d283daf19c69079f133b08af860266b969",
+ "emitter_sha256": "53bf8fd336297e3f89b8e6383367ab4cf2d595131c1d5a02d2b6e2a23f85ba2c",
+ "estimator_sha256": "be9beb7f3a3c6d255c03f8c16cf6a25ffff1ef612e12b2c9ef9da94ff94b4cab",
+ "evidence_rule": "canon holds findings and declarations; the raw bundle holds the evidence and the derived bundle holds one interpretation keyed by the raw content id; every entry binds the declaration by hash, the family snapshot as a raw member, the run rows and the fits as derived members, and every document by hash, byte-equal to its derived member",
+ "fit_sha256": "7465a08fd613babb8cb52210467e098cb2188a71da914a6c5ea88f8bcbd7332d",
+ "report_kind": "findings_certification/v0.1"
+}
